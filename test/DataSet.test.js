@@ -117,7 +117,7 @@ describe('DataSet', function () {
     assert.equal(data.get().length, 0);
 
 
-    // test filtering and sorting
+    // test filtering sorting and mapping
     data = new DataSet();
     data.add([
       {id: 1, age: 30, group: 2},
@@ -143,6 +143,10 @@ describe('DataSet', function () {
 
     assert.deepEqual(data.get({
       order: 'age',
+      map: function (item) {
+        item.isTwo = item.group === 2;
+        return item;
+      },
       filter: function (item) {
         return item.group == 2;
       },
@@ -153,6 +157,10 @@ describe('DataSet', function () {
     ]);
     assert.deepEqual(data.getIds({
       order: 'age',
+      map: function (item) {
+        item.isTwo = item.group === 2;
+        return item;
+      },
       filter: function (item) {
         return (item.group == 2);
       }
