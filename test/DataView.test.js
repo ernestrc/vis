@@ -96,6 +96,74 @@ describe('DataView', function () {
     assert.equal(group2.length, 0);
   });
 
+  it('should alter a DataView', function () {
+    var data = new DataSet([
+      {id:1, value:2},
+      {id:2, value:4},
+      {id:3, value:7}
+    ]);
+
+    var view = new DataView(data, {
+      filter: function (item) {
+        return item.value < 5;
+      }
+    });
+
+    var added, updated, removed;
+    view.on('add', function (event, props) {added = added.concat(props.items)});
+    view.on('update', function (event, props) {updated = updated.concat(props.items)});
+    view.on('remove', function (event, props) {removed = removed.concat(props.items)});
+
+    assert.deepEqual(view.get(), [
+      {id:1, value:2},
+      {id:2, value:4}
+    ]);
+
+    // change filter's threshold to 3
+    added = [];
+    updated = [];
+    removed = [];
+    view.alter({
+      filter: function (item) {
+        return item.value < 3;
+      }
+    });
+    assert.deepEqual(view.get(), [{id:1, value:2}]);
+    assert.deepEqual(added, []);
+    assert.deepEqual(updated, []);
+    assert.deepEqual(removed, [2]);
+
+    // change filter's threshold to 8
+    added = [];
+    updated = [];
+    removed = [];
+    view.alter({
+      filter: function (item) {
+        return item.value < 7;
+      }
+    });
+    assert.deepEqual(view.get(), [
+      {id:1, value:2},
+      {id:2, value:4},
+    ]);
+    assert.deepEqual(added, [2]);
+    assert.deepEqual(updated, []);
+    assert.deepEqual(removed, []);
+
+    // remove filter
+    added = [];
+    updated = [];
+    removed = [];
+    view.alter({ filter: null });
+    assert.deepEqual(view.get(), [
+      {id:1, value:2},
+      {id:2, value:4},
+      {id:3, value:7}
+    ]);
+    assert.deepEqual(added, [3]);
+    assert.deepEqual(updated, []);
+    assert.deepEqual(removed, []);
+  });
 
   it('should refresh a DataView with filter', function () {
     var data = new DataSet([
