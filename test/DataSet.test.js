@@ -160,6 +160,49 @@ describe('DataSet', function () {
       {id: 1, isTwo: true },
     ]);
 
+    /* from https://github.com/tc39/proposal-object-values-entries polyfill */
+    var reduce = Function.bind.call(Function.call, Array.prototype.reduce);
+    var isEnumerable = Function.bind.call(Function.call, Object.prototype.propertyIsEnumerable);
+    var concat = Function.bind.call(Function.call, Array.prototype.concat);
+    var keys = Reflect.ownKeys;
+
+    Object.values = function values(O) {
+      return reduce(keys(O), (v, k) => concat(v, typeof k === 'string' && isEnumerable(O, k) ? [O[k]] : []), []);
+    };
+
+    // naive groupBy
+    function groupBy() {
+      var groups = {};
+      return function (acc, item) {
+        var group = item.group;
+        if (!groups[group]) {
+          groups[group] = {
+            sage: 0,
+            id : group,
+          };
+        }
+        groups[group].sage += item.sage;
+        return Object.values(groups);
+      }
+    }
+
+    // test reducing
+    assert.deepEqual(data.get({
+      fields: ['id', 'sage'],
+      map: function (item) {
+        return {
+          id: item.id,
+          sage: item.group * item.age,
+          group: item.group
+        };
+      },
+      reduce: groupBy('group'),
+    }), [
+      {id: 2, sage: (30 + 17) * 2 },
+      {id: 3, sage: 27 * 3 },
+      {id: 4, sage: 25 * 4 },
+    ]);
+
     data.clear();
 
 
