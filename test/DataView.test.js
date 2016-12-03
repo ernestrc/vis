@@ -218,6 +218,111 @@ describe('DataView', function () {
     assert.deepEqual(removed, []);
   });
 
+  it('should refresh a DataView with map and reduce', function () {
+    var data = new DataSet([
+      {id:1, value:2, feature: 1},
+      {id:2, value:4, feature: 1},
+      {id:3, value:7, feature: 2}
+    ]);
+
+    var multiplier = 2;
+
+    var view = new DataView(data, {
+      map: function (item) {
+        return {
+          id: item.id,
+          value: item.feature ? 2 item.value * multiplier : item.value,
+        }
+      },
+      reduce: function(acc, item) {
+        if (!acc[item.feature]) {
+          acc[item.feature] = {
+            id: item.feature,
+            value: 0,
+          }
+        }
+
+        acc[item.feature].value += item.value;
+
+        return acc;
+      }
+    });
+
+    var added, updated, removed;
+    view.on('add', function (event, props) {added = added.concat(props.items)});
+    view.on('update', function (event, props) {updated = updated.concat(props.items)});
+    view.on('remove', function (event, props) {removed = removed.concat(props.items)});
+
+    assert.deepEqual(view.get(), [
+      {id:1, value:4*multiplier + 2*multiplier},
+      {id:2, value:7*multiplier},
+    ]);
+
+    // add new item from seen feature
+    added = [];
+    updated = [];
+    removed = [];
+    data.add({
+      id: 4,
+      value: 10,
+      feature: 2
+    });
+    assert.deepEqual(view.get(), [
+      {id:1, value:4*multiplier + 2*multiplier},
+      {id:2, value:7*multiplier + 10*multiplier},
+    ]);
+    assert.deepEqual(added, []);
+    assert.deepEqual(updated, [2]);
+    assert.deepEqual(removed, []);
+
+    // change multiplier to 8
+    added = [];
+    updated = [];
+    removed = [];
+    multiplier = 8;
+    view.refresh();
+    assert.deepEqual(view.get(), [
+      {id:1, value:4*multiplier + 2*multiplier},
+      {id:2, value:7*multiplier + 10*multiplier},
+    ]);
+    assert.deepEqual(added, []);
+    assert.deepEqual(updated, [1, 2]);
+    assert.deepEqual(removed, []);
+
+    // add new item from new feature
+    added = [];
+    updated = [];
+    removed = [];
+    data.add({
+      id: 5,
+      value: 20,
+      feature: 3
+    });
+    assert.deepEqual(view.get(), [
+      {id:1, value:4*multiplier + 2*multiplier},
+      {id:2, value:7*multiplier + 10*multiplier},
+      {id:3, value:20*multiplier},
+    ]);
+    assert.deepEqual(added, [3]);
+    assert.deepEqual(updated, []);
+    assert.deepEqual(removed, []);
+
+    // remove item
+    added = [];
+    updated = [];
+    removed = [];
+    data.remove(3);
+    assert.deepEqual(view.get(), [
+      {id:1, value:4*multiplier + 2*multiplier},
+      {id:2, value:7*multiplier + 10*multiplier},
+    ]);
+    assert.deepEqual(added, []);
+    assert.deepEqual(updated, []);
+    assert.deepEqual(removed, [3]);
+  });
+
+  // TODO implement updating dataset test with reduce and map
+
   it('should pass data of changed items when updating a DataSet', function () {
     var data = new DataSet([
       {id: 1, title: 'Item 1', group: 1},
