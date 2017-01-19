@@ -308,7 +308,6 @@ input.vis-configuration.vis-config-range:focus::-ms-fill-upper {
     border-width: 12px;
     margin-top: -12px;
 }
-<<<<<<< HEAD
 div.vis-tooltip {
   position: absolute;
   visibility: hidden;
@@ -331,8 +330,6 @@ div.vis-tooltip {
   z-index: 5;
 }
 
-=======
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
 div.vis-color-picker {
   position:absolute;
@@ -721,28 +718,6 @@ div.vis-network div.vis-navigation div.vis-button.vis-zoomExtends {
     bottom:50px;
     right:15px;
 }
-<<<<<<< HEAD
-=======
-div.vis-network-tooltip {
-  position: absolute;
-  visibility: hidden;
-  padding: 5px;
-  white-space: nowrap;
-
-  font-family: verdana;
-  font-size:14px;
-  color:#000000;
-  background-color: #f5f4ed;
-
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px;
-  border-radius: 3px;
-  border: 1px solid #808074;
-
-  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
-  pointer-events: none;
-}
->>>>>>> 88f14a0... add 'dist' folder for deployment
 .vis-timeline {
   /*
   -webkit-transition: height .4s ease-in-out;
@@ -780,7 +755,6 @@ div.vis-network-tooltip {
   background-color: #FF7F6E;
   width: 2px;
   z-index: 1;
-<<<<<<< HEAD
   pointer-events: none;
 }
 
@@ -805,8 +779,6 @@ div.vis-network-tooltip {
 
 .vis-rolling-mode-btn:hover {
   opacity: 1;
-=======
->>>>>>> 88f14a0... add 'dist' folder for deployment
 }
 .vis-custom-time {
   background-color: #6E94FF;
@@ -985,13 +957,10 @@ div.vis-network-tooltip {
   overflow: hidden;
 }
 
-<<<<<<< HEAD
 .vis-item-visible-frame {
   white-space: nowrap;
 }
 
-=======
->>>>>>> 88f14a0... add 'dist' folder for deployment
 .vis-item.vis-range .vis-item-content {
   position: relative;
   display: inline-block;
@@ -1146,7 +1115,6 @@ div.vis-network-tooltip {
   border-bottom: none;
 }
 
-<<<<<<< HEAD
 .vis-nesting-group {
   cursor: pointer;
 }
@@ -1167,8 +1135,6 @@ div.vis-network-tooltip {
   content: "\25B6";
 }
 
-=======
->>>>>>> 88f14a0... add 'dist' folder for deployment
 .vis-overlay {
   position: absolute;
   top: 0;
