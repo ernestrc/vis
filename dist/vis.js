@@ -4,13 +4,8 @@
  *
  * A dynamic, browser-based visualization library.
  *
-<<<<<<< HEAD
- * @version 4.18.0
- * @date    2017-01-15
-=======
- * @version 4.17.0
- * @date    2016-11-05
->>>>>>> 88f14a0... add 'dist' folder for deployment
+ * @version 4.18.1
+ * @date    2017-03-06
  *
  * @license
  * Copyright (C) 2011-2016 Almende B.V, http://almende.com
@@ -91,7 +86,6 @@ return /******/ (function(modules) { // webpackBootstrap
   var util = __webpack_require__(1);
 
   // Graph3d
-<<<<<<< HEAD
   util.extend(exports, __webpack_require__(89));
 
   // Timeline & Graph2d
@@ -99,15 +93,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
   // Network
   util.extend(exports, __webpack_require__(154));
-=======
-  util.extend(exports, __webpack_require__(7));
-
-  // Timeline & Graph2d
-  util.extend(exports, __webpack_require__(26));
-
-  // Network
-  util.extend(exports, __webpack_require__(62));
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
 /***/ },
 /* 1 */
@@ -115,7 +100,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
   'use strict';
 
-<<<<<<< HEAD
   var _getIterator2 = __webpack_require__(2);
 
   var _getIterator3 = _interopRequireDefault(_getIterator2);
@@ -137,9 +121,6 @@ return /******/ (function(modules) { // webpackBootstrap
   var _stringify2 = _interopRequireDefault(_stringify);
 
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-=======
-  var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
   // utility functions
 
@@ -147,13 +128,8 @@ return /******/ (function(modules) { // webpackBootstrap
   // use this instance. Else, load via commonjs.
 
 
-<<<<<<< HEAD
   var moment = __webpack_require__(84);
   var uuid = __webpack_require__(88);
-=======
-  var moment = __webpack_require__(2);
-  var uuid = __webpack_require__(6);
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
   /**
    * Test whether given object is a number
@@ -165,7 +141,6 @@ return /******/ (function(modules) { // webpackBootstrap
   };
 
   /**
-<<<<<<< HEAD
    * Censors object elements containing dom elements
    * @param {*} object
    * @return {Object} object without elements
@@ -183,8 +158,6 @@ return /******/ (function(modules) { // webpackBootstrap
   };
 
   /**
-=======
->>>>>>> 88f14a0... add 'dist' folder for deployment
    * Remove everything in the DOM object
    * @param DOMobject
    */
@@ -262,11 +235,7 @@ return /******/ (function(modules) { // webpackBootstrap
   exports.assignAllKeys = function (obj, value) {
     for (var prop in obj) {
       if (obj.hasOwnProperty(prop)) {
-<<<<<<< HEAD
         if ((0, _typeof3['default'])(obj[prop]) !== 'object') {
-=======
-        if (_typeof(obj[prop]) !== 'object') {
->>>>>>> 88f14a0... add 'dist' folder for deployment
           obj[prop] = value;
         }
       }
@@ -284,22 +253,14 @@ return /******/ (function(modules) { // webpackBootstrap
 
     for (var prop in a) {
       if (b[prop] !== undefined) {
-<<<<<<< HEAD
         if ((0, _typeof3['default'])(b[prop]) !== 'object') {
-=======
-        if (_typeof(b[prop]) !== 'object') {
->>>>>>> 88f14a0... add 'dist' folder for deployment
           if ((b[prop] === undefined || b[prop] === null) && a[prop] !== undefined && allowDeletion === true) {
             delete a[prop];
           } else {
             a[prop] = b[prop];
           }
         } else {
-<<<<<<< HEAD
           if ((0, _typeof3['default'])(a[prop]) === 'object') {
-=======
-          if (_typeof(a[prop]) === 'object') {
->>>>>>> 88f14a0... add 'dist' folder for deployment
             exports.fillIfDefined(a[prop], b[prop], allowDeletion);
           }
         }
@@ -559,11 +520,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
       case 'number':
       case 'Number':
-<<<<<<< HEAD
         if (exports.isString(object) && !isNaN(Date.parse(object))) {
-=======
-        if (!isNaN(Date.parse(object))) {
->>>>>>> 88f14a0... add 'dist' folder for deployment
           return moment(object).valueOf();
         } else {
           return Number(object.valueOf());
@@ -668,11 +625,7 @@ return /******/ (function(modules) { // webpackBootstrap
    * @return {String} type
    */
   exports.getType = function (object) {
-<<<<<<< HEAD
     var type = typeof object === 'undefined' ? 'undefined' : (0, _typeof3['default'])(object);
-=======
-    var type = typeof object === 'undefined' ? 'undefined' : _typeof(object);
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
     if (type == 'object') {
       if (object === null) {
@@ -1238,11 +1191,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
     // build a css text string from an object with key/values
     join: function join(styles) {
-<<<<<<< HEAD
       return (0, _keys2['default'])(styles).map(function (key) {
-=======
-      return Object.keys(styles).map(function (key) {
->>>>>>> 88f14a0... add 'dist' folder for deployment
         return key + ': ' + styles[key];
       }).join('; ');
     }
@@ -1348,19 +1297,11 @@ return /******/ (function(modules) { // webpackBootstrap
    * @returns {*}
    */
   exports.selectiveBridgeObject = function (fields, referenceObject) {
-<<<<<<< HEAD
     if ((typeof referenceObject === 'undefined' ? 'undefined' : (0, _typeof3['default'])(referenceObject)) == "object") {
       var objectTo = (0, _create2['default'])(referenceObject);
       for (var i = 0; i < fields.length; i++) {
         if (referenceObject.hasOwnProperty(fields[i])) {
           if ((0, _typeof3['default'])(referenceObject[fields[i]]) == "object") {
-=======
-    if ((typeof referenceObject === 'undefined' ? 'undefined' : _typeof(referenceObject)) == "object") {
-      var objectTo = Object.create(referenceObject);
-      for (var i = 0; i < fields.length; i++) {
-        if (referenceObject.hasOwnProperty(fields[i])) {
-          if (_typeof(referenceObject[fields[i]]) == "object") {
->>>>>>> 88f14a0... add 'dist' folder for deployment
             objectTo[fields[i]] = exports.bridgeObject(referenceObject[fields[i]]);
           }
         }
@@ -1379,19 +1320,11 @@ return /******/ (function(modules) { // webpackBootstrap
    * @returns {*}
    */
   exports.bridgeObject = function (referenceObject) {
-<<<<<<< HEAD
     if ((typeof referenceObject === 'undefined' ? 'undefined' : (0, _typeof3['default'])(referenceObject)) == "object") {
       var objectTo = (0, _create2['default'])(referenceObject);
       for (var i in referenceObject) {
         if (referenceObject.hasOwnProperty(i)) {
           if ((0, _typeof3['default'])(referenceObject[i]) == "object") {
-=======
-    if ((typeof referenceObject === 'undefined' ? 'undefined' : _typeof(referenceObject)) == "object") {
-      var objectTo = Object.create(referenceObject);
-      for (var i in referenceObject) {
-        if (referenceObject.hasOwnProperty(i)) {
-          if (_typeof(referenceObject[i]) == "object") {
->>>>>>> 88f14a0... add 'dist' folder for deployment
             objectTo[i] = exports.bridgeObject(referenceObject[i]);
           }
         }
@@ -1433,11 +1366,7 @@ return /******/ (function(modules) { // webpackBootstrap
     var globalOptions = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : {};
 
     if (options[option] === null) {
-<<<<<<< HEAD
       mergeTarget[option] = (0, _create2['default'])(globalOptions[option]);
-=======
-      mergeTarget[option] = Object.create(globalOptions[option]);
->>>>>>> 88f14a0... add 'dist' folder for deployment
     } else {
       if (options[option] !== undefined) {
         if (typeof options[option] === 'boolean') {
@@ -1640,7 +1569,6 @@ return /******/ (function(modules) { // webpackBootstrap
     return w1 - w2;
   };
 
-<<<<<<< HEAD
   exports.topMost = function (pile, accessors) {
     var candidate = void 0;
     if (!Array.isArray(accessors)) {
@@ -1686,27 +1614,16 @@ return /******/ (function(modules) { // webpackBootstrap
     return candidate;
   };
 
-=======
->>>>>>> 88f14a0... add 'dist' folder for deployment
 /***/ },
 /* 2 */
 /***/ function(module, exports, __webpack_require__) {
 
-<<<<<<< HEAD
   module.exports = { "default": __webpack_require__(3), __esModule: true };
-=======
-  'use strict';
-
-  // first check if moment.js is already loaded in the browser window, if so,
-  // use this instance. Else, load via commonjs.
-  module.exports = typeof window !== 'undefined' && window['moment'] || __webpack_require__(3);
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
 /***/ },
 /* 3 */
 /***/ function(module, exports, __webpack_require__) {
 
-<<<<<<< HEAD
   __webpack_require__(4);
   __webpack_require__(50);
   module.exports = __webpack_require__(52);
@@ -3144,7 +3061,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ function(module, exports, __webpack_require__) {
 
   /* WEBPACK VAR INJECTION */(function(module) {//! moment.js
-  //! version : 2.17.1
+  //! version : 2.16.0
   //! authors : Tim Wood, Iskren Chernev, Moment.js contributors
   //! license : MIT
   //! momentjs.com
@@ -3187,7 +3104,7 @@ return /******/ (function(modules) { // webpackBootstrap
   }
 
   function isNumber(input) {
-      return typeof input === 'number' || Object.prototype.toString.call(input) === '[object Number]';
+      return typeof value === 'number' || Object.prototype.toString.call(input) === '[object Number]';
   }
 
   function isDate(input) {
@@ -3379,9 +3296,6 @@ return /******/ (function(modules) { // webpackBootstrap
   function Moment(config) {
       copyConfig(this, config);
       this._d = new Date(config._d != null ? config._d.getTime() : NaN);
-      if (!this.isValid()) {
-          this._d = new Date(NaN);
-      }
       // Prevent infinite loop in case updateOffset creates new moment
       // objects.
       if (updateInProgress === false) {
@@ -6976,3749 +6890,11 @@ return /******/ (function(modules) { // webpackBootstrap
   function listWeekdaysImpl (localeSorted, format, index, field) {
       if (typeof localeSorted === 'boolean') {
           if (isNumber(format)) {
-=======
-  /* WEBPACK VAR INJECTION */(function(module) {//! moment.js
-  //! version : 2.15.2
-  //! authors : Tim Wood, Iskren Chernev, Moment.js contributors
-  //! license : MIT
-  //! momentjs.com
-
-  ;(function (global, factory) {
-       true ? module.exports = factory() :
-      typeof define === 'function' && define.amd ? define(factory) :
-      global.moment = factory()
-  }(this, function () { 'use strict';
-
-      var hookCallback;
-
-      function utils_hooks__hooks () {
-          return hookCallback.apply(null, arguments);
-      }
-
-      // This is done to register the method called with moment()
-      // without creating circular dependencies.
-      function setHookCallback (callback) {
-          hookCallback = callback;
-      }
-
-      function isArray(input) {
-          return input instanceof Array || Object.prototype.toString.call(input) === '[object Array]';
-      }
-
-      function isObject(input) {
-          // IE8 will treat undefined and null as object if it wasn't for
-          // input != null
-          return input != null && Object.prototype.toString.call(input) === '[object Object]';
-      }
-
-      function isObjectEmpty(obj) {
-          var k;
-          for (k in obj) {
-              // even if its not own property I'd still call it non-empty
-              return false;
-          }
-          return true;
-      }
-
-      function isDate(input) {
-          return input instanceof Date || Object.prototype.toString.call(input) === '[object Date]';
-      }
-
-      function map(arr, fn) {
-          var res = [], i;
-          for (i = 0; i < arr.length; ++i) {
-              res.push(fn(arr[i], i));
-          }
-          return res;
-      }
-
-      function hasOwnProp(a, b) {
-          return Object.prototype.hasOwnProperty.call(a, b);
-      }
-
-      function extend(a, b) {
-          for (var i in b) {
-              if (hasOwnProp(b, i)) {
-                  a[i] = b[i];
-              }
-          }
-
-          if (hasOwnProp(b, 'toString')) {
-              a.toString = b.toString;
-          }
-
-          if (hasOwnProp(b, 'valueOf')) {
-              a.valueOf = b.valueOf;
-          }
-
-          return a;
-      }
-
-      function create_utc__createUTC (input, format, locale, strict) {
-          return createLocalOrUTC(input, format, locale, strict, true).utc();
-      }
-
-      function defaultParsingFlags() {
-          // We need to deep clone this object.
-          return {
-              empty           : false,
-              unusedTokens    : [],
-              unusedInput     : [],
-              overflow        : -2,
-              charsLeftOver   : 0,
-              nullInput       : false,
-              invalidMonth    : null,
-              invalidFormat   : false,
-              userInvalidated : false,
-              iso             : false,
-              parsedDateParts : [],
-              meridiem        : null
-          };
-      }
-
-      function getParsingFlags(m) {
-          if (m._pf == null) {
-              m._pf = defaultParsingFlags();
-          }
-          return m._pf;
-      }
-
-      var some;
-      if (Array.prototype.some) {
-          some = Array.prototype.some;
-      } else {
-          some = function (fun) {
-              var t = Object(this);
-              var len = t.length >>> 0;
-
-              for (var i = 0; i < len; i++) {
-                  if (i in t && fun.call(this, t[i], i, t)) {
-                      return true;
-                  }
-              }
-
-              return false;
-          };
-      }
-
-      function valid__isValid(m) {
-          if (m._isValid == null) {
-              var flags = getParsingFlags(m);
-              var parsedParts = some.call(flags.parsedDateParts, function (i) {
-                  return i != null;
-              });
-              var isNowValid = !isNaN(m._d.getTime()) &&
-                  flags.overflow < 0 &&
-                  !flags.empty &&
-                  !flags.invalidMonth &&
-                  !flags.invalidWeekday &&
-                  !flags.nullInput &&
-                  !flags.invalidFormat &&
-                  !flags.userInvalidated &&
-                  (!flags.meridiem || (flags.meridiem && parsedParts));
-
-              if (m._strict) {
-                  isNowValid = isNowValid &&
-                      flags.charsLeftOver === 0 &&
-                      flags.unusedTokens.length === 0 &&
-                      flags.bigHour === undefined;
-              }
-
-              if (Object.isFrozen == null || !Object.isFrozen(m)) {
-                  m._isValid = isNowValid;
-              }
-              else {
-                  return isNowValid;
-              }
-          }
-          return m._isValid;
-      }
-
-      function valid__createInvalid (flags) {
-          var m = create_utc__createUTC(NaN);
-          if (flags != null) {
-              extend(getParsingFlags(m), flags);
-          }
-          else {
-              getParsingFlags(m).userInvalidated = true;
-          }
-
-          return m;
-      }
-
-      function isUndefined(input) {
-          return input === void 0;
-      }
-
-      // Plugins that add properties should also add the key here (null value),
-      // so we can properly clone ourselves.
-      var momentProperties = utils_hooks__hooks.momentProperties = [];
-
-      function copyConfig(to, from) {
-          var i, prop, val;
-
-          if (!isUndefined(from._isAMomentObject)) {
-              to._isAMomentObject = from._isAMomentObject;
-          }
-          if (!isUndefined(from._i)) {
-              to._i = from._i;
-          }
-          if (!isUndefined(from._f)) {
-              to._f = from._f;
-          }
-          if (!isUndefined(from._l)) {
-              to._l = from._l;
-          }
-          if (!isUndefined(from._strict)) {
-              to._strict = from._strict;
-          }
-          if (!isUndefined(from._tzm)) {
-              to._tzm = from._tzm;
-          }
-          if (!isUndefined(from._isUTC)) {
-              to._isUTC = from._isUTC;
-          }
-          if (!isUndefined(from._offset)) {
-              to._offset = from._offset;
-          }
-          if (!isUndefined(from._pf)) {
-              to._pf = getParsingFlags(from);
-          }
-          if (!isUndefined(from._locale)) {
-              to._locale = from._locale;
-          }
-
-          if (momentProperties.length > 0) {
-              for (i in momentProperties) {
-                  prop = momentProperties[i];
-                  val = from[prop];
-                  if (!isUndefined(val)) {
-                      to[prop] = val;
-                  }
-              }
-          }
-
-          return to;
-      }
-
-      var updateInProgress = false;
-
-      // Moment prototype object
-      function Moment(config) {
-          copyConfig(this, config);
-          this._d = new Date(config._d != null ? config._d.getTime() : NaN);
-          // Prevent infinite loop in case updateOffset creates new moment
-          // objects.
-          if (updateInProgress === false) {
-              updateInProgress = true;
-              utils_hooks__hooks.updateOffset(this);
-              updateInProgress = false;
-          }
-      }
-
-      function isMoment (obj) {
-          return obj instanceof Moment || (obj != null && obj._isAMomentObject != null);
-      }
-
-      function absFloor (number) {
-          if (number < 0) {
-              // -0 -> 0
-              return Math.ceil(number) || 0;
-          } else {
-              return Math.floor(number);
-          }
-      }
-
-      function toInt(argumentForCoercion) {
-          var coercedNumber = +argumentForCoercion,
-              value = 0;
-
-          if (coercedNumber !== 0 && isFinite(coercedNumber)) {
-              value = absFloor(coercedNumber);
-          }
-
-          return value;
-      }
-
-      // compare two arrays, return the number of differences
-      function compareArrays(array1, array2, dontConvert) {
-          var len = Math.min(array1.length, array2.length),
-              lengthDiff = Math.abs(array1.length - array2.length),
-              diffs = 0,
-              i;
-          for (i = 0; i < len; i++) {
-              if ((dontConvert && array1[i] !== array2[i]) ||
-                  (!dontConvert && toInt(array1[i]) !== toInt(array2[i]))) {
-                  diffs++;
-              }
-          }
-          return diffs + lengthDiff;
-      }
-
-      function warn(msg) {
-          if (utils_hooks__hooks.suppressDeprecationWarnings === false &&
-                  (typeof console !==  'undefined') && console.warn) {
-              console.warn('Deprecation warning: ' + msg);
-          }
-      }
-
-      function deprecate(msg, fn) {
-          var firstTime = true;
-
-          return extend(function () {
-              if (utils_hooks__hooks.deprecationHandler != null) {
-                  utils_hooks__hooks.deprecationHandler(null, msg);
-              }
-              if (firstTime) {
-                  var args = [];
-                  var arg;
-                  for (var i = 0; i < arguments.length; i++) {
-                      arg = '';
-                      if (typeof arguments[i] === 'object') {
-                          arg += '\n[' + i + '] ';
-                          for (var key in arguments[0]) {
-                              arg += key + ': ' + arguments[0][key] + ', ';
-                          }
-                          arg = arg.slice(0, -2); // Remove trailing comma and space
-                      } else {
-                          arg = arguments[i];
-                      }
-                      args.push(arg);
-                  }
-                  warn(msg + '\nArguments: ' + Array.prototype.slice.call(args).join('') + '\n' + (new Error()).stack);
-                  firstTime = false;
-              }
-              return fn.apply(this, arguments);
-          }, fn);
-      }
-
-      var deprecations = {};
-
-      function deprecateSimple(name, msg) {
-          if (utils_hooks__hooks.deprecationHandler != null) {
-              utils_hooks__hooks.deprecationHandler(name, msg);
-          }
-          if (!deprecations[name]) {
-              warn(msg);
-              deprecations[name] = true;
-          }
-      }
-
-      utils_hooks__hooks.suppressDeprecationWarnings = false;
-      utils_hooks__hooks.deprecationHandler = null;
-
-      function isFunction(input) {
-          return input instanceof Function || Object.prototype.toString.call(input) === '[object Function]';
-      }
-
-      function locale_set__set (config) {
-          var prop, i;
-          for (i in config) {
-              prop = config[i];
-              if (isFunction(prop)) {
-                  this[i] = prop;
-              } else {
-                  this['_' + i] = prop;
-              }
-          }
-          this._config = config;
-          // Lenient ordinal parsing accepts just a number in addition to
-          // number + (possibly) stuff coming from _ordinalParseLenient.
-          this._ordinalParseLenient = new RegExp(this._ordinalParse.source + '|' + (/\d{1,2}/).source);
-      }
-
-      function mergeConfigs(parentConfig, childConfig) {
-          var res = extend({}, parentConfig), prop;
-          for (prop in childConfig) {
-              if (hasOwnProp(childConfig, prop)) {
-                  if (isObject(parentConfig[prop]) && isObject(childConfig[prop])) {
-                      res[prop] = {};
-                      extend(res[prop], parentConfig[prop]);
-                      extend(res[prop], childConfig[prop]);
-                  } else if (childConfig[prop] != null) {
-                      res[prop] = childConfig[prop];
-                  } else {
-                      delete res[prop];
-                  }
-              }
-          }
-          for (prop in parentConfig) {
-              if (hasOwnProp(parentConfig, prop) &&
-                      !hasOwnProp(childConfig, prop) &&
-                      isObject(parentConfig[prop])) {
-                  // make sure changes to properties don't modify parent config
-                  res[prop] = extend({}, res[prop]);
-              }
-          }
-          return res;
-      }
-
-      function Locale(config) {
-          if (config != null) {
-              this.set(config);
-          }
-      }
-
-      var keys;
-
-      if (Object.keys) {
-          keys = Object.keys;
-      } else {
-          keys = function (obj) {
-              var i, res = [];
-              for (i in obj) {
-                  if (hasOwnProp(obj, i)) {
-                      res.push(i);
-                  }
-              }
-              return res;
-          };
-      }
-
-      var defaultCalendar = {
-          sameDay : '[Today at] LT',
-          nextDay : '[Tomorrow at] LT',
-          nextWeek : 'dddd [at] LT',
-          lastDay : '[Yesterday at] LT',
-          lastWeek : '[Last] dddd [at] LT',
-          sameElse : 'L'
-      };
-
-      function locale_calendar__calendar (key, mom, now) {
-          var output = this._calendar[key] || this._calendar['sameElse'];
-          return isFunction(output) ? output.call(mom, now) : output;
-      }
-
-      var defaultLongDateFormat = {
-          LTS  : 'h:mm:ss A',
-          LT   : 'h:mm A',
-          L    : 'MM/DD/YYYY',
-          LL   : 'MMMM D, YYYY',
-          LLL  : 'MMMM D, YYYY h:mm A',
-          LLLL : 'dddd, MMMM D, YYYY h:mm A'
-      };
-
-      function longDateFormat (key) {
-          var format = this._longDateFormat[key],
-              formatUpper = this._longDateFormat[key.toUpperCase()];
-
-          if (format || !formatUpper) {
-              return format;
-          }
-
-          this._longDateFormat[key] = formatUpper.replace(/MMMM|MM|DD|dddd/g, function (val) {
-              return val.slice(1);
-          });
-
-          return this._longDateFormat[key];
-      }
-
-      var defaultInvalidDate = 'Invalid date';
-
-      function invalidDate () {
-          return this._invalidDate;
-      }
-
-      var defaultOrdinal = '%d';
-      var defaultOrdinalParse = /\d{1,2}/;
-
-      function ordinal (number) {
-          return this._ordinal.replace('%d', number);
-      }
-
-      var defaultRelativeTime = {
-          future : 'in %s',
-          past   : '%s ago',
-          s  : 'a few seconds',
-          m  : 'a minute',
-          mm : '%d minutes',
-          h  : 'an hour',
-          hh : '%d hours',
-          d  : 'a day',
-          dd : '%d days',
-          M  : 'a month',
-          MM : '%d months',
-          y  : 'a year',
-          yy : '%d years'
-      };
-
-      function relative__relativeTime (number, withoutSuffix, string, isFuture) {
-          var output = this._relativeTime[string];
-          return (isFunction(output)) ?
-              output(number, withoutSuffix, string, isFuture) :
-              output.replace(/%d/i, number);
-      }
-
-      function pastFuture (diff, output) {
-          var format = this._relativeTime[diff > 0 ? 'future' : 'past'];
-          return isFunction(format) ? format(output) : format.replace(/%s/i, output);
-      }
-
-      var aliases = {};
-
-      function addUnitAlias (unit, shorthand) {
-          var lowerCase = unit.toLowerCase();
-          aliases[lowerCase] = aliases[lowerCase + 's'] = aliases[shorthand] = unit;
-      }
-
-      function normalizeUnits(units) {
-          return typeof units === 'string' ? aliases[units] || aliases[units.toLowerCase()] : undefined;
-      }
-
-      function normalizeObjectUnits(inputObject) {
-          var normalizedInput = {},
-              normalizedProp,
-              prop;
-
-          for (prop in inputObject) {
-              if (hasOwnProp(inputObject, prop)) {
-                  normalizedProp = normalizeUnits(prop);
-                  if (normalizedProp) {
-                      normalizedInput[normalizedProp] = inputObject[prop];
-                  }
-              }
-          }
-
-          return normalizedInput;
-      }
-
-      var priorities = {};
-
-      function addUnitPriority(unit, priority) {
-          priorities[unit] = priority;
-      }
-
-      function getPrioritizedUnits(unitsObj) {
-          var units = [];
-          for (var u in unitsObj) {
-              units.push({unit: u, priority: priorities[u]});
-          }
-          units.sort(function (a, b) {
-              return a.priority - b.priority;
-          });
-          return units;
-      }
-
-      function makeGetSet (unit, keepTime) {
-          return function (value) {
-              if (value != null) {
-                  get_set__set(this, unit, value);
-                  utils_hooks__hooks.updateOffset(this, keepTime);
-                  return this;
-              } else {
-                  return get_set__get(this, unit);
-              }
-          };
-      }
-
-      function get_set__get (mom, unit) {
-          return mom.isValid() ?
-              mom._d['get' + (mom._isUTC ? 'UTC' : '') + unit]() : NaN;
-      }
-
-      function get_set__set (mom, unit, value) {
-          if (mom.isValid()) {
-              mom._d['set' + (mom._isUTC ? 'UTC' : '') + unit](value);
-          }
-      }
-
-      // MOMENTS
-
-      function stringGet (units) {
-          units = normalizeUnits(units);
-          if (isFunction(this[units])) {
-              return this[units]();
-          }
-          return this;
-      }
-
-
-      function stringSet (units, value) {
-          if (typeof units === 'object') {
-              units = normalizeObjectUnits(units);
-              var prioritized = getPrioritizedUnits(units);
-              for (var i = 0; i < prioritized.length; i++) {
-                  this[prioritized[i].unit](units[prioritized[i].unit]);
-              }
-          } else {
-              units = normalizeUnits(units);
-              if (isFunction(this[units])) {
-                  return this[units](value);
-              }
-          }
-          return this;
-      }
-
-      function zeroFill(number, targetLength, forceSign) {
-          var absNumber = '' + Math.abs(number),
-              zerosToFill = targetLength - absNumber.length,
-              sign = number >= 0;
-          return (sign ? (forceSign ? '+' : '') : '-') +
-              Math.pow(10, Math.max(0, zerosToFill)).toString().substr(1) + absNumber;
-      }
-
-      var formattingTokens = /(\[[^\[]*\])|(\\)?([Hh]mm(ss)?|Mo|MM?M?M?|Do|DDDo|DD?D?D?|ddd?d?|do?|w[o|w]?|W[o|W]?|Qo?|YYYYYY|YYYYY|YYYY|YY|gg(ggg?)?|GG(GGG?)?|e|E|a|A|hh?|HH?|kk?|mm?|ss?|S{1,9}|x|X|zz?|ZZ?|.)/g;
-
-      var localFormattingTokens = /(\[[^\[]*\])|(\\)?(LTS|LT|LL?L?L?|l{1,4})/g;
-
-      var formatFunctions = {};
-
-      var formatTokenFunctions = {};
-
-      // token:    'M'
-      // padded:   ['MM', 2]
-      // ordinal:  'Mo'
-      // callback: function () { this.month() + 1 }
-      function addFormatToken (token, padded, ordinal, callback) {
-          var func = callback;
-          if (typeof callback === 'string') {
-              func = function () {
-                  return this[callback]();
-              };
-          }
-          if (token) {
-              formatTokenFunctions[token] = func;
-          }
-          if (padded) {
-              formatTokenFunctions[padded[0]] = function () {
-                  return zeroFill(func.apply(this, arguments), padded[1], padded[2]);
-              };
-          }
-          if (ordinal) {
-              formatTokenFunctions[ordinal] = function () {
-                  return this.localeData().ordinal(func.apply(this, arguments), token);
-              };
-          }
-      }
-
-      function removeFormattingTokens(input) {
-          if (input.match(/\[[\s\S]/)) {
-              return input.replace(/^\[|\]$/g, '');
-          }
-          return input.replace(/\\/g, '');
-      }
-
-      function makeFormatFunction(format) {
-          var array = format.match(formattingTokens), i, length;
-
-          for (i = 0, length = array.length; i < length; i++) {
-              if (formatTokenFunctions[array[i]]) {
-                  array[i] = formatTokenFunctions[array[i]];
-              } else {
-                  array[i] = removeFormattingTokens(array[i]);
-              }
-          }
-
-          return function (mom) {
-              var output = '', i;
-              for (i = 0; i < length; i++) {
-                  output += array[i] instanceof Function ? array[i].call(mom, format) : array[i];
-              }
-              return output;
-          };
-      }
-
-      // format date using native date object
-      function formatMoment(m, format) {
-          if (!m.isValid()) {
-              return m.localeData().invalidDate();
-          }
-
-          format = expandFormat(format, m.localeData());
-          formatFunctions[format] = formatFunctions[format] || makeFormatFunction(format);
-
-          return formatFunctions[format](m);
-      }
-
-      function expandFormat(format, locale) {
-          var i = 5;
-
-          function replaceLongDateFormatTokens(input) {
-              return locale.longDateFormat(input) || input;
-          }
-
-          localFormattingTokens.lastIndex = 0;
-          while (i >= 0 && localFormattingTokens.test(format)) {
-              format = format.replace(localFormattingTokens, replaceLongDateFormatTokens);
-              localFormattingTokens.lastIndex = 0;
-              i -= 1;
-          }
-
-          return format;
-      }
-
-      var match1         = /\d/;            //       0 - 9
-      var match2         = /\d\d/;          //      00 - 99
-      var match3         = /\d{3}/;         //     000 - 999
-      var match4         = /\d{4}/;         //    0000 - 9999
-      var match6         = /[+-]?\d{6}/;    // -999999 - 999999
-      var match1to2      = /\d\d?/;         //       0 - 99
-      var match3to4      = /\d\d\d\d?/;     //     999 - 9999
-      var match5to6      = /\d\d\d\d\d\d?/; //   99999 - 999999
-      var match1to3      = /\d{1,3}/;       //       0 - 999
-      var match1to4      = /\d{1,4}/;       //       0 - 9999
-      var match1to6      = /[+-]?\d{1,6}/;  // -999999 - 999999
-
-      var matchUnsigned  = /\d+/;           //       0 - inf
-      var matchSigned    = /[+-]?\d+/;      //    -inf - inf
-
-      var matchOffset    = /Z|[+-]\d\d:?\d\d/gi; // +00:00 -00:00 +0000 -0000 or Z
-      var matchShortOffset = /Z|[+-]\d\d(?::?\d\d)?/gi; // +00 -00 +00:00 -00:00 +0000 -0000 or Z
-
-      var matchTimestamp = /[+-]?\d+(\.\d{1,3})?/; // 123456789 123456789.123
-
-      // any word (or two) characters or numbers including two/three word month in arabic.
-      // includes scottish gaelic two word and hyphenated months
-      var matchWord = /[0-9]*['a-z\u00A0-\u05FF\u0700-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+|[\u0600-\u06FF\/]+(\s*?[\u0600-\u06FF]+){1,2}/i;
-
-
-      var regexes = {};
-
-      function addRegexToken (token, regex, strictRegex) {
-          regexes[token] = isFunction(regex) ? regex : function (isStrict, localeData) {
-              return (isStrict && strictRegex) ? strictRegex : regex;
-          };
-      }
-
-      function getParseRegexForToken (token, config) {
-          if (!hasOwnProp(regexes, token)) {
-              return new RegExp(unescapeFormat(token));
-          }
-
-          return regexes[token](config._strict, config._locale);
-      }
-
-      // Code from http://stackoverflow.com/questions/3561493/is-there-a-regexp-escape-function-in-javascript
-      function unescapeFormat(s) {
-          return regexEscape(s.replace('\\', '').replace(/\\(\[)|\\(\])|\[([^\]\[]*)\]|\\(.)/g, function (matched, p1, p2, p3, p4) {
-              return p1 || p2 || p3 || p4;
-          }));
-      }
-
-      function regexEscape(s) {
-          return s.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
-      }
-
-      var tokens = {};
-
-      function addParseToken (token, callback) {
-          var i, func = callback;
-          if (typeof token === 'string') {
-              token = [token];
-          }
-          if (typeof callback === 'number') {
-              func = function (input, array) {
-                  array[callback] = toInt(input);
-              };
-          }
-          for (i = 0; i < token.length; i++) {
-              tokens[token[i]] = func;
-          }
-      }
-
-      function addWeekParseToken (token, callback) {
-          addParseToken(token, function (input, array, config, token) {
-              config._w = config._w || {};
-              callback(input, config._w, config, token);
-          });
-      }
-
-      function addTimeToArrayFromToken(token, input, config) {
-          if (input != null && hasOwnProp(tokens, token)) {
-              tokens[token](input, config._a, config, token);
-          }
-      }
-
-      var YEAR = 0;
-      var MONTH = 1;
-      var DATE = 2;
-      var HOUR = 3;
-      var MINUTE = 4;
-      var SECOND = 5;
-      var MILLISECOND = 6;
-      var WEEK = 7;
-      var WEEKDAY = 8;
-
-      var indexOf;
-
-      if (Array.prototype.indexOf) {
-          indexOf = Array.prototype.indexOf;
-      } else {
-          indexOf = function (o) {
-              // I know
-              var i;
-              for (i = 0; i < this.length; ++i) {
-                  if (this[i] === o) {
-                      return i;
-                  }
-              }
-              return -1;
-          };
-      }
-
-      function daysInMonth(year, month) {
-          return new Date(Date.UTC(year, month + 1, 0)).getUTCDate();
-      }
-
-      // FORMATTING
-
-      addFormatToken('M', ['MM', 2], 'Mo', function () {
-          return this.month() + 1;
-      });
-
-      addFormatToken('MMM', 0, 0, function (format) {
-          return this.localeData().monthsShort(this, format);
-      });
-
-      addFormatToken('MMMM', 0, 0, function (format) {
-          return this.localeData().months(this, format);
-      });
-
-      // ALIASES
-
-      addUnitAlias('month', 'M');
-
-      // PRIORITY
-
-      addUnitPriority('month', 8);
-
-      // PARSING
-
-      addRegexToken('M',    match1to2);
-      addRegexToken('MM',   match1to2, match2);
-      addRegexToken('MMM',  function (isStrict, locale) {
-          return locale.monthsShortRegex(isStrict);
-      });
-      addRegexToken('MMMM', function (isStrict, locale) {
-          return locale.monthsRegex(isStrict);
-      });
-
-      addParseToken(['M', 'MM'], function (input, array) {
-          array[MONTH] = toInt(input) - 1;
-      });
-
-      addParseToken(['MMM', 'MMMM'], function (input, array, config, token) {
-          var month = config._locale.monthsParse(input, token, config._strict);
-          // if we didn't find a month name, mark the date as invalid.
-          if (month != null) {
-              array[MONTH] = month;
-          } else {
-              getParsingFlags(config).invalidMonth = input;
-          }
-      });
-
-      // LOCALES
-
-      var MONTHS_IN_FORMAT = /D[oD]?(\[[^\[\]]*\]|\s)+MMMM?/;
-      var defaultLocaleMonths = 'January_February_March_April_May_June_July_August_September_October_November_December'.split('_');
-      function localeMonths (m, format) {
-          if (!m) {
-              return this._months;
-          }
-          return isArray(this._months) ? this._months[m.month()] :
-              this._months[(this._months.isFormat || MONTHS_IN_FORMAT).test(format) ? 'format' : 'standalone'][m.month()];
-      }
-
-      var defaultLocaleMonthsShort = 'Jan_Feb_Mar_Apr_May_Jun_Jul_Aug_Sep_Oct_Nov_Dec'.split('_');
-      function localeMonthsShort (m, format) {
-          if (!m) {
-              return this._monthsShort;
-          }
-          return isArray(this._monthsShort) ? this._monthsShort[m.month()] :
-              this._monthsShort[MONTHS_IN_FORMAT.test(format) ? 'format' : 'standalone'][m.month()];
-      }
-
-      function units_month__handleStrictParse(monthName, format, strict) {
-          var i, ii, mom, llc = monthName.toLocaleLowerCase();
-          if (!this._monthsParse) {
-              // this is not used
-              this._monthsParse = [];
-              this._longMonthsParse = [];
-              this._shortMonthsParse = [];
-              for (i = 0; i < 12; ++i) {
-                  mom = create_utc__createUTC([2000, i]);
-                  this._shortMonthsParse[i] = this.monthsShort(mom, '').toLocaleLowerCase();
-                  this._longMonthsParse[i] = this.months(mom, '').toLocaleLowerCase();
-              }
-          }
-
-          if (strict) {
-              if (format === 'MMM') {
-                  ii = indexOf.call(this._shortMonthsParse, llc);
-                  return ii !== -1 ? ii : null;
-              } else {
-                  ii = indexOf.call(this._longMonthsParse, llc);
-                  return ii !== -1 ? ii : null;
-              }
-          } else {
-              if (format === 'MMM') {
-                  ii = indexOf.call(this._shortMonthsParse, llc);
-                  if (ii !== -1) {
-                      return ii;
-                  }
-                  ii = indexOf.call(this._longMonthsParse, llc);
-                  return ii !== -1 ? ii : null;
-              } else {
-                  ii = indexOf.call(this._longMonthsParse, llc);
-                  if (ii !== -1) {
-                      return ii;
-                  }
-                  ii = indexOf.call(this._shortMonthsParse, llc);
-                  return ii !== -1 ? ii : null;
-              }
-          }
-      }
-
-      function localeMonthsParse (monthName, format, strict) {
-          var i, mom, regex;
-
-          if (this._monthsParseExact) {
-              return units_month__handleStrictParse.call(this, monthName, format, strict);
-          }
-
-          if (!this._monthsParse) {
-              this._monthsParse = [];
-              this._longMonthsParse = [];
-              this._shortMonthsParse = [];
-          }
-
-          // TODO: add sorting
-          // Sorting makes sure if one month (or abbr) is a prefix of another
-          // see sorting in computeMonthsParse
-          for (i = 0; i < 12; i++) {
-              // make the regex if we don't have it already
-              mom = create_utc__createUTC([2000, i]);
-              if (strict && !this._longMonthsParse[i]) {
-                  this._longMonthsParse[i] = new RegExp('^' + this.months(mom, '').replace('.', '') + '$', 'i');
-                  this._shortMonthsParse[i] = new RegExp('^' + this.monthsShort(mom, '').replace('.', '') + '$', 'i');
-              }
-              if (!strict && !this._monthsParse[i]) {
-                  regex = '^' + this.months(mom, '') + '|^' + this.monthsShort(mom, '');
-                  this._monthsParse[i] = new RegExp(regex.replace('.', ''), 'i');
-              }
-              // test the regex
-              if (strict && format === 'MMMM' && this._longMonthsParse[i].test(monthName)) {
-                  return i;
-              } else if (strict && format === 'MMM' && this._shortMonthsParse[i].test(monthName)) {
-                  return i;
-              } else if (!strict && this._monthsParse[i].test(monthName)) {
-                  return i;
-              }
-          }
-      }
-
-      // MOMENTS
-
-      function setMonth (mom, value) {
-          var dayOfMonth;
-
-          if (!mom.isValid()) {
-              // No op
-              return mom;
-          }
-
-          if (typeof value === 'string') {
-              if (/^\d+$/.test(value)) {
-                  value = toInt(value);
-              } else {
-                  value = mom.localeData().monthsParse(value);
-                  // TODO: Another silent failure?
-                  if (typeof value !== 'number') {
-                      return mom;
-                  }
-              }
-          }
-
-          dayOfMonth = Math.min(mom.date(), daysInMonth(mom.year(), value));
-          mom._d['set' + (mom._isUTC ? 'UTC' : '') + 'Month'](value, dayOfMonth);
-          return mom;
-      }
-
-      function getSetMonth (value) {
-          if (value != null) {
-              setMonth(this, value);
-              utils_hooks__hooks.updateOffset(this, true);
-              return this;
-          } else {
-              return get_set__get(this, 'Month');
-          }
-      }
-
-      function getDaysInMonth () {
-          return daysInMonth(this.year(), this.month());
-      }
-
-      var defaultMonthsShortRegex = matchWord;
-      function monthsShortRegex (isStrict) {
-          if (this._monthsParseExact) {
-              if (!hasOwnProp(this, '_monthsRegex')) {
-                  computeMonthsParse.call(this);
-              }
-              if (isStrict) {
-                  return this._monthsShortStrictRegex;
-              } else {
-                  return this._monthsShortRegex;
-              }
-          } else {
-              if (!hasOwnProp(this, '_monthsShortRegex')) {
-                  this._monthsShortRegex = defaultMonthsShortRegex;
-              }
-              return this._monthsShortStrictRegex && isStrict ?
-                  this._monthsShortStrictRegex : this._monthsShortRegex;
-          }
-      }
-
-      var defaultMonthsRegex = matchWord;
-      function monthsRegex (isStrict) {
-          if (this._monthsParseExact) {
-              if (!hasOwnProp(this, '_monthsRegex')) {
-                  computeMonthsParse.call(this);
-              }
-              if (isStrict) {
-                  return this._monthsStrictRegex;
-              } else {
-                  return this._monthsRegex;
-              }
-          } else {
-              if (!hasOwnProp(this, '_monthsRegex')) {
-                  this._monthsRegex = defaultMonthsRegex;
-              }
-              return this._monthsStrictRegex && isStrict ?
-                  this._monthsStrictRegex : this._monthsRegex;
-          }
-      }
-
-      function computeMonthsParse () {
-          function cmpLenRev(a, b) {
-              return b.length - a.length;
-          }
-
-          var shortPieces = [], longPieces = [], mixedPieces = [],
-              i, mom;
-          for (i = 0; i < 12; i++) {
-              // make the regex if we don't have it already
-              mom = create_utc__createUTC([2000, i]);
-              shortPieces.push(this.monthsShort(mom, ''));
-              longPieces.push(this.months(mom, ''));
-              mixedPieces.push(this.months(mom, ''));
-              mixedPieces.push(this.monthsShort(mom, ''));
-          }
-          // Sorting makes sure if one month (or abbr) is a prefix of another it
-          // will match the longer piece.
-          shortPieces.sort(cmpLenRev);
-          longPieces.sort(cmpLenRev);
-          mixedPieces.sort(cmpLenRev);
-          for (i = 0; i < 12; i++) {
-              shortPieces[i] = regexEscape(shortPieces[i]);
-              longPieces[i] = regexEscape(longPieces[i]);
-          }
-          for (i = 0; i < 24; i++) {
-              mixedPieces[i] = regexEscape(mixedPieces[i]);
-          }
-
-          this._monthsRegex = new RegExp('^(' + mixedPieces.join('|') + ')', 'i');
-          this._monthsShortRegex = this._monthsRegex;
-          this._monthsStrictRegex = new RegExp('^(' + longPieces.join('|') + ')', 'i');
-          this._monthsShortStrictRegex = new RegExp('^(' + shortPieces.join('|') + ')', 'i');
-      }
-
-      // FORMATTING
-
-      addFormatToken('Y', 0, 0, function () {
-          var y = this.year();
-          return y <= 9999 ? '' + y : '+' + y;
-      });
-
-      addFormatToken(0, ['YY', 2], 0, function () {
-          return this.year() % 100;
-      });
-
-      addFormatToken(0, ['YYYY',   4],       0, 'year');
-      addFormatToken(0, ['YYYYY',  5],       0, 'year');
-      addFormatToken(0, ['YYYYYY', 6, true], 0, 'year');
-
-      // ALIASES
-
-      addUnitAlias('year', 'y');
-
-      // PRIORITIES
-
-      addUnitPriority('year', 1);
-
-      // PARSING
-
-      addRegexToken('Y',      matchSigned);
-      addRegexToken('YY',     match1to2, match2);
-      addRegexToken('YYYY',   match1to4, match4);
-      addRegexToken('YYYYY',  match1to6, match6);
-      addRegexToken('YYYYYY', match1to6, match6);
-
-      addParseToken(['YYYYY', 'YYYYYY'], YEAR);
-      addParseToken('YYYY', function (input, array) {
-          array[YEAR] = input.length === 2 ? utils_hooks__hooks.parseTwoDigitYear(input) : toInt(input);
-      });
-      addParseToken('YY', function (input, array) {
-          array[YEAR] = utils_hooks__hooks.parseTwoDigitYear(input);
-      });
-      addParseToken('Y', function (input, array) {
-          array[YEAR] = parseInt(input, 10);
-      });
-
-      // HELPERS
-
-      function daysInYear(year) {
-          return isLeapYear(year) ? 366 : 365;
-      }
-
-      function isLeapYear(year) {
-          return (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;
-      }
-
-      // HOOKS
-
-      utils_hooks__hooks.parseTwoDigitYear = function (input) {
-          return toInt(input) + (toInt(input) > 68 ? 1900 : 2000);
-      };
-
-      // MOMENTS
-
-      var getSetYear = makeGetSet('FullYear', true);
-
-      function getIsLeapYear () {
-          return isLeapYear(this.year());
-      }
-
-      function createDate (y, m, d, h, M, s, ms) {
-          //can't just apply() to create a date:
-          //http://stackoverflow.com/questions/181348/instantiating-a-javascript-object-by-calling-prototype-constructor-apply
-          var date = new Date(y, m, d, h, M, s, ms);
-
-          //the date constructor remaps years 0-99 to 1900-1999
-          if (y < 100 && y >= 0 && isFinite(date.getFullYear())) {
-              date.setFullYear(y);
-          }
-          return date;
-      }
-
-      function createUTCDate (y) {
-          var date = new Date(Date.UTC.apply(null, arguments));
-
-          //the Date.UTC function remaps years 0-99 to 1900-1999
-          if (y < 100 && y >= 0 && isFinite(date.getUTCFullYear())) {
-              date.setUTCFullYear(y);
-          }
-          return date;
-      }
-
-      // start-of-first-week - start-of-year
-      function firstWeekOffset(year, dow, doy) {
-          var // first-week day -- which january is always in the first week (4 for iso, 1 for other)
-              fwd = 7 + dow - doy,
-              // first-week day local weekday -- which local weekday is fwd
-              fwdlw = (7 + createUTCDate(year, 0, fwd).getUTCDay() - dow) % 7;
-
-          return -fwdlw + fwd - 1;
-      }
-
-      //http://en.wikipedia.org/wiki/ISO_week_date#Calculating_a_date_given_the_year.2C_week_number_and_weekday
-      function dayOfYearFromWeeks(year, week, weekday, dow, doy) {
-          var localWeekday = (7 + weekday - dow) % 7,
-              weekOffset = firstWeekOffset(year, dow, doy),
-              dayOfYear = 1 + 7 * (week - 1) + localWeekday + weekOffset,
-              resYear, resDayOfYear;
-
-          if (dayOfYear <= 0) {
-              resYear = year - 1;
-              resDayOfYear = daysInYear(resYear) + dayOfYear;
-          } else if (dayOfYear > daysInYear(year)) {
-              resYear = year + 1;
-              resDayOfYear = dayOfYear - daysInYear(year);
-          } else {
-              resYear = year;
-              resDayOfYear = dayOfYear;
-          }
-
-          return {
-              year: resYear,
-              dayOfYear: resDayOfYear
-          };
-      }
-
-      function weekOfYear(mom, dow, doy) {
-          var weekOffset = firstWeekOffset(mom.year(), dow, doy),
-              week = Math.floor((mom.dayOfYear() - weekOffset - 1) / 7) + 1,
-              resWeek, resYear;
-
-          if (week < 1) {
-              resYear = mom.year() - 1;
-              resWeek = week + weeksInYear(resYear, dow, doy);
-          } else if (week > weeksInYear(mom.year(), dow, doy)) {
-              resWeek = week - weeksInYear(mom.year(), dow, doy);
-              resYear = mom.year() + 1;
-          } else {
-              resYear = mom.year();
-              resWeek = week;
-          }
-
-          return {
-              week: resWeek,
-              year: resYear
-          };
-      }
-
-      function weeksInYear(year, dow, doy) {
-          var weekOffset = firstWeekOffset(year, dow, doy),
-              weekOffsetNext = firstWeekOffset(year + 1, dow, doy);
-          return (daysInYear(year) - weekOffset + weekOffsetNext) / 7;
-      }
-
-      // FORMATTING
-
-      addFormatToken('w', ['ww', 2], 'wo', 'week');
-      addFormatToken('W', ['WW', 2], 'Wo', 'isoWeek');
-
-      // ALIASES
-
-      addUnitAlias('week', 'w');
-      addUnitAlias('isoWeek', 'W');
-
-      // PRIORITIES
-
-      addUnitPriority('week', 5);
-      addUnitPriority('isoWeek', 5);
-
-      // PARSING
-
-      addRegexToken('w',  match1to2);
-      addRegexToken('ww', match1to2, match2);
-      addRegexToken('W',  match1to2);
-      addRegexToken('WW', match1to2, match2);
-
-      addWeekParseToken(['w', 'ww', 'W', 'WW'], function (input, week, config, token) {
-          week[token.substr(0, 1)] = toInt(input);
-      });
-
-      // HELPERS
-
-      // LOCALES
-
-      function localeWeek (mom) {
-          return weekOfYear(mom, this._week.dow, this._week.doy).week;
-      }
-
-      var defaultLocaleWeek = {
-          dow : 0, // Sunday is the first day of the week.
-          doy : 6  // The week that contains Jan 1st is the first week of the year.
-      };
-
-      function localeFirstDayOfWeek () {
-          return this._week.dow;
-      }
-
-      function localeFirstDayOfYear () {
-          return this._week.doy;
-      }
-
-      // MOMENTS
-
-      function getSetWeek (input) {
-          var week = this.localeData().week(this);
-          return input == null ? week : this.add((input - week) * 7, 'd');
-      }
-
-      function getSetISOWeek (input) {
-          var week = weekOfYear(this, 1, 4).week;
-          return input == null ? week : this.add((input - week) * 7, 'd');
-      }
-
-      // FORMATTING
-
-      addFormatToken('d', 0, 'do', 'day');
-
-      addFormatToken('dd', 0, 0, function (format) {
-          return this.localeData().weekdaysMin(this, format);
-      });
-
-      addFormatToken('ddd', 0, 0, function (format) {
-          return this.localeData().weekdaysShort(this, format);
-      });
-
-      addFormatToken('dddd', 0, 0, function (format) {
-          return this.localeData().weekdays(this, format);
-      });
-
-      addFormatToken('e', 0, 0, 'weekday');
-      addFormatToken('E', 0, 0, 'isoWeekday');
-
-      // ALIASES
-
-      addUnitAlias('day', 'd');
-      addUnitAlias('weekday', 'e');
-      addUnitAlias('isoWeekday', 'E');
-
-      // PRIORITY
-      addUnitPriority('day', 11);
-      addUnitPriority('weekday', 11);
-      addUnitPriority('isoWeekday', 11);
-
-      // PARSING
-
-      addRegexToken('d',    match1to2);
-      addRegexToken('e',    match1to2);
-      addRegexToken('E',    match1to2);
-      addRegexToken('dd',   function (isStrict, locale) {
-          return locale.weekdaysMinRegex(isStrict);
-      });
-      addRegexToken('ddd',   function (isStrict, locale) {
-          return locale.weekdaysShortRegex(isStrict);
-      });
-      addRegexToken('dddd',   function (isStrict, locale) {
-          return locale.weekdaysRegex(isStrict);
-      });
-
-      addWeekParseToken(['dd', 'ddd', 'dddd'], function (input, week, config, token) {
-          var weekday = config._locale.weekdaysParse(input, token, config._strict);
-          // if we didn't get a weekday name, mark the date as invalid
-          if (weekday != null) {
-              week.d = weekday;
-          } else {
-              getParsingFlags(config).invalidWeekday = input;
-          }
-      });
-
-      addWeekParseToken(['d', 'e', 'E'], function (input, week, config, token) {
-          week[token] = toInt(input);
-      });
-
-      // HELPERS
-
-      function parseWeekday(input, locale) {
-          if (typeof input !== 'string') {
-              return input;
-          }
-
-          if (!isNaN(input)) {
-              return parseInt(input, 10);
-          }
-
-          input = locale.weekdaysParse(input);
-          if (typeof input === 'number') {
-              return input;
-          }
-
-          return null;
-      }
-
-      function parseIsoWeekday(input, locale) {
-          if (typeof input === 'string') {
-              return locale.weekdaysParse(input) % 7 || 7;
-          }
-          return isNaN(input) ? null : input;
-      }
-
-      // LOCALES
-
-      var defaultLocaleWeekdays = 'Sunday_Monday_Tuesday_Wednesday_Thursday_Friday_Saturday'.split('_');
-      function localeWeekdays (m, format) {
-          if (!m) {
-              return this._weekdays;
-          }
-          return isArray(this._weekdays) ? this._weekdays[m.day()] :
-              this._weekdays[this._weekdays.isFormat.test(format) ? 'format' : 'standalone'][m.day()];
-      }
-
-      var defaultLocaleWeekdaysShort = 'Sun_Mon_Tue_Wed_Thu_Fri_Sat'.split('_');
-      function localeWeekdaysShort (m) {
-          return (m) ? this._weekdaysShort[m.day()] : this._weekdaysShort;
-      }
-
-      var defaultLocaleWeekdaysMin = 'Su_Mo_Tu_We_Th_Fr_Sa'.split('_');
-      function localeWeekdaysMin (m) {
-          return (m) ? this._weekdaysMin[m.day()] : this._weekdaysMin;
-      }
-
-      function day_of_week__handleStrictParse(weekdayName, format, strict) {
-          var i, ii, mom, llc = weekdayName.toLocaleLowerCase();
-          if (!this._weekdaysParse) {
-              this._weekdaysParse = [];
-              this._shortWeekdaysParse = [];
-              this._minWeekdaysParse = [];
-
-              for (i = 0; i < 7; ++i) {
-                  mom = create_utc__createUTC([2000, 1]).day(i);
-                  this._minWeekdaysParse[i] = this.weekdaysMin(mom, '').toLocaleLowerCase();
-                  this._shortWeekdaysParse[i] = this.weekdaysShort(mom, '').toLocaleLowerCase();
-                  this._weekdaysParse[i] = this.weekdays(mom, '').toLocaleLowerCase();
-              }
-          }
-
-          if (strict) {
-              if (format === 'dddd') {
-                  ii = indexOf.call(this._weekdaysParse, llc);
-                  return ii !== -1 ? ii : null;
-              } else if (format === 'ddd') {
-                  ii = indexOf.call(this._shortWeekdaysParse, llc);
-                  return ii !== -1 ? ii : null;
-              } else {
-                  ii = indexOf.call(this._minWeekdaysParse, llc);
-                  return ii !== -1 ? ii : null;
-              }
-          } else {
-              if (format === 'dddd') {
-                  ii = indexOf.call(this._weekdaysParse, llc);
-                  if (ii !== -1) {
-                      return ii;
-                  }
-                  ii = indexOf.call(this._shortWeekdaysParse, llc);
-                  if (ii !== -1) {
-                      return ii;
-                  }
-                  ii = indexOf.call(this._minWeekdaysParse, llc);
-                  return ii !== -1 ? ii : null;
-              } else if (format === 'ddd') {
-                  ii = indexOf.call(this._shortWeekdaysParse, llc);
-                  if (ii !== -1) {
-                      return ii;
-                  }
-                  ii = indexOf.call(this._weekdaysParse, llc);
-                  if (ii !== -1) {
-                      return ii;
-                  }
-                  ii = indexOf.call(this._minWeekdaysParse, llc);
-                  return ii !== -1 ? ii : null;
-              } else {
-                  ii = indexOf.call(this._minWeekdaysParse, llc);
-                  if (ii !== -1) {
-                      return ii;
-                  }
-                  ii = indexOf.call(this._weekdaysParse, llc);
-                  if (ii !== -1) {
-                      return ii;
-                  }
-                  ii = indexOf.call(this._shortWeekdaysParse, llc);
-                  return ii !== -1 ? ii : null;
-              }
-          }
-      }
-
-      function localeWeekdaysParse (weekdayName, format, strict) {
-          var i, mom, regex;
-
-          if (this._weekdaysParseExact) {
-              return day_of_week__handleStrictParse.call(this, weekdayName, format, strict);
-          }
-
-          if (!this._weekdaysParse) {
-              this._weekdaysParse = [];
-              this._minWeekdaysParse = [];
-              this._shortWeekdaysParse = [];
-              this._fullWeekdaysParse = [];
-          }
-
-          for (i = 0; i < 7; i++) {
-              // make the regex if we don't have it already
-
-              mom = create_utc__createUTC([2000, 1]).day(i);
-              if (strict && !this._fullWeekdaysParse[i]) {
-                  this._fullWeekdaysParse[i] = new RegExp('^' + this.weekdays(mom, '').replace('.', '\.?') + '$', 'i');
-                  this._shortWeekdaysParse[i] = new RegExp('^' + this.weekdaysShort(mom, '').replace('.', '\.?') + '$', 'i');
-                  this._minWeekdaysParse[i] = new RegExp('^' + this.weekdaysMin(mom, '').replace('.', '\.?') + '$', 'i');
-              }
-              if (!this._weekdaysParse[i]) {
-                  regex = '^' + this.weekdays(mom, '') + '|^' + this.weekdaysShort(mom, '') + '|^' + this.weekdaysMin(mom, '');
-                  this._weekdaysParse[i] = new RegExp(regex.replace('.', ''), 'i');
-              }
-              // test the regex
-              if (strict && format === 'dddd' && this._fullWeekdaysParse[i].test(weekdayName)) {
-                  return i;
-              } else if (strict && format === 'ddd' && this._shortWeekdaysParse[i].test(weekdayName)) {
-                  return i;
-              } else if (strict && format === 'dd' && this._minWeekdaysParse[i].test(weekdayName)) {
-                  return i;
-              } else if (!strict && this._weekdaysParse[i].test(weekdayName)) {
-                  return i;
-              }
-          }
-      }
-
-      // MOMENTS
-
-      function getSetDayOfWeek (input) {
-          if (!this.isValid()) {
-              return input != null ? this : NaN;
-          }
-          var day = this._isUTC ? this._d.getUTCDay() : this._d.getDay();
-          if (input != null) {
-              input = parseWeekday(input, this.localeData());
-              return this.add(input - day, 'd');
-          } else {
-              return day;
-          }
-      }
-
-      function getSetLocaleDayOfWeek (input) {
-          if (!this.isValid()) {
-              return input != null ? this : NaN;
-          }
-          var weekday = (this.day() + 7 - this.localeData()._week.dow) % 7;
-          return input == null ? weekday : this.add(input - weekday, 'd');
-      }
-
-      function getSetISODayOfWeek (input) {
-          if (!this.isValid()) {
-              return input != null ? this : NaN;
-          }
-
-          // behaves the same as moment#day except
-          // as a getter, returns 7 instead of 0 (1-7 range instead of 0-6)
-          // as a setter, sunday should belong to the previous week.
-
-          if (input != null) {
-              var weekday = parseIsoWeekday(input, this.localeData());
-              return this.day(this.day() % 7 ? weekday : weekday - 7);
-          } else {
-              return this.day() || 7;
-          }
-      }
-
-      var defaultWeekdaysRegex = matchWord;
-      function weekdaysRegex (isStrict) {
-          if (this._weekdaysParseExact) {
-              if (!hasOwnProp(this, '_weekdaysRegex')) {
-                  computeWeekdaysParse.call(this);
-              }
-              if (isStrict) {
-                  return this._weekdaysStrictRegex;
-              } else {
-                  return this._weekdaysRegex;
-              }
-          } else {
-              if (!hasOwnProp(this, '_weekdaysRegex')) {
-                  this._weekdaysRegex = defaultWeekdaysRegex;
-              }
-              return this._weekdaysStrictRegex && isStrict ?
-                  this._weekdaysStrictRegex : this._weekdaysRegex;
-          }
-      }
-
-      var defaultWeekdaysShortRegex = matchWord;
-      function weekdaysShortRegex (isStrict) {
-          if (this._weekdaysParseExact) {
-              if (!hasOwnProp(this, '_weekdaysRegex')) {
-                  computeWeekdaysParse.call(this);
-              }
-              if (isStrict) {
-                  return this._weekdaysShortStrictRegex;
-              } else {
-                  return this._weekdaysShortRegex;
-              }
-          } else {
-              if (!hasOwnProp(this, '_weekdaysShortRegex')) {
-                  this._weekdaysShortRegex = defaultWeekdaysShortRegex;
-              }
-              return this._weekdaysShortStrictRegex && isStrict ?
-                  this._weekdaysShortStrictRegex : this._weekdaysShortRegex;
-          }
-      }
-
-      var defaultWeekdaysMinRegex = matchWord;
-      function weekdaysMinRegex (isStrict) {
-          if (this._weekdaysParseExact) {
-              if (!hasOwnProp(this, '_weekdaysRegex')) {
-                  computeWeekdaysParse.call(this);
-              }
-              if (isStrict) {
-                  return this._weekdaysMinStrictRegex;
-              } else {
-                  return this._weekdaysMinRegex;
-              }
-          } else {
-              if (!hasOwnProp(this, '_weekdaysMinRegex')) {
-                  this._weekdaysMinRegex = defaultWeekdaysMinRegex;
-              }
-              return this._weekdaysMinStrictRegex && isStrict ?
-                  this._weekdaysMinStrictRegex : this._weekdaysMinRegex;
-          }
-      }
-
-
-      function computeWeekdaysParse () {
-          function cmpLenRev(a, b) {
-              return b.length - a.length;
-          }
-
-          var minPieces = [], shortPieces = [], longPieces = [], mixedPieces = [],
-              i, mom, minp, shortp, longp;
-          for (i = 0; i < 7; i++) {
-              // make the regex if we don't have it already
-              mom = create_utc__createUTC([2000, 1]).day(i);
-              minp = this.weekdaysMin(mom, '');
-              shortp = this.weekdaysShort(mom, '');
-              longp = this.weekdays(mom, '');
-              minPieces.push(minp);
-              shortPieces.push(shortp);
-              longPieces.push(longp);
-              mixedPieces.push(minp);
-              mixedPieces.push(shortp);
-              mixedPieces.push(longp);
-          }
-          // Sorting makes sure if one weekday (or abbr) is a prefix of another it
-          // will match the longer piece.
-          minPieces.sort(cmpLenRev);
-          shortPieces.sort(cmpLenRev);
-          longPieces.sort(cmpLenRev);
-          mixedPieces.sort(cmpLenRev);
-          for (i = 0; i < 7; i++) {
-              shortPieces[i] = regexEscape(shortPieces[i]);
-              longPieces[i] = regexEscape(longPieces[i]);
-              mixedPieces[i] = regexEscape(mixedPieces[i]);
-          }
-
-          this._weekdaysRegex = new RegExp('^(' + mixedPieces.join('|') + ')', 'i');
-          this._weekdaysShortRegex = this._weekdaysRegex;
-          this._weekdaysMinRegex = this._weekdaysRegex;
-
-          this._weekdaysStrictRegex = new RegExp('^(' + longPieces.join('|') + ')', 'i');
-          this._weekdaysShortStrictRegex = new RegExp('^(' + shortPieces.join('|') + ')', 'i');
-          this._weekdaysMinStrictRegex = new RegExp('^(' + minPieces.join('|') + ')', 'i');
-      }
-
-      // FORMATTING
-
-      function hFormat() {
-          return this.hours() % 12 || 12;
-      }
-
-      function kFormat() {
-          return this.hours() || 24;
-      }
-
-      addFormatToken('H', ['HH', 2], 0, 'hour');
-      addFormatToken('h', ['hh', 2], 0, hFormat);
-      addFormatToken('k', ['kk', 2], 0, kFormat);
-
-      addFormatToken('hmm', 0, 0, function () {
-          return '' + hFormat.apply(this) + zeroFill(this.minutes(), 2);
-      });
-
-      addFormatToken('hmmss', 0, 0, function () {
-          return '' + hFormat.apply(this) + zeroFill(this.minutes(), 2) +
-              zeroFill(this.seconds(), 2);
-      });
-
-      addFormatToken('Hmm', 0, 0, function () {
-          return '' + this.hours() + zeroFill(this.minutes(), 2);
-      });
-
-      addFormatToken('Hmmss', 0, 0, function () {
-          return '' + this.hours() + zeroFill(this.minutes(), 2) +
-              zeroFill(this.seconds(), 2);
-      });
-
-      function meridiem (token, lowercase) {
-          addFormatToken(token, 0, 0, function () {
-              return this.localeData().meridiem(this.hours(), this.minutes(), lowercase);
-          });
-      }
-
-      meridiem('a', true);
-      meridiem('A', false);
-
-      // ALIASES
-
-      addUnitAlias('hour', 'h');
-
-      // PRIORITY
-      addUnitPriority('hour', 13);
-
-      // PARSING
-
-      function matchMeridiem (isStrict, locale) {
-          return locale._meridiemParse;
-      }
-
-      addRegexToken('a',  matchMeridiem);
-      addRegexToken('A',  matchMeridiem);
-      addRegexToken('H',  match1to2);
-      addRegexToken('h',  match1to2);
-      addRegexToken('HH', match1to2, match2);
-      addRegexToken('hh', match1to2, match2);
-
-      addRegexToken('hmm', match3to4);
-      addRegexToken('hmmss', match5to6);
-      addRegexToken('Hmm', match3to4);
-      addRegexToken('Hmmss', match5to6);
-
-      addParseToken(['H', 'HH'], HOUR);
-      addParseToken(['a', 'A'], function (input, array, config) {
-          config._isPm = config._locale.isPM(input);
-          config._meridiem = input;
-      });
-      addParseToken(['h', 'hh'], function (input, array, config) {
-          array[HOUR] = toInt(input);
-          getParsingFlags(config).bigHour = true;
-      });
-      addParseToken('hmm', function (input, array, config) {
-          var pos = input.length - 2;
-          array[HOUR] = toInt(input.substr(0, pos));
-          array[MINUTE] = toInt(input.substr(pos));
-          getParsingFlags(config).bigHour = true;
-      });
-      addParseToken('hmmss', function (input, array, config) {
-          var pos1 = input.length - 4;
-          var pos2 = input.length - 2;
-          array[HOUR] = toInt(input.substr(0, pos1));
-          array[MINUTE] = toInt(input.substr(pos1, 2));
-          array[SECOND] = toInt(input.substr(pos2));
-          getParsingFlags(config).bigHour = true;
-      });
-      addParseToken('Hmm', function (input, array, config) {
-          var pos = input.length - 2;
-          array[HOUR] = toInt(input.substr(0, pos));
-          array[MINUTE] = toInt(input.substr(pos));
-      });
-      addParseToken('Hmmss', function (input, array, config) {
-          var pos1 = input.length - 4;
-          var pos2 = input.length - 2;
-          array[HOUR] = toInt(input.substr(0, pos1));
-          array[MINUTE] = toInt(input.substr(pos1, 2));
-          array[SECOND] = toInt(input.substr(pos2));
-      });
-
-      // LOCALES
-
-      function localeIsPM (input) {
-          // IE8 Quirks Mode & IE7 Standards Mode do not allow accessing strings like arrays
-          // Using charAt should be more compatible.
-          return ((input + '').toLowerCase().charAt(0) === 'p');
-      }
-
-      var defaultLocaleMeridiemParse = /[ap]\.?m?\.?/i;
-      function localeMeridiem (hours, minutes, isLower) {
-          if (hours > 11) {
-              return isLower ? 'pm' : 'PM';
-          } else {
-              return isLower ? 'am' : 'AM';
-          }
-      }
-
-
-      // MOMENTS
-
-      // Setting the hour should keep the time, because the user explicitly
-      // specified which hour he wants. So trying to maintain the same hour (in
-      // a new timezone) makes sense. Adding/subtracting hours does not follow
-      // this rule.
-      var getSetHour = makeGetSet('Hours', true);
-
-      var baseConfig = {
-          calendar: defaultCalendar,
-          longDateFormat: defaultLongDateFormat,
-          invalidDate: defaultInvalidDate,
-          ordinal: defaultOrdinal,
-          ordinalParse: defaultOrdinalParse,
-          relativeTime: defaultRelativeTime,
-
-          months: defaultLocaleMonths,
-          monthsShort: defaultLocaleMonthsShort,
-
-          week: defaultLocaleWeek,
-
-          weekdays: defaultLocaleWeekdays,
-          weekdaysMin: defaultLocaleWeekdaysMin,
-          weekdaysShort: defaultLocaleWeekdaysShort,
-
-          meridiemParse: defaultLocaleMeridiemParse
-      };
-
-      // internal storage for locale config files
-      var locales = {};
-      var globalLocale;
-
-      function normalizeLocale(key) {
-          return key ? key.toLowerCase().replace('_', '-') : key;
-      }
-
-      // pick the locale from the array
-      // try ['en-au', 'en-gb'] as 'en-au', 'en-gb', 'en', as in move through the list trying each
-      // substring from most specific to least, but move to the next array item if it's a more specific variant than the current root
-      function chooseLocale(names) {
-          var i = 0, j, next, locale, split;
-
-          while (i < names.length) {
-              split = normalizeLocale(names[i]).split('-');
-              j = split.length;
-              next = normalizeLocale(names[i + 1]);
-              next = next ? next.split('-') : null;
-              while (j > 0) {
-                  locale = loadLocale(split.slice(0, j).join('-'));
-                  if (locale) {
-                      return locale;
-                  }
-                  if (next && next.length >= j && compareArrays(split, next, true) >= j - 1) {
-                      //the next array item is better than a shallower substring of this one
-                      break;
-                  }
-                  j--;
-              }
-              i++;
-          }
-          return null;
-      }
-
-      function loadLocale(name) {
-          var oldLocale = null;
-          // TODO: Find a better way to register and load all the locales in Node
-          if (!locales[name] && (typeof module !== 'undefined') &&
-                  module && module.exports) {
-              try {
-                  oldLocale = globalLocale._abbr;
-                  !(function webpackMissingModule() { var e = new Error("Cannot find module \"./locale\""); e.code = 'MODULE_NOT_FOUND'; throw e; }());
-                  // because defineLocale currently also sets the global locale, we
-                  // want to undo that for lazy loaded locales
-                  locale_locales__getSetGlobalLocale(oldLocale);
-              } catch (e) { }
-          }
-          return locales[name];
-      }
-
-      // This function will load locale and then set the global locale.  If
-      // no arguments are passed in, it will simply return the current global
-      // locale key.
-      function locale_locales__getSetGlobalLocale (key, values) {
-          var data;
-          if (key) {
-              if (isUndefined(values)) {
-                  data = locale_locales__getLocale(key);
-              }
-              else {
-                  data = defineLocale(key, values);
-              }
-
-              if (data) {
-                  // moment.duration._locale = moment._locale = data;
-                  globalLocale = data;
-              }
-          }
-
-          return globalLocale._abbr;
-      }
-
-      function defineLocale (name, config) {
-          if (config !== null) {
-              var parentConfig = baseConfig;
-              config.abbr = name;
-              if (locales[name] != null) {
-                  deprecateSimple('defineLocaleOverride',
-                          'use moment.updateLocale(localeName, config) to change ' +
-                          'an existing locale. moment.defineLocale(localeName, ' +
-                          'config) should only be used for creating a new locale ' +
-                          'See http://momentjs.com/guides/#/warnings/define-locale/ for more info.');
-                  parentConfig = locales[name]._config;
-              } else if (config.parentLocale != null) {
-                  if (locales[config.parentLocale] != null) {
-                      parentConfig = locales[config.parentLocale]._config;
-                  } else {
-                      // treat as if there is no base config
-                      deprecateSimple('parentLocaleUndefined',
-                              'specified parentLocale is not defined yet. See http://momentjs.com/guides/#/warnings/parent-locale/');
-                  }
-              }
-              locales[name] = new Locale(mergeConfigs(parentConfig, config));
-
-              // backwards compat for now: also set the locale
-              locale_locales__getSetGlobalLocale(name);
-
-              return locales[name];
-          } else {
-              // useful for testing
-              delete locales[name];
-              return null;
-          }
-      }
-
-      function updateLocale(name, config) {
-          if (config != null) {
-              var locale, parentConfig = baseConfig;
-              // MERGE
-              if (locales[name] != null) {
-                  parentConfig = locales[name]._config;
-              }
-              config = mergeConfigs(parentConfig, config);
-              locale = new Locale(config);
-              locale.parentLocale = locales[name];
-              locales[name] = locale;
-
-              // backwards compat for now: also set the locale
-              locale_locales__getSetGlobalLocale(name);
-          } else {
-              // pass null for config to unupdate, useful for tests
-              if (locales[name] != null) {
-                  if (locales[name].parentLocale != null) {
-                      locales[name] = locales[name].parentLocale;
-                  } else if (locales[name] != null) {
-                      delete locales[name];
-                  }
-              }
-          }
-          return locales[name];
-      }
-
-      // returns locale data
-      function locale_locales__getLocale (key) {
-          var locale;
-
-          if (key && key._locale && key._locale._abbr) {
-              key = key._locale._abbr;
-          }
-
-          if (!key) {
-              return globalLocale;
-          }
-
-          if (!isArray(key)) {
-              //short-circuit everything else
-              locale = loadLocale(key);
-              if (locale) {
-                  return locale;
-              }
-              key = [key];
-          }
-
-          return chooseLocale(key);
-      }
-
-      function locale_locales__listLocales() {
-          return keys(locales);
-      }
-
-      function checkOverflow (m) {
-          var overflow;
-          var a = m._a;
-
-          if (a && getParsingFlags(m).overflow === -2) {
-              overflow =
-                  a[MONTH]       < 0 || a[MONTH]       > 11  ? MONTH :
-                  a[DATE]        < 1 || a[DATE]        > daysInMonth(a[YEAR], a[MONTH]) ? DATE :
-                  a[HOUR]        < 0 || a[HOUR]        > 24 || (a[HOUR] === 24 && (a[MINUTE] !== 0 || a[SECOND] !== 0 || a[MILLISECOND] !== 0)) ? HOUR :
-                  a[MINUTE]      < 0 || a[MINUTE]      > 59  ? MINUTE :
-                  a[SECOND]      < 0 || a[SECOND]      > 59  ? SECOND :
-                  a[MILLISECOND] < 0 || a[MILLISECOND] > 999 ? MILLISECOND :
-                  -1;
-
-              if (getParsingFlags(m)._overflowDayOfYear && (overflow < YEAR || overflow > DATE)) {
-                  overflow = DATE;
-              }
-              if (getParsingFlags(m)._overflowWeeks && overflow === -1) {
-                  overflow = WEEK;
-              }
-              if (getParsingFlags(m)._overflowWeekday && overflow === -1) {
-                  overflow = WEEKDAY;
-              }
-
-              getParsingFlags(m).overflow = overflow;
-          }
-
-          return m;
-      }
-
-      // iso 8601 regex
-      // 0000-00-00 0000-W00 or 0000-W00-0 + T + 00 or 00:00 or 00:00:00 or 00:00:00.000 + +00:00 or +0000 or +00)
-      var extendedIsoRegex = /^\s*((?:[+-]\d{6}|\d{4})-(?:\d\d-\d\d|W\d\d-\d|W\d\d|\d\d\d|\d\d))(?:(T| )(\d\d(?::\d\d(?::\d\d(?:[.,]\d+)?)?)?)([\+\-]\d\d(?::?\d\d)?|\s*Z)?)?/;
-      var basicIsoRegex = /^\s*((?:[+-]\d{6}|\d{4})(?:\d\d\d\d|W\d\d\d|W\d\d|\d\d\d|\d\d))(?:(T| )(\d\d(?:\d\d(?:\d\d(?:[.,]\d+)?)?)?)([\+\-]\d\d(?::?\d\d)?|\s*Z)?)?/;
-
-      var tzRegex = /Z|[+-]\d\d(?::?\d\d)?/;
-
-      var isoDates = [
-          ['YYYYYY-MM-DD', /[+-]\d{6}-\d\d-\d\d/],
-          ['YYYY-MM-DD', /\d{4}-\d\d-\d\d/],
-          ['GGGG-[W]WW-E', /\d{4}-W\d\d-\d/],
-          ['GGGG-[W]WW', /\d{4}-W\d\d/, false],
-          ['YYYY-DDD', /\d{4}-\d{3}/],
-          ['YYYY-MM', /\d{4}-\d\d/, false],
-          ['YYYYYYMMDD', /[+-]\d{10}/],
-          ['YYYYMMDD', /\d{8}/],
-          // YYYYMM is NOT allowed by the standard
-          ['GGGG[W]WWE', /\d{4}W\d{3}/],
-          ['GGGG[W]WW', /\d{4}W\d{2}/, false],
-          ['YYYYDDD', /\d{7}/]
-      ];
-
-      // iso time formats and regexes
-      var isoTimes = [
-          ['HH:mm:ss.SSSS', /\d\d:\d\d:\d\d\.\d+/],
-          ['HH:mm:ss,SSSS', /\d\d:\d\d:\d\d,\d+/],
-          ['HH:mm:ss', /\d\d:\d\d:\d\d/],
-          ['HH:mm', /\d\d:\d\d/],
-          ['HHmmss.SSSS', /\d\d\d\d\d\d\.\d+/],
-          ['HHmmss,SSSS', /\d\d\d\d\d\d,\d+/],
-          ['HHmmss', /\d\d\d\d\d\d/],
-          ['HHmm', /\d\d\d\d/],
-          ['HH', /\d\d/]
-      ];
-
-      var aspNetJsonRegex = /^\/?Date\((\-?\d+)/i;
-
-      // date from iso format
-      function configFromISO(config) {
-          var i, l,
-              string = config._i,
-              match = extendedIsoRegex.exec(string) || basicIsoRegex.exec(string),
-              allowTime, dateFormat, timeFormat, tzFormat;
-
-          if (match) {
-              getParsingFlags(config).iso = true;
-
-              for (i = 0, l = isoDates.length; i < l; i++) {
-                  if (isoDates[i][1].exec(match[1])) {
-                      dateFormat = isoDates[i][0];
-                      allowTime = isoDates[i][2] !== false;
-                      break;
-                  }
-              }
-              if (dateFormat == null) {
-                  config._isValid = false;
-                  return;
-              }
-              if (match[3]) {
-                  for (i = 0, l = isoTimes.length; i < l; i++) {
-                      if (isoTimes[i][1].exec(match[3])) {
-                          // match[2] should be 'T' or space
-                          timeFormat = (match[2] || ' ') + isoTimes[i][0];
-                          break;
-                      }
-                  }
-                  if (timeFormat == null) {
-                      config._isValid = false;
-                      return;
-                  }
-              }
-              if (!allowTime && timeFormat != null) {
-                  config._isValid = false;
-                  return;
-              }
-              if (match[4]) {
-                  if (tzRegex.exec(match[4])) {
-                      tzFormat = 'Z';
-                  } else {
-                      config._isValid = false;
-                      return;
-                  }
-              }
-              config._f = dateFormat + (timeFormat || '') + (tzFormat || '');
-              configFromStringAndFormat(config);
-          } else {
-              config._isValid = false;
-          }
-      }
-
-      // date from iso format or fallback
-      function configFromString(config) {
-          var matched = aspNetJsonRegex.exec(config._i);
-
-          if (matched !== null) {
-              config._d = new Date(+matched[1]);
-              return;
-          }
-
-          configFromISO(config);
-          if (config._isValid === false) {
-              delete config._isValid;
-              utils_hooks__hooks.createFromInputFallback(config);
-          }
-      }
-
-      utils_hooks__hooks.createFromInputFallback = deprecate(
-          'value provided is not in a recognized ISO format. moment construction falls back to js Date(), ' +
-          'which is not reliable across all browsers and versions. Non ISO date formats are ' +
-          'discouraged and will be removed in an upcoming major release. Please refer to ' +
-          'http://momentjs.com/guides/#/warnings/js-date/ for more info.',
-          function (config) {
-              config._d = new Date(config._i + (config._useUTC ? ' UTC' : ''));
-          }
-      );
-
-      // Pick the first defined of two or three arguments.
-      function defaults(a, b, c) {
-          if (a != null) {
-              return a;
-          }
-          if (b != null) {
-              return b;
-          }
-          return c;
-      }
-
-      function currentDateArray(config) {
-          // hooks is actually the exported moment object
-          var nowValue = new Date(utils_hooks__hooks.now());
-          if (config._useUTC) {
-              return [nowValue.getUTCFullYear(), nowValue.getUTCMonth(), nowValue.getUTCDate()];
-          }
-          return [nowValue.getFullYear(), nowValue.getMonth(), nowValue.getDate()];
-      }
-
-      // convert an array to a date.
-      // the array should mirror the parameters below
-      // note: all values past the year are optional and will default to the lowest possible value.
-      // [year, month, day , hour, minute, second, millisecond]
-      function configFromArray (config) {
-          var i, date, input = [], currentDate, yearToUse;
-
-          if (config._d) {
-              return;
-          }
-
-          currentDate = currentDateArray(config);
-
-          //compute day of the year from weeks and weekdays
-          if (config._w && config._a[DATE] == null && config._a[MONTH] == null) {
-              dayOfYearFromWeekInfo(config);
-          }
-
-          //if the day of the year is set, figure out what it is
-          if (config._dayOfYear) {
-              yearToUse = defaults(config._a[YEAR], currentDate[YEAR]);
-
-              if (config._dayOfYear > daysInYear(yearToUse)) {
-                  getParsingFlags(config)._overflowDayOfYear = true;
-              }
-
-              date = createUTCDate(yearToUse, 0, config._dayOfYear);
-              config._a[MONTH] = date.getUTCMonth();
-              config._a[DATE] = date.getUTCDate();
-          }
-
-          // Default to current date.
-          // * if no year, month, day of month are given, default to today
-          // * if day of month is given, default month and year
-          // * if month is given, default only year
-          // * if year is given, don't default anything
-          for (i = 0; i < 3 && config._a[i] == null; ++i) {
-              config._a[i] = input[i] = currentDate[i];
-          }
-
-          // Zero out whatever was not defaulted, including time
-          for (; i < 7; i++) {
-              config._a[i] = input[i] = (config._a[i] == null) ? (i === 2 ? 1 : 0) : config._a[i];
-          }
-
-          // Check for 24:00:00.000
-          if (config._a[HOUR] === 24 &&
-                  config._a[MINUTE] === 0 &&
-                  config._a[SECOND] === 0 &&
-                  config._a[MILLISECOND] === 0) {
-              config._nextDay = true;
-              config._a[HOUR] = 0;
-          }
-
-          config._d = (config._useUTC ? createUTCDate : createDate).apply(null, input);
-          // Apply timezone offset from input. The actual utcOffset can be changed
-          // with parseZone.
-          if (config._tzm != null) {
-              config._d.setUTCMinutes(config._d.getUTCMinutes() - config._tzm);
-          }
-
-          if (config._nextDay) {
-              config._a[HOUR] = 24;
-          }
-      }
-
-      function dayOfYearFromWeekInfo(config) {
-          var w, weekYear, week, weekday, dow, doy, temp, weekdayOverflow;
-
-          w = config._w;
-          if (w.GG != null || w.W != null || w.E != null) {
-              dow = 1;
-              doy = 4;
-
-              // TODO: We need to take the current isoWeekYear, but that depends on
-              // how we interpret now (local, utc, fixed offset). So create
-              // a now version of current config (take local/utc/offset flags, and
-              // create now).
-              weekYear = defaults(w.GG, config._a[YEAR], weekOfYear(local__createLocal(), 1, 4).year);
-              week = defaults(w.W, 1);
-              weekday = defaults(w.E, 1);
-              if (weekday < 1 || weekday > 7) {
-                  weekdayOverflow = true;
-              }
-          } else {
-              dow = config._locale._week.dow;
-              doy = config._locale._week.doy;
-
-              weekYear = defaults(w.gg, config._a[YEAR], weekOfYear(local__createLocal(), dow, doy).year);
-              week = defaults(w.w, 1);
-
-              if (w.d != null) {
-                  // weekday -- low day numbers are considered next week
-                  weekday = w.d;
-                  if (weekday < 0 || weekday > 6) {
-                      weekdayOverflow = true;
-                  }
-              } else if (w.e != null) {
-                  // local weekday -- counting starts from begining of week
-                  weekday = w.e + dow;
-                  if (w.e < 0 || w.e > 6) {
-                      weekdayOverflow = true;
-                  }
-              } else {
-                  // default to begining of week
-                  weekday = dow;
-              }
-          }
-          if (week < 1 || week > weeksInYear(weekYear, dow, doy)) {
-              getParsingFlags(config)._overflowWeeks = true;
-          } else if (weekdayOverflow != null) {
-              getParsingFlags(config)._overflowWeekday = true;
-          } else {
-              temp = dayOfYearFromWeeks(weekYear, week, weekday, dow, doy);
-              config._a[YEAR] = temp.year;
-              config._dayOfYear = temp.dayOfYear;
-          }
-      }
-
-      // constant that refers to the ISO standard
-      utils_hooks__hooks.ISO_8601 = function () {};
-
-      // date from string and format string
-      function configFromStringAndFormat(config) {
-          // TODO: Move this to another part of the creation flow to prevent circular deps
-          if (config._f === utils_hooks__hooks.ISO_8601) {
-              configFromISO(config);
-              return;
-          }
-
-          config._a = [];
-          getParsingFlags(config).empty = true;
-
-          // This array is used to make a Date, either with `new Date` or `Date.UTC`
-          var string = '' + config._i,
-              i, parsedInput, tokens, token, skipped,
-              stringLength = string.length,
-              totalParsedInputLength = 0;
-
-          tokens = expandFormat(config._f, config._locale).match(formattingTokens) || [];
-
-          for (i = 0; i < tokens.length; i++) {
-              token = tokens[i];
-              parsedInput = (string.match(getParseRegexForToken(token, config)) || [])[0];
-              // console.log('token', token, 'parsedInput', parsedInput,
-              //         'regex', getParseRegexForToken(token, config));
-              if (parsedInput) {
-                  skipped = string.substr(0, string.indexOf(parsedInput));
-                  if (skipped.length > 0) {
-                      getParsingFlags(config).unusedInput.push(skipped);
-                  }
-                  string = string.slice(string.indexOf(parsedInput) + parsedInput.length);
-                  totalParsedInputLength += parsedInput.length;
-              }
-              // don't parse if it's not a known token
-              if (formatTokenFunctions[token]) {
-                  if (parsedInput) {
-                      getParsingFlags(config).empty = false;
-                  }
-                  else {
-                      getParsingFlags(config).unusedTokens.push(token);
-                  }
-                  addTimeToArrayFromToken(token, parsedInput, config);
-              }
-              else if (config._strict && !parsedInput) {
-                  getParsingFlags(config).unusedTokens.push(token);
-              }
-          }
-
-          // add remaining unparsed input length to the string
-          getParsingFlags(config).charsLeftOver = stringLength - totalParsedInputLength;
-          if (string.length > 0) {
-              getParsingFlags(config).unusedInput.push(string);
-          }
-
-          // clear _12h flag if hour is <= 12
-          if (config._a[HOUR] <= 12 &&
-              getParsingFlags(config).bigHour === true &&
-              config._a[HOUR] > 0) {
-              getParsingFlags(config).bigHour = undefined;
-          }
-
-          getParsingFlags(config).parsedDateParts = config._a.slice(0);
-          getParsingFlags(config).meridiem = config._meridiem;
-          // handle meridiem
-          config._a[HOUR] = meridiemFixWrap(config._locale, config._a[HOUR], config._meridiem);
-
-          configFromArray(config);
-          checkOverflow(config);
-      }
-
-
-      function meridiemFixWrap (locale, hour, meridiem) {
-          var isPm;
-
-          if (meridiem == null) {
-              // nothing to do
-              return hour;
-          }
-          if (locale.meridiemHour != null) {
-              return locale.meridiemHour(hour, meridiem);
-          } else if (locale.isPM != null) {
-              // Fallback
-              isPm = locale.isPM(meridiem);
-              if (isPm && hour < 12) {
-                  hour += 12;
-              }
-              if (!isPm && hour === 12) {
-                  hour = 0;
-              }
-              return hour;
-          } else {
-              // this is not supposed to happen
-              return hour;
-          }
-      }
-
-      // date from string and array of format strings
-      function configFromStringAndArray(config) {
-          var tempConfig,
-              bestMoment,
-
-              scoreToBeat,
-              i,
-              currentScore;
-
-          if (config._f.length === 0) {
-              getParsingFlags(config).invalidFormat = true;
-              config._d = new Date(NaN);
-              return;
-          }
-
-          for (i = 0; i < config._f.length; i++) {
-              currentScore = 0;
-              tempConfig = copyConfig({}, config);
-              if (config._useUTC != null) {
-                  tempConfig._useUTC = config._useUTC;
-              }
-              tempConfig._f = config._f[i];
-              configFromStringAndFormat(tempConfig);
-
-              if (!valid__isValid(tempConfig)) {
-                  continue;
-              }
-
-              // if there is any input that was not parsed add a penalty for that format
-              currentScore += getParsingFlags(tempConfig).charsLeftOver;
-
-              //or tokens
-              currentScore += getParsingFlags(tempConfig).unusedTokens.length * 10;
-
-              getParsingFlags(tempConfig).score = currentScore;
-
-              if (scoreToBeat == null || currentScore < scoreToBeat) {
-                  scoreToBeat = currentScore;
-                  bestMoment = tempConfig;
-              }
-          }
-
-          extend(config, bestMoment || tempConfig);
-      }
-
-      function configFromObject(config) {
-          if (config._d) {
-              return;
-          }
-
-          var i = normalizeObjectUnits(config._i);
-          config._a = map([i.year, i.month, i.day || i.date, i.hour, i.minute, i.second, i.millisecond], function (obj) {
-              return obj && parseInt(obj, 10);
-          });
-
-          configFromArray(config);
-      }
-
-      function createFromConfig (config) {
-          var res = new Moment(checkOverflow(prepareConfig(config)));
-          if (res._nextDay) {
-              // Adding is smart enough around DST
-              res.add(1, 'd');
-              res._nextDay = undefined;
-          }
-
-          return res;
-      }
-
-      function prepareConfig (config) {
-          var input = config._i,
-              format = config._f;
-
-          config._locale = config._locale || locale_locales__getLocale(config._l);
-
-          if (input === null || (format === undefined && input === '')) {
-              return valid__createInvalid({nullInput: true});
-          }
-
-          if (typeof input === 'string') {
-              config._i = input = config._locale.preparse(input);
-          }
-
-          if (isMoment(input)) {
-              return new Moment(checkOverflow(input));
-          } else if (isArray(format)) {
-              configFromStringAndArray(config);
-          } else if (isDate(input)) {
-              config._d = input;
-          } else if (format) {
-              configFromStringAndFormat(config);
-          }  else {
-              configFromInput(config);
-          }
-
-          if (!valid__isValid(config)) {
-              config._d = null;
-          }
-
-          return config;
-      }
-
-      function configFromInput(config) {
-          var input = config._i;
-          if (input === undefined) {
-              config._d = new Date(utils_hooks__hooks.now());
-          } else if (isDate(input)) {
-              config._d = new Date(input.valueOf());
-          } else if (typeof input === 'string') {
-              configFromString(config);
-          } else if (isArray(input)) {
-              config._a = map(input.slice(0), function (obj) {
-                  return parseInt(obj, 10);
-              });
-              configFromArray(config);
-          } else if (typeof(input) === 'object') {
-              configFromObject(config);
-          } else if (typeof(input) === 'number') {
-              // from milliseconds
-              config._d = new Date(input);
-          } else {
-              utils_hooks__hooks.createFromInputFallback(config);
-          }
-      }
-
-      function createLocalOrUTC (input, format, locale, strict, isUTC) {
-          var c = {};
-
-          if (typeof(locale) === 'boolean') {
-              strict = locale;
-              locale = undefined;
-          }
-
-          if ((isObject(input) && isObjectEmpty(input)) ||
-                  (isArray(input) && input.length === 0)) {
-              input = undefined;
-          }
-          // object construction must be done this way.
-          // https://github.com/moment/moment/issues/1423
-          c._isAMomentObject = true;
-          c._useUTC = c._isUTC = isUTC;
-          c._l = locale;
-          c._i = input;
-          c._f = format;
-          c._strict = strict;
-
-          return createFromConfig(c);
-      }
-
-      function local__createLocal (input, format, locale, strict) {
-          return createLocalOrUTC(input, format, locale, strict, false);
-      }
-
-      var prototypeMin = deprecate(
-          'moment().min is deprecated, use moment.max instead. http://momentjs.com/guides/#/warnings/min-max/',
-          function () {
-              var other = local__createLocal.apply(null, arguments);
-              if (this.isValid() && other.isValid()) {
-                  return other < this ? this : other;
-              } else {
-                  return valid__createInvalid();
-              }
-          }
-      );
-
-      var prototypeMax = deprecate(
-          'moment().max is deprecated, use moment.min instead. http://momentjs.com/guides/#/warnings/min-max/',
-          function () {
-              var other = local__createLocal.apply(null, arguments);
-              if (this.isValid() && other.isValid()) {
-                  return other > this ? this : other;
-              } else {
-                  return valid__createInvalid();
-              }
-          }
-      );
-
-      // Pick a moment m from moments so that m[fn](other) is true for all
-      // other. This relies on the function fn to be transitive.
-      //
-      // moments should either be an array of moment objects or an array, whose
-      // first element is an array of moment objects.
-      function pickBy(fn, moments) {
-          var res, i;
-          if (moments.length === 1 && isArray(moments[0])) {
-              moments = moments[0];
-          }
-          if (!moments.length) {
-              return local__createLocal();
-          }
-          res = moments[0];
-          for (i = 1; i < moments.length; ++i) {
-              if (!moments[i].isValid() || moments[i][fn](res)) {
-                  res = moments[i];
-              }
-          }
-          return res;
-      }
-
-      // TODO: Use [].sort instead?
-      function min () {
-          var args = [].slice.call(arguments, 0);
-
-          return pickBy('isBefore', args);
-      }
-
-      function max () {
-          var args = [].slice.call(arguments, 0);
-
-          return pickBy('isAfter', args);
-      }
-
-      var now = function () {
-          return Date.now ? Date.now() : +(new Date());
-      };
-
-      function Duration (duration) {
-          var normalizedInput = normalizeObjectUnits(duration),
-              years = normalizedInput.year || 0,
-              quarters = normalizedInput.quarter || 0,
-              months = normalizedInput.month || 0,
-              weeks = normalizedInput.week || 0,
-              days = normalizedInput.day || 0,
-              hours = normalizedInput.hour || 0,
-              minutes = normalizedInput.minute || 0,
-              seconds = normalizedInput.second || 0,
-              milliseconds = normalizedInput.millisecond || 0;
-
-          // representation for dateAddRemove
-          this._milliseconds = +milliseconds +
-              seconds * 1e3 + // 1000
-              minutes * 6e4 + // 1000 * 60
-              hours * 1000 * 60 * 60; //using 1000 * 60 * 60 instead of 36e5 to avoid floating point rounding errors https://github.com/moment/moment/issues/2978
-          // Because of dateAddRemove treats 24 hours as different from a
-          // day when working around DST, we need to store them separately
-          this._days = +days +
-              weeks * 7;
-          // It is impossible translate months into days without knowing
-          // which months you are are talking about, so we have to store
-          // it separately.
-          this._months = +months +
-              quarters * 3 +
-              years * 12;
-
-          this._data = {};
-
-          this._locale = locale_locales__getLocale();
-
-          this._bubble();
-      }
-
-      function isDuration (obj) {
-          return obj instanceof Duration;
-      }
-
-      function absRound (number) {
-          if (number < 0) {
-              return Math.round(-1 * number) * -1;
-          } else {
-              return Math.round(number);
-          }
-      }
-
-      // FORMATTING
-
-      function offset (token, separator) {
-          addFormatToken(token, 0, 0, function () {
-              var offset = this.utcOffset();
-              var sign = '+';
-              if (offset < 0) {
-                  offset = -offset;
-                  sign = '-';
-              }
-              return sign + zeroFill(~~(offset / 60), 2) + separator + zeroFill(~~(offset) % 60, 2);
-          });
-      }
-
-      offset('Z', ':');
-      offset('ZZ', '');
-
-      // PARSING
-
-      addRegexToken('Z',  matchShortOffset);
-      addRegexToken('ZZ', matchShortOffset);
-      addParseToken(['Z', 'ZZ'], function (input, array, config) {
-          config._useUTC = true;
-          config._tzm = offsetFromString(matchShortOffset, input);
-      });
-
-      // HELPERS
-
-      // timezone chunker
-      // '+10:00' > ['10',  '00']
-      // '-1530'  > ['-15', '30']
-      var chunkOffset = /([\+\-]|\d\d)/gi;
-
-      function offsetFromString(matcher, string) {
-          var matches = ((string || '').match(matcher) || []);
-          var chunk   = matches[matches.length - 1] || [];
-          var parts   = (chunk + '').match(chunkOffset) || ['-', 0, 0];
-          var minutes = +(parts[1] * 60) + toInt(parts[2]);
-
-          return parts[0] === '+' ? minutes : -minutes;
-      }
-
-      // Return a moment from input, that is local/utc/zone equivalent to model.
-      function cloneWithOffset(input, model) {
-          var res, diff;
-          if (model._isUTC) {
-              res = model.clone();
-              diff = (isMoment(input) || isDate(input) ? input.valueOf() : local__createLocal(input).valueOf()) - res.valueOf();
-              // Use low-level api, because this fn is low-level api.
-              res._d.setTime(res._d.valueOf() + diff);
-              utils_hooks__hooks.updateOffset(res, false);
-              return res;
-          } else {
-              return local__createLocal(input).local();
-          }
-      }
-
-      function getDateOffset (m) {
-          // On Firefox.24 Date#getTimezoneOffset returns a floating point.
-          // https://github.com/moment/moment/pull/1871
-          return -Math.round(m._d.getTimezoneOffset() / 15) * 15;
-      }
-
-      // HOOKS
-
-      // This function will be called whenever a moment is mutated.
-      // It is intended to keep the offset in sync with the timezone.
-      utils_hooks__hooks.updateOffset = function () {};
-
-      // MOMENTS
-
-      // keepLocalTime = true means only change the timezone, without
-      // affecting the local hour. So 5:31:26 +0300 --[utcOffset(2, true)]-->
-      // 5:31:26 +0200 It is possible that 5:31:26 doesn't exist with offset
-      // +0200, so we adjust the time as needed, to be valid.
-      //
-      // Keeping the time actually adds/subtracts (one hour)
-      // from the actual represented time. That is why we call updateOffset
-      // a second time. In case it wants us to change the offset again
-      // _changeInProgress == true case, then we have to adjust, because
-      // there is no such time in the given timezone.
-      function getSetOffset (input, keepLocalTime) {
-          var offset = this._offset || 0,
-              localAdjust;
-          if (!this.isValid()) {
-              return input != null ? this : NaN;
-          }
-          if (input != null) {
-              if (typeof input === 'string') {
-                  input = offsetFromString(matchShortOffset, input);
-              } else if (Math.abs(input) < 16) {
-                  input = input * 60;
-              }
-              if (!this._isUTC && keepLocalTime) {
-                  localAdjust = getDateOffset(this);
-              }
-              this._offset = input;
-              this._isUTC = true;
-              if (localAdjust != null) {
-                  this.add(localAdjust, 'm');
-              }
-              if (offset !== input) {
-                  if (!keepLocalTime || this._changeInProgress) {
-                      add_subtract__addSubtract(this, create__createDuration(input - offset, 'm'), 1, false);
-                  } else if (!this._changeInProgress) {
-                      this._changeInProgress = true;
-                      utils_hooks__hooks.updateOffset(this, true);
-                      this._changeInProgress = null;
-                  }
-              }
-              return this;
-          } else {
-              return this._isUTC ? offset : getDateOffset(this);
-          }
-      }
-
-      function getSetZone (input, keepLocalTime) {
-          if (input != null) {
-              if (typeof input !== 'string') {
-                  input = -input;
-              }
-
-              this.utcOffset(input, keepLocalTime);
-
-              return this;
-          } else {
-              return -this.utcOffset();
-          }
-      }
-
-      function setOffsetToUTC (keepLocalTime) {
-          return this.utcOffset(0, keepLocalTime);
-      }
-
-      function setOffsetToLocal (keepLocalTime) {
-          if (this._isUTC) {
-              this.utcOffset(0, keepLocalTime);
-              this._isUTC = false;
-
-              if (keepLocalTime) {
-                  this.subtract(getDateOffset(this), 'm');
-              }
-          }
-          return this;
-      }
-
-      function setOffsetToParsedOffset () {
-          if (this._tzm) {
-              this.utcOffset(this._tzm);
-          } else if (typeof this._i === 'string') {
-              var tZone = offsetFromString(matchOffset, this._i);
-
-              if (tZone === 0) {
-                  this.utcOffset(0, true);
-              } else {
-                  this.utcOffset(offsetFromString(matchOffset, this._i));
-              }
-          }
-          return this;
-      }
-
-      function hasAlignedHourOffset (input) {
-          if (!this.isValid()) {
-              return false;
-          }
-          input = input ? local__createLocal(input).utcOffset() : 0;
-
-          return (this.utcOffset() - input) % 60 === 0;
-      }
-
-      function isDaylightSavingTime () {
-          return (
-              this.utcOffset() > this.clone().month(0).utcOffset() ||
-              this.utcOffset() > this.clone().month(5).utcOffset()
-          );
-      }
-
-      function isDaylightSavingTimeShifted () {
-          if (!isUndefined(this._isDSTShifted)) {
-              return this._isDSTShifted;
-          }
-
-          var c = {};
-
-          copyConfig(c, this);
-          c = prepareConfig(c);
-
-          if (c._a) {
-              var other = c._isUTC ? create_utc__createUTC(c._a) : local__createLocal(c._a);
-              this._isDSTShifted = this.isValid() &&
-                  compareArrays(c._a, other.toArray()) > 0;
-          } else {
-              this._isDSTShifted = false;
-          }
-
-          return this._isDSTShifted;
-      }
-
-      function isLocal () {
-          return this.isValid() ? !this._isUTC : false;
-      }
-
-      function isUtcOffset () {
-          return this.isValid() ? this._isUTC : false;
-      }
-
-      function isUtc () {
-          return this.isValid() ? this._isUTC && this._offset === 0 : false;
-      }
-
-      // ASP.NET json date format regex
-      var aspNetRegex = /^(\-)?(?:(\d*)[. ])?(\d+)\:(\d+)(?:\:(\d+)(\.\d*)?)?$/;
-
-      // from http://docs.closure-library.googlecode.com/git/closure_goog_date_date.js.source.html
-      // somewhat more in line with 4.4.3.2 2004 spec, but allows decimal anywhere
-      // and further modified to allow for strings containing both week and day
-      var isoRegex = /^(-)?P(?:(-?[0-9,.]*)Y)?(?:(-?[0-9,.]*)M)?(?:(-?[0-9,.]*)W)?(?:(-?[0-9,.]*)D)?(?:T(?:(-?[0-9,.]*)H)?(?:(-?[0-9,.]*)M)?(?:(-?[0-9,.]*)S)?)?$/;
-
-      function create__createDuration (input, key) {
-          var duration = input,
-              // matching against regexp is expensive, do it on demand
-              match = null,
-              sign,
-              ret,
-              diffRes;
-
-          if (isDuration(input)) {
-              duration = {
-                  ms : input._milliseconds,
-                  d  : input._days,
-                  M  : input._months
-              };
-          } else if (typeof input === 'number') {
-              duration = {};
-              if (key) {
-                  duration[key] = input;
-              } else {
-                  duration.milliseconds = input;
-              }
-          } else if (!!(match = aspNetRegex.exec(input))) {
-              sign = (match[1] === '-') ? -1 : 1;
-              duration = {
-                  y  : 0,
-                  d  : toInt(match[DATE])                         * sign,
-                  h  : toInt(match[HOUR])                         * sign,
-                  m  : toInt(match[MINUTE])                       * sign,
-                  s  : toInt(match[SECOND])                       * sign,
-                  ms : toInt(absRound(match[MILLISECOND] * 1000)) * sign // the millisecond decimal point is included in the match
-              };
-          } else if (!!(match = isoRegex.exec(input))) {
-              sign = (match[1] === '-') ? -1 : 1;
-              duration = {
-                  y : parseIso(match[2], sign),
-                  M : parseIso(match[3], sign),
-                  w : parseIso(match[4], sign),
-                  d : parseIso(match[5], sign),
-                  h : parseIso(match[6], sign),
-                  m : parseIso(match[7], sign),
-                  s : parseIso(match[8], sign)
-              };
-          } else if (duration == null) {// checks for null or undefined
-              duration = {};
-          } else if (typeof duration === 'object' && ('from' in duration || 'to' in duration)) {
-              diffRes = momentsDifference(local__createLocal(duration.from), local__createLocal(duration.to));
-
-              duration = {};
-              duration.ms = diffRes.milliseconds;
-              duration.M = diffRes.months;
-          }
-
-          ret = new Duration(duration);
-
-          if (isDuration(input) && hasOwnProp(input, '_locale')) {
-              ret._locale = input._locale;
-          }
-
-          return ret;
-      }
-
-      create__createDuration.fn = Duration.prototype;
-
-      function parseIso (inp, sign) {
-          // We'd normally use ~~inp for this, but unfortunately it also
-          // converts floats to ints.
-          // inp may be undefined, so careful calling replace on it.
-          var res = inp && parseFloat(inp.replace(',', '.'));
-          // apply sign while we're at it
-          return (isNaN(res) ? 0 : res) * sign;
-      }
-
-      function positiveMomentsDifference(base, other) {
-          var res = {milliseconds: 0, months: 0};
-
-          res.months = other.month() - base.month() +
-              (other.year() - base.year()) * 12;
-          if (base.clone().add(res.months, 'M').isAfter(other)) {
-              --res.months;
-          }
-
-          res.milliseconds = +other - +(base.clone().add(res.months, 'M'));
-
-          return res;
-      }
-
-      function momentsDifference(base, other) {
-          var res;
-          if (!(base.isValid() && other.isValid())) {
-              return {milliseconds: 0, months: 0};
-          }
-
-          other = cloneWithOffset(other, base);
-          if (base.isBefore(other)) {
-              res = positiveMomentsDifference(base, other);
-          } else {
-              res = positiveMomentsDifference(other, base);
-              res.milliseconds = -res.milliseconds;
-              res.months = -res.months;
-          }
-
-          return res;
-      }
-
-      // TODO: remove 'name' arg after deprecation is removed
-      function createAdder(direction, name) {
-          return function (val, period) {
-              var dur, tmp;
-              //invert the arguments, but complain about it
-              if (period !== null && !isNaN(+period)) {
-                  deprecateSimple(name, 'moment().' + name  + '(period, number) is deprecated. Please use moment().' + name + '(number, period). ' +
-                  'See http://momentjs.com/guides/#/warnings/add-inverted-param/ for more info.');
-                  tmp = val; val = period; period = tmp;
-              }
-
-              val = typeof val === 'string' ? +val : val;
-              dur = create__createDuration(val, period);
-              add_subtract__addSubtract(this, dur, direction);
-              return this;
-          };
-      }
-
-      function add_subtract__addSubtract (mom, duration, isAdding, updateOffset) {
-          var milliseconds = duration._milliseconds,
-              days = absRound(duration._days),
-              months = absRound(duration._months);
-
-          if (!mom.isValid()) {
-              // No op
-              return;
-          }
-
-          updateOffset = updateOffset == null ? true : updateOffset;
-
-          if (milliseconds) {
-              mom._d.setTime(mom._d.valueOf() + milliseconds * isAdding);
-          }
-          if (days) {
-              get_set__set(mom, 'Date', get_set__get(mom, 'Date') + days * isAdding);
-          }
-          if (months) {
-              setMonth(mom, get_set__get(mom, 'Month') + months * isAdding);
-          }
-          if (updateOffset) {
-              utils_hooks__hooks.updateOffset(mom, days || months);
-          }
-      }
-
-      var add_subtract__add      = createAdder(1, 'add');
-      var add_subtract__subtract = createAdder(-1, 'subtract');
-
-      function getCalendarFormat(myMoment, now) {
-          var diff = myMoment.diff(now, 'days', true);
-          return diff < -6 ? 'sameElse' :
-                  diff < -1 ? 'lastWeek' :
-                  diff < 0 ? 'lastDay' :
-                  diff < 1 ? 'sameDay' :
-                  diff < 2 ? 'nextDay' :
-                  diff < 7 ? 'nextWeek' : 'sameElse';
-      }
-
-      function moment_calendar__calendar (time, formats) {
-          // We want to compare the start of today, vs this.
-          // Getting start-of-today depends on whether we're local/utc/offset or not.
-          var now = time || local__createLocal(),
-              sod = cloneWithOffset(now, this).startOf('day'),
-              format = utils_hooks__hooks.calendarFormat(this, sod) || 'sameElse';
-
-          var output = formats && (isFunction(formats[format]) ? formats[format].call(this, now) : formats[format]);
-
-          return this.format(output || this.localeData().calendar(format, this, local__createLocal(now)));
-      }
-
-      function clone () {
-          return new Moment(this);
-      }
-
-      function isAfter (input, units) {
-          var localInput = isMoment(input) ? input : local__createLocal(input);
-          if (!(this.isValid() && localInput.isValid())) {
-              return false;
-          }
-          units = normalizeUnits(!isUndefined(units) ? units : 'millisecond');
-          if (units === 'millisecond') {
-              return this.valueOf() > localInput.valueOf();
-          } else {
-              return localInput.valueOf() < this.clone().startOf(units).valueOf();
-          }
-      }
-
-      function isBefore (input, units) {
-          var localInput = isMoment(input) ? input : local__createLocal(input);
-          if (!(this.isValid() && localInput.isValid())) {
-              return false;
-          }
-          units = normalizeUnits(!isUndefined(units) ? units : 'millisecond');
-          if (units === 'millisecond') {
-              return this.valueOf() < localInput.valueOf();
-          } else {
-              return this.clone().endOf(units).valueOf() < localInput.valueOf();
-          }
-      }
-
-      function isBetween (from, to, units, inclusivity) {
-          inclusivity = inclusivity || '()';
-          return (inclusivity[0] === '(' ? this.isAfter(from, units) : !this.isBefore(from, units)) &&
-              (inclusivity[1] === ')' ? this.isBefore(to, units) : !this.isAfter(to, units));
-      }
-
-      function isSame (input, units) {
-          var localInput = isMoment(input) ? input : local__createLocal(input),
-              inputMs;
-          if (!(this.isValid() && localInput.isValid())) {
-              return false;
-          }
-          units = normalizeUnits(units || 'millisecond');
-          if (units === 'millisecond') {
-              return this.valueOf() === localInput.valueOf();
-          } else {
-              inputMs = localInput.valueOf();
-              return this.clone().startOf(units).valueOf() <= inputMs && inputMs <= this.clone().endOf(units).valueOf();
-          }
-      }
-
-      function isSameOrAfter (input, units) {
-          return this.isSame(input, units) || this.isAfter(input,units);
-      }
-
-      function isSameOrBefore (input, units) {
-          return this.isSame(input, units) || this.isBefore(input,units);
-      }
-
-      function diff (input, units, asFloat) {
-          var that,
-              zoneDelta,
-              delta, output;
-
-          if (!this.isValid()) {
-              return NaN;
-          }
-
-          that = cloneWithOffset(input, this);
-
-          if (!that.isValid()) {
-              return NaN;
-          }
-
-          zoneDelta = (that.utcOffset() - this.utcOffset()) * 6e4;
-
-          units = normalizeUnits(units);
-
-          if (units === 'year' || units === 'month' || units === 'quarter') {
-              output = monthDiff(this, that);
-              if (units === 'quarter') {
-                  output = output / 3;
-              } else if (units === 'year') {
-                  output = output / 12;
-              }
-          } else {
-              delta = this - that;
-              output = units === 'second' ? delta / 1e3 : // 1000
-                  units === 'minute' ? delta / 6e4 : // 1000 * 60
-                  units === 'hour' ? delta / 36e5 : // 1000 * 60 * 60
-                  units === 'day' ? (delta - zoneDelta) / 864e5 : // 1000 * 60 * 60 * 24, negate dst
-                  units === 'week' ? (delta - zoneDelta) / 6048e5 : // 1000 * 60 * 60 * 24 * 7, negate dst
-                  delta;
-          }
-          return asFloat ? output : absFloor(output);
-      }
-
-      function monthDiff (a, b) {
-          // difference in months
-          var wholeMonthDiff = ((b.year() - a.year()) * 12) + (b.month() - a.month()),
-              // b is in (anchor - 1 month, anchor + 1 month)
-              anchor = a.clone().add(wholeMonthDiff, 'months'),
-              anchor2, adjust;
-
-          if (b - anchor < 0) {
-              anchor2 = a.clone().add(wholeMonthDiff - 1, 'months');
-              // linear across the month
-              adjust = (b - anchor) / (anchor - anchor2);
-          } else {
-              anchor2 = a.clone().add(wholeMonthDiff + 1, 'months');
-              // linear across the month
-              adjust = (b - anchor) / (anchor2 - anchor);
-          }
-
-          //check for negative zero, return zero if negative zero
-          return -(wholeMonthDiff + adjust) || 0;
-      }
-
-      utils_hooks__hooks.defaultFormat = 'YYYY-MM-DDTHH:mm:ssZ';
-      utils_hooks__hooks.defaultFormatUtc = 'YYYY-MM-DDTHH:mm:ss[Z]';
-
-      function toString () {
-          return this.clone().locale('en').format('ddd MMM DD YYYY HH:mm:ss [GMT]ZZ');
-      }
-
-      function moment_format__toISOString () {
-          var m = this.clone().utc();
-          if (0 < m.year() && m.year() <= 9999) {
-              if (isFunction(Date.prototype.toISOString)) {
-                  // native implementation is ~50x faster, use it when we can
-                  return this.toDate().toISOString();
-              } else {
-                  return formatMoment(m, 'YYYY-MM-DD[T]HH:mm:ss.SSS[Z]');
-              }
-          } else {
-              return formatMoment(m, 'YYYYYY-MM-DD[T]HH:mm:ss.SSS[Z]');
-          }
-      }
-
-      function format (inputString) {
-          if (!inputString) {
-              inputString = this.isUtc() ? utils_hooks__hooks.defaultFormatUtc : utils_hooks__hooks.defaultFormat;
-          }
-          var output = formatMoment(this, inputString);
-          return this.localeData().postformat(output);
-      }
-
-      function from (time, withoutSuffix) {
-          if (this.isValid() &&
-                  ((isMoment(time) && time.isValid()) ||
-                   local__createLocal(time).isValid())) {
-              return create__createDuration({to: this, from: time}).locale(this.locale()).humanize(!withoutSuffix);
-          } else {
-              return this.localeData().invalidDate();
-          }
-      }
-
-      function fromNow (withoutSuffix) {
-          return this.from(local__createLocal(), withoutSuffix);
-      }
-
-      function to (time, withoutSuffix) {
-          if (this.isValid() &&
-                  ((isMoment(time) && time.isValid()) ||
-                   local__createLocal(time).isValid())) {
-              return create__createDuration({from: this, to: time}).locale(this.locale()).humanize(!withoutSuffix);
-          } else {
-              return this.localeData().invalidDate();
-          }
-      }
-
-      function toNow (withoutSuffix) {
-          return this.to(local__createLocal(), withoutSuffix);
-      }
-
-      // If passed a locale key, it will set the locale for this
-      // instance.  Otherwise, it will return the locale configuration
-      // variables for this instance.
-      function locale (key) {
-          var newLocaleData;
-
-          if (key === undefined) {
-              return this._locale._abbr;
-          } else {
-              newLocaleData = locale_locales__getLocale(key);
-              if (newLocaleData != null) {
-                  this._locale = newLocaleData;
-              }
-              return this;
-          }
-      }
-
-      var lang = deprecate(
-          'moment().lang() is deprecated. Instead, use moment().localeData() to get the language configuration. Use moment().locale() to change languages.',
-          function (key) {
-              if (key === undefined) {
-                  return this.localeData();
-              } else {
-                  return this.locale(key);
-              }
-          }
-      );
-
-      function localeData () {
-          return this._locale;
-      }
-
-      function startOf (units) {
-          units = normalizeUnits(units);
-          // the following switch intentionally omits break keywords
-          // to utilize falling through the cases.
-          switch (units) {
-              case 'year':
-                  this.month(0);
-                  /* falls through */
-              case 'quarter':
-              case 'month':
-                  this.date(1);
-                  /* falls through */
-              case 'week':
-              case 'isoWeek':
-              case 'day':
-              case 'date':
-                  this.hours(0);
-                  /* falls through */
-              case 'hour':
-                  this.minutes(0);
-                  /* falls through */
-              case 'minute':
-                  this.seconds(0);
-                  /* falls through */
-              case 'second':
-                  this.milliseconds(0);
-          }
-
-          // weeks are a special case
-          if (units === 'week') {
-              this.weekday(0);
-          }
-          if (units === 'isoWeek') {
-              this.isoWeekday(1);
-          }
-
-          // quarters are also special
-          if (units === 'quarter') {
-              this.month(Math.floor(this.month() / 3) * 3);
-          }
-
-          return this;
-      }
-
-      function endOf (units) {
-          units = normalizeUnits(units);
-          if (units === undefined || units === 'millisecond') {
-              return this;
-          }
-
-          // 'date' is an alias for 'day', so it should be considered as such.
-          if (units === 'date') {
-              units = 'day';
-          }
-
-          return this.startOf(units).add(1, (units === 'isoWeek' ? 'week' : units)).subtract(1, 'ms');
-      }
-
-      function to_type__valueOf () {
-          return this._d.valueOf() - ((this._offset || 0) * 60000);
-      }
-
-      function unix () {
-          return Math.floor(this.valueOf() / 1000);
-      }
-
-      function toDate () {
-          return new Date(this.valueOf());
-      }
-
-      function toArray () {
-          var m = this;
-          return [m.year(), m.month(), m.date(), m.hour(), m.minute(), m.second(), m.millisecond()];
-      }
-
-      function toObject () {
-          var m = this;
-          return {
-              years: m.year(),
-              months: m.month(),
-              date: m.date(),
-              hours: m.hours(),
-              minutes: m.minutes(),
-              seconds: m.seconds(),
-              milliseconds: m.milliseconds()
-          };
-      }
-
-      function toJSON () {
-          // new Date(NaN).toJSON() === null
-          return this.isValid() ? this.toISOString() : null;
-      }
-
-      function moment_valid__isValid () {
-          return valid__isValid(this);
-      }
-
-      function parsingFlags () {
-          return extend({}, getParsingFlags(this));
-      }
-
-      function invalidAt () {
-          return getParsingFlags(this).overflow;
-      }
-
-      function creationData() {
-          return {
-              input: this._i,
-              format: this._f,
-              locale: this._locale,
-              isUTC: this._isUTC,
-              strict: this._strict
-          };
-      }
-
-      // FORMATTING
-
-      addFormatToken(0, ['gg', 2], 0, function () {
-          return this.weekYear() % 100;
-      });
-
-      addFormatToken(0, ['GG', 2], 0, function () {
-          return this.isoWeekYear() % 100;
-      });
-
-      function addWeekYearFormatToken (token, getter) {
-          addFormatToken(0, [token, token.length], 0, getter);
-      }
-
-      addWeekYearFormatToken('gggg',     'weekYear');
-      addWeekYearFormatToken('ggggg',    'weekYear');
-      addWeekYearFormatToken('GGGG',  'isoWeekYear');
-      addWeekYearFormatToken('GGGGG', 'isoWeekYear');
-
-      // ALIASES
-
-      addUnitAlias('weekYear', 'gg');
-      addUnitAlias('isoWeekYear', 'GG');
-
-      // PRIORITY
-
-      addUnitPriority('weekYear', 1);
-      addUnitPriority('isoWeekYear', 1);
-
-
-      // PARSING
-
-      addRegexToken('G',      matchSigned);
-      addRegexToken('g',      matchSigned);
-      addRegexToken('GG',     match1to2, match2);
-      addRegexToken('gg',     match1to2, match2);
-      addRegexToken('GGGG',   match1to4, match4);
-      addRegexToken('gggg',   match1to4, match4);
-      addRegexToken('GGGGG',  match1to6, match6);
-      addRegexToken('ggggg',  match1to6, match6);
-
-      addWeekParseToken(['gggg', 'ggggg', 'GGGG', 'GGGGG'], function (input, week, config, token) {
-          week[token.substr(0, 2)] = toInt(input);
-      });
-
-      addWeekParseToken(['gg', 'GG'], function (input, week, config, token) {
-          week[token] = utils_hooks__hooks.parseTwoDigitYear(input);
-      });
-
-      // MOMENTS
-
-      function getSetWeekYear (input) {
-          return getSetWeekYearHelper.call(this,
-                  input,
-                  this.week(),
-                  this.weekday(),
-                  this.localeData()._week.dow,
-                  this.localeData()._week.doy);
-      }
-
-      function getSetISOWeekYear (input) {
-          return getSetWeekYearHelper.call(this,
-                  input, this.isoWeek(), this.isoWeekday(), 1, 4);
-      }
-
-      function getISOWeeksInYear () {
-          return weeksInYear(this.year(), 1, 4);
-      }
-
-      function getWeeksInYear () {
-          var weekInfo = this.localeData()._week;
-          return weeksInYear(this.year(), weekInfo.dow, weekInfo.doy);
-      }
-
-      function getSetWeekYearHelper(input, week, weekday, dow, doy) {
-          var weeksTarget;
-          if (input == null) {
-              return weekOfYear(this, dow, doy).year;
-          } else {
-              weeksTarget = weeksInYear(input, dow, doy);
-              if (week > weeksTarget) {
-                  week = weeksTarget;
-              }
-              return setWeekAll.call(this, input, week, weekday, dow, doy);
-          }
-      }
-
-      function setWeekAll(weekYear, week, weekday, dow, doy) {
-          var dayOfYearData = dayOfYearFromWeeks(weekYear, week, weekday, dow, doy),
-              date = createUTCDate(dayOfYearData.year, 0, dayOfYearData.dayOfYear);
-
-          this.year(date.getUTCFullYear());
-          this.month(date.getUTCMonth());
-          this.date(date.getUTCDate());
-          return this;
-      }
-
-      // FORMATTING
-
-      addFormatToken('Q', 0, 'Qo', 'quarter');
-
-      // ALIASES
-
-      addUnitAlias('quarter', 'Q');
-
-      // PRIORITY
-
-      addUnitPriority('quarter', 7);
-
-      // PARSING
-
-      addRegexToken('Q', match1);
-      addParseToken('Q', function (input, array) {
-          array[MONTH] = (toInt(input) - 1) * 3;
-      });
-
-      // MOMENTS
-
-      function getSetQuarter (input) {
-          return input == null ? Math.ceil((this.month() + 1) / 3) : this.month((input - 1) * 3 + this.month() % 3);
-      }
-
-      // FORMATTING
-
-      addFormatToken('D', ['DD', 2], 'Do', 'date');
-
-      // ALIASES
-
-      addUnitAlias('date', 'D');
-
-      // PRIOROITY
-      addUnitPriority('date', 9);
-
-      // PARSING
-
-      addRegexToken('D',  match1to2);
-      addRegexToken('DD', match1to2, match2);
-      addRegexToken('Do', function (isStrict, locale) {
-          return isStrict ? locale._ordinalParse : locale._ordinalParseLenient;
-      });
-
-      addParseToken(['D', 'DD'], DATE);
-      addParseToken('Do', function (input, array) {
-          array[DATE] = toInt(input.match(match1to2)[0], 10);
-      });
-
-      // MOMENTS
-
-      var getSetDayOfMonth = makeGetSet('Date', true);
-
-      // FORMATTING
-
-      addFormatToken('DDD', ['DDDD', 3], 'DDDo', 'dayOfYear');
-
-      // ALIASES
-
-      addUnitAlias('dayOfYear', 'DDD');
-
-      // PRIORITY
-      addUnitPriority('dayOfYear', 4);
-
-      // PARSING
-
-      addRegexToken('DDD',  match1to3);
-      addRegexToken('DDDD', match3);
-      addParseToken(['DDD', 'DDDD'], function (input, array, config) {
-          config._dayOfYear = toInt(input);
-      });
-
-      // HELPERS
-
-      // MOMENTS
-
-      function getSetDayOfYear (input) {
-          var dayOfYear = Math.round((this.clone().startOf('day') - this.clone().startOf('year')) / 864e5) + 1;
-          return input == null ? dayOfYear : this.add((input - dayOfYear), 'd');
-      }
-
-      // FORMATTING
-
-      addFormatToken('m', ['mm', 2], 0, 'minute');
-
-      // ALIASES
-
-      addUnitAlias('minute', 'm');
-
-      // PRIORITY
-
-      addUnitPriority('minute', 14);
-
-      // PARSING
-
-      addRegexToken('m',  match1to2);
-      addRegexToken('mm', match1to2, match2);
-      addParseToken(['m', 'mm'], MINUTE);
-
-      // MOMENTS
-
-      var getSetMinute = makeGetSet('Minutes', false);
-
-      // FORMATTING
-
-      addFormatToken('s', ['ss', 2], 0, 'second');
-
-      // ALIASES
-
-      addUnitAlias('second', 's');
-
-      // PRIORITY
-
-      addUnitPriority('second', 15);
-
-      // PARSING
-
-      addRegexToken('s',  match1to2);
-      addRegexToken('ss', match1to2, match2);
-      addParseToken(['s', 'ss'], SECOND);
-
-      // MOMENTS
-
-      var getSetSecond = makeGetSet('Seconds', false);
-
-      // FORMATTING
-
-      addFormatToken('S', 0, 0, function () {
-          return ~~(this.millisecond() / 100);
-      });
-
-      addFormatToken(0, ['SS', 2], 0, function () {
-          return ~~(this.millisecond() / 10);
-      });
-
-      addFormatToken(0, ['SSS', 3], 0, 'millisecond');
-      addFormatToken(0, ['SSSS', 4], 0, function () {
-          return this.millisecond() * 10;
-      });
-      addFormatToken(0, ['SSSSS', 5], 0, function () {
-          return this.millisecond() * 100;
-      });
-      addFormatToken(0, ['SSSSSS', 6], 0, function () {
-          return this.millisecond() * 1000;
-      });
-      addFormatToken(0, ['SSSSSSS', 7], 0, function () {
-          return this.millisecond() * 10000;
-      });
-      addFormatToken(0, ['SSSSSSSS', 8], 0, function () {
-          return this.millisecond() * 100000;
-      });
-      addFormatToken(0, ['SSSSSSSSS', 9], 0, function () {
-          return this.millisecond() * 1000000;
-      });
-
-
-      // ALIASES
-
-      addUnitAlias('millisecond', 'ms');
-
-      // PRIORITY
-
-      addUnitPriority('millisecond', 16);
-
-      // PARSING
-
-      addRegexToken('S',    match1to3, match1);
-      addRegexToken('SS',   match1to3, match2);
-      addRegexToken('SSS',  match1to3, match3);
-
-      var token;
-      for (token = 'SSSS'; token.length <= 9; token += 'S') {
-          addRegexToken(token, matchUnsigned);
-      }
-
-      function parseMs(input, array) {
-          array[MILLISECOND] = toInt(('0.' + input) * 1000);
-      }
-
-      for (token = 'S'; token.length <= 9; token += 'S') {
-          addParseToken(token, parseMs);
-      }
-      // MOMENTS
-
-      var getSetMillisecond = makeGetSet('Milliseconds', false);
-
-      // FORMATTING
-
-      addFormatToken('z',  0, 0, 'zoneAbbr');
-      addFormatToken('zz', 0, 0, 'zoneName');
-
-      // MOMENTS
-
-      function getZoneAbbr () {
-          return this._isUTC ? 'UTC' : '';
-      }
-
-      function getZoneName () {
-          return this._isUTC ? 'Coordinated Universal Time' : '';
-      }
-
-      var momentPrototype__proto = Moment.prototype;
-
-      momentPrototype__proto.add               = add_subtract__add;
-      momentPrototype__proto.calendar          = moment_calendar__calendar;
-      momentPrototype__proto.clone             = clone;
-      momentPrototype__proto.diff              = diff;
-      momentPrototype__proto.endOf             = endOf;
-      momentPrototype__proto.format            = format;
-      momentPrototype__proto.from              = from;
-      momentPrototype__proto.fromNow           = fromNow;
-      momentPrototype__proto.to                = to;
-      momentPrototype__proto.toNow             = toNow;
-      momentPrototype__proto.get               = stringGet;
-      momentPrototype__proto.invalidAt         = invalidAt;
-      momentPrototype__proto.isAfter           = isAfter;
-      momentPrototype__proto.isBefore          = isBefore;
-      momentPrototype__proto.isBetween         = isBetween;
-      momentPrototype__proto.isSame            = isSame;
-      momentPrototype__proto.isSameOrAfter     = isSameOrAfter;
-      momentPrototype__proto.isSameOrBefore    = isSameOrBefore;
-      momentPrototype__proto.isValid           = moment_valid__isValid;
-      momentPrototype__proto.lang              = lang;
-      momentPrototype__proto.locale            = locale;
-      momentPrototype__proto.localeData        = localeData;
-      momentPrototype__proto.max               = prototypeMax;
-      momentPrototype__proto.min               = prototypeMin;
-      momentPrototype__proto.parsingFlags      = parsingFlags;
-      momentPrototype__proto.set               = stringSet;
-      momentPrototype__proto.startOf           = startOf;
-      momentPrototype__proto.subtract          = add_subtract__subtract;
-      momentPrototype__proto.toArray           = toArray;
-      momentPrototype__proto.toObject          = toObject;
-      momentPrototype__proto.toDate            = toDate;
-      momentPrototype__proto.toISOString       = moment_format__toISOString;
-      momentPrototype__proto.toJSON            = toJSON;
-      momentPrototype__proto.toString          = toString;
-      momentPrototype__proto.unix              = unix;
-      momentPrototype__proto.valueOf           = to_type__valueOf;
-      momentPrototype__proto.creationData      = creationData;
-
-      // Year
-      momentPrototype__proto.year       = getSetYear;
-      momentPrototype__proto.isLeapYear = getIsLeapYear;
-
-      // Week Year
-      momentPrototype__proto.weekYear    = getSetWeekYear;
-      momentPrototype__proto.isoWeekYear = getSetISOWeekYear;
-
-      // Quarter
-      momentPrototype__proto.quarter = momentPrototype__proto.quarters = getSetQuarter;
-
-      // Month
-      momentPrototype__proto.month       = getSetMonth;
-      momentPrototype__proto.daysInMonth = getDaysInMonth;
-
-      // Week
-      momentPrototype__proto.week           = momentPrototype__proto.weeks        = getSetWeek;
-      momentPrototype__proto.isoWeek        = momentPrototype__proto.isoWeeks     = getSetISOWeek;
-      momentPrototype__proto.weeksInYear    = getWeeksInYear;
-      momentPrototype__proto.isoWeeksInYear = getISOWeeksInYear;
-
-      // Day
-      momentPrototype__proto.date       = getSetDayOfMonth;
-      momentPrototype__proto.day        = momentPrototype__proto.days             = getSetDayOfWeek;
-      momentPrototype__proto.weekday    = getSetLocaleDayOfWeek;
-      momentPrototype__proto.isoWeekday = getSetISODayOfWeek;
-      momentPrototype__proto.dayOfYear  = getSetDayOfYear;
-
-      // Hour
-      momentPrototype__proto.hour = momentPrototype__proto.hours = getSetHour;
-
-      // Minute
-      momentPrototype__proto.minute = momentPrototype__proto.minutes = getSetMinute;
-
-      // Second
-      momentPrototype__proto.second = momentPrototype__proto.seconds = getSetSecond;
-
-      // Millisecond
-      momentPrototype__proto.millisecond = momentPrototype__proto.milliseconds = getSetMillisecond;
-
-      // Offset
-      momentPrototype__proto.utcOffset            = getSetOffset;
-      momentPrototype__proto.utc                  = setOffsetToUTC;
-      momentPrototype__proto.local                = setOffsetToLocal;
-      momentPrototype__proto.parseZone            = setOffsetToParsedOffset;
-      momentPrototype__proto.hasAlignedHourOffset = hasAlignedHourOffset;
-      momentPrototype__proto.isDST                = isDaylightSavingTime;
-      momentPrototype__proto.isLocal              = isLocal;
-      momentPrototype__proto.isUtcOffset          = isUtcOffset;
-      momentPrototype__proto.isUtc                = isUtc;
-      momentPrototype__proto.isUTC                = isUtc;
-
-      // Timezone
-      momentPrototype__proto.zoneAbbr = getZoneAbbr;
-      momentPrototype__proto.zoneName = getZoneName;
-
-      // Deprecations
-      momentPrototype__proto.dates  = deprecate('dates accessor is deprecated. Use date instead.', getSetDayOfMonth);
-      momentPrototype__proto.months = deprecate('months accessor is deprecated. Use month instead', getSetMonth);
-      momentPrototype__proto.years  = deprecate('years accessor is deprecated. Use year instead', getSetYear);
-      momentPrototype__proto.zone   = deprecate('moment().zone is deprecated, use moment().utcOffset instead. http://momentjs.com/guides/#/warnings/zone/', getSetZone);
-      momentPrototype__proto.isDSTShifted = deprecate('isDSTShifted is deprecated. See http://momentjs.com/guides/#/warnings/dst-shifted/ for more information', isDaylightSavingTimeShifted);
-
-      var momentPrototype = momentPrototype__proto;
-
-      function moment__createUnix (input) {
-          return local__createLocal(input * 1000);
-      }
-
-      function moment__createInZone () {
-          return local__createLocal.apply(null, arguments).parseZone();
-      }
-
-      function preParsePostFormat (string) {
-          return string;
-      }
-
-      var prototype__proto = Locale.prototype;
-
-      prototype__proto.calendar        = locale_calendar__calendar;
-      prototype__proto.longDateFormat  = longDateFormat;
-      prototype__proto.invalidDate     = invalidDate;
-      prototype__proto.ordinal         = ordinal;
-      prototype__proto.preparse        = preParsePostFormat;
-      prototype__proto.postformat      = preParsePostFormat;
-      prototype__proto.relativeTime    = relative__relativeTime;
-      prototype__proto.pastFuture      = pastFuture;
-      prototype__proto.set             = locale_set__set;
-
-      // Month
-      prototype__proto.months            =        localeMonths;
-      prototype__proto.monthsShort       =        localeMonthsShort;
-      prototype__proto.monthsParse       =        localeMonthsParse;
-      prototype__proto.monthsRegex       = monthsRegex;
-      prototype__proto.monthsShortRegex  = monthsShortRegex;
-
-      // Week
-      prototype__proto.week = localeWeek;
-      prototype__proto.firstDayOfYear = localeFirstDayOfYear;
-      prototype__proto.firstDayOfWeek = localeFirstDayOfWeek;
-
-      // Day of Week
-      prototype__proto.weekdays       =        localeWeekdays;
-      prototype__proto.weekdaysMin    =        localeWeekdaysMin;
-      prototype__proto.weekdaysShort  =        localeWeekdaysShort;
-      prototype__proto.weekdaysParse  =        localeWeekdaysParse;
-
-      prototype__proto.weekdaysRegex       =        weekdaysRegex;
-      prototype__proto.weekdaysShortRegex  =        weekdaysShortRegex;
-      prototype__proto.weekdaysMinRegex    =        weekdaysMinRegex;
-
-      // Hours
-      prototype__proto.isPM = localeIsPM;
-      prototype__proto.meridiem = localeMeridiem;
-
-      function lists__get (format, index, field, setter) {
-          var locale = locale_locales__getLocale();
-          var utc = create_utc__createUTC().set(setter, index);
-          return locale[field](utc, format);
-      }
-
-      function listMonthsImpl (format, index, field) {
-          if (typeof format === 'number') {
->>>>>>> 88f14a0... add 'dist' folder for deployment
               index = format;
               format = undefined;
           }
 
           format = format || '';
-<<<<<<< HEAD
       } else {
           format = localeSorted;
           index = format;
@@ -11147,7 +7323,7 @@ return /******/ (function(modules) { // webpackBootstrap
   // Side effect imports
 
 
-  hooks.version = '2.17.1';
+  hooks.version = '2.16.0';
 
   setHookCallback(createLocal);
 
@@ -11203,522 +7379,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 87 */
-=======
-
-          if (index != null) {
-              return lists__get(format, index, field, 'month');
-          }
-
-          var i;
-          var out = [];
-          for (i = 0; i < 12; i++) {
-              out[i] = lists__get(format, i, field, 'month');
-          }
-          return out;
-      }
-
-      // ()
-      // (5)
-      // (fmt, 5)
-      // (fmt)
-      // (true)
-      // (true, 5)
-      // (true, fmt, 5)
-      // (true, fmt)
-      function listWeekdaysImpl (localeSorted, format, index, field) {
-          if (typeof localeSorted === 'boolean') {
-              if (typeof format === 'number') {
-                  index = format;
-                  format = undefined;
-              }
-
-              format = format || '';
-          } else {
-              format = localeSorted;
-              index = format;
-              localeSorted = false;
-
-              if (typeof format === 'number') {
-                  index = format;
-                  format = undefined;
-              }
-
-              format = format || '';
-          }
-
-          var locale = locale_locales__getLocale(),
-              shift = localeSorted ? locale._week.dow : 0;
-
-          if (index != null) {
-              return lists__get(format, (index + shift) % 7, field, 'day');
-          }
-
-          var i;
-          var out = [];
-          for (i = 0; i < 7; i++) {
-              out[i] = lists__get(format, (i + shift) % 7, field, 'day');
-          }
-          return out;
-      }
-
-      function lists__listMonths (format, index) {
-          return listMonthsImpl(format, index, 'months');
-      }
-
-      function lists__listMonthsShort (format, index) {
-          return listMonthsImpl(format, index, 'monthsShort');
-      }
-
-      function lists__listWeekdays (localeSorted, format, index) {
-          return listWeekdaysImpl(localeSorted, format, index, 'weekdays');
-      }
-
-      function lists__listWeekdaysShort (localeSorted, format, index) {
-          return listWeekdaysImpl(localeSorted, format, index, 'weekdaysShort');
-      }
-
-      function lists__listWeekdaysMin (localeSorted, format, index) {
-          return listWeekdaysImpl(localeSorted, format, index, 'weekdaysMin');
-      }
-
-      locale_locales__getSetGlobalLocale('en', {
-          ordinalParse: /\d{1,2}(th|st|nd|rd)/,
-          ordinal : function (number) {
-              var b = number % 10,
-                  output = (toInt(number % 100 / 10) === 1) ? 'th' :
-                  (b === 1) ? 'st' :
-                  (b === 2) ? 'nd' :
-                  (b === 3) ? 'rd' : 'th';
-              return number + output;
-          }
-      });
-
-      // Side effect imports
-      utils_hooks__hooks.lang = deprecate('moment.lang is deprecated. Use moment.locale instead.', locale_locales__getSetGlobalLocale);
-      utils_hooks__hooks.langData = deprecate('moment.langData is deprecated. Use moment.localeData instead.', locale_locales__getLocale);
-
-      var mathAbs = Math.abs;
-
-      function duration_abs__abs () {
-          var data           = this._data;
-
-          this._milliseconds = mathAbs(this._milliseconds);
-          this._days         = mathAbs(this._days);
-          this._months       = mathAbs(this._months);
-
-          data.milliseconds  = mathAbs(data.milliseconds);
-          data.seconds       = mathAbs(data.seconds);
-          data.minutes       = mathAbs(data.minutes);
-          data.hours         = mathAbs(data.hours);
-          data.months        = mathAbs(data.months);
-          data.years         = mathAbs(data.years);
-
-          return this;
-      }
-
-      function duration_add_subtract__addSubtract (duration, input, value, direction) {
-          var other = create__createDuration(input, value);
-
-          duration._milliseconds += direction * other._milliseconds;
-          duration._days         += direction * other._days;
-          duration._months       += direction * other._months;
-
-          return duration._bubble();
-      }
-
-      // supports only 2.0-style add(1, 's') or add(duration)
-      function duration_add_subtract__add (input, value) {
-          return duration_add_subtract__addSubtract(this, input, value, 1);
-      }
-
-      // supports only 2.0-style subtract(1, 's') or subtract(duration)
-      function duration_add_subtract__subtract (input, value) {
-          return duration_add_subtract__addSubtract(this, input, value, -1);
-      }
-
-      function absCeil (number) {
-          if (number < 0) {
-              return Math.floor(number);
-          } else {
-              return Math.ceil(number);
-          }
-      }
-
-      function bubble () {
-          var milliseconds = this._milliseconds;
-          var days         = this._days;
-          var months       = this._months;
-          var data         = this._data;
-          var seconds, minutes, hours, years, monthsFromDays;
-
-          // if we have a mix of positive and negative values, bubble down first
-          // check: https://github.com/moment/moment/issues/2166
-          if (!((milliseconds >= 0 && days >= 0 && months >= 0) ||
-                  (milliseconds <= 0 && days <= 0 && months <= 0))) {
-              milliseconds += absCeil(monthsToDays(months) + days) * 864e5;
-              days = 0;
-              months = 0;
-          }
-
-          // The following code bubbles up values, see the tests for
-          // examples of what that means.
-          data.milliseconds = milliseconds % 1000;
-
-          seconds           = absFloor(milliseconds / 1000);
-          data.seconds      = seconds % 60;
-
-          minutes           = absFloor(seconds / 60);
-          data.minutes      = minutes % 60;
-
-          hours             = absFloor(minutes / 60);
-          data.hours        = hours % 24;
-
-          days += absFloor(hours / 24);
-
-          // convert days to months
-          monthsFromDays = absFloor(daysToMonths(days));
-          months += monthsFromDays;
-          days -= absCeil(monthsToDays(monthsFromDays));
-
-          // 12 months -> 1 year
-          years = absFloor(months / 12);
-          months %= 12;
-
-          data.days   = days;
-          data.months = months;
-          data.years  = years;
-
-          return this;
-      }
-
-      function daysToMonths (days) {
-          // 400 years have 146097 days (taking into account leap year rules)
-          // 400 years have 12 months === 4800
-          return days * 4800 / 146097;
-      }
-
-      function monthsToDays (months) {
-          // the reverse of daysToMonths
-          return months * 146097 / 4800;
-      }
-
-      function as (units) {
-          var days;
-          var months;
-          var milliseconds = this._milliseconds;
-
-          units = normalizeUnits(units);
-
-          if (units === 'month' || units === 'year') {
-              days   = this._days   + milliseconds / 864e5;
-              months = this._months + daysToMonths(days);
-              return units === 'month' ? months : months / 12;
-          } else {
-              // handle milliseconds separately because of floating point math errors (issue #1867)
-              days = this._days + Math.round(monthsToDays(this._months));
-              switch (units) {
-                  case 'week'   : return days / 7     + milliseconds / 6048e5;
-                  case 'day'    : return days         + milliseconds / 864e5;
-                  case 'hour'   : return days * 24    + milliseconds / 36e5;
-                  case 'minute' : return days * 1440  + milliseconds / 6e4;
-                  case 'second' : return days * 86400 + milliseconds / 1000;
-                  // Math.floor prevents floating point math errors here
-                  case 'millisecond': return Math.floor(days * 864e5) + milliseconds;
-                  default: throw new Error('Unknown unit ' + units);
-              }
-          }
-      }
-
-      // TODO: Use this.as('ms')?
-      function duration_as__valueOf () {
-          return (
-              this._milliseconds +
-              this._days * 864e5 +
-              (this._months % 12) * 2592e6 +
-              toInt(this._months / 12) * 31536e6
-          );
-      }
-
-      function makeAs (alias) {
-          return function () {
-              return this.as(alias);
-          };
-      }
-
-      var asMilliseconds = makeAs('ms');
-      var asSeconds      = makeAs('s');
-      var asMinutes      = makeAs('m');
-      var asHours        = makeAs('h');
-      var asDays         = makeAs('d');
-      var asWeeks        = makeAs('w');
-      var asMonths       = makeAs('M');
-      var asYears        = makeAs('y');
-
-      function duration_get__get (units) {
-          units = normalizeUnits(units);
-          return this[units + 's']();
-      }
-
-      function makeGetter(name) {
-          return function () {
-              return this._data[name];
-          };
-      }
-
-      var milliseconds = makeGetter('milliseconds');
-      var seconds      = makeGetter('seconds');
-      var minutes      = makeGetter('minutes');
-      var hours        = makeGetter('hours');
-      var days         = makeGetter('days');
-      var months       = makeGetter('months');
-      var years        = makeGetter('years');
-
-      function weeks () {
-          return absFloor(this.days() / 7);
-      }
-
-      var round = Math.round;
-      var thresholds = {
-          s: 45,  // seconds to minute
-          m: 45,  // minutes to hour
-          h: 22,  // hours to day
-          d: 26,  // days to month
-          M: 11   // months to year
-      };
-
-      // helper function for moment.fn.from, moment.fn.fromNow, and moment.duration.fn.humanize
-      function substituteTimeAgo(string, number, withoutSuffix, isFuture, locale) {
-          return locale.relativeTime(number || 1, !!withoutSuffix, string, isFuture);
-      }
-
-      function duration_humanize__relativeTime (posNegDuration, withoutSuffix, locale) {
-          var duration = create__createDuration(posNegDuration).abs();
-          var seconds  = round(duration.as('s'));
-          var minutes  = round(duration.as('m'));
-          var hours    = round(duration.as('h'));
-          var days     = round(duration.as('d'));
-          var months   = round(duration.as('M'));
-          var years    = round(duration.as('y'));
-
-          var a = seconds < thresholds.s && ['s', seconds]  ||
-                  minutes <= 1           && ['m']           ||
-                  minutes < thresholds.m && ['mm', minutes] ||
-                  hours   <= 1           && ['h']           ||
-                  hours   < thresholds.h && ['hh', hours]   ||
-                  days    <= 1           && ['d']           ||
-                  days    < thresholds.d && ['dd', days]    ||
-                  months  <= 1           && ['M']           ||
-                  months  < thresholds.M && ['MM', months]  ||
-                  years   <= 1           && ['y']           || ['yy', years];
-
-          a[2] = withoutSuffix;
-          a[3] = +posNegDuration > 0;
-          a[4] = locale;
-          return substituteTimeAgo.apply(null, a);
-      }
-
-      // This function allows you to set the rounding function for relative time strings
-      function duration_humanize__getSetRelativeTimeRounding (roundingFunction) {
-          if (roundingFunction === undefined) {
-              return round;
-          }
-          if (typeof(roundingFunction) === 'function') {
-              round = roundingFunction;
-              return true;
-          }
-          return false;
-      }
-
-      // This function allows you to set a threshold for relative time strings
-      function duration_humanize__getSetRelativeTimeThreshold (threshold, limit) {
-          if (thresholds[threshold] === undefined) {
-              return false;
-          }
-          if (limit === undefined) {
-              return thresholds[threshold];
-          }
-          thresholds[threshold] = limit;
-          return true;
-      }
-
-      function humanize (withSuffix) {
-          var locale = this.localeData();
-          var output = duration_humanize__relativeTime(this, !withSuffix, locale);
-
-          if (withSuffix) {
-              output = locale.pastFuture(+this, output);
-          }
-
-          return locale.postformat(output);
-      }
-
-      var iso_string__abs = Math.abs;
-
-      function iso_string__toISOString() {
-          // for ISO strings we do not use the normal bubbling rules:
-          //  * milliseconds bubble up until they become hours
-          //  * days do not bubble at all
-          //  * months bubble up until they become years
-          // This is because there is no context-free conversion between hours and days
-          // (think of clock changes)
-          // and also not between days and months (28-31 days per month)
-          var seconds = iso_string__abs(this._milliseconds) / 1000;
-          var days         = iso_string__abs(this._days);
-          var months       = iso_string__abs(this._months);
-          var minutes, hours, years;
-
-          // 3600 seconds -> 60 minutes -> 1 hour
-          minutes           = absFloor(seconds / 60);
-          hours             = absFloor(minutes / 60);
-          seconds %= 60;
-          minutes %= 60;
-
-          // 12 months -> 1 year
-          years  = absFloor(months / 12);
-          months %= 12;
-
-
-          // inspired by https://github.com/dordille/moment-isoduration/blob/master/moment.isoduration.js
-          var Y = years;
-          var M = months;
-          var D = days;
-          var h = hours;
-          var m = minutes;
-          var s = seconds;
-          var total = this.asSeconds();
-
-          if (!total) {
-              // this is the same as C#'s (Noda) and python (isodate)...
-              // but not other JS (goog.date)
-              return 'P0D';
-          }
-
-          return (total < 0 ? '-' : '') +
-              'P' +
-              (Y ? Y + 'Y' : '') +
-              (M ? M + 'M' : '') +
-              (D ? D + 'D' : '') +
-              ((h || m || s) ? 'T' : '') +
-              (h ? h + 'H' : '') +
-              (m ? m + 'M' : '') +
-              (s ? s + 'S' : '');
-      }
-
-      var duration_prototype__proto = Duration.prototype;
-
-      duration_prototype__proto.abs            = duration_abs__abs;
-      duration_prototype__proto.add            = duration_add_subtract__add;
-      duration_prototype__proto.subtract       = duration_add_subtract__subtract;
-      duration_prototype__proto.as             = as;
-      duration_prototype__proto.asMilliseconds = asMilliseconds;
-      duration_prototype__proto.asSeconds      = asSeconds;
-      duration_prototype__proto.asMinutes      = asMinutes;
-      duration_prototype__proto.asHours        = asHours;
-      duration_prototype__proto.asDays         = asDays;
-      duration_prototype__proto.asWeeks        = asWeeks;
-      duration_prototype__proto.asMonths       = asMonths;
-      duration_prototype__proto.asYears        = asYears;
-      duration_prototype__proto.valueOf        = duration_as__valueOf;
-      duration_prototype__proto._bubble        = bubble;
-      duration_prototype__proto.get            = duration_get__get;
-      duration_prototype__proto.milliseconds   = milliseconds;
-      duration_prototype__proto.seconds        = seconds;
-      duration_prototype__proto.minutes        = minutes;
-      duration_prototype__proto.hours          = hours;
-      duration_prototype__proto.days           = days;
-      duration_prototype__proto.weeks          = weeks;
-      duration_prototype__proto.months         = months;
-      duration_prototype__proto.years          = years;
-      duration_prototype__proto.humanize       = humanize;
-      duration_prototype__proto.toISOString    = iso_string__toISOString;
-      duration_prototype__proto.toString       = iso_string__toISOString;
-      duration_prototype__proto.toJSON         = iso_string__toISOString;
-      duration_prototype__proto.locale         = locale;
-      duration_prototype__proto.localeData     = localeData;
-
-      // Deprecations
-      duration_prototype__proto.toIsoString = deprecate('toIsoString() is deprecated. Please use toISOString() instead (notice the capitals)', iso_string__toISOString);
-      duration_prototype__proto.lang = lang;
-
-      // Side effect imports
-
-      // FORMATTING
-
-      addFormatToken('X', 0, 0, 'unix');
-      addFormatToken('x', 0, 0, 'valueOf');
-
-      // PARSING
-
-      addRegexToken('x', matchSigned);
-      addRegexToken('X', matchTimestamp);
-      addParseToken('X', function (input, array, config) {
-          config._d = new Date(parseFloat(input, 10) * 1000);
-      });
-      addParseToken('x', function (input, array, config) {
-          config._d = new Date(toInt(input));
-      });
-
-      // Side effect imports
-
-
-      utils_hooks__hooks.version = '2.15.2';
-
-      setHookCallback(local__createLocal);
-
-      utils_hooks__hooks.fn                    = momentPrototype;
-      utils_hooks__hooks.min                   = min;
-      utils_hooks__hooks.max                   = max;
-      utils_hooks__hooks.now                   = now;
-      utils_hooks__hooks.utc                   = create_utc__createUTC;
-      utils_hooks__hooks.unix                  = moment__createUnix;
-      utils_hooks__hooks.months                = lists__listMonths;
-      utils_hooks__hooks.isDate                = isDate;
-      utils_hooks__hooks.locale                = locale_locales__getSetGlobalLocale;
-      utils_hooks__hooks.invalid               = valid__createInvalid;
-      utils_hooks__hooks.duration              = create__createDuration;
-      utils_hooks__hooks.isMoment              = isMoment;
-      utils_hooks__hooks.weekdays              = lists__listWeekdays;
-      utils_hooks__hooks.parseZone             = moment__createInZone;
-      utils_hooks__hooks.localeData            = locale_locales__getLocale;
-      utils_hooks__hooks.isDuration            = isDuration;
-      utils_hooks__hooks.monthsShort           = lists__listMonthsShort;
-      utils_hooks__hooks.weekdaysMin           = lists__listWeekdaysMin;
-      utils_hooks__hooks.defineLocale          = defineLocale;
-      utils_hooks__hooks.updateLocale          = updateLocale;
-      utils_hooks__hooks.locales               = locale_locales__listLocales;
-      utils_hooks__hooks.weekdaysShort         = lists__listWeekdaysShort;
-      utils_hooks__hooks.normalizeUnits        = normalizeUnits;
-      utils_hooks__hooks.relativeTimeRounding = duration_humanize__getSetRelativeTimeRounding;
-      utils_hooks__hooks.relativeTimeThreshold = duration_humanize__getSetRelativeTimeThreshold;
-      utils_hooks__hooks.calendarFormat        = getCalendarFormat;
-      utils_hooks__hooks.prototype             = momentPrototype;
-
-      var _moment = utils_hooks__hooks;
-
-      return _moment;
-
-  }));
-  /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)(module)))
-
-/***/ },
-/* 4 */
-/***/ function(module, exports) {
-
-  module.exports = function(module) {
-  	if(!module.webpackPolyfill) {
-  		module.deprecate = function() {};
-  		module.paths = [];
-  		// module.parent = undefined by default
-  		module.children = [];
-  		module.webpackPolyfill = 1;
-  	}
-  	return module;
-  }
-
-
-/***/ },
-/* 5 */
->>>>>>> 88f14a0... add 'dist' folder for deployment
 /***/ function(module, exports) {
 
   function webpackContext(req) {
@@ -11727,19 +7387,11 @@ return /******/ (function(modules) { // webpackBootstrap
   webpackContext.keys = function() { return []; };
   webpackContext.resolve = webpackContext;
   module.exports = webpackContext;
-<<<<<<< HEAD
   webpackContext.id = 87;
 
 
 /***/ },
 /* 88 */
-=======
-  webpackContext.id = 5;
-
-
-/***/ },
-/* 6 */
->>>>>>> 88f14a0... add 'dist' folder for deployment
 /***/ function(module, exports) {
 
   /* WEBPACK VAR INJECTION */(function(global) {'use strict';
@@ -11955,18 +7607,13 @@ return /******/ (function(modules) { // webpackBootstrap
   /* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-<<<<<<< HEAD
 /* 89 */
-=======
-/* 7 */
->>>>>>> 88f14a0... add 'dist' folder for deployment
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
 
   // utils
   exports.util = __webpack_require__(1);
-<<<<<<< HEAD
   exports.DOMutil = __webpack_require__(90);
 
   // data
@@ -11992,33 +7639,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 90 */
-=======
-  exports.DOMutil = __webpack_require__(8);
-
-  // data
-  exports.DataSet = __webpack_require__(9);
-  exports.DataView = __webpack_require__(11);
-  exports.Queue = __webpack_require__(10);
-
-  // Graph3d
-  exports.Graph3d = __webpack_require__(12);
-  exports.graph3d = {
-    Camera: __webpack_require__(16),
-    Filter: __webpack_require__(17),
-    Point2d: __webpack_require__(15),
-    Point3d: __webpack_require__(14),
-    Slider: __webpack_require__(18),
-    StepNumber: __webpack_require__(19)
-  };
-
-  // bundled external libraries
-  exports.moment = __webpack_require__(2);
-  exports.Hammer = __webpack_require__(22);
-  exports.keycharm = __webpack_require__(25);
-
-/***/ },
-/* 8 */
->>>>>>> 88f14a0... add 'dist' folder for deployment
 /***/ function(module, exports) {
 
   'use strict';
@@ -12231,16 +7851,11 @@ return /******/ (function(modules) { // webpackBootstrap
   };
 
 /***/ },
-<<<<<<< HEAD
 /* 91 */
-=======
-/* 9 */
->>>>>>> 88f14a0... add 'dist' folder for deployment
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
 
-<<<<<<< HEAD
   var _stringify = __webpack_require__(82);
 
   var _stringify2 = _interopRequireDefault(_stringify);
@@ -12257,12 +7872,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
   var util = __webpack_require__(1);
   var Queue = __webpack_require__(92);
-=======
-  var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
-
-  var util = __webpack_require__(1);
-  var Queue = __webpack_require__(10);
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
   /**
    * DataSet
@@ -12323,11 +7932,7 @@ return /******/ (function(modules) { // webpackBootstrap
     // all variants of a Date are internally stored as Date, so we can convert
     // from everything to everything (also from ISODate to Number for example)
     if (this._options.type) {
-<<<<<<< HEAD
       var fields = (0, _keys2['default'])(this._options.type);
-=======
-      var fields = Object.keys(this._options.type);
->>>>>>> 88f14a0... add 'dist' folder for deployment
       for (var i = 0, len = fields.length; i < len; i++) {
         var field = fields[i];
         var value = this._options.type[field];
@@ -12379,11 +7984,7 @@ return /******/ (function(modules) { // webpackBootstrap
           });
         }
 
-<<<<<<< HEAD
         if ((0, _typeof3['default'])(options.queue) === 'object') {
-=======
-        if (_typeof(options.queue) === 'object') {
->>>>>>> 88f14a0... add 'dist' folder for deployment
           this._queue.setOptions(options.queue);
         }
       }
@@ -12584,6 +8185,8 @@ return /******/ (function(modules) { // webpackBootstrap
    * {Object.<String, String>} [type]
    * {String[]} [fields]          field names to be returned
    * {function} [filter]          filter items
+   * {function} [map]             map items
+   * {function} [reduce]          reduce items
    * {String | function} [order]  Order the items by a field name or custom sort function.
    * @throws Error
    */
@@ -12618,6 +8221,10 @@ return /******/ (function(modules) { // webpackBootstrap
     // build options
     var type = options && options.type || this._options.type;
     var filter = options && options.filter;
+    var map = options && options.map;
+    var order = options && options.order;
+    var fields = options && options.fields;
+    var reduce = options && options.reduce;
     var items = [],
         item,
         itemIds,
@@ -12628,11 +8235,15 @@ return /******/ (function(modules) { // webpackBootstrap
     // convert items
     if (id != undefined) {
       // return a single item
-      item = me._getItem(id, type);
+      if (!map) {
+        item = me._getItem(id, type);
+      } else {
+        item = map(me._getItem(id, type));
+      }
       if (item && filter && !filter(item)) {
         item = null;
       }
-    } else if (ids != undefined) {
+    } else if (ids != undefined && !map) {
       // return a subset of items
       for (i = 0, len = ids.length; i < len; i++) {
         item = me._getItem(ids[i], type);
@@ -12640,13 +8251,17 @@ return /******/ (function(modules) { // webpackBootstrap
           items.push(item);
         }
       }
-    } else {
+    } else if (ids != undefined) {
+      // return a subset of items mapped
+      for (i = 0, len = ids.length; i < len; i++) {
+        item = me._getItem(ids[i], type);
+        if (!filter || filter(item)) {
+          items.push(map(item));
+        }
+      }
+    } else if (!map) {
       // return all items
-<<<<<<< HEAD
       itemIds = (0, _keys2['default'])(this._data);
-=======
-      itemIds = Object.keys(this._data);
->>>>>>> 88f14a0... add 'dist' folder for deployment
       for (i = 0, len = itemIds.length; i < len; i++) {
         itemId = itemIds[i];
         item = me._getItem(itemId, type);
@@ -12654,16 +8269,30 @@ return /******/ (function(modules) { // webpackBootstrap
           items.push(item);
         }
       }
+    } else {
+      // return all items mapped
+      itemIds = (0, _keys2['default'])(this._data);
+      for (i = 0, len = itemIds.length; i < len; i++) {
+        itemId = itemIds[i];
+        item = me._getItem(itemId, type);
+        if (!filter || filter(item)) {
+          items.push(map(item));
+        }
+      }
     }
 
-    // order the results
-    if (options && options.order && id == undefined) {
-      this._sort(items, options.order);
+    // first reduce the results if applicable
+    if (reduce && id == undefined) {
+      items = items.reduce(reduce, []);
+    }
+
+    // then order the results
+    if (order && id == undefined) {
+      this._sort(items, order);
     }
 
     // filter fields of the items
-    if (options && options.fields) {
-      var fields = options.fields;
+    if (fields) {
       if (id != undefined) {
         item = this._filterFields(item, fields);
       } else {
@@ -12704,13 +8333,13 @@ return /******/ (function(modules) { // webpackBootstrap
   DataSet.prototype.getIds = function (options) {
     var data = this._data,
         filter = options && options.filter,
+
+    // should not affect ids, but provided for consistency
+    map = options && options.map,
+        reduce = options && options.reduce,
         order = options && options.order,
         type = options && options.type || this._options.type,
-<<<<<<< HEAD
         itemIds = (0, _keys2['default'])(data),
-=======
-        itemIds = Object.keys(data),
->>>>>>> 88f14a0... add 'dist' folder for deployment
         i,
         len,
         id,
@@ -12720,7 +8349,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
     if (filter) {
       // get filtered items
-      if (order) {
+      if (order || reduce) {
         // create ordered list
         items = [];
         for (i = 0, len = itemIds.length; i < len; i++) {
@@ -12731,7 +8360,13 @@ return /******/ (function(modules) { // webpackBootstrap
           }
         }
 
-        this._sort(items, order);
+        if (reduce) {
+          items = items.reduce(reduce, []);
+        }
+
+        if (order) {
+          this._sort(items, order);
+        }
 
         for (i = 0, len = items.length; i < len; i++) {
           ids.push(items[i][this._fieldId]);
@@ -12748,7 +8383,7 @@ return /******/ (function(modules) { // webpackBootstrap
       }
     } else {
       // get all items
-      if (order) {
+      if (order || reduce) {
         // create an ordered list
         items = [];
         for (i = 0, len = itemIds.length; i < len; i++) {
@@ -12756,7 +8391,13 @@ return /******/ (function(modules) { // webpackBootstrap
           items.push(data[id]);
         }
 
-        this._sort(items, order);
+        if (reduce) {
+          items = items.reduce(reduce, []);
+        }
+
+        if (order) {
+          this._sort(items, order);
+        }
 
         for (i = 0, len = items.length; i < len; i++) {
           ids.push(items[i][this._fieldId]);
@@ -12796,11 +8437,7 @@ return /******/ (function(modules) { // webpackBootstrap
     var filter = options && options.filter,
         type = options && options.type || this._options.type,
         data = this._data,
-<<<<<<< HEAD
         itemIds = (0, _keys2['default'])(data),
-=======
-        itemIds = Object.keys(data),
->>>>>>> 88f14a0... add 'dist' folder for deployment
         i,
         len,
         item,
@@ -12843,11 +8480,7 @@ return /******/ (function(modules) { // webpackBootstrap
         type = options && options.type || this._options.type,
         mappedItems = [],
         data = this._data,
-<<<<<<< HEAD
         itemIds = (0, _keys2['default'])(data),
-=======
-        itemIds = Object.keys(data),
->>>>>>> 88f14a0... add 'dist' folder for deployment
         i,
         len,
         id,
@@ -12884,11 +8517,7 @@ return /******/ (function(modules) { // webpackBootstrap
     }
 
     var filteredItem = {},
-<<<<<<< HEAD
         itemFields = (0, _keys2['default'])(item),
-=======
-        itemFields = Object.keys(item),
->>>>>>> 88f14a0... add 'dist' folder for deployment
         len = itemFields.length,
         i,
         field;
@@ -12961,11 +8590,7 @@ return /******/ (function(modules) { // webpackBootstrap
       item = this._remove(ids[i]);
       if (item) {
         itemId = item[this._fieldId];
-<<<<<<< HEAD
         if (itemId != undefined) {
-=======
-        if (itemId) {
->>>>>>> 88f14a0... add 'dist' folder for deployment
           removedIds.push(itemId);
           removedItems.push(item);
         }
@@ -13012,11 +8637,7 @@ return /******/ (function(modules) { // webpackBootstrap
    */
   DataSet.prototype.clear = function (senderId) {
     var i, len;
-<<<<<<< HEAD
     var ids = (0, _keys2['default'])(this._data);
-=======
-    var ids = Object.keys(this._data);
->>>>>>> 88f14a0... add 'dist' folder for deployment
     var items = [];
 
     for (i = 0, len = ids.length; i < len; i++) {
@@ -13038,11 +8659,7 @@ return /******/ (function(modules) { // webpackBootstrap
    */
   DataSet.prototype.max = function (field) {
     var data = this._data,
-<<<<<<< HEAD
         itemIds = (0, _keys2['default'])(data),
-=======
-        itemIds = Object.keys(data),
->>>>>>> 88f14a0... add 'dist' folder for deployment
         max = null,
         maxField = null,
         i,
@@ -13068,11 +8685,7 @@ return /******/ (function(modules) { // webpackBootstrap
    */
   DataSet.prototype.min = function (field) {
     var data = this._data,
-<<<<<<< HEAD
         itemIds = (0, _keys2['default'])(data),
-=======
-        itemIds = Object.keys(data),
->>>>>>> 88f14a0... add 'dist' folder for deployment
         min = null,
         minField = null,
         i,
@@ -13100,11 +8713,7 @@ return /******/ (function(modules) { // webpackBootstrap
    */
   DataSet.prototype.distinct = function (field) {
     var data = this._data;
-<<<<<<< HEAD
     var itemIds = (0, _keys2['default'])(data);
-=======
-    var itemIds = Object.keys(data);
->>>>>>> 88f14a0... add 'dist' folder for deployment
     var values = [];
     var fieldType = this._options.type && this._options.type[field] || null;
     var count = 0;
@@ -13158,11 +8767,7 @@ return /******/ (function(modules) { // webpackBootstrap
     }
 
     var d = {},
-<<<<<<< HEAD
         fields = (0, _keys2['default'])(item),
-=======
-        fields = Object.keys(item),
->>>>>>> 88f14a0... add 'dist' folder for deployment
         i,
         len;
     for (i = 0, len = fields.length; i < len; i++) {
@@ -13194,11 +8799,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
     // convert the items field types
     var converted = {},
-<<<<<<< HEAD
         fields = (0, _keys2['default'])(raw);
-=======
-        fields = Object.keys(raw);
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
     if (types) {
       for (i = 0, len = fields.length; i < len; i++) {
@@ -13214,14 +8815,11 @@ return /******/ (function(modules) { // webpackBootstrap
         converted[field] = value;
       }
     }
-<<<<<<< HEAD
 
     if (!converted[this._fieldId]) {
       converted[this._fieldId] = raw.id;
     }
 
-=======
->>>>>>> 88f14a0... add 'dist' folder for deployment
     return converted;
   };
 
@@ -13236,11 +8834,7 @@ return /******/ (function(modules) { // webpackBootstrap
   DataSet.prototype._updateItem = function (item) {
     var id = item[this._fieldId];
     if (id == undefined) {
-<<<<<<< HEAD
       throw new Error('Cannot update item: item has no id (item: ' + (0, _stringify2['default'])(item) + ')');
-=======
-      throw new Error('Cannot update item: item has no id (item: ' + JSON.stringify(item) + ')');
->>>>>>> 88f14a0... add 'dist' folder for deployment
     }
     var d = this._data[id];
     if (!d) {
@@ -13249,11 +8843,7 @@ return /******/ (function(modules) { // webpackBootstrap
     }
 
     // merge with current item
-<<<<<<< HEAD
     var fields = (0, _keys2['default'])(item);
-=======
-    var fields = Object.keys(item);
->>>>>>> 88f14a0... add 'dist' folder for deployment
     for (var i = 0, len = fields.length; i < len; i++) {
       var field = fields[i];
       var fieldType = this._type[field]; // type may be undefined
@@ -13266,11 +8856,7 @@ return /******/ (function(modules) { // webpackBootstrap
   module.exports = DataSet;
 
 /***/ },
-<<<<<<< HEAD
 /* 92 */
-=======
-/* 10 */
->>>>>>> 88f14a0... add 'dist' folder for deployment
 /***/ function(module, exports) {
 
   'use strict';
@@ -13475,16 +9061,11 @@ return /******/ (function(modules) { // webpackBootstrap
   module.exports = Queue;
 
 /***/ },
-<<<<<<< HEAD
 /* 93 */
-=======
-/* 11 */
->>>>>>> 88f14a0... add 'dist' folder for deployment
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
 
-<<<<<<< HEAD
   var _keys = __webpack_require__(58);
 
   var _keys2 = _interopRequireDefault(_keys);
@@ -13493,10 +9074,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
   var util = __webpack_require__(1);
   var DataSet = __webpack_require__(91);
-=======
-  var util = __webpack_require__(1);
-  var DataSet = __webpack_require__(9);
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
   /**
    * DataView
@@ -13524,8 +9101,15 @@ return /******/ (function(modules) { // webpackBootstrap
     this.setData(data);
   }
 
-  // TODO: implement a function .config() to dynamically update things like configured filter
-  // and trigger changes accordingly
+  /**
+   * Change the DataView's options and refresh DataView accordingly.
+   * @param {Object} [options]  New options: see method get
+   */
+  DataView.prototype.alter = function (options) {
+    this._options = options || {};
+    this._fieldId = this._options.fieldId || this._data && this._data.options && this._data.options.fieldId || 'id';
+    this.refresh();
+  };
 
   /**
    * Set a data source for the view
@@ -13560,7 +9144,11 @@ return /******/ (function(modules) { // webpackBootstrap
       this._fieldId = this._options.fieldId || this._data && this._data.options && this._data.options.fieldId || 'id';
 
       // trigger an add of all added items
-      ids = this._data.getIds({ filter: this._options && this._options.filter });
+      ids = this._data.getIds({
+        filter: this._options && this._options.filter,
+        map: this._options && this._options.map,
+        reduce: this._options && this._options.reduce
+      });
       for (i = 0, len = ids.length; i < len; i++) {
         id = ids[i];
         this._ids[id] = true;
@@ -13581,12 +9169,12 @@ return /******/ (function(modules) { // webpackBootstrap
    */
   DataView.prototype.refresh = function () {
     var id, i, len;
-    var ids = this._data.getIds({ filter: this._options && this._options.filter }),
-<<<<<<< HEAD
-        oldIds = (0, _keys2['default'])(this._ids),
-=======
-        oldIds = Object.keys(this._ids),
->>>>>>> 88f14a0... add 'dist' folder for deployment
+    var ids = this._data.getIds({
+      filter: this._options && this._options.filter,
+      map: this._options && this._options.map,
+      reduce: this._options && this._options.reduce
+    });
+    var oldIds = (0, _keys2['default'])(this._ids),
         newIds = {},
         addedIds = [],
         removedIds = [],
@@ -13607,11 +9195,7 @@ return /******/ (function(modules) { // webpackBootstrap
       id = oldIds[i];
       if (!newIds[id]) {
         removedIds.push(id);
-<<<<<<< HEAD
         removedItems.push(this._data._data[id]);
-=======
-        removedItems.push(this._data[id]);
->>>>>>> 88f14a0... add 'dist' folder for deployment
         delete this._ids[id];
       }
     }
@@ -13654,6 +9238,8 @@ return /******/ (function(modules) { // webpackBootstrap
    *                              {Object.<String, String>} [convert]
    *                              {String[]} [fields] field names to be returned
    *                              {function} [filter] filter items
+   *                              {function} [map] map items
+   *                              {function} [reduce] reduce items
    *                              {String | function} [order] Order the items by
    *                                  a field name or custom sort function.
    * {Array | DataTable} [data]   If provided, items will be appended to this
@@ -13688,6 +9274,13 @@ return /******/ (function(modules) { // webpackBootstrap
       };
     }
 
+    // create a combined map method when needed
+    if (this._options.map && options && options.map) {
+      viewOptions.map = function (item) {
+        return options.map(me._options.map(item));
+      };
+    }
+
     // build up the call to the linked data set
     var getArguments = [];
     if (ids != undefined) {
@@ -13703,6 +9296,7 @@ return /******/ (function(modules) { // webpackBootstrap
    * Get ids of all items or from a filtered set of items.
    * @param {Object} [options]    An Object with options. Available options:
    *                              {function} [filter] filter items
+   *                              {function} [map] map items
    *                              {String | function} [order] Order the items by
    *                                  a field name or custom sort function.
    * @return {Array} ids
@@ -13893,16 +9487,11 @@ return /******/ (function(modules) { // webpackBootstrap
   module.exports = DataView;
 
 /***/ },
-<<<<<<< HEAD
 /* 94 */
-=======
-/* 12 */
->>>>>>> 88f14a0... add 'dist' folder for deployment
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
 
-<<<<<<< HEAD
   var Emitter = __webpack_require__(95);var DataSet = __webpack_require__(91);
   var DataView = __webpack_require__(93);
   var util = __webpack_require__(1);
@@ -13914,19 +9503,6 @@ return /******/ (function(modules) { // webpackBootstrap
   var StepNumber = __webpack_require__(105);
   var Range = __webpack_require__(106);
   var Settings = __webpack_require__(107);
-=======
-  var Emitter = __webpack_require__(13);var DataSet = __webpack_require__(9);
-  var DataView = __webpack_require__(11);
-  var util = __webpack_require__(1);
-  var Point3d = __webpack_require__(14);
-  var Point2d = __webpack_require__(15);
-  var Camera = __webpack_require__(16);
-  var Filter = __webpack_require__(17);
-  var Slider = __webpack_require__(18);
-  var StepNumber = __webpack_require__(19);
-  var Range = __webpack_require__(20);
-  var Settings = __webpack_require__(21);
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
   /// enumerate the available styles
   Graph3d.STYLE = Settings.STYLE;
@@ -14582,12 +10158,9 @@ return /******/ (function(modules) { // webpackBootstrap
     var ontooltip = function ontooltip(event) {
       me._onTooltip(event);
     };
-<<<<<<< HEAD
     var onclick = function onclick(event) {
       me._onClick(event);
     };
-=======
->>>>>>> 88f14a0... add 'dist' folder for deployment
     // TODO: these events are never cleaned up... can give a 'memory leakage'
 
     util.addEventListener(this.frame.canvas, 'keydown', onkeydown);
@@ -14595,10 +10168,7 @@ return /******/ (function(modules) { // webpackBootstrap
     util.addEventListener(this.frame.canvas, 'touchstart', ontouchstart);
     util.addEventListener(this.frame.canvas, 'mousewheel', onmousewheel);
     util.addEventListener(this.frame.canvas, 'mousemove', ontooltip);
-<<<<<<< HEAD
     util.addEventListener(this.frame.canvas, 'click', onclick);
-=======
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
     // add the new graph to the container element
     this.containerElement.appendChild(this.frame);
@@ -14606,18 +10176,8 @@ return /******/ (function(modules) { // webpackBootstrap
 
   /**
    * Set a new size for the graph
-<<<<<<< HEAD
    */
   Graph3d.prototype._setSize = function (width, height) {
-=======
-   *
-   * @param {string} width  Width in pixels or percentage (for example '800px'
-   *                        or '50%')
-   * @param {string} height Height in pixels or percentage  (for example '400px'
-   *                        or '30%')
-   */
-  Graph3d.prototype.setSize = function (width, height) {
->>>>>>> 88f14a0... add 'dist' folder for deployment
     this.frame.style.width = width;
     this.frame.style.height = height;
 
@@ -14737,11 +10297,7 @@ return /******/ (function(modules) { // webpackBootstrap
     Settings.setOptions(options, this);
 
     this.setPointDrawingMethod();
-<<<<<<< HEAD
     this._setSize(this.width, this.height);
-=======
-    this.setSize(this.width, this.height);
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
     // re-load the data
     if (this.dataTable) {
@@ -14847,11 +10403,7 @@ return /******/ (function(modules) { // webpackBootstrap
   };
 
   /**
-<<<<<<< HEAD
    * Get legend width
-=======
-   * Get legend width 
->>>>>>> 88f14a0... add 'dist' folder for deployment
    */
   Graph3d.prototype._getLegendWidth = function () {
     var width;
@@ -14868,53 +10420,30 @@ return /******/ (function(modules) { // webpackBootstrap
   };
 
   /**
-<<<<<<< HEAD
    * Redraw the legend based on size, dot color, or surface height
    */
   Graph3d.prototype._redrawLegend = function () {
 
     //Return without drawing anything, if no legend is specified
-=======
-   * Redraw the legend based on size, dot color, or surface height 
-   */
-  Graph3d.prototype._redrawLegend = function () {
-
-    //Return without drawing anything, if no legend is specified 
->>>>>>> 88f14a0... add 'dist' folder for deployment
     if (this.showLegend !== true) {
       return;
     }
 
     // Do not draw legend when graph style does not support
-<<<<<<< HEAD
     if (this.style === Graph3d.STYLE.LINE || this.style === Graph3d.STYLE.BARSIZE //TODO add legend support for BARSIZE
-=======
-    if (this.style === Graph3d.STYLE.LINE || this.style === Graph3d.STYLE.BARSIZE //TODO add legend support for BARSIZE 
->>>>>>> 88f14a0... add 'dist' folder for deployment
     ) {
         return;
       }
 
-<<<<<<< HEAD
     // Legend types - size and color. Determine if size legend.
     var isSizeLegend = this.style === Graph3d.STYLE.BARSIZE || this.style === Graph3d.STYLE.DOTSIZE;
 
     // Legend is either tracking z values or style values. This flag if false means use z values.
-=======
-    // Legend types - size and color. Determine if size legend.  
-    var isSizeLegend = this.style === Graph3d.STYLE.BARSIZE || this.style === Graph3d.STYLE.DOTSIZE;
-
-    // Legend is either tracking z values or style values. This flag if false means use z values. 
->>>>>>> 88f14a0... add 'dist' folder for deployment
     var isValueLegend = this.style === Graph3d.STYLE.DOTSIZE || this.style === Graph3d.STYLE.DOTCOLOR || this.style === Graph3d.STYLE.BARCOLOR;
 
     var height = Math.max(this.frame.clientHeight * 0.25, 100);
     var top = this.margin;
-<<<<<<< HEAD
     var width = this._getLegendWidth(); // px - overwritten by size legend
-=======
-    var width = this._getLegendWidth(); // px - overwritten by size legend  
->>>>>>> 88f14a0... add 'dist' folder for deployment
     var right = this.frame.clientWidth - this.margin;
     var left = right - width;
     var bottom = top + height;
@@ -14944,21 +10473,13 @@ return /******/ (function(modules) { // webpackBootstrap
       ctx.strokeRect(left, top, width, height);
     } else {
 
-<<<<<<< HEAD
       // draw the size legend box
-=======
-      // draw the size legend box 
->>>>>>> 88f14a0... add 'dist' folder for deployment
       var widthMin;
       if (this.style === Graph3d.STYLE.DOTSIZE) {
         var dotSize = this._dotSize();
         widthMin = dotSize / 2; // px
       } else if (this.style === Graph3d.STYLE.BARSIZE) {
-<<<<<<< HEAD
         //widthMin = this.xBarWidth * 0.2 this is wrong - barwidth measures in terms of xvalues
-=======
-        //widthMin = this.xBarWidth * 0.2 this is wrong - barwidth measures in terms of xvalues 
->>>>>>> 88f14a0... add 'dist' folder for deployment
       }
       ctx.strokeStyle = this.axisColor;
       ctx.fillStyle = this.dataColor.fill;
@@ -14972,11 +10493,7 @@ return /******/ (function(modules) { // webpackBootstrap
       ctx.stroke();
     }
 
-<<<<<<< HEAD
     // print value text along the legend edge
-=======
-    // print value text along the legend edge 
->>>>>>> 88f14a0... add 'dist' folder for deployment
     var gridLineLen = 5; // px
 
     var legendMin = isValueLegend ? this.valueRange.min : this.zRange.min;
@@ -15312,11 +10829,7 @@ return /******/ (function(modules) { // webpackBootstrap
     var xLabel = this.xLabel;
     if (xLabel.length > 0) {
       yOffset = 0.1 / this.scale.y;
-<<<<<<< HEAD
       xText = (xRange.max + 3 * xRange.min) / 4;
-=======
-      xText = xRange.center() / 2;
->>>>>>> 88f14a0... add 'dist' folder for deployment
       yText = armVector.x > 0 ? yRange.min - yOffset : yRange.max + yOffset;
       text = new Point3d(xText, yText, zRange.min);
       this.drawAxisLabelX(ctx, text, xLabel, armAngle);
@@ -15327,11 +10840,7 @@ return /******/ (function(modules) { // webpackBootstrap
     if (yLabel.length > 0) {
       xOffset = 0.1 / this.scale.x;
       xText = armVector.y > 0 ? xRange.min - xOffset : xRange.max + xOffset;
-<<<<<<< HEAD
       yText = (yRange.max + 3 * yRange.min) / 4;
-=======
-      yText = yRange.center() / 2;
->>>>>>> 88f14a0... add 'dist' folder for deployment
       text = new Point3d(xText, yText, zRange.min);
 
       this.drawAxisLabelY(ctx, text, yLabel, armAngle);
@@ -15343,11 +10852,7 @@ return /******/ (function(modules) { // webpackBootstrap
       offset = 30; // pixels.  // TODO: relate to the max width of the values on the z axis?
       xText = armVector.x > 0 ? xRange.min : xRange.max;
       yText = armVector.y < 0 ? yRange.min : yRange.max;
-<<<<<<< HEAD
       zText = (zRange.max + 3 * zRange.min) / 4;
-=======
-      zText = zRange.center() / 2;
->>>>>>> 88f14a0... add 'dist' folder for deployment
       text = new Point3d(xText, yText, zText);
 
       this.drawAxisLabelZ(ctx, text, zLabel, offset);
@@ -15467,11 +10972,7 @@ return /******/ (function(modules) { // webpackBootstrap
   /**
    * Draw a polygon using the passed points and fill it with the passed style and stroke.
    *
-<<<<<<< HEAD
    * @param points      an array of points.
-=======
-   * @param points      an array of points. 
->>>>>>> 88f14a0... add 'dist' folder for deployment
    * @param fillStyle   optional; the fill style to set
    * @param strokeStyle optional; the stroke style to set
    */
@@ -15532,7 +11033,6 @@ return /******/ (function(modules) { // webpackBootstrap
   /**
    * Get the colors for the 'color' graph styles.
    * These styles are currently: 'bar-color' and 'dot-color'
-<<<<<<< HEAD
    * Color may be set as a string representation of HTML color, like #ff00ff,
    * or calculated from a number, for example, distance from this point
    * The first option is useful when we have some pre-given legend, to which we have to adjust ourselves
@@ -15551,15 +11051,6 @@ return /******/ (function(modules) { // webpackBootstrap
       color = this._hsv2rgb(hue, 1, 1);
       borderColor = this._hsv2rgb(hue, 1, 0.8);
     }
-=======
-   */
-  Graph3d.prototype._getColorsColor = function (point) {
-    // calculate the color based on the value
-    var hue = (1 - (point.point.value - this.valueRange.min) * this.scale.value) * 240;
-    var color = this._hsv2rgb(hue, 1, 1);
-    var borderColor = this._hsv2rgb(hue, 1, 0.8);
-
->>>>>>> 88f14a0... add 'dist' folder for deployment
     return {
       fill: color,
       border: borderColor
@@ -15808,7 +11299,6 @@ return /******/ (function(modules) { // webpackBootstrap
   // End methods for drawing points per graph style.
   // -----------------------------------------------------------------------------
 
-<<<<<<< HEAD
   /**
    * Store startX, startY and startOffset for mouse operations
    *
@@ -15821,8 +11311,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
     this._startCameraOffset = this.camera.getOffset();
   };
-=======
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
   /**
    * Start a moving operation inside the provided parent element
@@ -15842,13 +11330,7 @@ return /******/ (function(modules) { // webpackBootstrap
     this.leftButtonDown = event.which ? event.which === 1 : event.button === 1;
     if (!this.leftButtonDown && !this.touchDown) return;
 
-<<<<<<< HEAD
     this._storeMousePosition(event);
-=======
-    // get mouse position (different code for IE and all other browsers)
-    this.startMouseX = getMouseX(event);
-    this.startMouseY = getMouseY(event);
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
     this.startStart = new Date(this.start);
     this.startEnd = new Date(this.end);
@@ -15877,17 +11359,13 @@ return /******/ (function(modules) { // webpackBootstrap
    * @param {Event}   event  Well, eehh, the event
    */
   Graph3d.prototype._onMouseMove = function (event) {
-<<<<<<< HEAD
     this.moving = true;
-=======
->>>>>>> 88f14a0... add 'dist' folder for deployment
     event = event || window.event;
 
     // calculate change in mouse position
     var diffX = parseFloat(getMouseX(event)) - this.startMouseX;
     var diffY = parseFloat(getMouseY(event)) - this.startMouseY;
 
-<<<<<<< HEAD
     // move with ctrl or rotate by other
     if (event && event.ctrlKey === true) {
       // calculate change in mouse position
@@ -15925,32 +11403,6 @@ return /******/ (function(modules) { // webpackBootstrap
       this.camera.setArmRotation(horizontalNew, verticalNew);
     }
 
-=======
-    var horizontalNew = this.startArmRotation.horizontal + diffX / 200;
-    var verticalNew = this.startArmRotation.vertical + diffY / 200;
-
-    var snapAngle = 4; // degrees
-    var snapValue = Math.sin(snapAngle / 360 * 2 * Math.PI);
-
-    // snap horizontally to nice angles at 0pi, 0.5pi, 1pi, 1.5pi, etc...
-    // the -0.001 is to take care that the vertical axis is always drawn at the left front corner
-    if (Math.abs(Math.sin(horizontalNew)) < snapValue) {
-      horizontalNew = Math.round(horizontalNew / Math.PI) * Math.PI - 0.001;
-    }
-    if (Math.abs(Math.cos(horizontalNew)) < snapValue) {
-      horizontalNew = (Math.round(horizontalNew / Math.PI - 0.5) + 0.5) * Math.PI - 0.001;
-    }
-
-    // snap vertically to nice angles
-    if (Math.abs(Math.sin(verticalNew)) < snapValue) {
-      verticalNew = Math.round(verticalNew / Math.PI) * Math.PI;
-    }
-    if (Math.abs(Math.cos(verticalNew)) < snapValue) {
-      verticalNew = (Math.round(verticalNew / Math.PI - 0.5) + 0.5) * Math.PI;
-    }
-
-    this.camera.setArmRotation(horizontalNew, verticalNew);
->>>>>>> 88f14a0... add 'dist' folder for deployment
     this.redraw();
 
     // fire a cameraPositionChange event
@@ -15976,7 +11428,6 @@ return /******/ (function(modules) { // webpackBootstrap
   };
 
   /**
-<<<<<<< HEAD
    * @param {event}  event   The event
    */
   Graph3d.prototype._onClick = function (event) {
@@ -15995,8 +11446,6 @@ return /******/ (function(modules) { // webpackBootstrap
   };
 
   /**
-=======
->>>>>>> 88f14a0... add 'dist' folder for deployment
    * After having moved the mouse, a tooltip should pop up when the mouse is resting on a data point
    * @param {Event}  event   A mouse move event
    */
@@ -16355,7 +11804,6 @@ return /******/ (function(modules) { // webpackBootstrap
     this.redraw();
   };
 
-<<<<<<< HEAD
   /**
    * Set a new size for the graph
    *
@@ -16369,8 +11817,6 @@ return /******/ (function(modules) { // webpackBootstrap
     this.redraw();
   };
 
-=======
->>>>>>> 88f14a0... add 'dist' folder for deployment
   // -----------------------------------------------------------------------------
   //  End public methods for specific settings
   // -----------------------------------------------------------------------------
@@ -16379,11 +11825,7 @@ return /******/ (function(modules) { // webpackBootstrap
   module.exports = Graph3d;
 
 /***/ },
-<<<<<<< HEAD
 /* 95 */
-=======
-/* 13 */
->>>>>>> 88f14a0... add 'dist' folder for deployment
 /***/ function(module, exports) {
 
   
@@ -16553,11 +11995,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-<<<<<<< HEAD
 /* 96 */
-=======
-/* 14 */
->>>>>>> 88f14a0... add 'dist' folder for deployment
 /***/ function(module, exports) {
 
   "use strict";
@@ -16640,11 +12078,7 @@ return /******/ (function(modules) { // webpackBootstrap
   module.exports = Point3d;
 
 /***/ },
-<<<<<<< HEAD
 /* 97 */
-=======
-/* 15 */
->>>>>>> 88f14a0... add 'dist' folder for deployment
 /***/ function(module, exports) {
 
   "use strict";
@@ -16662,16 +12096,11 @@ return /******/ (function(modules) { // webpackBootstrap
   module.exports = Point2d;
 
 /***/ },
-<<<<<<< HEAD
 /* 98 */
-=======
-/* 16 */
->>>>>>> 88f14a0... add 'dist' folder for deployment
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
 
-<<<<<<< HEAD
   var _sign = __webpack_require__(99);
 
   var _sign2 = _interopRequireDefault(_sign);
@@ -16679,9 +12108,6 @@ return /******/ (function(modules) { // webpackBootstrap
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
   var Point3d = __webpack_require__(96);
-=======
-  var Point3d = __webpack_require__(14);
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
   /**
    * @class Camera
@@ -16699,11 +12125,8 @@ return /******/ (function(modules) { // webpackBootstrap
     this.armRotation.horizontal = 0;
     this.armRotation.vertical = 0;
     this.armLength = 1.7;
-<<<<<<< HEAD
     this.cameraOffset = new Point3d();
     this.offsetMultiplier = 0.6;
-=======
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
     this.cameraLocation = new Point3d();
     this.cameraRotation = new Point3d(0.5 * Math.PI, 0, 0);
@@ -16712,7 +12135,6 @@ return /******/ (function(modules) { // webpackBootstrap
   }
 
   /**
-<<<<<<< HEAD
    * Set offset camera in camera coordinates
    * @param {Number} x offset by camera horisontal
    * @param {Number} y offset by camera vertical
@@ -16743,8 +12165,6 @@ return /******/ (function(modules) { // webpackBootstrap
   };
 
   /**
-=======
->>>>>>> 88f14a0... add 'dist' folder for deployment
    * Set the location (origin) of the arm
    * @param {Number} x  Normalized value of x
    * @param {Number} y  Normalized value of y
@@ -16809,10 +12229,7 @@ return /******/ (function(modules) { // webpackBootstrap
     if (this.armLength < 0.71) this.armLength = 0.71;
     if (this.armLength > 5.0) this.armLength = 5.0;
 
-<<<<<<< HEAD
     this.setOffset(this.cameraOffset.x, this.cameraOffset.y);
-=======
->>>>>>> 88f14a0... add 'dist' folder for deployment
     this.calculateCameraOrientation();
   };
 
@@ -16854,7 +12271,6 @@ return /******/ (function(modules) { // webpackBootstrap
     this.cameraRotation.x = Math.PI / 2 - this.armRotation.vertical;
     this.cameraRotation.y = 0;
     this.cameraRotation.z = -this.armRotation.horizontal;
-<<<<<<< HEAD
 
     var xa = this.cameraRotation.x;
     var ya = this.cameraRotation.y;
@@ -16867,14 +12283,11 @@ return /******/ (function(modules) { // webpackBootstrap
     this.cameraLocation.x = this.cameraLocation.x + dx * cos(za) + dy * -sin(za) * cos(xa);
     this.cameraLocation.y = this.cameraLocation.y + dx * sin(za) + dy * cos(za) * cos(xa);
     this.cameraLocation.z = this.cameraLocation.z + dy * sin(xa);
-=======
->>>>>>> 88f14a0... add 'dist' folder for deployment
   };
 
   module.exports = Camera;
 
 /***/ },
-<<<<<<< HEAD
 /* 99 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -16907,18 +12320,11 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 103 */
-=======
-/* 17 */
->>>>>>> 88f14a0... add 'dist' folder for deployment
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
 
-<<<<<<< HEAD
   var DataView = __webpack_require__(93);
-=======
-  var DataView = __webpack_require__(11);
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
   /**
    * @class Filter
@@ -17124,11 +12530,7 @@ return /******/ (function(modules) { // webpackBootstrap
   module.exports = Filter;
 
 /***/ },
-<<<<<<< HEAD
 /* 104 */
-=======
-/* 18 */
->>>>>>> 88f14a0... add 'dist' folder for deployment
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -17476,11 +12878,7 @@ return /******/ (function(modules) { // webpackBootstrap
   module.exports = Slider;
 
 /***/ },
-<<<<<<< HEAD
 /* 105 */
-=======
-/* 19 */
->>>>>>> 88f14a0... add 'dist' folder for deployment
 /***/ function(module, exports) {
 
   'use strict';
@@ -17658,11 +13056,7 @@ return /******/ (function(modules) { // webpackBootstrap
   module.exports = StepNumber;
 
 /***/ },
-<<<<<<< HEAD
 /* 106 */
-=======
-/* 20 */
->>>>>>> 88f14a0... add 'dist' folder for deployment
 /***/ function(module, exports) {
 
   'use strict';
@@ -17760,36 +13154,23 @@ return /******/ (function(modules) { // webpackBootstrap
   module.exports = Range;
 
 /***/ },
-<<<<<<< HEAD
 /* 107 */
-=======
-/* 21 */
->>>>>>> 88f14a0... add 'dist' folder for deployment
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
 
-<<<<<<< HEAD
   var _typeof2 = __webpack_require__(62);
 
   var _typeof3 = _interopRequireDefault(_typeof2);
 
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-=======
-  var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
   ////////////////////////////////////////////////////////////////////////////////
   // This modules handles the options for Graph3d.
   //
   ////////////////////////////////////////////////////////////////////////////////
-<<<<<<< HEAD
   var Camera = __webpack_require__(98);
   var Point3d = __webpack_require__(96);
-=======
-  var Camera = __webpack_require__(16);
-  var Point3d = __webpack_require__(14);
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
   // enumerate the available styles
   var STYLE = {
@@ -17857,11 +13238,7 @@ return /******/ (function(modules) { // webpackBootstrap
    * Source: http://stackoverflow.com/a/1026087
    */
   function capitalize(str) {
-<<<<<<< HEAD
     if (str === undefined || str === "" || typeof str != "string") {
-=======
-    if (str === undefined || str === "") {
->>>>>>> 88f14a0... add 'dist' folder for deployment
       return str;
     }
 
@@ -17959,10 +13336,7 @@ return /******/ (function(modules) { // webpackBootstrap
     dst.margin = 10; // px
     dst.showGrayBottom = false; // TODO: this does not work correctly
     dst.showTooltip = false;
-<<<<<<< HEAD
     dst.onclick_callback = null;
-=======
->>>>>>> 88f14a0... add 'dist' folder for deployment
     dst.eye = new Point3d(0, 0, -1); // TODO: set eye.z about 3/4 of the width of the window?
   }
 
@@ -18006,12 +13380,9 @@ return /******/ (function(modules) { // webpackBootstrap
     if (src.tooltip !== undefined) {
       dst.showTooltip = src.tooltip;
     }
-<<<<<<< HEAD
     if (src.onclick != undefined) {
       dst.onclick_callback = src.onclick;
     }
-=======
->>>>>>> 88f14a0... add 'dist' folder for deployment
   }
 
   /**
@@ -18110,11 +13481,7 @@ return /******/ (function(modules) { // webpackBootstrap
       fill = backgroundColor;
       stroke = 'none';
       strokeWidth = 0;
-<<<<<<< HEAD
     } else if ((typeof backgroundColor === 'undefined' ? 'undefined' : (0, _typeof3['default'])(backgroundColor)) === 'object') {
-=======
-    } else if ((typeof backgroundColor === 'undefined' ? 'undefined' : _typeof(backgroundColor)) === 'object') {
->>>>>>> 88f14a0... add 'dist' folder for deployment
       if (backgroundColor.fill !== undefined) fill = backgroundColor.fill;
       if (backgroundColor.stroke !== undefined) stroke = backgroundColor.stroke;
       if (backgroundColor.strokeWidth !== undefined) strokeWidth = backgroundColor.strokeWidth;
@@ -18173,11 +13540,7 @@ return /******/ (function(modules) { // webpackBootstrap
   module.exports.setCameraPosition = setCameraPosition;
 
 /***/ },
-<<<<<<< HEAD
 /* 108 */
-=======
-/* 22 */
->>>>>>> 88f14a0... add 'dist' folder for deployment
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -18185,13 +13548,8 @@ return /******/ (function(modules) { // webpackBootstrap
   // Only load hammer.js when in a browser environment
   // (loading hammer.js in a node.js environment gives errors)
   if (typeof window !== 'undefined') {
-<<<<<<< HEAD
     var propagating = __webpack_require__(109);
     var Hammer = window['Hammer'] || __webpack_require__(110);
-=======
-    var propagating = __webpack_require__(23);
-    var Hammer = window['Hammer'] || __webpack_require__(24);
->>>>>>> 88f14a0... add 'dist' folder for deployment
     module.exports = propagating(Hammer, {
       preventDefault: 'mouse'
     });
@@ -18202,11 +13560,7 @@ return /******/ (function(modules) { // webpackBootstrap
   }
 
 /***/ },
-<<<<<<< HEAD
 /* 109 */
-=======
-/* 23 */
->>>>>>> 88f14a0... add 'dist' folder for deployment
 /***/ function(module, exports, __webpack_require__) {
 
   var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;'use strict';
@@ -18443,11 +13797,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-<<<<<<< HEAD
 /* 110 */
-=======
-/* 24 */
->>>>>>> 88f14a0... add 'dist' folder for deployment
 /***/ function(module, exports, __webpack_require__) {
 
   var __WEBPACK_AMD_DEFINE_RESULT__;/*! Hammer.JS - v2.0.7 - 2016-04-22
@@ -21096,11 +16446,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-<<<<<<< HEAD
 /* 111 */
-=======
-/* 25 */
->>>>>>> 88f14a0... add 'dist' folder for deployment
 /***/ function(module, exports, __webpack_require__) {
 
   var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;"use strict";
@@ -21299,18 +16645,13 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-<<<<<<< HEAD
 /* 112 */
-=======
-/* 26 */
->>>>>>> 88f14a0... add 'dist' folder for deployment
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
 
   // utils
   exports.util = __webpack_require__(1);
-<<<<<<< HEAD
   exports.DOMutil = __webpack_require__(90);
 
   // data
@@ -21349,70 +16690,20 @@ return /******/ (function(modules) { // webpackBootstrap
       Legend: __webpack_require__(152),
       LineGraph: __webpack_require__(145),
       TimeAxis: __webpack_require__(138)
-=======
-  exports.DOMutil = __webpack_require__(8);
-
-  // data
-  exports.DataSet = __webpack_require__(9);
-  exports.DataView = __webpack_require__(11);
-  exports.Queue = __webpack_require__(10);
-
-  // Timeline
-  exports.Timeline = __webpack_require__(27);
-  exports.Graph2d = __webpack_require__(52);
-  exports.timeline = {
-    Core: __webpack_require__(35),
-    DateUtil: __webpack_require__(34),
-    Range: __webpack_require__(32),
-    stack: __webpack_require__(39),
-    TimeStep: __webpack_require__(37),
-
-    components: {
-      items: {
-        Item: __webpack_require__(41),
-        BackgroundItem: __webpack_require__(45),
-        BoxItem: __webpack_require__(43),
-        PointItem: __webpack_require__(44),
-        RangeItem: __webpack_require__(40)
-      },
-
-      BackgroundGroup: __webpack_require__(42),
-      Component: __webpack_require__(33),
-      CurrentTime: __webpack_require__(50),
-      CustomTime: __webpack_require__(48),
-      DataAxis: __webpack_require__(54),
-      DataScale: __webpack_require__(55),
-      GraphGroup: __webpack_require__(56),
-      Group: __webpack_require__(38),
-      ItemSet: __webpack_require__(36),
-      Legend: __webpack_require__(60),
-      LineGraph: __webpack_require__(53),
-      TimeAxis: __webpack_require__(46)
->>>>>>> 88f14a0... add 'dist' folder for deployment
     }
   };
 
   // bundled external libraries
-<<<<<<< HEAD
   exports.moment = __webpack_require__(84);
   exports.Hammer = __webpack_require__(108);
   exports.keycharm = __webpack_require__(111);
 
 /***/ },
 /* 113 */
-=======
-  exports.moment = __webpack_require__(2);
-  exports.Hammer = __webpack_require__(22);
-  exports.keycharm = __webpack_require__(25);
-
-/***/ },
-/* 27 */
->>>>>>> 88f14a0... add 'dist' folder for deployment
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
 
-<<<<<<< HEAD
   var _Configurator = __webpack_require__(114);
 
   var _Configurator2 = _interopRequireDefault(_Configurator);
@@ -21439,34 +16730,6 @@ return /******/ (function(modules) { // webpackBootstrap
   var printStyle = __webpack_require__(122).printStyle;
   var allOptions = __webpack_require__(143).allOptions;
   var configureOptions = __webpack_require__(143).configureOptions;
-=======
-  var _Configurator = __webpack_require__(28);
-
-  var _Configurator2 = _interopRequireDefault(_Configurator);
-
-  var _Validator = __webpack_require__(31);
-
-  var _Validator2 = _interopRequireDefault(_Validator);
-
-  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-  var Emitter = __webpack_require__(13);
-  var Hammer = __webpack_require__(22);
-  var moment = __webpack_require__(2);
-  var util = __webpack_require__(1);
-  var DataSet = __webpack_require__(9);
-  var DataView = __webpack_require__(11);
-  var Range = __webpack_require__(32);
-  var Core = __webpack_require__(35);
-  var TimeAxis = __webpack_require__(46);
-  var CurrentTime = __webpack_require__(50);
-  var CustomTime = __webpack_require__(48);
-  var ItemSet = __webpack_require__(36);
-
-  var printStyle = __webpack_require__(31).printStyle;
-  var allOptions = __webpack_require__(51).allOptions;
-  var configureOptions = __webpack_require__(51).configureOptions;
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
   /**
    * Create a timeline visualization
@@ -21490,15 +16753,12 @@ return /******/ (function(modules) { // webpackBootstrap
       groups = forthArgument;
     }
 
-<<<<<<< HEAD
     // TODO: REMOVE THIS in the next MAJOR release
     // see https://github.com/almende/vis/issues/2511
     if (options && options.throttleRedraw) {
       console.warn("Timeline option \"throttleRedraw\" is DEPRICATED and no longer supported. It will be removed in the next MAJOR release.");
     }
 
-=======
->>>>>>> 88f14a0... add 'dist' folder for deployment
     var me = this;
     this.defaultOptions = {
       start: null,
@@ -21518,10 +16778,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
     // Create the DOM, props, and emitter
     this._create(container);
-<<<<<<< HEAD
-=======
-
->>>>>>> 88f14a0... add 'dist' folder for deployment
     if (!options || options && typeof options.rtl == "undefined") {
       var directionFromDom,
           domNode = this.dom.root;
@@ -21534,11 +16790,8 @@ return /******/ (function(modules) { // webpackBootstrap
       this.options.rtl = options.rtl;
     }
 
-<<<<<<< HEAD
     this.options.rollingMode = options && options.rollingMode;
 
-=======
->>>>>>> 88f14a0... add 'dist' folder for deployment
     // all components listed here will be repainted automatically
     this.components = [];
 
@@ -21587,7 +16840,6 @@ return /******/ (function(modules) { // webpackBootstrap
     this.itemsData = null; // DataSet
     this.groupsData = null; // DataSet
 
-<<<<<<< HEAD
     this.dom.root.onclick = function (event) {
       me.emit('click', me.getEventProperties(event));
     };
@@ -21603,26 +16855,11 @@ return /******/ (function(modules) { // webpackBootstrap
     this.dom.root.onmousemove = function (event) {
       me.emit('mouseMove', me.getEventProperties(event));
     };
-=======
-    this.on('tap', function (event) {
-      me.emit('click', me.getEventProperties(event));
-    });
-    this.on('doubletap', function (event) {
-      me.emit('doubleClick', me.getEventProperties(event));
-    });
-    this.dom.root.oncontextmenu = function (event) {
-      me.emit('contextmenu', me.getEventProperties(event));
-    };
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
     //Single time autoscale/fit
     this.fitDone = false;
     this.on('changed', function () {
-<<<<<<< HEAD
       if (this.itemsData == null || this.options.rollingMode) return;
-=======
-      if (this.itemsData == null) return;
->>>>>>> 88f14a0... add 'dist' folder for deployment
       if (!me.fitDone) {
         me.fitDone = true;
         if (me.options.start != undefined || me.options.end != undefined) {
@@ -21632,10 +16869,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
           var start = me.options.start != undefined ? me.options.start : range.min;
           var end = me.options.end != undefined ? me.options.end : range.max;
-<<<<<<< HEAD
-=======
-
->>>>>>> 88f14a0... add 'dist' folder for deployment
           me.setWindow(start, end, { animation: false });
         } else {
           me.fit({ animation: false });
@@ -21671,11 +16904,7 @@ return /******/ (function(modules) { // webpackBootstrap
    * @private
    */
   Timeline.prototype._createConfigurator = function () {
-<<<<<<< HEAD
     return new _Configurator2['default'](this, this.dom.container, configureOptions);
-=======
-    return new _Configurator2.default(this, this.dom.container, configureOptions);
->>>>>>> 88f14a0... add 'dist' folder for deployment
   };
 
   /**
@@ -21692,11 +16921,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
   Timeline.prototype.setOptions = function (options) {
     // validate options
-<<<<<<< HEAD
     var errorFound = _Validator2['default'].validate(options, allOptions);
-=======
-    var errorFound = _Validator2.default.validate(options, allOptions);
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
     if (errorFound === true) {
       console.log('%cErrors have been found in the supplied options object.', printStyle);
@@ -21754,7 +16979,6 @@ return /******/ (function(modules) { // webpackBootstrap
     var newDataSet;
     if (!groups) {
       newDataSet = null;
-<<<<<<< HEAD
     } else {
       var filter = function filter(group) {
         return group.visible !== false;
@@ -21765,13 +16989,6 @@ return /******/ (function(modules) { // webpackBootstrap
         // turn an array into a dataset
         newDataSet = new DataSet(groups.filter(filter));
       }
-=======
-    } else if (groups instanceof DataSet || groups instanceof DataView) {
-      newDataSet = groups;
-    } else {
-      // turn an array into a dataset
-      newDataSet = new DataSet(groups);
->>>>>>> 88f14a0... add 'dist' folder for deployment
     }
 
     this.groupsData = newDataSet;
@@ -21944,15 +17161,10 @@ return /******/ (function(modules) { // webpackBootstrap
         }
         factor = interval / _this.props.center.width;
         util.forEach(_this.itemSet.items, function (item) {
-<<<<<<< HEAD
           if (item.groupShowing) {
             item.show();
             item.repositionX();
           }
-=======
-          item.show();
-          item.repositionX();
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
           var start = getStart(item);
           var end = getEnd(item);
@@ -22088,11 +17300,7 @@ return /******/ (function(modules) { // webpackBootstrap
   module.exports = Timeline;
 
 /***/ },
-<<<<<<< HEAD
 /* 114 */
-=======
-/* 28 */
->>>>>>> 88f14a0... add 'dist' folder for deployment
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -22101,7 +17309,6 @@ return /******/ (function(modules) { // webpackBootstrap
     value: true
   });
 
-<<<<<<< HEAD
   var _stringify = __webpack_require__(82);
 
   var _stringify2 = _interopRequireDefault(_stringify);
@@ -22123,19 +17330,6 @@ return /******/ (function(modules) { // webpackBootstrap
   var _ColorPicker2 = _interopRequireDefault(_ColorPicker);
 
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-=======
-  var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
-
-  var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-  var _ColorPicker = __webpack_require__(29);
-
-  var _ColorPicker2 = _interopRequireDefault(_ColorPicker);
-
-  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
   var util = __webpack_require__(1);
 
@@ -22156,12 +17350,7 @@ return /******/ (function(modules) { // webpackBootstrap
   var Configurator = function () {
     function Configurator(parentModule, defaultContainer, configureOptions) {
       var pixelRatio = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 1;
-<<<<<<< HEAD
       (0, _classCallCheck3['default'])(this, Configurator);
-=======
-
-      _classCallCheck(this, Configurator);
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
       this.parent = parentModule;
       this.changedOptions = [];
@@ -22185,11 +17374,7 @@ return /******/ (function(modules) { // webpackBootstrap
       this.popupDiv = {};
       this.popupLimit = 5;
       this.popupHistory = {};
-<<<<<<< HEAD
       this.colorPicker = new _ColorPicker2['default'](pixelRatio);
-=======
-      this.colorPicker = new _ColorPicker2.default(pixelRatio);
->>>>>>> 88f14a0... add 'dist' folder for deployment
       this.wrapper = undefined;
     }
 
@@ -22201,11 +17386,7 @@ return /******/ (function(modules) { // webpackBootstrap
      */
 
 
-<<<<<<< HEAD
     (0, _createClass3['default'])(Configurator, [{
-=======
-    _createClass(Configurator, [{
->>>>>>> 88f14a0... add 'dist' folder for deployment
       key: 'setOptions',
       value: function setOptions(options) {
         if (options !== undefined) {
@@ -22218,11 +17399,7 @@ return /******/ (function(modules) { // webpackBootstrap
             this.options.filter = options;
           } else if (options instanceof Array) {
             this.options.filter = options.join();
-<<<<<<< HEAD
           } else if ((typeof options === 'undefined' ? 'undefined' : (0, _typeof3['default'])(options)) === 'object') {
-=======
-          } else if ((typeof options === 'undefined' ? 'undefined' : _typeof(options)) === 'object') {
->>>>>>> 88f14a0... add 'dist' folder for deployment
             if (options.container !== undefined) {
               this.options.container = options.container;
             }
@@ -22428,11 +17605,7 @@ return /******/ (function(modules) { // webpackBootstrap
             };
           }();
 
-<<<<<<< HEAD
           if ((typeof _ret2 === 'undefined' ? 'undefined' : (0, _typeof3['default'])(_ret2)) === "object") return _ret2.v;
-=======
-          if ((typeof _ret2 === 'undefined' ? 'undefined' : _typeof(_ret2)) === "object") return _ret2.v;
->>>>>>> 88f14a0... add 'dist' folder for deployment
         }
         return 0;
       }
@@ -22670,11 +17843,7 @@ return /******/ (function(modules) { // webpackBootstrap
         if (value !== undefined) {
           checkbox.checked = value;
           if (value !== defaultValue) {
-<<<<<<< HEAD
             if ((typeof defaultValue === 'undefined' ? 'undefined' : (0, _typeof3['default'])(defaultValue)) === 'object') {
-=======
-            if ((typeof defaultValue === 'undefined' ? 'undefined' : _typeof(defaultValue)) === 'object') {
->>>>>>> 88f14a0... add 'dist' folder for deployment
               if (value !== defaultValue.enabled) {
                 this.changedOptions.push({ path: path, value: value });
               }
@@ -22946,11 +18115,7 @@ return /******/ (function(modules) { // webpackBootstrap
       key: '_printOptions',
       value: function _printOptions() {
         var options = this.getOptions();
-<<<<<<< HEAD
         this.optionsContainer.innerHTML = '<pre>var options = ' + (0, _stringify2['default'])(options, null, 2) + '</pre>';
-=======
-        this.optionsContainer.innerHTML = '<pre>var options = ' + JSON.stringify(options, null, 2) + '</pre>';
->>>>>>> 88f14a0... add 'dist' folder for deployment
       }
     }, {
       key: 'getOptions',
@@ -22962,7 +18127,6 @@ return /******/ (function(modules) { // webpackBootstrap
         return options;
       }
     }]);
-<<<<<<< HEAD
     return Configurator;
   }();
 
@@ -23040,16 +18204,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 120 */
-=======
-
-    return Configurator;
-  }();
-
-  exports.default = Configurator;
-
-/***/ },
-/* 29 */
->>>>>>> 88f14a0... add 'dist' folder for deployment
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -23058,7 +18212,6 @@ return /******/ (function(modules) { // webpackBootstrap
     value: true
   });
 
-<<<<<<< HEAD
   var _stringify = __webpack_require__(82);
 
   var _stringify2 = _interopRequireDefault(_stringify);
@@ -23075,25 +18228,12 @@ return /******/ (function(modules) { // webpackBootstrap
 
   var Hammer = __webpack_require__(108);
   var hammerUtil = __webpack_require__(121);
-=======
-  var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-  var Hammer = __webpack_require__(22);
-  var hammerUtil = __webpack_require__(30);
->>>>>>> 88f14a0... add 'dist' folder for deployment
   var util = __webpack_require__(1);
 
   var ColorPicker = function () {
     function ColorPicker() {
       var pixelRatio = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
-<<<<<<< HEAD
       (0, _classCallCheck3['default'])(this, ColorPicker);
-=======
-
-      _classCallCheck(this, ColorPicker);
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
       this.pixelRatio = pixelRatio;
       this.generated = false;
@@ -23119,11 +18259,7 @@ return /******/ (function(modules) { // webpackBootstrap
      */
 
 
-<<<<<<< HEAD
     (0, _createClass3['default'])(ColorPicker, [{
-=======
-    _createClass(ColorPicker, [{
->>>>>>> 88f14a0... add 'dist' folder for deployment
       key: 'insertTo',
       value: function insertTo(container) {
         if (this.hammer !== undefined) {
@@ -23228,11 +18364,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
         // set color
         if (rgba === undefined) {
-<<<<<<< HEAD
           throw new Error("Unknown color passed to the colorPicker. Supported are strings: rgb, hex, rgba. Object: rgb ({r:r,g:g,b:b,[a:a]}). Supplied: " + (0, _stringify2['default'])(color));
-=======
-          throw new Error("Unknown color passed to the colorPicker. Supported are strings: rgb, hex, rgba. Object: rgb ({r:r,g:g,b:b,[a:a]}). Supplied: " + JSON.stringify(color));
->>>>>>> 88f14a0... add 'dist' folder for deployment
         } else {
           this._setColor(rgba, setInitial);
         }
@@ -23702,7 +18834,6 @@ return /******/ (function(modules) { // webpackBootstrap
         this.newColorDiv.style.backgroundColor = 'rgba(' + this.color.r + ',' + this.color.g + ',' + this.color.b + ',' + this.color.a + ')';
       }
     }]);
-<<<<<<< HEAD
     return ColorPicker;
   }();
 
@@ -23710,25 +18841,11 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 121 */
-=======
-
-    return ColorPicker;
-  }();
-
-  exports.default = ColorPicker;
-
-/***/ },
-/* 30 */
->>>>>>> 88f14a0... add 'dist' folder for deployment
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
 
-<<<<<<< HEAD
   var Hammer = __webpack_require__(108);
-=======
-  var Hammer = __webpack_require__(22);
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
   /**
    * Register a touch event, taking place before a gesture
@@ -23797,11 +18914,7 @@ return /******/ (function(modules) { // webpackBootstrap
   };
 
 /***/ },
-<<<<<<< HEAD
 /* 122 */
-=======
-/* 31 */
->>>>>>> 88f14a0... add 'dist' folder for deployment
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -23809,7 +18922,6 @@ return /******/ (function(modules) { // webpackBootstrap
   Object.defineProperty(exports, "__esModule", {
     value: true
   });
-<<<<<<< HEAD
   exports.printStyle = undefined;
 
   var _stringify = __webpack_require__(82);
@@ -23833,14 +18945,6 @@ return /******/ (function(modules) { // webpackBootstrap
   var _createClass3 = _interopRequireDefault(_createClass2);
 
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-=======
-
-  var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
-
-  var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
   var util = __webpack_require__(1);
 
@@ -23853,11 +18957,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
   var Validator = function () {
     function Validator() {
-<<<<<<< HEAD
       (0, _classCallCheck3['default'])(this, Validator);
-=======
-      _classCallCheck(this, Validator);
->>>>>>> 88f14a0... add 'dist' folder for deployment
     }
 
     /**
@@ -23868,11 +18968,7 @@ return /******/ (function(modules) { // webpackBootstrap
      */
 
 
-<<<<<<< HEAD
     (0, _createClass3['default'])(Validator, null, [{
-=======
-    _createClass(Validator, null, [{
->>>>>>> 88f14a0... add 'dist' folder for deployment
       key: 'validate',
       value: function validate(options, referenceOptions, subObject) {
         errorFound = false;
@@ -23965,22 +19061,14 @@ return /******/ (function(modules) { // webpackBootstrap
           }
         } else if (refOptionObj['any'] === undefined) {
           // type of the field is incorrect and the field cannot be any
-<<<<<<< HEAD
           console.log('%cInvalid type received for "' + option + '". Expected: ' + Validator.print((0, _keys2['default'])(refOptionObj)) + '. Received [' + optionType + '] "' + options[option] + '"' + Validator.printLocation(path, option), printStyle);
-=======
-          console.log('%cInvalid type received for "' + option + '". Expected: ' + Validator.print(Object.keys(refOptionObj)) + '. Received [' + optionType + '] "' + options[option] + '"' + Validator.printLocation(path, option), printStyle);
->>>>>>> 88f14a0... add 'dist' folder for deployment
           errorFound = true;
         }
       }
     }, {
       key: 'getType',
       value: function getType(object) {
-<<<<<<< HEAD
         var type = typeof object === 'undefined' ? 'undefined' : (0, _typeof3['default'])(object);
-=======
-        var type = typeof object === 'undefined' ? 'undefined' : _typeof(object);
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
         if (type === 'object') {
           if (object === null) {
@@ -24035,11 +19123,7 @@ return /******/ (function(modules) { // webpackBootstrap
         } else if (localSearch.distance <= localSearchThreshold) {
           console.log('%cUnknown option detected: "' + option + '". Did you mean "' + localSearch.closestMatch + '"?' + Validator.printLocation(localSearch.path, option), printStyle);
         } else {
-<<<<<<< HEAD
           console.log('%cUnknown option detected: "' + option + '". Did you mean one of these: ' + Validator.print((0, _keys2['default'])(options)) + Validator.printLocation(path, option), printStyle);
-=======
-          console.log('%cUnknown option detected: "' + option + '". Did you mean one of these: ' + Validator.print(Object.keys(options)) + Validator.printLocation(path, option), printStyle);
->>>>>>> 88f14a0... add 'dist' folder for deployment
         }
 
         errorFound = true;
@@ -24115,11 +19199,7 @@ return /******/ (function(modules) { // webpackBootstrap
     }, {
       key: 'print',
       value: function print(options) {
-<<<<<<< HEAD
         return (0, _stringify2['default'])(options).replace(/(\")|(\[)|(\])|(,"__type__")/g, "").replace(/(\,)/g, ', ');
-=======
-        return JSON.stringify(options).replace(/(\")|(\[)|(\])|(,"__type__")/g, "").replace(/(\,)/g, ', ');
->>>>>>> 88f14a0... add 'dist' folder for deployment
       }
 
       // Compute the edit distance between the two given strings
@@ -24167,7 +19247,6 @@ return /******/ (function(modules) { // webpackBootstrap
         return matrix[b.length][a.length];
       }
     }]);
-<<<<<<< HEAD
     return Validator;
   }();
 
@@ -24176,22 +19255,10 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 123 */
-=======
-
-    return Validator;
-  }();
-
-  exports.default = Validator;
-  exports.printStyle = printStyle;
-
-/***/ },
-/* 32 */
->>>>>>> 88f14a0... add 'dist' folder for deployment
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
 
-<<<<<<< HEAD
   var _keys = __webpack_require__(58);
 
   var _keys2 = _interopRequireDefault(_keys);
@@ -24211,15 +19278,6 @@ return /******/ (function(modules) { // webpackBootstrap
   var moment = __webpack_require__(84);
   var Component = __webpack_require__(124);
   var DateUtil = __webpack_require__(125);
-=======
-  var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
-
-  var util = __webpack_require__(1);
-  var hammerUtil = __webpack_require__(30);
-  var moment = __webpack_require__(2);
-  var Component = __webpack_require__(33);
-  var DateUtil = __webpack_require__(34);
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
   /**
    * @constructor Range
@@ -24231,9 +19289,8 @@ return /******/ (function(modules) { // webpackBootstrap
    */
   function Range(body, options) {
     var now = moment().hours(0).minutes(0).seconds(0).milliseconds(0);
-<<<<<<< HEAD
     var start = now.clone().add(-3, 'days').valueOf();
-    var end = now.clone().add(-3, 'days').valueOf();
+    var end = now.clone().add(3, 'days').valueOf();
 
     if (options === undefined) {
       this.start = start;
@@ -24244,10 +19301,6 @@ return /******/ (function(modules) { // webpackBootstrap
     }
 
     this.rolling = false;
-=======
-    this.start = now.clone().add(-3, 'days').valueOf(); // Number
-    this.end = now.clone().add(4, 'days').valueOf(); // Number
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
     this.body = body;
     this.deltaDifference = 0;
@@ -24287,12 +19340,9 @@ return /******/ (function(modules) { // webpackBootstrap
     this.body.emitter.on('touch', this._onTouch.bind(this));
     this.body.emitter.on('pinch', this._onPinch.bind(this));
 
-<<<<<<< HEAD
     // on click of rolling mode button
     this.body.dom.rollingModeBtn.addEventListener('click', this.startRolling.bind(this));
 
-=======
->>>>>>> 88f14a0... add 'dist' folder for deployment
     this.setOptions(options);
   }
 
@@ -24317,18 +19367,12 @@ return /******/ (function(modules) { // webpackBootstrap
   Range.prototype.setOptions = function (options) {
     if (options) {
       // copy the options that we know
-<<<<<<< HEAD
       var fields = ['animation', 'direction', 'min', 'max', 'zoomMin', 'zoomMax', 'moveable', 'zoomable', 'moment', 'activate', 'hiddenDates', 'zoomKey', 'rtl', 'showCurrentTime', 'rollMode', 'horizontalScroll'];
       util.selectiveExtend(fields, this.options, options);
 
       if (options.rollingMode) {
         this.startRolling();
       }
-=======
-      var fields = ['direction', 'min', 'max', 'zoomMin', 'zoomMax', 'moveable', 'zoomable', 'moment', 'activate', 'hiddenDates', 'zoomKey', 'rtl', 'horizontalScroll'];
-      util.selectiveExtend(fields, this.options, options);
-
->>>>>>> 88f14a0... add 'dist' folder for deployment
       if ('start' in options || 'end' in options) {
         // apply a new range. both start and end are optional
         this.setRange(options.start, options.end);
@@ -24347,7 +19391,6 @@ return /******/ (function(modules) { // webpackBootstrap
   }
 
   /**
-<<<<<<< HEAD
    * Start auto refreshing the current time bar
    */
   Range.prototype.startRolling = function () {
@@ -24392,8 +19435,6 @@ return /******/ (function(modules) { // webpackBootstrap
   };
 
   /**
-=======
->>>>>>> 88f14a0... add 'dist' folder for deployment
    * Set a new start and end range
    * @param {Date | Number | String} [start]
    * @param {Date | Number | String} [end]
@@ -24406,11 +19447,7 @@ return /******/ (function(modules) { // webpackBootstrap
    * @param {Boolean} [byUser=false]
    *
    */
-<<<<<<< HEAD
   Range.prototype.setRange = function (start, end, animation, byUser, event) {
-=======
-  Range.prototype.setRange = function (start, end, animation, byUser) {
->>>>>>> 88f14a0... add 'dist' folder for deployment
     if (byUser !== true) {
       byUser = false;
     }
@@ -24423,19 +19460,11 @@ return /******/ (function(modules) { // webpackBootstrap
       var me = this;
       var initStart = this.start;
       var initEnd = this.end;
-<<<<<<< HEAD
       var duration = (typeof animation === 'undefined' ? 'undefined' : (0, _typeof3['default'])(animation)) === 'object' && 'duration' in animation ? animation.duration : 500;
       var easingName = (typeof animation === 'undefined' ? 'undefined' : (0, _typeof3['default'])(animation)) === 'object' && 'easingFunction' in animation ? animation.easingFunction : 'easeInOutQuad';
       var easingFunction = util.easingFunctions[easingName];
       if (!easingFunction) {
         throw new Error('Unknown easing function ' + (0, _stringify2['default'])(easingName) + '. ' + 'Choose from: ' + (0, _keys2['default'])(util.easingFunctions).join(', '));
-=======
-      var duration = (typeof animation === 'undefined' ? 'undefined' : _typeof(animation)) === 'object' && 'duration' in animation ? animation.duration : 500;
-      var easingName = (typeof animation === 'undefined' ? 'undefined' : _typeof(animation)) === 'object' && 'easingFunction' in animation ? animation.easingFunction : 'easeInOutQuad';
-      var easingFunction = util.easingFunctions[easingName];
-      if (!easingFunction) {
-        throw new Error('Unknown easing function ' + JSON.stringify(easingName) + '. ' + 'Choose from: ' + Object.keys(util.easingFunctions).join(', '));
->>>>>>> 88f14a0... add 'dist' folder for deployment
       }
 
       var initTime = new Date().valueOf();
@@ -24453,7 +19482,6 @@ return /******/ (function(modules) { // webpackBootstrap
           changed = me._applyRange(s, e);
           DateUtil.updateHiddenDates(me.options.moment, me.body, me.options.hiddenDates);
           anyChanged = anyChanged || changed;
-<<<<<<< HEAD
 
           var params = {
             start: new Date(me.start),
@@ -24464,19 +19492,11 @@ return /******/ (function(modules) { // webpackBootstrap
 
           if (changed) {
             me.body.emitter.emit('rangechange', params);
-=======
-          if (changed) {
-            me.body.emitter.emit('rangechange', { start: new Date(me.start), end: new Date(me.end), byUser: byUser });
->>>>>>> 88f14a0... add 'dist' folder for deployment
           }
 
           if (done) {
             if (anyChanged) {
-<<<<<<< HEAD
               me.body.emitter.emit('rangechanged', params);
-=======
-              me.body.emitter.emit('rangechanged', { start: new Date(me.start), end: new Date(me.end), byUser: byUser });
->>>>>>> 88f14a0... add 'dist' folder for deployment
             }
           } else {
             // animate with as high as possible frame rate, leave 20 ms in between
@@ -24491,20 +19511,23 @@ return /******/ (function(modules) { // webpackBootstrap
       var changed = this._applyRange(finalStart, finalEnd);
       DateUtil.updateHiddenDates(this.options.moment, this.body, this.options.hiddenDates);
       if (changed) {
-<<<<<<< HEAD
         var params = {
           start: new Date(this.start),
           end: new Date(this.end),
           byUser: byUser,
           event: util.elementsCensor(event)
         };
-=======
-        var params = { start: new Date(this.start), end: new Date(this.end), byUser: byUser };
->>>>>>> 88f14a0... add 'dist' folder for deployment
         this.body.emitter.emit('rangechange', params);
         this.body.emitter.emit('rangechanged', params);
       }
     }
+  };
+
+  /**
+   * Get the number of milliseconds per pixel.
+   */
+  Range.prototype.getMillisecondsPerPixel = function () {
+    return (this.end - this.start) / this.body.dom.center.clientWidth;
   };
 
   /**
@@ -24542,7 +19565,7 @@ return /******/ (function(modules) { // webpackBootstrap
       throw new Error('Invalid end "' + end + '"');
     }
 
-    // prevent start < end
+    // prevent end < start
     if (newEnd < newStart) {
       newEnd = newStart;
     }
@@ -24586,7 +19609,9 @@ return /******/ (function(modules) { // webpackBootstrap
         zoomMin = 0;
       }
       if (newEnd - newStart < zoomMin) {
-        if (this.end - this.start === zoomMin && newStart > this.start && newEnd < this.end) {
+        // compensate for a scale of 0.5 ms
+        var compensation = 0.5;
+        if (this.end - this.start === zoomMin && newStart >= this.start - compensation && newEnd <= this.end) {
           // ignore this action, we are already zoomed to the minimum
           newStart = this.start;
           newEnd = this.end;
@@ -24697,11 +19722,8 @@ return /******/ (function(modules) { // webpackBootstrap
     // when releasing the fingers in opposite order from the touch screen
     if (!this.props.touch.allowDragging) return;
 
-<<<<<<< HEAD
     this.stopRolling();
 
-=======
->>>>>>> 88f14a0... add 'dist' folder for deployment
     this.props.touch.start = this.start;
     this.props.touch.end = this.end;
     this.props.touch.dragging = true;
@@ -24771,12 +19793,8 @@ return /******/ (function(modules) { // webpackBootstrap
     this.body.emitter.emit('rangechange', {
       start: startDate,
       end: endDate,
-<<<<<<< HEAD
       byUser: true,
       event: util.elementsCensor(event)
-=======
-      byUser: true
->>>>>>> 88f14a0... add 'dist' folder for deployment
     });
 
     // fire a panmove event
@@ -24808,12 +19826,8 @@ return /******/ (function(modules) { // webpackBootstrap
     this.body.emitter.emit('rangechanged', {
       start: new Date(this.start),
       end: new Date(this.end),
-<<<<<<< HEAD
       byUser: true,
       event: util.elementsCensor(event)
-=======
-      byUser: true
->>>>>>> 88f14a0... add 'dist' folder for deployment
     });
   };
 
@@ -24824,13 +19838,6 @@ return /******/ (function(modules) { // webpackBootstrap
    * @private
    */
   Range.prototype._onMouseWheel = function (event) {
-<<<<<<< HEAD
-=======
-    // Prevent default actions caused by mouse wheel
-    // (else the page and timeline both zoom and scroll)
-    event.preventDefault();
-
->>>>>>> 88f14a0... add 'dist' folder for deployment
     // retrieve delta
     var delta = 0;
     if (event.wheelDelta) {
@@ -24846,24 +19853,17 @@ return /******/ (function(modules) { // webpackBootstrap
     // don't allow zoom when the according key is pressed and the zoomKey option or not zoomable but movable
     if (this.options.zoomKey && !event[this.options.zoomKey] && this.options.zoomable || !this.options.zoomable && this.options.moveable) {
       if (this.options.horizontalScroll) {
-<<<<<<< HEAD
         // Prevent default actions caused by mouse wheel
         // (else the page and timeline both scroll)
         event.preventDefault();
 
-=======
->>>>>>> 88f14a0... add 'dist' folder for deployment
         // calculate a single scroll jump relative to the range scale
         var diff = delta * (this.end - this.start) / 20;
         // calculate new start and end
         var newStart = this.start - diff;
         var newEnd = this.end - diff;
 
-<<<<<<< HEAD
         this.setRange(newStart, newEnd, false, true, event);
-=======
-        this.setRange(newStart, newEnd);
->>>>>>> 88f14a0... add 'dist' folder for deployment
       }
       return;
     }
@@ -24890,7 +19890,6 @@ return /******/ (function(modules) { // webpackBootstrap
       }
 
       // calculate center, the date to zoom around
-<<<<<<< HEAD
       var pointerDate;
       if (this.rolling) {
         pointerDate = (this.start + this.end) / 2;
@@ -24903,12 +19902,6 @@ return /******/ (function(modules) { // webpackBootstrap
       // Prevent default actions caused by mouse wheel
       // (else the page and timeline both scroll)
       event.preventDefault();
-=======
-      var pointer = this.getPointer({ x: event.clientX, y: event.clientY }, this.body.dom.center);
-      var pointerDate = this._pointerToDate(pointer);
-
-      this.zoom(scale, pointerDate, delta);
->>>>>>> 88f14a0... add 'dist' folder for deployment
     }
   };
 
@@ -24940,11 +19933,8 @@ return /******/ (function(modules) { // webpackBootstrap
       this.props.touch.center = this.getPointer(event.center, this.body.dom.center);
     }
 
-<<<<<<< HEAD
     this.stopRolling();
 
-=======
->>>>>>> 88f14a0... add 'dist' folder for deployment
     var scale = 1 / (event.scale + this.scaleOffset);
     var centerDate = this._pointerToDate(this.props.touch.center);
 
@@ -24970,11 +19960,7 @@ return /******/ (function(modules) { // webpackBootstrap
       newEnd = safeEnd;
     }
 
-<<<<<<< HEAD
     this.setRange(newStart, newEnd, false, true, event);
-=======
-    this.setRange(newStart, newEnd, false, true);
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
     this.startToFront = false; // revert to default
     this.endToFront = true; // revert to default
@@ -25053,11 +20039,7 @@ return /******/ (function(modules) { // webpackBootstrap
    * @param {Number} [center]   Value representing a date around which will
    *                            be zoomed.
    */
-<<<<<<< HEAD
   Range.prototype.zoom = function (scale, center, delta, event) {
-=======
-  Range.prototype.zoom = function (scale, center, delta) {
->>>>>>> 88f14a0... add 'dist' folder for deployment
     // if centerDate is not provided, take it half between start Date and end Date
     if (center == null) {
       center = (this.start + this.end) / 2;
@@ -25081,11 +20063,7 @@ return /******/ (function(modules) { // webpackBootstrap
       newEnd = safeEnd;
     }
 
-<<<<<<< HEAD
     this.setRange(newStart, newEnd, false, true, event);
-=======
-    this.setRange(newStart, newEnd, false, true);
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
     this.startToFront = false; // revert to default
     this.endToFront = true; // revert to default
@@ -25124,21 +20102,13 @@ return /******/ (function(modules) { // webpackBootstrap
     var newStart = this.start - diff;
     var newEnd = this.end - diff;
 
-<<<<<<< HEAD
     this.setRange(newStart, newEnd, false, true, event);
-=======
-    this.setRange(newStart, newEnd);
->>>>>>> 88f14a0... add 'dist' folder for deployment
   };
 
   module.exports = Range;
 
 /***/ },
-<<<<<<< HEAD
 /* 124 */
-=======
-/* 33 */
->>>>>>> 88f14a0... add 'dist' folder for deployment
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -25200,11 +20170,7 @@ return /******/ (function(modules) { // webpackBootstrap
   module.exports = Component;
 
 /***/ },
-<<<<<<< HEAD
 /* 125 */
-=======
-/* 34 */
->>>>>>> 88f14a0... add 'dist' folder for deployment
 /***/ function(module, exports) {
 
   "use strict";
@@ -25708,16 +20674,11 @@ return /******/ (function(modules) { // webpackBootstrap
   };
 
 /***/ },
-<<<<<<< HEAD
 /* 126 */
-=======
-/* 35 */
->>>>>>> 88f14a0... add 'dist' folder for deployment
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
 
-<<<<<<< HEAD
   var _stringify = __webpack_require__(82);
 
   var _stringify2 = _interopRequireDefault(_stringify);
@@ -25740,22 +20701,6 @@ return /******/ (function(modules) { // webpackBootstrap
   var Activator = __webpack_require__(139);
   var DateUtil = __webpack_require__(125);
   var CustomTime = __webpack_require__(140);
-=======
-  var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
-
-  var Emitter = __webpack_require__(13);
-  var Hammer = __webpack_require__(22);
-  var hammerUtil = __webpack_require__(30);
-  var util = __webpack_require__(1);
-  var DataSet = __webpack_require__(9);
-  var DataView = __webpack_require__(11);
-  var Range = __webpack_require__(32);
-  var ItemSet = __webpack_require__(36);
-  var TimeAxis = __webpack_require__(46);
-  var Activator = __webpack_require__(47);
-  var DateUtil = __webpack_require__(34);
-  var CustomTime = __webpack_require__(48);
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
   /**
    * Create a timeline visualization
@@ -25796,10 +20741,7 @@ return /******/ (function(modules) { // webpackBootstrap
     this.dom.shadowBottomLeft = document.createElement('div');
     this.dom.shadowTopRight = document.createElement('div');
     this.dom.shadowBottomRight = document.createElement('div');
-<<<<<<< HEAD
     this.dom.rollingModeBtn = document.createElement('div');
-=======
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
     this.dom.root.className = 'vis-timeline';
     this.dom.background.className = 'vis-panel vis-background';
@@ -25819,10 +20761,7 @@ return /******/ (function(modules) { // webpackBootstrap
     this.dom.shadowBottomLeft.className = 'vis-shadow vis-bottom';
     this.dom.shadowTopRight.className = 'vis-shadow vis-top';
     this.dom.shadowBottomRight.className = 'vis-shadow vis-bottom';
-<<<<<<< HEAD
     this.dom.rollingModeBtn.className = 'vis-rolling-mode-btn';
-=======
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
     this.dom.root.appendChild(this.dom.background);
     this.dom.root.appendChild(this.dom.backgroundVertical);
@@ -25832,11 +20771,8 @@ return /******/ (function(modules) { // webpackBootstrap
     this.dom.root.appendChild(this.dom.rightContainer);
     this.dom.root.appendChild(this.dom.top);
     this.dom.root.appendChild(this.dom.bottom);
-<<<<<<< HEAD
     this.dom.root.appendChild(this.dom.bottom);
     this.dom.root.appendChild(this.dom.rollingModeBtn);
-=======
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
     this.dom.centerContainer.appendChild(this.dom.center);
     this.dom.leftContainer.appendChild(this.dom.left);
@@ -25874,7 +20810,6 @@ return /******/ (function(modules) { // webpackBootstrap
     this.on('panmove', this._onDrag.bind(this));
 
     var me = this;
-<<<<<<< HEAD
     this._origRedraw = this._redraw.bind(this);
     this._redraw = util.throttle(this._origRedraw);
 
@@ -25883,20 +20818,6 @@ return /******/ (function(modules) { // webpackBootstrap
         me._redraw();
       } else {
         me._origRedraw();
-=======
-    this.on('_change', function (properties) {
-      if (properties && properties.queue == true) {
-        // redraw once on next tick
-        if (!me._redrawTimer) {
-          me._redrawTimer = setTimeout(function () {
-            me._redrawTimer = null;
-            me._redraw();
-          }, 0);
-        }
-      } else {
-        // redraw immediately
-        me._redraw();
->>>>>>> 88f14a0... add 'dist' folder for deployment
       }
     });
 
@@ -25940,7 +20861,6 @@ return /******/ (function(modules) { // webpackBootstrap
         this.emit('mousewheel', event);
       }
 
-<<<<<<< HEAD
       // prevent scrolling if not specified explicitly or when horizontalScroll is true
       if (!this.options.verticalScroll || this.options.horizontalScroll) return;
 
@@ -25950,13 +20870,6 @@ return /******/ (function(modules) { // webpackBootstrap
       // Prevent default actions caused by mouse wheel
       // (else the page and timeline both scroll)
       event.preventDefault();
-=======
-      // prevent scrolling when zoomKey defined or activated
-      if (!this.options.zoomKey || event[this.options.zoomKey]) return;
-
-      // prevent scrolling vertically when horizontalScroll is true
-      if (this.options.horizontalScroll) return;
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
       var delta = 0;
       if (event.wheelDelta) {
@@ -25974,23 +20887,9 @@ return /******/ (function(modules) { // webpackBootstrap
 
       if (this.isActive()) {
         this._setScrollTop(adjusted);
-<<<<<<< HEAD
         this._redraw();
         this.emit('scroll', event);
       }
-=======
-        if (this.options.verticalScroll) {
-          this.dom.left.parentNode.scrollTop = -adjusted;
-          this.dom.right.parentNode.scrollTop = -adjusted;
-        }
-        this._redraw();
-        this.emit('scroll', event);
-      }
-
-      // Prevent default actions caused by mouse wheel
-      // (else the page and timeline both scroll)
-      event.preventDefault();
->>>>>>> 88f14a0... add 'dist' folder for deployment
     }
 
     if (this.dom.centerContainer.addEventListener) {
@@ -26025,11 +20924,7 @@ return /******/ (function(modules) { // webpackBootstrap
       }
 
       // make sure your target is a vis element
-<<<<<<< HEAD
       if (!event.target.className.indexOf("vis") > -1) return;
-=======
-      if (!event.target.className.includes('vis')) return;
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
       // make sure only one item is added every time you're over the timeline
       if (itemAddedToTimeline) return;
@@ -26042,11 +20937,7 @@ return /******/ (function(modules) { // webpackBootstrap
     function handleDrop(event) {
       // return when dropping non-vis items 
       try {
-<<<<<<< HEAD
         var itemData = JSON.parse(event.dataTransfer.getData("text"));
-=======
-        var itemData = JSON.parse(event.dataTransfer.getData("text/plain"));
->>>>>>> 88f14a0... add 'dist' folder for deployment
         if (!itemData.content) return;
       } catch (err) {
         return false;
@@ -26054,13 +20945,8 @@ return /******/ (function(modules) { // webpackBootstrap
 
       itemAddedToTimeline = false;
       event.center = {
-<<<<<<< HEAD
         x: event.clientX,
         y: event.clientY
-=======
-        x: event.x,
-        y: event.y
->>>>>>> 88f14a0... add 'dist' folder for deployment
       };
       me.itemSet._onAddItem(event);
 
@@ -26114,11 +21000,8 @@ return /******/ (function(modules) { // webpackBootstrap
       var fields = ['width', 'height', 'minHeight', 'maxHeight', 'autoResize', 'start', 'end', 'clickToUse', 'dataAttributes', 'hiddenDates', 'locale', 'locales', 'moment', 'rtl', 'zoomKey', 'horizontalScroll', 'verticalScroll'];
       util.selectiveExtend(fields, this.options, options);
 
-<<<<<<< HEAD
       this.dom.rollingModeBtn.style.visibility = 'hidden';
 
-=======
->>>>>>> 88f14a0... add 'dist' folder for deployment
       if (this.options.rtl) {
         this.dom.container.style.direction = "rtl";
         this.dom.backgroundVertical.className = 'vis-panel vis-background vis-vertical-rtl';
@@ -26139,11 +21022,7 @@ return /******/ (function(modules) { // webpackBootstrap
             item: options.orientation,
             axis: options.orientation
           };
-<<<<<<< HEAD
         } else if ((0, _typeof3['default'])(options.orientation) === 'object') {
-=======
-        } else if (_typeof(options.orientation) === 'object') {
->>>>>>> 88f14a0... add 'dist' folder for deployment
           if ('item' in options.orientation) {
             this.options.orientation.item = options.orientation.item;
           }
@@ -26227,18 +21106,7 @@ return /******/ (function(modules) { // webpackBootstrap
       this.configurator.setModuleOptions({ global: appliedOptions });
     }
 
-<<<<<<< HEAD
     this._redraw();
-=======
-    // override redraw with a throttled version
-    if (!this._origRedraw) {
-      this._origRedraw = this._redraw.bind(this);
-      this._redraw = util.throttle(this._origRedraw);
-    } else {
-      // Not the initial run: redraw everything
-      this._redraw();
-    }
->>>>>>> 88f14a0... add 'dist' folder for deployment
   };
 
   /**
@@ -26303,11 +21171,7 @@ return /******/ (function(modules) { // webpackBootstrap
     });
 
     if (customTimes.length === 0) {
-<<<<<<< HEAD
       throw new Error('No custom time bar found with id ' + (0, _stringify2['default'])(id));
-=======
-      throw new Error('No custom time bar found with id ' + JSON.stringify(id));
->>>>>>> 88f14a0... add 'dist' folder for deployment
     }
 
     if (customTimes.length > 0) {
@@ -26326,11 +21190,7 @@ return /******/ (function(modules) { // webpackBootstrap
     });
 
     if (customTimes.length === 0) {
-<<<<<<< HEAD
       throw new Error('No custom time bar found with id ' + (0, _stringify2['default'])(id));
-=======
-      throw new Error('No custom time bar found with id ' + JSON.stringify(id));
->>>>>>> 88f14a0... add 'dist' folder for deployment
     }
     return customTimes[0].getCustomTime();
   };
@@ -26346,11 +21206,7 @@ return /******/ (function(modules) { // webpackBootstrap
     });
 
     if (customTimes.length === 0) {
-<<<<<<< HEAD
       throw new Error('No custom time bar found with id ' + (0, _stringify2['default'])(id));
-=======
-      throw new Error('No custom time bar found with id ' + JSON.stringify(id));
->>>>>>> 88f14a0... add 'dist' folder for deployment
     }
     if (customTimes.length > 0) {
       return customTimes[0].setCustomTitle(title);
@@ -26384,11 +21240,7 @@ return /******/ (function(modules) { // webpackBootstrap
       return customTime.options.id === id;
     });
     if (exists) {
-<<<<<<< HEAD
       throw new Error('A custom time with id ' + (0, _stringify2['default'])(id) + ' already exists');
-=======
-      throw new Error('A custom time with id ' + JSON.stringify(id) + ' already exists');
->>>>>>> 88f14a0... add 'dist' folder for deployment
     }
 
     var customTime = new CustomTime(this.body, util.extend({}, this.options, {
@@ -26414,11 +21266,7 @@ return /******/ (function(modules) { // webpackBootstrap
     });
 
     if (customTimes.length === 0) {
-<<<<<<< HEAD
       throw new Error('No custom time bar found with id ' + (0, _stringify2['default'])(id));
-=======
-      throw new Error('No custom time bar found with id ' + JSON.stringify(id));
->>>>>>> 88f14a0... add 'dist' folder for deployment
     }
 
     customTimes.forEach(function (customTime) {
@@ -26623,13 +21471,8 @@ return /******/ (function(modules) { // webpackBootstrap
     props.border.right = props.border.left;
     props.border.top = (dom.centerContainer.offsetHeight - dom.centerContainer.clientHeight) / 2;
     props.border.bottom = props.border.top;
-<<<<<<< HEAD
     props.borderRootHeight = dom.root.offsetHeight - dom.root.clientHeight;
     props.borderRootWidth = dom.root.offsetWidth - dom.root.clientWidth;
-=======
-    var borderRootHeight = dom.root.offsetHeight - dom.root.clientHeight;
-    var borderRootWidth = dom.root.offsetWidth - dom.root.clientWidth;
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
     // workaround for a bug in IE: the clientWidth of an element with
     // a height:0px and overflow:hidden is not calculated and always has value 0
@@ -26638,11 +21481,7 @@ return /******/ (function(modules) { // webpackBootstrap
       props.border.right = props.border.left;
     }
     if (dom.root.clientHeight === 0) {
-<<<<<<< HEAD
       props.borderRootWidth = props.borderRootHeight;
-=======
-      borderRootWidth = borderRootHeight;
->>>>>>> 88f14a0... add 'dist' folder for deployment
     }
 
     // calculate the heights. If any of the side panels is empty, we set the height to
@@ -26658,45 +21497,27 @@ return /******/ (function(modules) { // webpackBootstrap
     // apply auto height
     // TODO: only calculate autoHeight when needed (else we cause an extra reflow/repaint of the DOM)
     var contentHeight = Math.max(props.left.height, props.center.height, props.right.height);
-<<<<<<< HEAD
     var autoHeight = props.top.height + contentHeight + props.bottom.height + props.borderRootHeight + props.border.top + props.border.bottom;
-=======
-    var autoHeight = props.top.height + contentHeight + props.bottom.height + borderRootHeight + props.border.top + props.border.bottom;
->>>>>>> 88f14a0... add 'dist' folder for deployment
     dom.root.style.height = util.option.asSize(options.height, autoHeight + 'px');
 
     // calculate heights of the content panels
     props.root.height = dom.root.offsetHeight;
-<<<<<<< HEAD
     props.background.height = props.root.height - props.borderRootHeight;
     var containerHeight = props.root.height - props.top.height - props.bottom.height - props.borderRootHeight;
-=======
-    props.background.height = props.root.height - borderRootHeight;
-    var containerHeight = props.root.height - props.top.height - props.bottom.height - borderRootHeight;
->>>>>>> 88f14a0... add 'dist' folder for deployment
     props.centerContainer.height = containerHeight;
     props.leftContainer.height = containerHeight;
     props.rightContainer.height = props.leftContainer.height;
 
     // calculate the widths of the panels
     props.root.width = dom.root.offsetWidth;
-<<<<<<< HEAD
     props.background.width = props.root.width - props.borderRootWidth;
-=======
-    props.background.width = props.root.width - borderRootWidth;
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
     if (!this.initialDrawDone) {
       props.scrollbarWidth = util.getScrollBarWidth();
     }
 
-<<<<<<< HEAD
     if (options.verticalScroll) {
       if (options.rtl) {
-=======
-    if (this.options.verticalScroll) {
-      if (this.options.rtl) {
->>>>>>> 88f14a0... add 'dist' folder for deployment
         props.left.width = dom.leftContainer.clientWidth || -props.border.left;
         props.right.width = dom.rightContainer.clientWidth + props.scrollbarWidth || -props.border.right;
       } else {
@@ -26708,50 +21529,7 @@ return /******/ (function(modules) { // webpackBootstrap
       props.right.width = dom.rightContainer.clientWidth || -props.border.right;
     }
 
-<<<<<<< HEAD
     this._setDOM();
-=======
-    props.leftContainer.width = props.left.width;
-    props.rightContainer.width = props.right.width;
-    var centerWidth = props.root.width - props.left.width - props.right.width - borderRootWidth;
-    props.center.width = centerWidth;
-    props.centerContainer.width = centerWidth;
-    props.top.width = centerWidth;
-    props.bottom.width = centerWidth;
-
-    // resize the panels
-    dom.background.style.height = props.background.height + 'px';
-    dom.backgroundVertical.style.height = props.background.height + 'px';
-    dom.backgroundHorizontal.style.height = props.centerContainer.height + 'px';
-    dom.centerContainer.style.height = props.centerContainer.height + 'px';
-    dom.leftContainer.style.height = props.leftContainer.height + 'px';
-    dom.rightContainer.style.height = props.rightContainer.height + 'px';
-
-    dom.background.style.width = props.background.width + 'px';
-    dom.backgroundVertical.style.width = props.centerContainer.width + 'px';
-    dom.backgroundHorizontal.style.width = props.background.width + 'px';
-    dom.centerContainer.style.width = props.center.width + 'px';
-    dom.top.style.width = props.top.width + 'px';
-    dom.bottom.style.width = props.bottom.width + 'px';
-
-    // reposition the panels
-    dom.background.style.left = '0';
-    dom.background.style.top = '0';
-    dom.backgroundVertical.style.left = props.left.width + props.border.left + 'px';
-    dom.backgroundVertical.style.top = '0';
-    dom.backgroundHorizontal.style.left = '0';
-    dom.backgroundHorizontal.style.top = props.top.height + 'px';
-    dom.centerContainer.style.left = props.left.width + 'px';
-    dom.centerContainer.style.top = props.top.height + 'px';
-    dom.leftContainer.style.left = '0';
-    dom.leftContainer.style.top = props.top.height + 'px';
-    dom.rightContainer.style.left = props.left.width + props.center.width + 'px';
-    dom.rightContainer.style.top = props.top.height + 'px';
-    dom.top.style.left = props.left.width + 'px';
-    dom.top.style.top = '0';
-    dom.bottom.style.left = props.left.width + 'px';
-    dom.bottom.style.top = props.top.height + props.centerContainer.height + 'px';
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
     // update the scrollTop, feasible range for the offset can be changed
     // when the height of the Core or of the contents of the center changed
@@ -26759,7 +21537,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
     // reposition the scrollable contents
     if (options.orientation.item != 'top') {
-<<<<<<< HEAD
       offset += Math.max(props.centerContainer.height - props.center.height - props.border.top - props.border.bottom, 0);
     }
     dom.center.style.top = offset + 'px';
@@ -26767,18 +21544,6 @@ return /******/ (function(modules) { // webpackBootstrap
     // show shadows when vertical scrolling is available
     var visibilityTop = props.scrollTop == 0 ? 'hidden' : '';
     var visibilityBottom = props.scrollTop == props.scrollTopMin ? 'hidden' : '';
-=======
-      offset += Math.max(this.props.centerContainer.height - this.props.center.height - this.props.border.top - this.props.border.bottom, 0);
-    }
-    dom.center.style.left = '0';
-    dom.center.style.top = offset + 'px';
-    dom.left.style.left = '0';
-    dom.right.style.left = '0';
-
-    // show shadows when vertical scrolling is available
-    var visibilityTop = this.props.scrollTop == 0 ? 'hidden' : '';
-    var visibilityBottom = this.props.scrollTop == this.props.scrollTopMin ? 'hidden' : '';
->>>>>>> 88f14a0... add 'dist' folder for deployment
     dom.shadowTop.style.visibility = visibilityTop;
     dom.shadowBottom.style.visibility = visibilityBottom;
     dom.shadowTopLeft.style.visibility = visibilityTop;
@@ -26786,19 +21551,14 @@ return /******/ (function(modules) { // webpackBootstrap
     dom.shadowTopRight.style.visibility = visibilityTop;
     dom.shadowBottomRight.style.visibility = visibilityBottom;
 
-<<<<<<< HEAD
     if (options.verticalScroll) {
       dom.rightContainer.className = 'vis-panel vis-right vis-vertical-scroll';
       dom.leftContainer.className = 'vis-panel vis-left vis-vertical-scroll';
 
-=======
-    if (this.options.verticalScroll) {
->>>>>>> 88f14a0... add 'dist' folder for deployment
       dom.shadowTopRight.style.visibility = "hidden";
       dom.shadowBottomRight.style.visibility = "hidden";
       dom.shadowTopLeft.style.visibility = "hidden";
       dom.shadowBottomLeft.style.visibility = "hidden";
-<<<<<<< HEAD
 
       dom.left.style.top = '0px';
       dom.right.style.top = '0px';
@@ -26816,15 +21576,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
     // enable/disable vertical panning
     var contentsOverflow = props.center.height > props.centerContainer.height;
-=======
-    } else {
-      dom.left.style.top = offset + 'px';
-      dom.right.style.top = offset + 'px';
-    }
-
-    // enable/disable vertical panning
-    var contentsOverflow = this.props.center.height > this.props.centerContainer.height;
->>>>>>> 88f14a0... add 'dist' folder for deployment
     this.hammer.get('pan').set({
       direction: contentsOverflow ? Hammer.DIRECTION_ALL : Hammer.DIRECTION_HORIZONTAL
     });
@@ -26844,17 +21595,12 @@ return /******/ (function(modules) { // webpackBootstrap
     } else {
       this.redrawCount = 0;
     }
-<<<<<<< HEAD
-=======
-
->>>>>>> 88f14a0... add 'dist' folder for deployment
     this.initialDrawDone = true;
 
     //Emit public 'changed' event for UI updates, see issue #1592
     this.body.emitter.emit("changed");
   };
 
-<<<<<<< HEAD
   Core.prototype._setDOM = function () {
     var props = this.props;
     var dom = this.dom;
@@ -26904,8 +21650,6 @@ return /******/ (function(modules) { // webpackBootstrap
     dom.right.style.left = '0';
   };
 
-=======
->>>>>>> 88f14a0... add 'dist' folder for deployment
   // TODO: deprecated since version 1.1.0, remove some day
   Core.prototype.repaint = function () {
     throw new Error('Function repaint is deprecated. Use redraw instead.');
@@ -27027,10 +21771,7 @@ return /******/ (function(modules) { // webpackBootstrap
         if (me.dom.root.offsetWidth != me.props.lastWidth || me.dom.root.offsetHeight != me.props.lastHeight) {
           me.props.lastWidth = me.dom.root.offsetWidth;
           me.props.lastHeight = me.dom.root.offsetHeight;
-<<<<<<< HEAD
           me.props.scrollbarWidth = util.getScrollBarWidth();
-=======
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
           me.body.emitter.emit('_change');
         }
@@ -27144,14 +21885,11 @@ return /******/ (function(modules) { // webpackBootstrap
     if (this.props.scrollTop > 0) this.props.scrollTop = 0;
     if (this.props.scrollTop < scrollTopMin) this.props.scrollTop = scrollTopMin;
 
-<<<<<<< HEAD
     if (this.options.verticalScroll) {
       this.dom.left.parentNode.scrollTop = -this.props.scrollTop;
       this.dom.right.parentNode.scrollTop = -this.props.scrollTop;
     }
 
-=======
->>>>>>> 88f14a0... add 'dist' folder for deployment
     return this.props.scrollTop;
   };
 
@@ -27176,16 +21914,11 @@ return /******/ (function(modules) { // webpackBootstrap
   module.exports = Core;
 
 /***/ },
-<<<<<<< HEAD
 /* 127 */
-=======
-/* 36 */
->>>>>>> 88f14a0... add 'dist' folder for deployment
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
 
-<<<<<<< HEAD
   var _create = __webpack_require__(55);
 
   var _create2 = _interopRequireDefault(_create);
@@ -27213,22 +21946,6 @@ return /******/ (function(modules) { // webpackBootstrap
   var RangeItem = __webpack_require__(132);
   var BackgroundItem = __webpack_require__(137);
 
-=======
-  var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
-
-  var Hammer = __webpack_require__(22);
-  var util = __webpack_require__(1);
-  var DataSet = __webpack_require__(9);
-  var DataView = __webpack_require__(11);
-  var TimeStep = __webpack_require__(37);
-  var Component = __webpack_require__(33);
-  var Group = __webpack_require__(38);
-  var BackgroundGroup = __webpack_require__(42);
-  var BoxItem = __webpack_require__(43);
-  var PointItem = __webpack_require__(44);
-  var RangeItem = __webpack_require__(40);
-  var BackgroundItem = __webpack_require__(45);
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
   var UNGROUPED = '__ungrouped__'; // reserved group id for ungrouped items
   var BACKGROUND = '__background__'; // reserved group id for background items without group
@@ -27251,10 +21968,7 @@ return /******/ (function(modules) { // webpackBootstrap
       },
       align: 'auto', // alignment of box items
       stack: true,
-<<<<<<< HEAD
       stackSubgroups: true,
-=======
->>>>>>> 88f14a0... add 'dist' folder for deployment
       groupOrderSwap: function groupOrderSwap(fromGroup, toGroup, groups) {
         var targetOrder = toGroup.order;
         toGroup.order = fromGroup.order;
@@ -27270,12 +21984,8 @@ return /******/ (function(modules) { // webpackBootstrap
         updateTime: false,
         updateGroup: false,
         add: false,
-<<<<<<< HEAD
         remove: false,
         overrideItems: false
-=======
-        remove: false
->>>>>>> 88f14a0... add 'dist' folder for deployment
       },
 
       groupEditable: {
@@ -27319,14 +22029,11 @@ return /******/ (function(modules) { // webpackBootstrap
         axis: 20
       },
 
-<<<<<<< HEAD
       tooltip: {
         followMouse: false,
         overflowMethod: 'flip'
       },
 
-=======
->>>>>>> 88f14a0... add 'dist' folder for deployment
       tooltipOnItemUpdateTime: false
     };
 
@@ -27474,7 +22181,6 @@ return /******/ (function(modules) { // webpackBootstrap
       this.groupHammer = new Hammer(this.body.dom.leftContainer);
     }
 
-<<<<<<< HEAD
     this.groupHammer.on('tap', this._onGroupClick.bind(this));
     this.groupHammer.on('panstart', this._onGroupDragStart.bind(this));
     this.groupHammer.on('panmove', this._onGroupDrag.bind(this));
@@ -27486,15 +22192,8 @@ return /******/ (function(modules) { // webpackBootstrap
     this.body.dom.centerContainer.addEventListener('mousemove', this._onMouseMove.bind(this));
     // right-click on timeline 
     this.body.dom.centerContainer.addEventListener('contextmenu', this._onDragEnd.bind(this));
-=======
-    this.groupHammer.on('panstart', this._onGroupDragStart.bind(this));
-    this.groupHammer.on('panmove', this._onGroupDrag.bind(this));
-    this.groupHammer.on('panend', this._onGroupDragEnd.bind(this));
-    this.groupHammer.get('pan').set({ threshold: 5, direction: Hammer.DIRECTION_HORIZONTAL });
 
-    this.body.dom.centerContainer.addEventListener('mouseover', this._onMouseOver.bind(this));
-    this.body.dom.centerContainer.addEventListener('mouseout', this._onMouseOut.bind(this));
->>>>>>> 88f14a0... add 'dist' folder for deployment
+    this.body.dom.centerContainer.addEventListener('mousewheel', this._onMouseWheel.bind(this));
 
     // attach to the DOM
     this.show();
@@ -27567,21 +22266,13 @@ return /******/ (function(modules) { // webpackBootstrap
   ItemSet.prototype.setOptions = function (options) {
     if (options) {
       // copy all options that we know
-<<<<<<< HEAD
       var fields = ['type', 'rtl', 'align', 'order', 'stack', 'stackSubgroups', 'selectable', 'multiselect', 'itemsAlwaysDraggable', 'multiselectPerGroup', 'groupOrder', 'dataAttributes', 'template', 'groupTemplate', 'visibleFrameTemplate', 'hide', 'snap', 'groupOrderSwap', 'tooltip', 'tooltipOnItemUpdateTime'];
-=======
-      var fields = ['type', 'rtl', 'align', 'order', 'stack', 'selectable', 'multiselect', 'itemsAlwaysDraggable', 'multiselectPerGroup', 'groupOrder', 'dataAttributes', 'template', 'groupTemplate', 'hide', 'snap', 'groupOrderSwap', 'tooltipOnItemUpdateTime'];
->>>>>>> 88f14a0... add 'dist' folder for deployment
       util.selectiveExtend(fields, this.options, options);
 
       if ('orientation' in options) {
         if (typeof options.orientation === 'string') {
           this.options.orientation.item = options.orientation === 'top' ? 'top' : 'bottom';
-<<<<<<< HEAD
         } else if ((0, _typeof3['default'])(options.orientation) === 'object' && 'item' in options.orientation) {
-=======
-        } else if (_typeof(options.orientation) === 'object' && 'item' in options.orientation) {
->>>>>>> 88f14a0... add 'dist' folder for deployment
           this.options.orientation.item = options.orientation.item;
         }
       }
@@ -27591,21 +22282,13 @@ return /******/ (function(modules) { // webpackBootstrap
           this.options.margin.axis = options.margin;
           this.options.margin.item.horizontal = options.margin;
           this.options.margin.item.vertical = options.margin;
-<<<<<<< HEAD
         } else if ((0, _typeof3['default'])(options.margin) === 'object') {
-=======
-        } else if (_typeof(options.margin) === 'object') {
->>>>>>> 88f14a0... add 'dist' folder for deployment
           util.selectiveExtend(['axis'], this.options.margin, options.margin);
           if ('item' in options.margin) {
             if (typeof options.margin.item === 'number') {
               this.options.margin.item.horizontal = options.margin.item;
               this.options.margin.item.vertical = options.margin.item;
-<<<<<<< HEAD
             } else if ((0, _typeof3['default'])(options.margin.item) === 'object') {
-=======
-            } else if (_typeof(options.margin.item) === 'object') {
->>>>>>> 88f14a0... add 'dist' folder for deployment
               util.selectiveExtend(['horizontal', 'vertical'], this.options.margin.item, options.margin.item);
             }
           }
@@ -27618,14 +22301,9 @@ return /******/ (function(modules) { // webpackBootstrap
           this.options.editable.updateGroup = options.editable;
           this.options.editable.add = options.editable;
           this.options.editable.remove = options.editable;
-<<<<<<< HEAD
           this.options.editable.overrideItems = false;
         } else if ((0, _typeof3['default'])(options.editable) === 'object') {
           util.selectiveExtend(['updateTime', 'updateGroup', 'add', 'remove', 'overrideItems'], this.options.editable, options.editable);
-=======
-        } else if (_typeof(options.editable) === 'object') {
-          util.selectiveExtend(['updateTime', 'updateGroup', 'add', 'remove'], this.options.editable, options.editable);
->>>>>>> 88f14a0... add 'dist' folder for deployment
         }
       }
 
@@ -27634,11 +22312,7 @@ return /******/ (function(modules) { // webpackBootstrap
           this.options.groupEditable.order = options.groupEditable;
           this.options.groupEditable.add = options.groupEditable;
           this.options.groupEditable.remove = options.groupEditable;
-<<<<<<< HEAD
         } else if ((0, _typeof3['default'])(options.groupEditable) === 'object') {
-=======
-        } else if (_typeof(options.groupEditable) === 'object') {
->>>>>>> 88f14a0... add 'dist' folder for deployment
           util.selectiveExtend(['order', 'add', 'remove'], this.options.groupEditable, options.groupEditable);
         }
       }
@@ -27911,10 +22585,7 @@ return /******/ (function(modules) { // webpackBootstrap
       this.dom.axis.style.left = '0';
     }
 
-<<<<<<< HEAD
     this.initialItemSetDrawn = true;
-=======
->>>>>>> 88f14a0... add 'dist' folder for deployment
     // check if this component is resized
     resized = this._isResized() || resized;
 
@@ -28073,7 +22744,6 @@ return /******/ (function(modules) { // webpackBootstrap
     }
 
     if (this.groupsData) {
-<<<<<<< HEAD
       // go over all groups nesting
       var groupsData = this.groupsData;
       if (this.groupsData instanceof DataView) {
@@ -28093,8 +22763,6 @@ return /******/ (function(modules) { // webpackBootstrap
         }
       });
 
-=======
->>>>>>> 88f14a0... add 'dist' folder for deployment
       // subscribe to new dataset
       var id = this.id;
       util.forEach(this.groupListeners, function (callback, event) {
@@ -28129,12 +22797,8 @@ return /******/ (function(modules) { // webpackBootstrap
    */
   ItemSet.prototype.removeItem = function (id) {
     var item = this.itemsData.get(id),
-<<<<<<< HEAD
         dataset = this.itemsData.getDataSet(),
         itemObj = this.items[id];
-=======
-        dataset = this.itemsData.getDataSet();
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
     if (item) {
       // confirm deletion
@@ -28143,15 +22807,12 @@ return /******/ (function(modules) { // webpackBootstrap
           // remove by id here, it is possible that an item has no id defined
           // itself, so better not delete by the item itself
           dataset.remove(id);
-<<<<<<< HEAD
 
           // Remove it's popup
           if (itemObj.popup) {
             itemObj.popup.destroy();
             itemObj.popup = null;
           }
-=======
->>>>>>> 88f14a0... add 'dist' folder for deployment
         }
       });
     }
@@ -28199,11 +22860,7 @@ return /******/ (function(modules) { // webpackBootstrap
       var selected;
 
       if (item) {
-<<<<<<< HEAD
         // update item   	
-=======
-        // update item
->>>>>>> 88f14a0... add 'dist' folder for deployment
         if (!constructor || !(item instanceof constructor)) {
           // item type has changed, delete the item and recreate it
           selected = item.selected; // preserve selection of this item
@@ -28219,10 +22876,7 @@ return /******/ (function(modules) { // webpackBootstrap
         if (constructor) {
           item = new constructor(itemData, me.conversion, me.options);
           item.id = id; // TODO: not so nice setting id afterwards
-<<<<<<< HEAD
 
-=======
->>>>>>> 88f14a0... add 'dist' folder for deployment
           me._addItem(item);
           if (selected) {
             this.selection.push(id);
@@ -28312,11 +22966,7 @@ return /******/ (function(modules) { // webpackBootstrap
           throw new Error('Illegal group id. ' + id + ' is a reserved id.');
         }
 
-<<<<<<< HEAD
         var groupOptions = (0, _create2['default'])(me.options);
-=======
-        var groupOptions = Object.create(me.options);
->>>>>>> 88f14a0... add 'dist' folder for deployment
         util.extend(groupOptions, {
           height: null
         });
@@ -28378,11 +23028,8 @@ return /******/ (function(modules) { // webpackBootstrap
         order: this.options.groupOrder
       });
 
-<<<<<<< HEAD
       groupIds = this._orderNestedGroups(groupIds);
 
-=======
->>>>>>> 88f14a0... add 'dist' folder for deployment
       var changed = !util.equalArray(groupIds, this.groupIds);
       if (changed) {
         // hide all groups, removes them from the DOM
@@ -28406,7 +23053,6 @@ return /******/ (function(modules) { // webpackBootstrap
   };
 
   /**
-<<<<<<< HEAD
    * Reorder the nested groups
    * @return {boolean} changed
    * @private
@@ -28435,8 +23081,6 @@ return /******/ (function(modules) { // webpackBootstrap
   };
 
   /**
-=======
->>>>>>> 88f14a0... add 'dist' folder for deployment
    * Add a new item
    * @param {Item} item
    * @private
@@ -28447,7 +23091,6 @@ return /******/ (function(modules) { // webpackBootstrap
     // add to group
     var groupId = this._getGroupId(item.data);
     var group = this.groups[groupId];
-<<<<<<< HEAD
 
     if (!group) {
       item.groupShowing = false;
@@ -28455,8 +23098,6 @@ return /******/ (function(modules) { // webpackBootstrap
       item.groupShowing = true;
     }
 
-=======
->>>>>>> 88f14a0... add 'dist' folder for deployment
     if (group) group.add(item);
   };
 
@@ -28473,7 +23114,6 @@ return /******/ (function(modules) { // webpackBootstrap
     // update the items data (will redraw the item when displayed)
     item.setData(itemData);
 
-<<<<<<< HEAD
     var groupId = this._getGroupId(item.data);
     var group = this.groups[groupId];
     if (!group) {
@@ -28481,18 +23121,10 @@ return /******/ (function(modules) { // webpackBootstrap
     } else if (group && group.data && group.data.showNested) {
       item.groupShowing = true;
     }
-=======
->>>>>>> 88f14a0... add 'dist' folder for deployment
     // update group
     if (oldGroupId != item.data.group || oldSubGroupId != item.data.subgroup) {
       var oldGroup = this.groups[oldGroupId];
       if (oldGroup) oldGroup.remove(item);
-<<<<<<< HEAD
-=======
-
-      var groupId = this._getGroupId(item.data);
-      var group = this.groups[groupId];
->>>>>>> 88f14a0... add 'dist' folder for deployment
       if (group) group.add(item);
     }
   };
@@ -28571,42 +23203,28 @@ return /******/ (function(modules) { // webpackBootstrap
    * @private
    */
   ItemSet.prototype._onDragStart = function (event) {
-<<<<<<< HEAD
     if (this.touchParams.itemIsDragging) {
       return;
     }
-=======
->>>>>>> 88f14a0... add 'dist' folder for deployment
     var item = this.touchParams.item || null;
     var me = this;
     var props;
 
     if (item && (item.selected || this.options.itemsAlwaysDraggable)) {
 
-<<<<<<< HEAD
       if (this.options.editable.overrideItems && !this.options.editable.updateTime && !this.options.editable.updateGroup) {
-=======
-      if (!this.options.editable.updateTime && !this.options.editable.updateGroup && !item.editable) {
->>>>>>> 88f14a0... add 'dist' folder for deployment
         return;
       }
 
       // override options.editable
-<<<<<<< HEAD
       if (item.editable != null && !item.editable.updateTime && !item.editable.updateGroup && !this.options.editable.overrideItems) {
-=======
-      if (item.editable === false) {
->>>>>>> 88f14a0... add 'dist' folder for deployment
         return;
       }
 
       var dragLeftItem = this.touchParams.dragLeftItem;
       var dragRightItem = this.touchParams.dragRightItem;
       this.touchParams.itemIsDragging = true;
-<<<<<<< HEAD
       this.touchParams.selectedItem = item;
-=======
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
       if (dragLeftItem) {
         props = {
@@ -28627,11 +23245,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
         this.touchParams.itemProps = [props];
       } else {
-<<<<<<< HEAD
-=======
-        this.touchParams.selectedItem = item;
-
->>>>>>> 88f14a0... add 'dist' folder for deployment
         var baseGroupIndex = this._getGroupIndex(item.data.group);
 
         var itemsToDrag = this.options.itemsAlwaysDraggable && !item.selected ? [item.id] : this.getSelection();
@@ -28695,10 +23308,7 @@ return /******/ (function(modules) { // webpackBootstrap
     newItem.id = id; // TODO: not so nice setting id afterwards
     newItem.data = this._cloneItemData(itemData);
     this._addItem(newItem);
-<<<<<<< HEAD
     this.touchParams.selectedItem = newItem;
-=======
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
     var props = {
       item: newItem,
@@ -28739,11 +23349,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
       //only calculate the new group for the item that's actually dragged
       var selectedItem = this.touchParams.selectedItem;
-<<<<<<< HEAD
       var updateGroupAllowed = (this.options.editable.overrideItems || selectedItem.editable == null) && this.options.editable.updateGroup || !this.options.editable.overrideItems && selectedItem.editable != null && selectedItem.editable.updateGroup;
-=======
-      var updateGroupAllowed = me.options.editable.updateGroup;
->>>>>>> 88f14a0... add 'dist' folder for deployment
       var newGroupBase = null;
       if (updateGroupAllowed && selectedItem) {
         if (selectedItem.data.group != undefined) {
@@ -28769,19 +23375,11 @@ return /******/ (function(modules) { // webpackBootstrap
         }
 
         var itemData = this._cloneItemData(props.item.data); // clone the data
-<<<<<<< HEAD
         if (props.item.editable != null && !props.item.editable.updateTime && !props.item.editable.updateGroup && !me.options.editable.overrideItems) {
           return;
         }
 
         var updateTimeAllowed = (this.options.editable.overrideItems || selectedItem.editable == null) && this.options.editable.updateTime || !this.options.editable.overrideItems && selectedItem.editable != null && selectedItem.editable.updateTime;
-=======
-        if (props.item.editable === false) {
-          return;
-        }
-
-        var updateTimeAllowed = me.options.editable.updateTime || props.item.editable === true;
->>>>>>> 88f14a0... add 'dist' folder for deployment
         if (updateTimeAllowed) {
           if (props.dragLeft) {
             // drag left side of a range item
@@ -28839,11 +23437,6 @@ return /******/ (function(modules) { // webpackBootstrap
           }
         }
 
-<<<<<<< HEAD
-=======
-        var updateGroupAllowed = me.options.editable.updateGroup || props.item.editable === true;
-
->>>>>>> 88f14a0... add 'dist' folder for deployment
         if (updateGroupAllowed && !props.dragLeft && !props.dragRight && newGroupBase != null) {
           if (itemData.group != undefined) {
             var newOffset = newGroupBase - props.groupOffset;
@@ -28895,10 +23488,7 @@ return /******/ (function(modules) { // webpackBootstrap
    * @private
    */
   ItemSet.prototype._onDragEnd = function (event) {
-<<<<<<< HEAD
     this.touchParams.itemIsDragging = false;
-=======
->>>>>>> 88f14a0... add 'dist' folder for deployment
     if (this.touchParams.itemProps) {
       event.stopPropagation();
 
@@ -28906,10 +23496,6 @@ return /******/ (function(modules) { // webpackBootstrap
       var dataset = this.itemsData.getDataSet();
       var itemProps = this.touchParams.itemProps;
       this.touchParams.itemProps = null;
-<<<<<<< HEAD
-=======
-      this.touchParams.itemIsDragging = false;
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
       itemProps.forEach(function (props) {
         var id = props.item.id;
@@ -28948,7 +23534,6 @@ return /******/ (function(modules) { // webpackBootstrap
     }
   };
 
-<<<<<<< HEAD
   ItemSet.prototype._onGroupClick = function (event) {
     var group = this.groupFromTarget(event);
 
@@ -28980,8 +23565,6 @@ return /******/ (function(modules) { // webpackBootstrap
     }
   };
 
-=======
->>>>>>> 88f14a0... add 'dist' folder for deployment
   ItemSet.prototype._onGroupDragStart = function (event) {
     if (this.options.groupEditable.order) {
       this.groupTouchParams.group = this.groupFromTarget(event);
@@ -29000,13 +23583,10 @@ return /******/ (function(modules) { // webpackBootstrap
     if (this.options.groupEditable.order && this.groupTouchParams.group) {
       event.stopPropagation();
 
-<<<<<<< HEAD
       var groupsData = this.groupsData;
       if (this.groupsData instanceof DataView) {
         groupsData = this.groupsData.getDataSet();
       }
-=======
->>>>>>> 88f14a0... add 'dist' folder for deployment
       // drag from one group to another
       var group = this.groupFromTarget(event);
 
@@ -29031,16 +23611,11 @@ return /******/ (function(modules) { // webpackBootstrap
       }
 
       if (group && group != this.groupTouchParams.group) {
-<<<<<<< HEAD
-=======
-        var groupsData = this.groupsData;
->>>>>>> 88f14a0... add 'dist' folder for deployment
         var targetGroup = groupsData.get(group.groupId);
         var draggedGroup = groupsData.get(this.groupTouchParams.group.groupId);
 
         // switch groups
         if (draggedGroup && targetGroup) {
-<<<<<<< HEAD
           this.options.groupOrderSwap(draggedGroup, targetGroup, groupsData);
           groupsData.update(draggedGroup);
           groupsData.update(targetGroup);
@@ -29048,24 +23623,11 @@ return /******/ (function(modules) { // webpackBootstrap
 
         // fetch current order of groups
         var newOrder = groupsData.getIds({
-=======
-          this.options.groupOrderSwap(draggedGroup, targetGroup, this.groupsData);
-          this.groupsData.update(draggedGroup);
-          this.groupsData.update(targetGroup);
-        }
-
-        // fetch current order of groups
-        var newOrder = this.groupsData.getIds({
->>>>>>> 88f14a0... add 'dist' folder for deployment
           order: this.options.groupOrder
         });
 
         // in case of changes since _onGroupDragStart
         if (!util.equalArray(newOrder, this.groupTouchParams.originalOrder)) {
-<<<<<<< HEAD
-=======
-          var groupsData = this.groupsData;
->>>>>>> 88f14a0... add 'dist' folder for deployment
           var origOrder = this.groupTouchParams.originalOrder;
           var draggedId = this.groupTouchParams.group.groupId;
           var numGroups = Math.min(origOrder.length, newOrder.length);
@@ -29204,11 +23766,7 @@ return /******/ (function(modules) { // webpackBootstrap
     if (newSelection.length > 0 || oldSelection.length > 0) {
       this.body.emitter.emit('select', {
         items: newSelection,
-<<<<<<< HEAD
         event: util.elementsCensor(event)
-=======
-        event: event
->>>>>>> 88f14a0... add 'dist' folder for deployment
       });
     }
   };
@@ -29221,7 +23779,6 @@ return /******/ (function(modules) { // webpackBootstrap
   ItemSet.prototype._onMouseOver = function (event) {
     var item = this.itemFromTarget(event);
     if (!item) return;
-<<<<<<< HEAD
 
     // Item we just left
     var related = this.itemFromRelatedTarget(event);
@@ -29243,17 +23800,11 @@ return /******/ (function(modules) { // webpackBootstrap
     this.body.emitter.emit('itemover', {
       item: item.id,
       event: util.elementsCensor(event)
-=======
-    this.body.emitter.emit('itemover', {
-      item: item.id,
-      event: event
->>>>>>> 88f14a0... add 'dist' folder for deployment
     });
   };
   ItemSet.prototype._onMouseOut = function (event) {
     var item = this.itemFromTarget(event);
     if (!item) return;
-<<<<<<< HEAD
 
     // Item we are going to
     var related = this.itemFromRelatedTarget(event);
@@ -29287,40 +23838,28 @@ return /******/ (function(modules) { // webpackBootstrap
   };
 
   /**
+   * Handle mousewheel
+   * @param event
+   * @private
+   */
+  ItemSet.prototype._onMouseWheel = function (event) {
+    if (this.touchParams.itemIsDragging) {
+      this._onDragEnd(event);
+    }
+  };
+
+  /**
    * Handle updates of an item on double tap
    * @param event
    * @private
    */
   ItemSet.prototype._onUpdateItem = function (item) {
-=======
-    this.body.emitter.emit('itemout', {
-      item: item.id,
-      event: event
-    });
-  };
-
-  /**
-   * Handle creation and updates of an item on double tap
-   * @param event
-   * @private
-   */
-  ItemSet.prototype._onAddItem = function (event) {
->>>>>>> 88f14a0... add 'dist' folder for deployment
     if (!this.options.selectable) return;
     if (!this.options.editable.add) return;
 
     var me = this;
-<<<<<<< HEAD
 
     if (item) {
-=======
-    var snap = this.options.snap || null;
-    var item = this.itemFromTarget(event);
-
-    if (item) {
-      // update item
-
->>>>>>> 88f14a0... add 'dist' folder for deployment
       // execute async handler to update the item (or cancel it)
       var itemData = me.itemsData.get(item.id); // get a clone of the data from the dataset
       this.options.onUpdate(itemData, function (itemData) {
@@ -29328,7 +23867,6 @@ return /******/ (function(modules) { // webpackBootstrap
           me.itemsData.getDataSet().update(itemData);
         }
       });
-<<<<<<< HEAD
     }
   };
 
@@ -29346,9 +23884,6 @@ return /******/ (function(modules) { // webpackBootstrap
     var item = this.itemFromTarget(event);
 
     if (!item) {
-=======
-    } else {
->>>>>>> 88f14a0... add 'dist' folder for deployment
       // add item
       if (this.options.rtl) {
         var xAbs = util.getAbsoluteRight(this.dom.frame);
@@ -29369,30 +23904,18 @@ return /******/ (function(modules) { // webpackBootstrap
       };
 
       if (event.type == 'drop') {
-<<<<<<< HEAD
         var itemData = JSON.parse(event.dataTransfer.getData("text"));
-=======
-        var itemData = JSON.parse(event.dataTransfer.getData("text/plain"));
->>>>>>> 88f14a0... add 'dist' folder for deployment
         newItemData.content = itemData.content; // content is required 
         newItemData.type = itemData.type || 'box';
         newItemData[this.itemsData._fieldId] = itemData.id || util.randomUUID();
 
         if (itemData.type == 'range' || itemData.end && itemData.start) {
-<<<<<<< HEAD
-=======
-
->>>>>>> 88f14a0... add 'dist' folder for deployment
           if (!itemData.end) {
             var end = this.body.util.toTime(x + this.props.width / 5);
             newItemData.end = snap ? snap(end, scale, step) : end;
           } else {
-<<<<<<< HEAD
             newItemData.end = itemData.end;
             newItemData.start = itemData.start;
-=======
-            newItemData.end = new Date(newItemData.start._i).getTime() + new Date(itemData.end).getTime() - new Date(itemData.start).getTime();
->>>>>>> 88f14a0... add 'dist' folder for deployment
           }
         }
       } else {
@@ -29491,11 +24014,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
       this.body.emitter.emit('select', {
         items: this.getSelection(),
-<<<<<<< HEAD
         event: util.elementsCensor(event)
-=======
-        event: event
->>>>>>> 88f14a0... add 'dist' folder for deployment
       });
     }
   };
@@ -29533,7 +24052,6 @@ return /******/ (function(modules) { // webpackBootstrap
   };
 
   /**
-<<<<<<< HEAD
    * Find an item from an element:
    * searches for the attribute 'timeline-item' in the element's tree
    * @param {HTMLElement} element
@@ -29552,15 +24070,12 @@ return /******/ (function(modules) { // webpackBootstrap
   };
 
   /**
-=======
->>>>>>> 88f14a0... add 'dist' folder for deployment
    * Find an item from an event target:
    * searches for the attribute 'timeline-item' in the event target's element tree
    * @param {Event} event
    * @return {Item | null} item
    */
   ItemSet.prototype.itemFromTarget = function (event) {
-<<<<<<< HEAD
     return this.itemFromElement(event.target);
   };
 
@@ -29572,17 +24087,6 @@ return /******/ (function(modules) { // webpackBootstrap
    */
   ItemSet.prototype.itemFromRelatedTarget = function (event) {
     return this.itemFromElement(event.relatedTarget);
-=======
-    var target = event.target;
-    while (target) {
-      if (target.hasOwnProperty('timeline-item')) {
-        return target['timeline-item'];
-      }
-      target = target.parentNode;
-    }
-
-    return null;
->>>>>>> 88f14a0... add 'dist' folder for deployment
   };
 
   /**
@@ -29664,7 +24168,6 @@ return /******/ (function(modules) { // webpackBootstrap
   module.exports = ItemSet;
 
 /***/ },
-<<<<<<< HEAD
 /* 128 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -29835,20 +24338,12 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 129 */
-=======
-/* 37 */
->>>>>>> 88f14a0... add 'dist' folder for deployment
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
 
-<<<<<<< HEAD
   var moment = __webpack_require__(84);
   var DateUtil = __webpack_require__(125);
-=======
-  var moment = __webpack_require__(2);
-  var DateUtil = __webpack_require__(34);
->>>>>>> 88f14a0... add 'dist' folder for deployment
   var util = __webpack_require__(1);
 
   /**
@@ -30086,7 +24581,6 @@ return /******/ (function(modules) { // webpackBootstrap
         case 'minute':
           this.current.add(this.step, 'minute');break;
         case 'hour':
-<<<<<<< HEAD
           this.current.add(this.moment.duration(this.step, 'hour'));
 
           // correct for daylight saving
@@ -30097,9 +24591,6 @@ return /******/ (function(modules) { // webpackBootstrap
           }
 
           break;
-=======
-          this.current.add(this.step, 'hour');break;
->>>>>>> 88f14a0... add 'dist' folder for deployment
         case 'weekday': // intentional fall through
         case 'day':
           this.current.add(this.step, 'day');break;
@@ -30116,7 +24607,6 @@ return /******/ (function(modules) { // webpackBootstrap
       // round down to the correct major value
       switch (this.scale) {
         case 'millisecond':
-<<<<<<< HEAD
           if (this.current.milliseconds() > 0 && this.current.milliseconds() < this.step) this.current.milliseconds(0);break;
         case 'second':
           if (this.current.seconds() > 0 && this.current.seconds() < this.step) this.current.seconds(0);break;
@@ -30124,15 +24614,6 @@ return /******/ (function(modules) { // webpackBootstrap
           if (this.current.minutes() > 0 && this.current.minutes() < this.step) this.current.minutes(0);break;
         case 'hour':
           if (this.current.hours() > 0 && this.current.hours() < this.step) this.current.hours(0);break;
-=======
-          if (this.current.milliseconds() < this.step) this.current.milliseconds(0);break;
-        case 'second':
-          if (this.current.seconds() < this.step) this.current.seconds(0);break;
-        case 'minute':
-          if (this.current.minutes() < this.step) this.current.minutes(0);break;
-        case 'hour':
-          if (this.current.hours() < this.step) this.current.hours(0);break;
->>>>>>> 88f14a0... add 'dist' folder for deployment
         case 'weekday': // intentional fall through
         case 'day':
           if (this.current.date() < this.step + 1) this.current.date(1);break;
@@ -30562,11 +25043,7 @@ return /******/ (function(modules) { // webpackBootstrap
         return 'vis-' + current.format('dddd').toLowerCase() + today(current) + currentWeek(current) + even(current.date());
 
       case 'day':
-<<<<<<< HEAD
         return 'vis-day' + current.date() + ' vis-' + current.format('MMMM').toLowerCase() + today(current) + currentMonth(current) + (this.step <= 2 ? today(current) : '') + (this.step <= 2 ? ' vis-' + current.format('dddd').toLowerCase() : '' + even(current.date() - 1));
-=======
-        return 'vis-day' + current.date() + ' vis-' + current.format('MMMM').toLowerCase() + today(current) + currentMonth(current) + this.step <= 2 ? today(current) : '' + this.step <= 2 ? ' vis-' + current.format('dddd').toLowerCase() : '' + even(current.date() - 1);
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
       case 'month':
         return 'vis-' + current.format('MMMM').toLowerCase() + currentMonth(current) + even(current.month());
@@ -30583,16 +25060,11 @@ return /******/ (function(modules) { // webpackBootstrap
   module.exports = TimeStep;
 
 /***/ },
-<<<<<<< HEAD
 /* 130 */
-=======
-/* 38 */
->>>>>>> 88f14a0... add 'dist' folder for deployment
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
 
-<<<<<<< HEAD
   var _keys = __webpack_require__(58);
 
   var _keys2 = _interopRequireDefault(_keys);
@@ -30602,11 +25074,6 @@ return /******/ (function(modules) { // webpackBootstrap
   var util = __webpack_require__(1);
   var stack = __webpack_require__(131);
   var RangeItem = __webpack_require__(132);
-=======
-  var util = __webpack_require__(1);
-  var stack = __webpack_require__(39);
-  var RangeItem = __webpack_require__(40);
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
   /**
    * @constructor Group
@@ -30622,7 +25089,6 @@ return /******/ (function(modules) { // webpackBootstrap
     this.itemSet = itemSet;
     this.isVisible = null;
 
-<<<<<<< HEAD
     if (data && data.nestedGroups) {
       this.nestedGroups = data.nestedGroups;
       if (data.showNested == false) {
@@ -30634,8 +25100,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
     this.nestedInGroup = null;
 
-=======
->>>>>>> 88f14a0... add 'dist' folder for deployment
     this.dom = {};
     this.props = {
       label: {
@@ -30647,10 +25111,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
     this.items = {}; // items filtered by groupId of this group
     this.visibleItems = []; // items currently visible in window
-<<<<<<< HEAD
     this.itemsInRange = []; // items currently in range
-=======
->>>>>>> 88f14a0... add 'dist' folder for deployment
     this.orderedItems = {
       byStart: [],
       byEnd: []
@@ -30700,12 +25161,8 @@ return /******/ (function(modules) { // webpackBootstrap
     // display:none is changed to visible.
     this.dom.marker = document.createElement('div');
     this.dom.marker.style.visibility = 'hidden';
-<<<<<<< HEAD
     this.dom.marker.style.position = 'absolute';
     this.dom.marker.innerHTML = '';
-=======
-    this.dom.marker.innerHTML = '?';
->>>>>>> 88f14a0... add 'dist' folder for deployment
     this.dom.background.appendChild(this.dom.marker);
   };
 
@@ -30741,17 +25198,12 @@ return /******/ (function(modules) { // webpackBootstrap
 
     // update title
     this.dom.label.title = data && data.title || '';
-<<<<<<< HEAD
-=======
-
->>>>>>> 88f14a0... add 'dist' folder for deployment
     if (!this.dom.inner.firstChild) {
       util.addClassName(this.dom.inner, 'vis-hidden');
     } else {
       util.removeClassName(this.dom.inner, 'vis-hidden');
     }
 
-<<<<<<< HEAD
     if (data && data.nestedGroups) {
       if (data.showNested == false) {
         this.showNested = false;
@@ -30779,8 +25231,6 @@ return /******/ (function(modules) { // webpackBootstrap
       }
     }
 
-=======
->>>>>>> 88f14a0... add 'dist' folder for deployment
     // update className
     var className = data && data.className || null;
     if (className != this.className) {
@@ -30831,10 +25281,6 @@ return /******/ (function(modules) { // webpackBootstrap
     var markerHeight = this.dom.marker.clientHeight;
     if (markerHeight != this.lastMarkerHeight) {
       this.lastMarkerHeight = markerHeight;
-<<<<<<< HEAD
-=======
-
->>>>>>> 88f14a0... add 'dist' folder for deployment
       util.forEach(this.items, function (item) {
         item.dirty = true;
         if (item.displayed) item.redraw();
@@ -30844,13 +25290,7 @@ return /******/ (function(modules) { // webpackBootstrap
     }
 
     // recalculate the height of the subgroups
-<<<<<<< HEAD
     this._calculateSubGroupHeights(margin);
-=======
-    this._calculateSubGroupHeights();
-
-    this.isVisible = this._isGroupVisible(range, margin);
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
     // calculate actual size and position
     var foreground = this.dom.foreground;
@@ -30884,40 +25324,22 @@ return /******/ (function(modules) { // webpackBootstrap
         stack.stack(customOrderedItems, margin, true /* restack=true */);
       }
 
-<<<<<<< HEAD
       this.visibleItems = this._updateItemsInRange(this.orderedItems, this.visibleItems, range);
     } else {
       // no custom order function, lazy stacking
 
       this.visibleItems = this._updateItemsInRange(this.orderedItems, this.visibleItems, range);
 
-=======
-      this.visibleItems = this._updateVisibleItems(this.orderedItems, this.visibleItems, range);
-    } else {
-      // no custom order function, lazy stacking
-
-      this.visibleItems = this._updateVisibleItems(this.orderedItems, this.visibleItems, range);
->>>>>>> 88f14a0... add 'dist' folder for deployment
       if (this.itemSet.options.stack) {
         // TODO: ugly way to access options...
         stack.stack(this.visibleItems, margin, restack);
       } else {
         // no stacking
-<<<<<<< HEAD
         stack.nostack(this.visibleItems, margin, this.subgroups, this.itemSet.options.stackSubgroups);
       }
     }
 
     this._updateSubgroupsSizes();
-=======
-        stack.nostack(this.visibleItems, margin, this.subgroups);
-      }
-    }
-
-    if (!this.isVisible && this.height) {
-      return resized = false;
-    }
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
     // recalculate the height of the group
     var height = this._calculateHeight(margin);
@@ -30941,7 +25363,6 @@ return /******/ (function(modules) { // webpackBootstrap
     for (var i = 0, ii = this.visibleItems.length; i < ii; i++) {
       var item = this.visibleItems[i];
       item.repositionY(margin);
-<<<<<<< HEAD
       if (!this.isVisible && this.groupId != "__background__") {
         if (item.displayed) item.hide();
       }
@@ -30949,8 +25370,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
     if (!this.isVisible && this.height) {
       return resized = false;
-=======
->>>>>>> 88f14a0... add 'dist' folder for deployment
     }
 
     return resized;
@@ -30960,24 +25379,15 @@ return /******/ (function(modules) { // webpackBootstrap
    * recalculate the height of the subgroups
    * @private
    */
-<<<<<<< HEAD
   Group.prototype._calculateSubGroupHeights = function (margin) {
     if ((0, _keys2['default'])(this.subgroups).length > 0) {
-=======
-  Group.prototype._calculateSubGroupHeights = function () {
-    if (Object.keys(this.subgroups).length > 0) {
->>>>>>> 88f14a0... add 'dist' folder for deployment
       var me = this;
 
       this.resetSubgroups();
 
       util.forEach(this.visibleItems, function (item) {
         if (item.data.subgroup !== undefined) {
-<<<<<<< HEAD
           me.subgroups[item.data.subgroup].height = Math.max(me.subgroups[item.data.subgroup].height, item.height + margin.item.vertical);
-=======
-          me.subgroups[item.data.subgroup].height = Math.max(me.subgroups[item.data.subgroup].height, item.height);
->>>>>>> 88f14a0... add 'dist' folder for deployment
           me.subgroups[item.data.subgroup].visible = true;
         }
       });
@@ -31002,19 +25412,11 @@ return /******/ (function(modules) { // webpackBootstrap
   Group.prototype._calculateHeight = function (margin) {
     // recalculate the height of the group
     var height;
-<<<<<<< HEAD
     var itemsInRange = this.visibleItems;
     if (itemsInRange.length > 0) {
       var min = itemsInRange[0].top;
       var max = itemsInRange[0].top + itemsInRange[0].height;
       util.forEach(itemsInRange, function (item) {
-=======
-    var visibleItems = this.visibleItems;
-    if (visibleItems.length > 0) {
-      var min = visibleItems[0].top;
-      var max = visibleItems[0].top + visibleItems[0].height;
-      util.forEach(visibleItems, function (item) {
->>>>>>> 88f14a0... add 'dist' folder for deployment
         min = Math.min(min, item.top);
         max = Math.max(max, item.top + item.height);
       });
@@ -31022,11 +25424,7 @@ return /******/ (function(modules) { // webpackBootstrap
         // there is an empty gap between the lowest item and the axis
         var offset = min - margin.axis;
         max -= offset;
-<<<<<<< HEAD
         util.forEach(itemsInRange, function (item) {
-=======
-        util.forEach(visibleItems, function (item) {
->>>>>>> 88f14a0... add 'dist' folder for deployment
           item.top -= offset;
         });
       }
@@ -31096,7 +25494,6 @@ return /******/ (function(modules) { // webpackBootstrap
     // add to
     if (item.data.subgroup !== undefined) {
       if (this.subgroups[item.data.subgroup] === undefined) {
-<<<<<<< HEAD
         this.subgroups[item.data.subgroup] = {
           height: 0,
           top: 0,
@@ -31116,11 +25513,6 @@ return /******/ (function(modules) { // webpackBootstrap
         this.subgroups[item.data.subgroup].end = item.data.end;
       }
 
-=======
-        this.subgroups[item.data.subgroup] = { height: 0, visible: false, index: this.subgroupIndex, items: [] };
-        this.subgroupIndex++;
-      }
->>>>>>> 88f14a0... add 'dist' folder for deployment
       this.subgroups[item.data.subgroup].items.push(item);
     }
     this.orderSubgroups();
@@ -31131,7 +25523,6 @@ return /******/ (function(modules) { // webpackBootstrap
     }
   };
 
-<<<<<<< HEAD
   Group.prototype._updateSubgroupsSizes = function () {
     var me = this;
     if (me.subgroups) {
@@ -31154,8 +25545,6 @@ return /******/ (function(modules) { // webpackBootstrap
     }
   };
 
-=======
->>>>>>> 88f14a0... add 'dist' folder for deployment
   Group.prototype.orderSubgroups = function () {
     if (this.subgroupOrderer !== undefined) {
       var sortArray = [];
@@ -31209,11 +25598,8 @@ return /******/ (function(modules) { // webpackBootstrap
         if (!subgroup.items.length) {
           delete this.subgroups[item.data.subgroup];
           this.subgroupIndex--;
-<<<<<<< HEAD
         } else {
           this._updateSubgroupsSizes();
-=======
->>>>>>> 88f14a0... add 'dist' folder for deployment
         }
         this.orderSubgroups();
       }
@@ -31259,22 +25645,9 @@ return /******/ (function(modules) { // webpackBootstrap
    * @return {Item[]} visibleItems                            The new visible items.
    * @private
    */
-<<<<<<< HEAD
   Group.prototype._updateItemsInRange = function (orderedItems, oldVisibleItems, range) {
     var visibleItems = [];
     var visibleItemsLookup = {}; // we keep this to quickly look up if an item already exists in the list without using indexOf on visibleItems
-=======
-  Group.prototype._updateVisibleItems = function (orderedItems, oldVisibleItems, range) {
-    var visibleItems = [];
-    var visibleItemsLookup = {}; // we keep this to quickly look up if an item already exists in the list without using indexOf on visibleItems
-    if (!this.isVisible && this.groupId != "__background__") {
-      for (var i = 0; i < oldVisibleItems.length; i++) {
-        var item = oldVisibleItems[i];
-        if (item.displayed) item.hide();
-      }
-      return visibleItems;
-    }
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
     var interval = (range.end - range.start) / 4;
     var lowerBound = range.start - interval;
@@ -31411,11 +25784,7 @@ return /******/ (function(modules) { // webpackBootstrap
   module.exports = Group;
 
 /***/ },
-<<<<<<< HEAD
 /* 131 */
-=======
-/* 39 */
->>>>>>> 88f14a0... add 'dist' folder for deployment
 /***/ function(module, exports) {
 
   'use strict';
@@ -31459,26 +25828,15 @@ return /******/ (function(modules) { // webpackBootstrap
    *            items having a top===null will be re-stacked
    */
   exports.stack = function (items, margin, force) {
-<<<<<<< HEAD
     if (force) {
       // reset top position of all items
       for (var i = 0; i < items.length; i++) {
-=======
-    var i, iMax;
-    if (force) {
-      // reset top position of all items
-      for (i = 0, iMax = items.length; i < iMax; i++) {
->>>>>>> 88f14a0... add 'dist' folder for deployment
         items[i].top = null;
       }
     }
 
     // calculate new, non-overlapping positions
-<<<<<<< HEAD
     for (var i = 0; i < items.length; i++) {
-=======
-    for (i = 0, iMax = items.length; i < iMax; i++) {
->>>>>>> 88f14a0... add 'dist' folder for deployment
       var item = items[i];
       if (item.stack && item.top === null) {
         // initialize top position
@@ -31511,7 +25869,6 @@ return /******/ (function(modules) { // webpackBootstrap
    *            All visible items
    * @param {{item: {horizontal: number, vertical: number}, axis: number}} margin
    *            Margins between items and between items and the axis.
-<<<<<<< HEAD
   * @param {subgroups[]} subgroups
    *            All subgroups
    */
@@ -31571,26 +25928,6 @@ return /******/ (function(modules) { // webpackBootstrap
     for (var i = 0; i < items.length; i++) {
       if (items[i].data.subgroup !== undefined) {
         items[i].top = subgroups[items[i].data.subgroup].top + 0.5 * margin.item.vertical;
-=======
-   */
-  exports.nostack = function (items, margin, subgroups) {
-    var i, iMax, newTop;
-
-    // reset top position of all items
-    for (i = 0, iMax = items.length; i < iMax; i++) {
-      if (items[i].data.subgroup !== undefined) {
-        newTop = margin.axis;
-        for (var subgroup in subgroups) {
-          if (subgroups.hasOwnProperty(subgroup)) {
-            if (subgroups[subgroup].visible == true && subgroups[subgroup].index < subgroups[items[i].data.subgroup].index) {
-              newTop += subgroups[subgroup].height + margin.item.vertical;
-            }
-          }
-        }
-        items[i].top = newTop;
-      } else {
-        items[i].top = margin.axis;
->>>>>>> 88f14a0... add 'dist' folder for deployment
       }
     }
   };
@@ -31614,7 +25951,6 @@ return /******/ (function(modules) { // webpackBootstrap
     }
   };
 
-<<<<<<< HEAD
   /**
    * Test if the two provided objects collide
    * The objects must have parameters start, end, top, and height.
@@ -31628,21 +25964,12 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 132 */
-=======
-/***/ },
-/* 40 */
->>>>>>> 88f14a0... add 'dist' folder for deployment
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
 
-<<<<<<< HEAD
   var Hammer = __webpack_require__(108);
   var Item = __webpack_require__(133);
-=======
-  var Hammer = __webpack_require__(22);
-  var Item = __webpack_require__(41);
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
   /**
    * @constructor RangeItem
@@ -31703,23 +26030,16 @@ return /******/ (function(modules) { // webpackBootstrap
       dom.box = document.createElement('div');
       // className is updated in redraw()
 
-<<<<<<< HEAD
       // frame box (to prevent the item contents from overflowing)
-=======
-      // frame box (to prevent the item contents from overflowing
->>>>>>> 88f14a0... add 'dist' folder for deployment
       dom.frame = document.createElement('div');
       dom.frame.className = 'vis-item-overflow';
       dom.box.appendChild(dom.frame);
 
-<<<<<<< HEAD
       // visible frame box (showing the frame that is always visible)
       dom.visibleFrame = document.createElement('div');
       dom.visibleFrame.className = 'vis-item-visible-frame';
       dom.box.appendChild(dom.visibleFrame);
 
-=======
->>>>>>> 88f14a0... add 'dist' folder for deployment
       // contents box
       dom.content = document.createElement('div');
       dom.content.className = 'vis-item-content';
@@ -31750,11 +26070,7 @@ return /******/ (function(modules) { // webpackBootstrap
     // - the item is selected/deselected
     if (this.dirty) {
       this._updateContents(this.dom.content);
-<<<<<<< HEAD
       this._updateTitle();
-=======
-      this._updateTitle(this.dom.box);
->>>>>>> 88f14a0... add 'dist' folder for deployment
       this._updateDataAttributes(this.dom.box);
       this._updateStyle(this.dom.box);
 
@@ -31982,16 +26298,11 @@ return /******/ (function(modules) { // webpackBootstrap
   module.exports = RangeItem;
 
 /***/ },
-<<<<<<< HEAD
 /* 133 */
-=======
-/* 41 */
->>>>>>> 88f14a0... add 'dist' folder for deployment
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
 
-<<<<<<< HEAD
   var _keys = __webpack_require__(58);
 
   var _keys2 = _interopRequireDefault(_keys);
@@ -32005,11 +26316,6 @@ return /******/ (function(modules) { // webpackBootstrap
   var Hammer = __webpack_require__(108);
   var util = __webpack_require__(1);
   var moment = __webpack_require__(84);
-=======
-  var Hammer = __webpack_require__(22);
-  var util = __webpack_require__(1);
-  var moment = __webpack_require__(2);
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
   /**
    * @constructor Item
@@ -32029,13 +26335,9 @@ return /******/ (function(modules) { // webpackBootstrap
     this.options = options || {};
     this.selected = false;
     this.displayed = false;
-<<<<<<< HEAD
     this.groupShowing = true;
     this.dirty = true;
     this.popup = null;
-=======
-    this.dirty = true;
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
     this.top = null;
     this.right = null;
@@ -32044,7 +26346,6 @@ return /******/ (function(modules) { // webpackBootstrap
     this.height = null;
 
     this.editable = null;
-<<<<<<< HEAD
     if (this.data && this.data.hasOwnProperty('editable')) {
       if (typeof this.data.editable === 'boolean') {
         this.editable = {
@@ -32056,10 +26357,6 @@ return /******/ (function(modules) { // webpackBootstrap
         this.editable = {};
         util.selectiveExtend(['updateTime', 'updateGroup', 'remove'], this.editable, data.editable);
       };
-=======
-    if (this.data && this.data.hasOwnProperty('editable') && typeof this.data.editable === 'boolean') {
-      this.editable = data.editable;
->>>>>>> 88f14a0... add 'dist' folder for deployment
     }
   }
 
@@ -32094,7 +26391,6 @@ return /******/ (function(modules) { // webpackBootstrap
       this.parent.itemSet._moveToGroup(this, data.group);
     }
 
-<<<<<<< HEAD
     if (data.hasOwnProperty('editable')) {
       if (typeof data.editable === 'boolean') {
         this.editable = {
@@ -32106,10 +26402,6 @@ return /******/ (function(modules) { // webpackBootstrap
         this.editable = {};
         util.selectiveExtend(['updateTime', 'updateGroup', 'remove'], this.editable, data.editable);
       }
-=======
-    if (data.hasOwnProperty('editable') && typeof data.editable === 'boolean') {
-      this.editable = data.editable;
->>>>>>> 88f14a0... add 'dist' folder for deployment
     }
 
     this.data = data;
@@ -32180,7 +26472,6 @@ return /******/ (function(modules) { // webpackBootstrap
   };
 
   /**
-<<<<<<< HEAD
    * Repaint a drag area on the center of the item when the item is selected
    * @protected
    */
@@ -32215,18 +26506,12 @@ return /******/ (function(modules) { // webpackBootstrap
   };
 
   /**
-=======
->>>>>>> 88f14a0... add 'dist' folder for deployment
    * Repaint a delete button on the top right of the item when the item is selected
    * @param {HTMLElement} anchor
    * @protected
    */
   Item.prototype._repaintDeleteButton = function (anchor) {
-<<<<<<< HEAD
     var editable = (this.options.editable.overrideItems || this.editable == null) && this.options.editable.remove || !this.options.editable.overrideItems && this.editable != null && this.editable.remove;
-=======
-    var editable = (this.options.editable.remove || this.data.editable === true) && this.data.editable !== false;
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
     if (this.selected && editable && !this.dom.deleteButton) {
       // create and show button
@@ -32345,7 +26630,6 @@ return /******/ (function(modules) { // webpackBootstrap
   Item.prototype._updateContents = function (element) {
     var content;
     var templateFunction;
-<<<<<<< HEAD
     var itemVisibleFrameContent;
     var visibleFrameTemplateFunction;
     var itemData = this.parent.itemSet.itemsData.get(this.id); // get a clone of the data from the dataset
@@ -32384,11 +26668,6 @@ return /******/ (function(modules) { // webpackBootstrap
     }
 
     if (this.options.template) {
-=======
-
-    if (this.options.template) {
-      var itemData = this.parent.itemSet.itemsData.get(this.id); // get a clone of the data from the dataset
->>>>>>> 88f14a0... add 'dist' folder for deployment
       templateFunction = this.options.template.bind(this);
       content = templateFunction(itemData, element);
     } else {
@@ -32419,7 +26698,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
   /**
    * Set HTML contents for the item
-<<<<<<< HEAD
    * @private
    */
   Item.prototype._updateTitle = function () {
@@ -32427,16 +26705,6 @@ return /******/ (function(modules) { // webpackBootstrap
       if (this.popup != null) {
         this.popup.setText(this.data.title || '');
       }
-=======
-   * @param {Element} element   HTML element to fill with the contents
-   * @private
-   */
-  Item.prototype._updateTitle = function (element) {
-    if (this.data.title != null) {
-      element.title = this.data.title || '';
-    } else {
-      element.removeAttribute('vis-title');
->>>>>>> 88f14a0... add 'dist' folder for deployment
     }
   };
 
@@ -32452,11 +26720,7 @@ return /******/ (function(modules) { // webpackBootstrap
       if (Array.isArray(this.options.dataAttributes)) {
         attributes = this.options.dataAttributes;
       } else if (this.options.dataAttributes == 'all') {
-<<<<<<< HEAD
         attributes = (0, _keys2['default'])(this.data);
-=======
-        attributes = Object.keys(this.data);
->>>>>>> 88f14a0... add 'dist' folder for deployment
       } else {
         return;
       }
@@ -32522,7 +26786,6 @@ return /******/ (function(modules) { // webpackBootstrap
   };
 
   /**
-<<<<<<< HEAD
    * Return the title of the item
    * @return {string | undefined}
    */
@@ -32537,47 +26800,16 @@ return /******/ (function(modules) { // webpackBootstrap
   Item.prototype.setPopup = function (popup) {
     this.popup = popup;
     this._updateTitle();
-=======
-   * Repaint a drag area on the center of the item when the item is selected
-   * @protected
-   */
-  Item.prototype._repaintDragCenter = function () {
-    if (this.selected && this.options.editable.updateTime && !this.dom.dragCenter) {
-      // create and show drag area
-      var dragCenter = document.createElement('div');
-      dragCenter.className = 'vis-drag-center';
-      dragCenter.dragCenterItem = this;
-
-      if (this.dom.box) {
-        this.dom.box.appendChild(dragCenter);
-      } else if (this.dom.point) {
-        this.dom.point.appendChild(dragCenter);
-      }
-
-      this.dom.dragCenter = dragCenter;
-    } else if (!this.selected && this.dom.dragCenter) {
-      // delete drag area
-      if (this.dom.dragCenter.parentNode) {
-        this.dom.dragCenter.parentNode.removeChild(this.dom.dragCenter);
-      }
-      this.dom.dragCenter = null;
-    }
->>>>>>> 88f14a0... add 'dist' folder for deployment
   };
 
   module.exports = Item;
 
 /***/ },
-<<<<<<< HEAD
 /* 134 */
-=======
-/* 42 */
->>>>>>> 88f14a0... add 'dist' folder for deployment
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
 
-<<<<<<< HEAD
   var _create = __webpack_require__(55);
 
   var _create2 = _interopRequireDefault(_create);
@@ -32586,10 +26818,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
   var util = __webpack_require__(1);
   var Group = __webpack_require__(130);
-=======
-  var util = __webpack_require__(1);
-  var Group = __webpack_require__(38);
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
   /**
    * @constructor BackgroundGroup
@@ -32606,11 +26834,7 @@ return /******/ (function(modules) { // webpackBootstrap
     this.left = 0;
   }
 
-<<<<<<< HEAD
   BackgroundGroup.prototype = (0, _create2['default'])(Group.prototype);
-=======
-  BackgroundGroup.prototype = Object.create(Group.prototype);
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
   /**
    * Repaint this group
@@ -32622,11 +26846,7 @@ return /******/ (function(modules) { // webpackBootstrap
   BackgroundGroup.prototype.redraw = function (range, margin, restack) {
     var resized = false;
 
-<<<<<<< HEAD
     this.visibleItems = this._updateItemsInRange(this.orderedItems, this.visibleItems, range);
-=======
-    this.visibleItems = this._updateVisibleItems(this.orderedItems, this.visibleItems, range);
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
     // calculate actual size
     this.width = this.dom.background.offsetWidth;
@@ -32655,20 +26875,12 @@ return /******/ (function(modules) { // webpackBootstrap
   module.exports = BackgroundGroup;
 
 /***/ },
-<<<<<<< HEAD
 /* 135 */
-=======
-/* 43 */
->>>>>>> 88f14a0... add 'dist' folder for deployment
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
 
-<<<<<<< HEAD
   var Item = __webpack_require__(133);
-=======
-  var Item = __webpack_require__(41);
->>>>>>> 88f14a0... add 'dist' folder for deployment
   var util = __webpack_require__(1);
 
   /**
@@ -32707,15 +26919,14 @@ return /******/ (function(modules) { // webpackBootstrap
 
   /**
    * Check whether this item is visible inside given range
-   * @returns {{start: Number, end: Number}} range with a timestamp for start and end
+   * @param {{start: Number, end: Number}} range with a timestamp for start and end
    * @returns {boolean} True if visible
    */
   BoxItem.prototype.isVisible = function (range) {
     // determine visibility
     var isVisible;
     var align = this.options.align;
-    var msPerPixel = (range.end - range.start) / range.body.dom.center.clientWidth;
-    var widthInMs = this.width * msPerPixel;
+    var widthInMs = this.width * range.getMillisecondsPerPixel();
 
     if (align == 'right') {
       isVisible = this.data.start.getTime() > range.start && this.data.start.getTime() - widthInMs < range.end;
@@ -32787,11 +26998,7 @@ return /******/ (function(modules) { // webpackBootstrap
     // - the item is selected/deselected
     if (this.dirty) {
       this._updateContents(this.dom.content);
-<<<<<<< HEAD
       this._updateTitle();
-=======
-      this._updateTitle(this.dom.box);
->>>>>>> 88f14a0... add 'dist' folder for deployment
       this._updateDataAttributes(this.dom.box);
       this._updateStyle(this.dom.box);
 
@@ -32970,20 +27177,12 @@ return /******/ (function(modules) { // webpackBootstrap
   module.exports = BoxItem;
 
 /***/ },
-<<<<<<< HEAD
 /* 136 */
-=======
-/* 44 */
->>>>>>> 88f14a0... add 'dist' folder for deployment
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
 
-<<<<<<< HEAD
   var Item = __webpack_require__(133);
-=======
-  var Item = __webpack_require__(41);
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
   /**
    * @constructor PointItem
@@ -33023,13 +27222,12 @@ return /******/ (function(modules) { // webpackBootstrap
 
   /**
    * Check whether this item is visible inside given range
-   * @returns {{start: Number, end: Number}} range with a timestamp for start and end
+   * @param {{start: Number, end: Number}} range with a timestamp for start and end
    * @returns {boolean} True if visible
    */
   PointItem.prototype.isVisible = function (range) {
     // determine visibility
-    var msPerPixel = (range.end - range.start) / range.body.dom.center.clientWidth;
-    var widthInMs = this.width * msPerPixel;
+    var widthInMs = this.width * range.getMillisecondsPerPixel();
 
     return this.data.start.getTime() + widthInMs > range.start && this.data.start < range.end;
   };
@@ -33082,11 +27280,7 @@ return /******/ (function(modules) { // webpackBootstrap
     // - the item is selected/deselected
     if (this.dirty) {
       this._updateContents(this.dom.content);
-<<<<<<< HEAD
       this._updateTitle();
-=======
-      this._updateTitle(this.dom.point);
->>>>>>> 88f14a0... add 'dist' folder for deployment
       this._updateDataAttributes(this.dom.point);
       this._updateStyle(this.dom.point);
 
@@ -33206,26 +27400,15 @@ return /******/ (function(modules) { // webpackBootstrap
   module.exports = PointItem;
 
 /***/ },
-<<<<<<< HEAD
 /* 137 */
-=======
-/* 45 */
->>>>>>> 88f14a0... add 'dist' folder for deployment
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
 
-<<<<<<< HEAD
   var Hammer = __webpack_require__(108);
   var Item = __webpack_require__(133);
   var BackgroundGroup = __webpack_require__(134);
   var RangeItem = __webpack_require__(132);
-=======
-  var Hammer = __webpack_require__(22);
-  var Item = __webpack_require__(41);
-  var BackgroundGroup = __webpack_require__(42);
-  var RangeItem = __webpack_require__(40);
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
   /**
    * @constructor BackgroundItem
@@ -33324,11 +27507,7 @@ return /******/ (function(modules) { // webpackBootstrap
     // - the item is selected/deselected
     if (this.dirty) {
       this._updateContents(this.dom.content);
-<<<<<<< HEAD
       this._updateTitle();
-=======
-      this._updateTitle(this.dom.content);
->>>>>>> 88f14a0... add 'dist' folder for deployment
       this._updateDataAttributes(this.dom.content);
       this._updateStyle(this.dom.box);
 
@@ -33370,12 +27549,6 @@ return /******/ (function(modules) { // webpackBootstrap
    * @Override
    */
   BackgroundItem.prototype.repositionY = function (margin) {
-<<<<<<< HEAD
-=======
-    var onTop = this.options.orientation.item === 'top';
-    this.dom.content.style.top = onTop ? '' : '0';
-    this.dom.content.style.bottom = onTop ? '0' : '';
->>>>>>> 88f14a0... add 'dist' folder for deployment
     var height;
 
     // special positioning for subgroups
@@ -33385,7 +27558,6 @@ return /******/ (function(modules) { // webpackBootstrap
       var itemSubgroup = this.data.subgroup;
       var subgroups = this.parent.subgroups;
       var subgroupIndex = subgroups[itemSubgroup].index;
-<<<<<<< HEAD
 
       this.dom.box.style.height = this.parent.subgroups[itemSubgroup].height + 'px';
 
@@ -33396,46 +27568,6 @@ return /******/ (function(modules) { // webpackBootstrap
         this.dom.box.style.top = this.parent.top + this.parent.height - this.parent.subgroups[itemSubgroup].top - this.parent.subgroups[itemSubgroup].height + 'px';
       }
       this.dom.box.style.bottom = '';
-=======
-      // if the orientation is top, we need to take the difference in height into account.
-      if (onTop == true) {
-        // the first subgroup will have to account for the distance from the top to the first item.
-        height = this.parent.subgroups[itemSubgroup].height + margin.item.vertical;
-        height += subgroupIndex == 0 ? margin.axis - 0.5 * margin.item.vertical : 0;
-        var newTop = this.parent.top;
-        for (var subgroup in subgroups) {
-          if (subgroups.hasOwnProperty(subgroup)) {
-            if (subgroups[subgroup].visible == true && subgroups[subgroup].index < subgroupIndex) {
-              newTop += subgroups[subgroup].height + margin.item.vertical;
-            }
-          }
-        }
-
-        // the others will have to be offset downwards with this same distance.
-        newTop += subgroupIndex != 0 ? margin.axis - 0.5 * margin.item.vertical : 0;
-        this.dom.box.style.top = newTop + 'px';
-        this.dom.box.style.bottom = '';
-      }
-      // and when the orientation is bottom:
-      else {
-          var newTop = this.parent.top;
-          var totalHeight = 0;
-          for (var subgroup in subgroups) {
-            if (subgroups.hasOwnProperty(subgroup)) {
-              if (subgroups[subgroup].visible == true) {
-                var newHeight = subgroups[subgroup].height + margin.item.vertical;
-                totalHeight += newHeight;
-                if (subgroups[subgroup].index > subgroupIndex) {
-                  newTop += newHeight;
-                }
-              }
-            }
-          }
-          height = this.parent.subgroups[itemSubgroup].height + margin.item.vertical;
-          this.dom.box.style.top = this.parent.height - totalHeight + newTop + 'px';
-          this.dom.box.style.bottom = '';
-        }
->>>>>>> 88f14a0... add 'dist' folder for deployment
     }
     // and in the case of no subgroups:
     else {
@@ -33443,13 +27575,8 @@ return /******/ (function(modules) { // webpackBootstrap
         if (this.parent instanceof BackgroundGroup) {
           // if the item is not in a group:
           height = Math.max(this.parent.height, this.parent.itemSet.body.domProps.center.height, this.parent.itemSet.body.domProps.centerContainer.height);
-<<<<<<< HEAD
           this.dom.box.style.top = orientation == 'top' ? '0' : '';
           this.dom.box.style.bottom = orientation == 'top' ? '' : '0';
-=======
-          this.dom.box.style.top = onTop ? '0' : '';
-          this.dom.box.style.bottom = onTop ? '' : '0';
->>>>>>> 88f14a0... add 'dist' folder for deployment
         } else {
           height = this.parent.height;
           // same alignment for items when orientation is top or bottom
@@ -33463,16 +27590,11 @@ return /******/ (function(modules) { // webpackBootstrap
   module.exports = BackgroundItem;
 
 /***/ },
-<<<<<<< HEAD
 /* 138 */
-=======
-/* 46 */
->>>>>>> 88f14a0... add 'dist' folder for deployment
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
 
-<<<<<<< HEAD
   var _typeof2 = __webpack_require__(62);
 
   var _typeof3 = _interopRequireDefault(_typeof2);
@@ -33484,15 +27606,6 @@ return /******/ (function(modules) { // webpackBootstrap
   var TimeStep = __webpack_require__(129);
   var DateUtil = __webpack_require__(125);
   var moment = __webpack_require__(84);
-=======
-  var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
-
-  var util = __webpack_require__(1);
-  var Component = __webpack_require__(33);
-  var TimeStep = __webpack_require__(37);
-  var DateUtil = __webpack_require__(34);
-  var moment = __webpack_require__(2);
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
   /**
    * A horizontal time axis
@@ -33565,11 +27678,7 @@ return /******/ (function(modules) { // webpackBootstrap
       if ('orientation' in options) {
         if (typeof options.orientation === 'string') {
           this.options.orientation.axis = options.orientation;
-<<<<<<< HEAD
         } else if ((0, _typeof3['default'])(options.orientation) === 'object' && 'axis' in options.orientation) {
-=======
-        } else if (_typeof(options.orientation) === 'object' && 'axis' in options.orientation) {
->>>>>>> 88f14a0... add 'dist' folder for deployment
           this.options.orientation.axis = options.orientation.axis;
         }
       }
@@ -33813,12 +27922,7 @@ return /******/ (function(modules) { // webpackBootstrap
       this.dom.foreground.appendChild(label);
     }
     this.dom.minorTexts.push(label);
-<<<<<<< HEAD
     label.innerHTML = text;
-=======
-
-    label.childNodes[0].nodeValue = text;
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
     label.style.top = orientation == 'top' ? this.props.majorLabelHeight + 'px' : '0';
 
@@ -33849,23 +27953,13 @@ return /******/ (function(modules) { // webpackBootstrap
 
     if (!label) {
       // create label
-<<<<<<< HEAD
       var content = document.createElement('div');
-=======
-      var content = document.createTextNode(text);
->>>>>>> 88f14a0... add 'dist' folder for deployment
       label = document.createElement('div');
       label.appendChild(content);
       this.dom.foreground.appendChild(label);
     }
-<<<<<<< HEAD
 
     label.childNodes[0].innerHTML = text;
-=======
-    this.dom.majorTexts.push(label);
-
-    label.childNodes[0].nodeValue = text;
->>>>>>> 88f14a0... add 'dist' folder for deployment
     label.className = 'vis-text vis-major ' + className;
     //label.title = title; // TODO: this is a heavy operation
 
@@ -33877,10 +27971,7 @@ return /******/ (function(modules) { // webpackBootstrap
       label.style.left = x + 'px';
     };
 
-<<<<<<< HEAD
     this.dom.majorTexts.push(label);
-=======
->>>>>>> 88f14a0... add 'dist' folder for deployment
     return label;
   };
 
@@ -34003,24 +28094,14 @@ return /******/ (function(modules) { // webpackBootstrap
   module.exports = TimeAxis;
 
 /***/ },
-<<<<<<< HEAD
 /* 139 */
-=======
-/* 47 */
->>>>>>> 88f14a0... add 'dist' folder for deployment
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
 
-<<<<<<< HEAD
   var keycharm = __webpack_require__(111);
   var Emitter = __webpack_require__(95);
   var Hammer = __webpack_require__(108);
-=======
-  var keycharm = __webpack_require__(25);
-  var Emitter = __webpack_require__(13);
-  var Hammer = __webpack_require__(22);
->>>>>>> 88f14a0... add 'dist' folder for deployment
   var util = __webpack_require__(1);
 
   /**
@@ -34172,28 +28253,16 @@ return /******/ (function(modules) { // webpackBootstrap
   module.exports = Activator;
 
 /***/ },
-<<<<<<< HEAD
 /* 140 */
-=======
-/* 48 */
->>>>>>> 88f14a0... add 'dist' folder for deployment
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
 
-<<<<<<< HEAD
   var Hammer = __webpack_require__(108);
   var util = __webpack_require__(1);
   var Component = __webpack_require__(124);
   var moment = __webpack_require__(84);
   var locales = __webpack_require__(141);
-=======
-  var Hammer = __webpack_require__(22);
-  var util = __webpack_require__(1);
-  var Component = __webpack_require__(33);
-  var moment = __webpack_require__(2);
-  var locales = __webpack_require__(49);
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
   /**
    * A custom time bar
@@ -34268,7 +28337,6 @@ return /******/ (function(modules) { // webpackBootstrap
     drag.style.left = '-10px';
     drag.style.height = '100%';
     drag.style.width = '20px';
-<<<<<<< HEAD
 
     function onMouseWheel(e) {
       this.body.range._onMouseWheel(e);
@@ -34285,10 +28353,6 @@ return /******/ (function(modules) { // webpackBootstrap
     }
 
     bar.appendChild(drag);
-=======
-    bar.appendChild(drag);
-
->>>>>>> 88f14a0... add 'dist' folder for deployment
     // attach event listeners
     this.hammer = new Hammer(drag);
     this.hammer.on('panstart', this._onDragStart.bind(this));
@@ -34410,12 +28474,8 @@ return /******/ (function(modules) { // webpackBootstrap
     // fire a timechange event
     this.body.emitter.emit('timechange', {
       id: this.options.id,
-<<<<<<< HEAD
       time: new Date(this.customTime.valueOf()),
       event: util.elementsCensor(event)
-=======
-      time: new Date(this.customTime.valueOf())
->>>>>>> 88f14a0... add 'dist' folder for deployment
     });
 
     event.stopPropagation();
@@ -34432,12 +28492,8 @@ return /******/ (function(modules) { // webpackBootstrap
     // fire a timechanged event
     this.body.emitter.emit('timechanged', {
       id: this.options.id,
-<<<<<<< HEAD
       time: new Date(this.customTime.valueOf()),
       event: util.elementsCensor(event)
-=======
-      time: new Date(this.customTime.valueOf())
->>>>>>> 88f14a0... add 'dist' folder for deployment
     });
 
     event.stopPropagation();
@@ -34464,11 +28520,7 @@ return /******/ (function(modules) { // webpackBootstrap
   module.exports = CustomTime;
 
 /***/ },
-<<<<<<< HEAD
 /* 141 */
-=======
-/* 49 */
->>>>>>> 88f14a0... add 'dist' folder for deployment
 /***/ function(module, exports) {
 
   'use strict';
@@ -34505,25 +28557,15 @@ return /******/ (function(modules) { // webpackBootstrap
   exports['de_DE'] = exports['de'];
 
 /***/ },
-<<<<<<< HEAD
 /* 142 */
-=======
-/* 50 */
->>>>>>> 88f14a0... add 'dist' folder for deployment
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
 
   var util = __webpack_require__(1);
-<<<<<<< HEAD
   var Component = __webpack_require__(124);
   var moment = __webpack_require__(84);
   var locales = __webpack_require__(141);
-=======
-  var Component = __webpack_require__(33);
-  var moment = __webpack_require__(2);
-  var locales = __webpack_require__(49);
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
   /**
    * A current time bar
@@ -34698,11 +28740,7 @@ return /******/ (function(modules) { // webpackBootstrap
   module.exports = CurrentTime;
 
 /***/ },
-<<<<<<< HEAD
 /* 143 */
-=======
-/* 51 */
->>>>>>> 88f14a0... add 'dist' folder for deployment
 /***/ function(module, exports) {
 
   'use strict';
@@ -34718,11 +28756,7 @@ return /******/ (function(modules) { // webpackBootstrap
    * __type__ is a required field for all objects and contains the allowed types of all objects
    */
   var string = 'string';
-<<<<<<< HEAD
   var bool = 'boolean';
-=======
-  var boolean = 'boolean';
->>>>>>> 88f14a0... add 'dist' folder for deployment
   var number = 'number';
   var array = 'array';
   var date = 'date';
@@ -34733,22 +28767,14 @@ return /******/ (function(modules) { // webpackBootstrap
 
   var allOptions = {
     configure: {
-<<<<<<< HEAD
       enabled: { 'boolean': bool },
       filter: { 'boolean': bool, 'function': 'function' },
       container: { dom: dom },
       __type__: { object: object, 'boolean': bool, 'function': 'function' }
-=======
-      enabled: { boolean: boolean },
-      filter: { boolean: boolean, 'function': 'function' },
-      container: { dom: dom },
-      __type__: { object: object, boolean: boolean, 'function': 'function' }
->>>>>>> 88f14a0... add 'dist' folder for deployment
     },
 
     //globals :
     align: { string: string },
-<<<<<<< HEAD
     rtl: { 'boolean': bool, 'undefined': 'undefined' },
     rollingMode: { 'boolean': bool, 'undefined': 'undefined' },
     verticalScroll: { 'boolean': bool, 'undefined': 'undefined' },
@@ -34764,20 +28790,6 @@ return /******/ (function(modules) { // webpackBootstrap
       updateTime: { 'boolean': bool, 'undefined': 'undefined' },
       overrideItems: { 'boolean': bool, 'undefined': 'undefined' },
       __type__: { 'boolean': bool, object: object }
-=======
-    rtl: { boolean: boolean, 'undefined': 'undefined' },
-    verticalScroll: { boolean: boolean, 'undefined': 'undefined' },
-    horizontalScroll: { boolean: boolean, 'undefined': 'undefined' },
-    autoResize: { boolean: boolean },
-    clickToUse: { boolean: boolean },
-    dataAttributes: { string: string, array: array },
-    editable: {
-      add: { boolean: boolean, 'undefined': 'undefined' },
-      remove: { boolean: boolean, 'undefined': 'undefined' },
-      updateGroup: { boolean: boolean, 'undefined': 'undefined' },
-      updateTime: { boolean: boolean, 'undefined': 'undefined' },
-      __type__: { boolean: boolean, object: object }
->>>>>>> 88f14a0... add 'dist' folder for deployment
     },
     end: { number: number, date: date, string: string, moment: moment },
     format: {
@@ -34808,17 +28820,10 @@ return /******/ (function(modules) { // webpackBootstrap
     moment: { 'function': 'function' },
     groupOrder: { string: string, 'function': 'function' },
     groupEditable: {
-<<<<<<< HEAD
       add: { 'boolean': bool, 'undefined': 'undefined' },
       remove: { 'boolean': bool, 'undefined': 'undefined' },
       order: { 'boolean': bool, 'undefined': 'undefined' },
       __type__: { 'boolean': bool, object: object }
-=======
-      add: { boolean: boolean, 'undefined': 'undefined' },
-      remove: { boolean: boolean, 'undefined': 'undefined' },
-      order: { boolean: boolean, 'undefined': 'undefined' },
-      __type__: { boolean: boolean, object: object }
->>>>>>> 88f14a0... add 'dist' folder for deployment
     },
     groupOrderSwap: { 'function': 'function' },
     height: { string: string, number: number },
@@ -34828,11 +28833,7 @@ return /******/ (function(modules) { // webpackBootstrap
       repeat: { string: string },
       __type__: { object: object, array: array }
     },
-<<<<<<< HEAD
     itemsAlwaysDraggable: { 'boolean': bool },
-=======
-    itemsAlwaysDraggable: { boolean: boolean },
->>>>>>> 88f14a0... add 'dist' folder for deployment
     locale: { string: string },
     locales: {
       __any__: { any: any },
@@ -34852,15 +28853,9 @@ return /******/ (function(modules) { // webpackBootstrap
     maxMinorChars: { number: number },
     min: { date: date, number: number, string: string, moment: moment },
     minHeight: { number: number, string: string },
-<<<<<<< HEAD
     moveable: { 'boolean': bool },
     multiselect: { 'boolean': bool },
     multiselectPerGroup: { 'boolean': bool },
-=======
-    moveable: { boolean: boolean },
-    multiselect: { boolean: boolean },
-    multiselectPerGroup: { boolean: boolean },
->>>>>>> 88f14a0... add 'dist' folder for deployment
     onAdd: { 'function': 'function' },
     onUpdate: { 'function': 'function' },
     onMove: { 'function': 'function' },
@@ -34875,25 +28870,16 @@ return /******/ (function(modules) { // webpackBootstrap
       item: { string: string, 'undefined': 'undefined' },
       __type__: { string: string, object: object }
     },
-<<<<<<< HEAD
     selectable: { 'boolean': bool },
     showCurrentTime: { 'boolean': bool },
     showMajorLabels: { 'boolean': bool },
     showMinorLabels: { 'boolean': bool },
     stack: { 'boolean': bool },
     stackSubgroups: { 'boolean': bool },
-=======
-    selectable: { boolean: boolean },
-    showCurrentTime: { boolean: boolean },
-    showMajorLabels: { boolean: boolean },
-    showMinorLabels: { boolean: boolean },
-    stack: { boolean: boolean },
->>>>>>> 88f14a0... add 'dist' folder for deployment
     snap: { 'function': 'function', 'null': 'null' },
     start: { date: date, number: number, string: string, moment: moment },
     template: { 'function': 'function' },
     groupTemplate: { 'function': 'function' },
-<<<<<<< HEAD
     visibleFrameTemplate: { string: string, 'function': 'function' },
     tooltip: {
       followMouse: { 'boolean': bool },
@@ -34903,11 +28889,6 @@ return /******/ (function(modules) { // webpackBootstrap
     tooltipOnItemUpdateTime: {
       template: { 'function': 'function' },
       __type__: { 'boolean': bool, object: object }
-=======
-    tooltipOnItemUpdateTime: {
-      template: { 'function': 'function' },
-      __type__: { boolean: boolean, object: object }
->>>>>>> 88f14a0... add 'dist' folder for deployment
     },
     timeAxis: {
       scale: { string: string, 'undefined': 'undefined' },
@@ -34916,11 +28897,7 @@ return /******/ (function(modules) { // webpackBootstrap
     },
     type: { string: string },
     width: { string: string, number: number },
-<<<<<<< HEAD
     zoomable: { 'boolean': bool },
-=======
-    zoomable: { boolean: boolean },
->>>>>>> 88f14a0... add 'dist' folder for deployment
     zoomKey: { string: ['ctrlKey', 'altKey', 'metaKey', ''] },
     zoomMax: { number: number },
     zoomMin: { number: number },
@@ -35000,10 +28977,7 @@ return /******/ (function(modules) { // webpackBootstrap
       showMajorLabels: true,
       showMinorLabels: true,
       stack: true,
-<<<<<<< HEAD
       stackSubgroups: true,
-=======
->>>>>>> 88f14a0... add 'dist' folder for deployment
       //snap: {'function': 'function', nada},
       start: '',
       //template: {'function': 'function'},
@@ -35011,13 +28985,10 @@ return /******/ (function(modules) { // webpackBootstrap
       //  scale: ['millisecond', 'second', 'minute', 'hour', 'weekday', 'day', 'month', 'year'],
       //  step: [1, 1, 10, 1]
       //},
-<<<<<<< HEAD
       tooltip: {
         followMouse: false,
         overflowMethod: 'flip'
       },
-=======
->>>>>>> 88f14a0... add 'dist' folder for deployment
       tooltipOnItemUpdateTime: false,
       type: ['box', 'point', 'range', 'background'],
       width: '100%',
@@ -35032,16 +29003,11 @@ return /******/ (function(modules) { // webpackBootstrap
   exports.configureOptions = configureOptions;
 
 /***/ },
-<<<<<<< HEAD
 /* 144 */
-=======
-/* 52 */
->>>>>>> 88f14a0... add 'dist' folder for deployment
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
 
-<<<<<<< HEAD
   var _Configurator = __webpack_require__(114);
 
   var _Configurator2 = _interopRequireDefault(_Configurator);
@@ -35068,34 +29034,6 @@ return /******/ (function(modules) { // webpackBootstrap
   var printStyle = __webpack_require__(122).printStyle;
   var allOptions = __webpack_require__(153).allOptions;
   var configureOptions = __webpack_require__(153).configureOptions;
-=======
-  var _Configurator = __webpack_require__(28);
-
-  var _Configurator2 = _interopRequireDefault(_Configurator);
-
-  var _Validator = __webpack_require__(31);
-
-  var _Validator2 = _interopRequireDefault(_Validator);
-
-  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-  var Emitter = __webpack_require__(13);
-  var Hammer = __webpack_require__(22);
-  var moment = __webpack_require__(2);
-  var util = __webpack_require__(1);
-  var DataSet = __webpack_require__(9);
-  var DataView = __webpack_require__(11);
-  var Range = __webpack_require__(32);
-  var Core = __webpack_require__(35);
-  var TimeAxis = __webpack_require__(46);
-  var CurrentTime = __webpack_require__(50);
-  var CustomTime = __webpack_require__(48);
-  var LineGraph = __webpack_require__(53);
-
-  var printStyle = __webpack_require__(31).printStyle;
-  var allOptions = __webpack_require__(61).allOptions;
-  var configureOptions = __webpack_require__(61).configureOptions;
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
   /**
    * Create a timeline visualization
@@ -35113,15 +29051,12 @@ return /******/ (function(modules) { // webpackBootstrap
       groups = forthArgument;
     }
 
-<<<<<<< HEAD
     // TODO: REMOVE THIS in the next MAJOR release
     // see https://github.com/almende/vis/issues/2511
     if (options && options.throttleRedraw) {
       console.warn("Graph2d option \"throttleRedraw\" is DEPRICATED and no longer supported. It will be removed in the next MAJOR release.");
     }
 
-=======
->>>>>>> 88f14a0... add 'dist' folder for deployment
     var me = this;
     this.defaultOptions = {
       start: null,
@@ -35223,11 +29158,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
   Graph2d.prototype.setOptions = function (options) {
     // validate options
-<<<<<<< HEAD
     var errorFound = _Validator2['default'].validate(options, allOptions);
-=======
-    var errorFound = _Validator2.default.validate(options, allOptions);
->>>>>>> 88f14a0... add 'dist' folder for deployment
     if (errorFound === true) {
       console.log('%cErrors have been found in the supplied options object.', printStyle);
     }
@@ -35396,17 +29327,10 @@ return /******/ (function(modules) { // webpackBootstrap
     var value = [];
     var yAxisLeft = this.linegraph.yAxisLeft;
     var yAxisRight = this.linegraph.yAxisRight;
-<<<<<<< HEAD
     if (!yAxisLeft.hidden && this.itemsData.length > 0) {
       value.push(yAxisLeft.screenToValue(y));
     }
     if (!yAxisRight.hidden && this.itemsData.length > 0) {
-=======
-    if (!yAxisLeft.hidden) {
-      value.push(yAxisLeft.screenToValue(y));
-    }
-    if (!yAxisRight.hidden) {
->>>>>>> 88f14a0... add 'dist' folder for deployment
       value.push(yAxisRight.screenToValue(y));
     }
 
@@ -35428,26 +29352,17 @@ return /******/ (function(modules) { // webpackBootstrap
    * @private
    */
   Graph2d.prototype._createConfigurator = function () {
-<<<<<<< HEAD
     return new _Configurator2['default'](this, this.dom.container, configureOptions);
-=======
-    return new _Configurator2.default(this, this.dom.container, configureOptions);
->>>>>>> 88f14a0... add 'dist' folder for deployment
   };
 
   module.exports = Graph2d;
 
 /***/ },
-<<<<<<< HEAD
 /* 145 */
-=======
-/* 53 */
->>>>>>> 88f14a0... add 'dist' folder for deployment
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
 
-<<<<<<< HEAD
   var _typeof2 = __webpack_require__(62);
 
   var _typeof3 = _interopRequireDefault(_typeof2);
@@ -35465,21 +29380,6 @@ return /******/ (function(modules) { // webpackBootstrap
   var Bars = __webpack_require__(149);
   var Lines = __webpack_require__(151);
   var Points = __webpack_require__(150);
-=======
-  var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
-
-  var util = __webpack_require__(1);
-  var DOMutil = __webpack_require__(8);
-  var DataSet = __webpack_require__(9);
-  var DataView = __webpack_require__(11);
-  var Component = __webpack_require__(33);
-  var DataAxis = __webpack_require__(54);
-  var GraphGroup = __webpack_require__(56);
-  var Legend = __webpack_require__(60);
-  var Bars = __webpack_require__(57);
-  var Lines = __webpack_require__(59);
-  var Points = __webpack_require__(58);
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
   var UNGROUPED = '__ungrouped__'; // reserved group id for ungrouped items
 
@@ -35645,11 +29545,7 @@ return /******/ (function(modules) { // webpackBootstrap
       util.mergeOptions(this.options, options, 'legend');
 
       if (options.interpolation) {
-<<<<<<< HEAD
         if ((0, _typeof3['default'])(options.interpolation) == 'object') {
-=======
-        if (_typeof(options.interpolation) == 'object') {
->>>>>>> 88f14a0... add 'dist' folder for deployment
           if (options.interpolation.parametrization) {
             if (options.interpolation.parametrization == 'uniform') {
               this.options.interpolation.alpha = 0;
@@ -35798,11 +29694,7 @@ return /******/ (function(modules) { // webpackBootstrap
   };
 
   LineGraph.prototype._onUpdate = function (ids) {
-<<<<<<< HEAD
     this._updateAllGroupData(ids);
-=======
-    this._updateAllGroupData();
->>>>>>> 88f14a0... add 'dist' folder for deployment
   };
   LineGraph.prototype._onAdd = function (ids) {
     this._onUpdate(ids);
@@ -35811,11 +29703,7 @@ return /******/ (function(modules) { // webpackBootstrap
     this._onUpdate(ids);
   };
   LineGraph.prototype._onUpdateGroups = function (groupIds) {
-<<<<<<< HEAD
     this._updateAllGroupData(null, groupIds);
-=======
-    this._updateAllGroupData();
->>>>>>> 88f14a0... add 'dist' folder for deployment
   };
   LineGraph.prototype._onAddGroups = function (groupIds) {
     this._onUpdateGroups(groupIds);
@@ -35894,7 +29782,6 @@ return /******/ (function(modules) { // webpackBootstrap
   /**
    * this updates all groups, it is used when there is an update the the itemset.
    *
-<<<<<<< HEAD
    * @param  {Array} ids
    * @param  {Array} groupIds
    * @private
@@ -35911,14 +29798,6 @@ return /******/ (function(modules) { // webpackBootstrap
         });
       }
 
-=======
-   * @private
-   */
-  LineGraph.prototype._updateAllGroupData = function () {
-    if (this.itemsData != null) {
-      var groupsContent = {};
-      var items = this.itemsData.get();
->>>>>>> 88f14a0... add 'dist' folder for deployment
       //pre-Determine array sizes, for more efficient memory claim
       var groupCounts = {};
       for (var i = 0; i < items.length; i++) {
@@ -35929,7 +29808,6 @@ return /******/ (function(modules) { // webpackBootstrap
         }
         groupCounts.hasOwnProperty(groupId) ? groupCounts[groupId]++ : groupCounts[groupId] = 1;
       }
-<<<<<<< HEAD
 
       //Pre-load arrays from existing groups if items are not changed (not in ids)
       if (!groupIds && ids) {
@@ -35950,8 +29828,6 @@ return /******/ (function(modules) { // webpackBootstrap
         }
       }
 
-=======
->>>>>>> 88f14a0... add 'dist' folder for deployment
       //Now insert data into the arrays.
       for (var i = 0; i < items.length; i++) {
         var item = items[i];
@@ -35959,12 +29835,9 @@ return /******/ (function(modules) { // webpackBootstrap
         if (groupId === null || groupId === undefined) {
           groupId = UNGROUPED;
         }
-<<<<<<< HEAD
         if (!groupIds && ids && item[fieldId] !== idMap[item[fieldId]]) {
           continue;
         }
-=======
->>>>>>> 88f14a0... add 'dist' folder for deployment
         if (!groupsContent.hasOwnProperty(groupId)) {
           groupsContent[groupId] = new Array(groupCounts[groupId]);
         }
@@ -35973,10 +29846,7 @@ return /******/ (function(modules) { // webpackBootstrap
         extended.x = util.convert(item.x, 'Date');
         extended.orginalY = item.y; //real Y
         extended.y = Number(item.y);
-<<<<<<< HEAD
         extended[fieldId] = item[fieldId];
-=======
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
         var index = groupsContent[groupId].length - groupCounts[groupId]--;
         groupsContent[groupId][index] = extended;
@@ -36342,10 +30212,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
             // the global screen is used because changing the width of the yAxis may affect the increment, resulting in an endless loop
             // of width changing of the yAxis.
-<<<<<<< HEAD
             //TODO: This assumes sorted data, but that's not guaranteed!
-=======
->>>>>>> 88f14a0... add 'dist' folder for deployment
             var xDistance = this.body.util.toGlobalScreen(dataContainer[dataContainer.length - 1].x) - this.body.util.toGlobalScreen(dataContainer[0].x);
             var pointsPerPixel = amountOfPoints / xDistance;
             increment = Math.min(Math.ceil(0.2 * amountOfPoints), Math.max(1, Math.round(pointsPerPixel)));
@@ -36562,16 +30429,11 @@ return /******/ (function(modules) { // webpackBootstrap
   module.exports = LineGraph;
 
 /***/ },
-<<<<<<< HEAD
 /* 146 */
-=======
-/* 54 */
->>>>>>> 88f14a0... add 'dist' folder for deployment
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
 
-<<<<<<< HEAD
   var _keys = __webpack_require__(58);
 
   var _keys2 = _interopRequireDefault(_keys);
@@ -36582,12 +30444,6 @@ return /******/ (function(modules) { // webpackBootstrap
   var DOMutil = __webpack_require__(90);
   var Component = __webpack_require__(124);
   var DataScale = __webpack_require__(147);
-=======
-  var util = __webpack_require__(1);
-  var DOMutil = __webpack_require__(8);
-  var Component = __webpack_require__(33);
-  var DataScale = __webpack_require__(55);
->>>>>>> 88f14a0... add 'dist' folder for deployment
   /**
    * A horizontal time axis
    * @param {Object} [options]        See DataAxis.setOptions for the available
@@ -36752,11 +30608,7 @@ return /******/ (function(modules) { // webpackBootstrap
       x = this.width - iconWidth - iconOffset;
     }
 
-<<<<<<< HEAD
     var groupArray = (0, _keys2['default'])(this.groups);
-=======
-    var groupArray = Object.keys(this.groups);
->>>>>>> 88f14a0... add 'dist' folder for deployment
     groupArray.sort(function (a, b) {
       return a < b ? -1 : 1;
     });
@@ -37143,11 +30995,7 @@ return /******/ (function(modules) { // webpackBootstrap
   module.exports = DataAxis;
 
 /***/ },
-<<<<<<< HEAD
 /* 147 */
-=======
-/* 55 */
->>>>>>> 88f14a0... add 'dist' folder for deployment
 /***/ function(module, exports) {
 
   'use strict';
@@ -37389,16 +31237,11 @@ return /******/ (function(modules) { // webpackBootstrap
   module.exports = DataScale;
 
 /***/ },
-<<<<<<< HEAD
 /* 148 */
-=======
-/* 56 */
->>>>>>> 88f14a0... add 'dist' folder for deployment
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
 
-<<<<<<< HEAD
   var _typeof2 = __webpack_require__(62);
 
   var _typeof3 = _interopRequireDefault(_typeof2);
@@ -37410,15 +31253,6 @@ return /******/ (function(modules) { // webpackBootstrap
   var Bars = __webpack_require__(149);
   var Lines = __webpack_require__(151);
   var Points = __webpack_require__(150);
-=======
-  var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
-
-  var util = __webpack_require__(1);
-  var DOMutil = __webpack_require__(8);
-  var Bars = __webpack_require__(57);
-  var Lines = __webpack_require__(59);
-  var Points = __webpack_require__(58);
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
   /**
    * /**
@@ -37495,11 +31329,7 @@ return /******/ (function(modules) { // webpackBootstrap
       util.mergeOptions(this.options, options, 'shaded');
 
       if (options.interpolation) {
-<<<<<<< HEAD
         if ((0, _typeof3['default'])(options.interpolation) == 'object') {
-=======
-        if (_typeof(options.interpolation) == 'object') {
->>>>>>> 88f14a0... add 'dist' folder for deployment
           if (options.interpolation.parametrization) {
             if (options.interpolation.parametrization == 'uniform') {
               this.options.interpolation.alpha = 0;
@@ -37574,22 +31404,13 @@ return /******/ (function(modules) { // webpackBootstrap
   module.exports = GraphGroup;
 
 /***/ },
-<<<<<<< HEAD
 /* 149 */
-=======
-/* 57 */
->>>>>>> 88f14a0... add 'dist' folder for deployment
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
 
-<<<<<<< HEAD
   var DOMutil = __webpack_require__(90);
   var Points = __webpack_require__(150);
-=======
-  var DOMutil = __webpack_require__(8);
-  var Points = __webpack_require__(58);
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
   function Bargraph(groupId, options) {}
 
@@ -37844,16 +31665,11 @@ return /******/ (function(modules) { // webpackBootstrap
   module.exports = Bargraph;
 
 /***/ },
-<<<<<<< HEAD
 /* 150 */
-=======
-/* 58 */
->>>>>>> 88f14a0... add 'dist' folder for deployment
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
 
-<<<<<<< HEAD
   var _typeof2 = __webpack_require__(62);
 
   var _typeof3 = _interopRequireDefault(_typeof2);
@@ -37861,11 +31677,6 @@ return /******/ (function(modules) { // webpackBootstrap
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
   var DOMutil = __webpack_require__(90);
-=======
-  var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
-
-  var DOMutil = __webpack_require__(8);
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
   function Points(groupId, options) {}
 
@@ -37888,11 +31699,7 @@ return /******/ (function(modules) { // webpackBootstrap
         DOMutil.drawPoint(dataset[i].screen_x + offset, dataset[i].screen_y, getGroupTemplate(group), framework.svgElements, framework.svg, dataset[i].label);
       } else {
         var callbackResult = callback(dataset[i], group); // result might be true, false or an object
-<<<<<<< HEAD
         if (callbackResult === true || (typeof callbackResult === 'undefined' ? 'undefined' : (0, _typeof3['default'])(callbackResult)) === 'object') {
-=======
-        if (callbackResult === true || (typeof callbackResult === 'undefined' ? 'undefined' : _typeof(callbackResult)) === 'object') {
->>>>>>> 88f14a0... add 'dist' folder for deployment
           DOMutil.drawPoint(dataset[i].screen_x + offset, dataset[i].screen_y, getGroupTemplate(group, callbackResult), framework.svgElements, framework.svg, dataset[i].label);
         }
       }
@@ -37941,20 +31748,12 @@ return /******/ (function(modules) { // webpackBootstrap
   module.exports = Points;
 
 /***/ },
-<<<<<<< HEAD
 /* 151 */
-=======
-/* 59 */
->>>>>>> 88f14a0... add 'dist' folder for deployment
 /***/ function(module, exports, __webpack_require__) {
 
   "use strict";
 
-<<<<<<< HEAD
   var DOMutil = __webpack_require__(90);
-=======
-  var DOMutil = __webpack_require__(8);
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
   function Line(groupId, options) {}
 
@@ -38238,16 +32037,11 @@ return /******/ (function(modules) { // webpackBootstrap
   module.exports = Line;
 
 /***/ },
-<<<<<<< HEAD
 /* 152 */
-=======
-/* 60 */
->>>>>>> 88f14a0... add 'dist' folder for deployment
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
 
-<<<<<<< HEAD
   var _keys = __webpack_require__(58);
 
   var _keys2 = _interopRequireDefault(_keys);
@@ -38257,11 +32051,6 @@ return /******/ (function(modules) { // webpackBootstrap
   var util = __webpack_require__(1);
   var DOMutil = __webpack_require__(90);
   var Component = __webpack_require__(124);
-=======
-  var util = __webpack_require__(1);
-  var DOMutil = __webpack_require__(8);
-  var Component = __webpack_require__(33);
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
   /**
    * Legend for Graph2d
@@ -38376,11 +32165,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
   Legend.prototype.redraw = function () {
     var activeGroups = 0;
-<<<<<<< HEAD
     var groupArray = (0, _keys2['default'])(this.groups);
-=======
-    var groupArray = Object.keys(this.groups);
->>>>>>> 88f14a0... add 'dist' folder for deployment
     groupArray.sort(function (a, b) {
       return a < b ? -1 : 1;
     });
@@ -38447,11 +32232,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
   Legend.prototype.drawLegendIcons = function () {
     if (this.dom.frame.parentNode) {
-<<<<<<< HEAD
       var groupArray = (0, _keys2['default'])(this.groups);
-=======
-      var groupArray = Object.keys(this.groups);
->>>>>>> 88f14a0... add 'dist' folder for deployment
       groupArray.sort(function (a, b) {
         return a < b ? -1 : 1;
       });
@@ -38481,11 +32262,7 @@ return /******/ (function(modules) { // webpackBootstrap
   module.exports = Legend;
 
 /***/ },
-<<<<<<< HEAD
 /* 153 */
-=======
-/* 61 */
->>>>>>> 88f14a0... add 'dist' folder for deployment
 /***/ function(module, exports) {
 
   'use strict';
@@ -38501,11 +32278,7 @@ return /******/ (function(modules) { // webpackBootstrap
    * __type__ is a required field for all objects and contains the allowed types of all objects
    */
   var string = 'string';
-<<<<<<< HEAD
   var bool = 'boolean';
-=======
-  var boolean = 'boolean';
->>>>>>> 88f14a0... add 'dist' folder for deployment
   var number = 'number';
   var array = 'array';
   var date = 'date';
@@ -38516,23 +32289,15 @@ return /******/ (function(modules) { // webpackBootstrap
 
   var allOptions = {
     configure: {
-<<<<<<< HEAD
       enabled: { 'boolean': bool },
       filter: { 'boolean': bool, 'function': 'function' },
       container: { dom: dom },
       __type__: { object: object, 'boolean': bool, 'function': 'function' }
-=======
-      enabled: { boolean: boolean },
-      filter: { boolean: boolean, 'function': 'function' },
-      container: { dom: dom },
-      __type__: { object: object, boolean: boolean, 'function': 'function' }
->>>>>>> 88f14a0... add 'dist' folder for deployment
     },
 
     //globals :
     yAxisOrientation: { string: ['left', 'right'] },
     defaultGroup: { string: string },
-<<<<<<< HEAD
     sort: { 'boolean': bool },
     sampling: { 'boolean': bool },
     stack: { 'boolean': bool },
@@ -38542,32 +32307,16 @@ return /******/ (function(modules) { // webpackBootstrap
       orientation: { string: ['bottom', 'top', 'zero', 'group'] }, // top, bottom, zero, group
       groupId: { object: object },
       __type__: { 'boolean': bool, object: object }
-=======
-    sort: { boolean: boolean },
-    sampling: { boolean: boolean },
-    stack: { boolean: boolean },
-    graphHeight: { string: string, number: number },
-    shaded: {
-      enabled: { boolean: boolean },
-      orientation: { string: ['bottom', 'top', 'zero', 'group'] }, // top, bottom, zero, group
-      groupId: { object: object },
-      __type__: { boolean: boolean, object: object }
->>>>>>> 88f14a0... add 'dist' folder for deployment
     },
     style: { string: ['line', 'bar', 'points'] }, // line, bar
     barChart: {
       width: { number: number },
       minWidth: { number: number },
-<<<<<<< HEAD
       sideBySide: { 'boolean': bool },
-=======
-      sideBySide: { boolean: boolean },
->>>>>>> 88f14a0... add 'dist' folder for deployment
       align: { string: ['left', 'center', 'right'] },
       __type__: { object: object }
     },
     interpolation: {
-<<<<<<< HEAD
       enabled: { 'boolean': bool },
       parametrization: { string: ['centripetal', 'chordal', 'uniform'] }, // uniform (alpha = 0.0), chordal (alpha = 1.0), centripetal (alpha = 0.5)
       alpha: { number: number },
@@ -38587,84 +32336,43 @@ return /******/ (function(modules) { // webpackBootstrap
       width: { string: string, number: number },
       visible: { 'boolean': bool },
       alignZeros: { 'boolean': bool },
-=======
-      enabled: { boolean: boolean },
-      parametrization: { string: ['centripetal', 'chordal', 'uniform'] }, // uniform (alpha = 0.0), chordal (alpha = 1.0), centripetal (alpha = 0.5)
-      alpha: { number: number },
-      __type__: { object: object, boolean: boolean }
-    },
-    drawPoints: {
-      enabled: { boolean: boolean },
-      onRender: { 'function': 'function' },
-      size: { number: number },
-      style: { string: ['square', 'circle'] }, // square, circle
-      __type__: { object: object, boolean: boolean, 'function': 'function' }
-    },
-    dataAxis: {
-      showMinorLabels: { boolean: boolean },
-      showMajorLabels: { boolean: boolean },
-      icons: { boolean: boolean },
-      width: { string: string, number: number },
-      visible: { boolean: boolean },
-      alignZeros: { boolean: boolean },
->>>>>>> 88f14a0... add 'dist' folder for deployment
       left: {
-        range: { min: { number: number }, max: { number: number }, __type__: { object: object } },
+        range: { min: { number: number, 'undefined': 'undefined' }, max: { number: number, 'undefined': 'undefined' }, __type__: { object: object } },
         format: { 'function': 'function' },
-        title: { text: { string: string, number: number }, style: { string: string }, __type__: { object: object } },
+        title: { text: { string: string, number: number, 'undefined': 'undefined' }, style: { string: string, 'undefined': 'undefined' }, __type__: { object: object } },
         __type__: { object: object }
       },
       right: {
-        range: { min: { number: number }, max: { number: number }, __type__: { object: object } },
+        range: { min: { number: number, 'undefined': 'undefined' }, max: { number: number, 'undefined': 'undefined' }, __type__: { object: object } },
         format: { 'function': 'function' },
-        title: { text: { string: string, number: number }, style: { string: string }, __type__: { object: object } },
+        title: { text: { string: string, number: number, 'undefined': 'undefined' }, style: { string: string, 'undefined': 'undefined' }, __type__: { object: object } },
         __type__: { object: object }
       },
       __type__: { object: object }
     },
     legend: {
-<<<<<<< HEAD
       enabled: { 'boolean': bool },
       icons: { 'boolean': bool },
       left: {
         visible: { 'boolean': bool },
-=======
-      enabled: { boolean: boolean },
-      icons: { boolean: boolean },
-      left: {
-        visible: { boolean: boolean },
->>>>>>> 88f14a0... add 'dist' folder for deployment
         position: { string: ['top-right', 'bottom-right', 'top-left', 'bottom-left'] },
         __type__: { object: object }
       },
       right: {
-<<<<<<< HEAD
         visible: { 'boolean': bool },
         position: { string: ['top-right', 'bottom-right', 'top-left', 'bottom-left'] },
         __type__: { object: object }
       },
       __type__: { object: object, 'boolean': bool }
-=======
-        visible: { boolean: boolean },
-        position: { string: ['top-right', 'bottom-right', 'top-left', 'bottom-left'] },
-        __type__: { object: object }
-      },
-      __type__: { object: object, boolean: boolean }
->>>>>>> 88f14a0... add 'dist' folder for deployment
     },
     groups: {
       visibility: { any: any },
       __type__: { object: object }
     },
 
-<<<<<<< HEAD
     autoResize: { 'boolean': bool },
     throttleRedraw: { number: number }, // TODO: DEPRICATED see https://github.com/almende/vis/issues/2511
     clickToUse: { 'boolean': bool },
-=======
-    autoResize: { boolean: boolean },
-    clickToUse: { boolean: boolean },
->>>>>>> 88f14a0... add 'dist' folder for deployment
     end: { number: number, date: date, string: string, moment: moment },
     format: {
       minorLabels: {
@@ -38709,21 +32417,12 @@ return /******/ (function(modules) { // webpackBootstrap
     maxMinorChars: { number: number },
     min: { date: date, number: number, string: string, moment: moment },
     minHeight: { number: number, string: string },
-<<<<<<< HEAD
     moveable: { 'boolean': bool },
     multiselect: { 'boolean': bool },
     orientation: { string: string },
     showCurrentTime: { 'boolean': bool },
     showMajorLabels: { 'boolean': bool },
     showMinorLabels: { 'boolean': bool },
-=======
-    moveable: { boolean: boolean },
-    multiselect: { boolean: boolean },
-    orientation: { string: string },
-    showCurrentTime: { boolean: boolean },
-    showMajorLabels: { boolean: boolean },
-    showMinorLabels: { boolean: boolean },
->>>>>>> 88f14a0... add 'dist' folder for deployment
     start: { date: date, number: number, string: string, moment: moment },
     timeAxis: {
       scale: { string: string, 'undefined': 'undefined' },
@@ -38731,11 +32430,7 @@ return /******/ (function(modules) { // webpackBootstrap
       __type__: { object: object }
     },
     width: { string: string, number: number },
-<<<<<<< HEAD
     zoomable: { 'boolean': bool },
-=======
-    zoomable: { boolean: boolean },
->>>>>>> 88f14a0... add 'dist' folder for deployment
     zoomKey: { string: ['ctrlKey', 'altKey', 'metaKey', ''] },
     zoomMax: { number: number },
     zoomMin: { number: number },
@@ -38852,18 +32547,13 @@ return /******/ (function(modules) { // webpackBootstrap
   exports.configureOptions = configureOptions;
 
 /***/ },
-<<<<<<< HEAD
 /* 154 */
-=======
-/* 62 */
->>>>>>> 88f14a0... add 'dist' folder for deployment
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
 
   // utils
   exports.util = __webpack_require__(1);
-<<<<<<< HEAD
   exports.DOMutil = __webpack_require__(90);
 
   // data
@@ -38878,22 +32568,6 @@ return /******/ (function(modules) { // webpackBootstrap
     dotparser: __webpack_require__(224),
     gephiParser: __webpack_require__(225),
     allOptions: __webpack_require__(220)
-=======
-  exports.DOMutil = __webpack_require__(8);
-
-  // data
-  exports.DataSet = __webpack_require__(9);
-  exports.DataView = __webpack_require__(11);
-  exports.Queue = __webpack_require__(10);
-
-  // Network
-  exports.Network = __webpack_require__(63);
-  exports.network = {
-    Images: __webpack_require__(64),
-    dotparser: __webpack_require__(120),
-    gephiParser: __webpack_require__(121),
-    allOptions: __webpack_require__(116)
->>>>>>> 88f14a0... add 'dist' folder for deployment
   };
   exports.network.convertDot = function (input) {
     return exports.network.dotparser.DOTToGraph(input);
@@ -38903,26 +32577,16 @@ return /******/ (function(modules) { // webpackBootstrap
   };
 
   // bundled external libraries
-<<<<<<< HEAD
   exports.moment = __webpack_require__(84);
   exports.Hammer = __webpack_require__(108);
   exports.keycharm = __webpack_require__(111);
 
 /***/ },
 /* 155 */
-=======
-  exports.moment = __webpack_require__(2);
-  exports.Hammer = __webpack_require__(22);
-  exports.keycharm = __webpack_require__(25);
-
-/***/ },
-/* 63 */
->>>>>>> 88f14a0... add 'dist' folder for deployment
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
 
-<<<<<<< HEAD
   var _Images = __webpack_require__(156);
 
   var _Images2 = _interopRequireDefault(_Images);
@@ -39002,87 +32666,6 @@ return /******/ (function(modules) { // webpackBootstrap
   var gephiParser = __webpack_require__(225);
   var Activator = __webpack_require__(139);
   var locales = __webpack_require__(226);
-=======
-  var _Images = __webpack_require__(64);
-
-  var _Images2 = _interopRequireDefault(_Images);
-
-  var _Groups = __webpack_require__(65);
-
-  var _Groups2 = _interopRequireDefault(_Groups);
-
-  var _NodesHandler = __webpack_require__(66);
-
-  var _NodesHandler2 = _interopRequireDefault(_NodesHandler);
-
-  var _EdgesHandler = __webpack_require__(86);
-
-  var _EdgesHandler2 = _interopRequireDefault(_EdgesHandler);
-
-  var _PhysicsEngine = __webpack_require__(95);
-
-  var _PhysicsEngine2 = _interopRequireDefault(_PhysicsEngine);
-
-  var _Clustering = __webpack_require__(104);
-
-  var _Clustering2 = _interopRequireDefault(_Clustering);
-
-  var _CanvasRenderer = __webpack_require__(107);
-
-  var _CanvasRenderer2 = _interopRequireDefault(_CanvasRenderer);
-
-  var _Canvas = __webpack_require__(108);
-
-  var _Canvas2 = _interopRequireDefault(_Canvas);
-
-  var _View = __webpack_require__(109);
-
-  var _View2 = _interopRequireDefault(_View);
-
-  var _InteractionHandler = __webpack_require__(110);
-
-  var _InteractionHandler2 = _interopRequireDefault(_InteractionHandler);
-
-  var _SelectionHandler = __webpack_require__(113);
-
-  var _SelectionHandler2 = _interopRequireDefault(_SelectionHandler);
-
-  var _LayoutEngine = __webpack_require__(114);
-
-  var _LayoutEngine2 = _interopRequireDefault(_LayoutEngine);
-
-  var _ManipulationSystem = __webpack_require__(115);
-
-  var _ManipulationSystem2 = _interopRequireDefault(_ManipulationSystem);
-
-  var _Configurator = __webpack_require__(28);
-
-  var _Configurator2 = _interopRequireDefault(_Configurator);
-
-  var _Validator = __webpack_require__(31);
-
-  var _Validator2 = _interopRequireDefault(_Validator);
-
-  var _options = __webpack_require__(116);
-
-  var _KamadaKawai = __webpack_require__(117);
-
-  var _KamadaKawai2 = _interopRequireDefault(_KamadaKawai);
-
-  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-  // Load custom shapes into CanvasRenderingContext2D
-  __webpack_require__(119);
-
-  var Emitter = __webpack_require__(13);
-  var util = __webpack_require__(1);
-  var DataSet = __webpack_require__(9);
-  var DataView = __webpack_require__(11);
-  var dotparser = __webpack_require__(120);
-  var gephiParser = __webpack_require__(121);
-  var Activator = __webpack_require__(47);
-  var locales = __webpack_require__(122);
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
   /**
    * @constructor Network
@@ -39158,7 +32741,6 @@ return /******/ (function(modules) { // webpackBootstrap
     this.bindEventListeners();
 
     // setting up all modules
-<<<<<<< HEAD
     this.images = new _Images2['default'](function () {
       return _this.body.emitter.emit("_requestRedraw");
     }); // object with images
@@ -39177,26 +32759,6 @@ return /******/ (function(modules) { // webpackBootstrap
     this.edgesHandler = new _EdgesHandler2['default'](this.body, this.images, this.groups); // Handle adding, deleting and updating of edges as well as global options
 
     this.body.modules["kamadaKawai"] = new _KamadaKawai2['default'](this.body, 150, 0.05); // Layouting algorithm.
-=======
-    this.images = new _Images2.default(function () {
-      return _this.body.emitter.emit("_requestRedraw");
-    }); // object with images
-    this.groups = new _Groups2.default(); // object with groups
-    this.canvas = new _Canvas2.default(this.body); // DOM handler
-    this.selectionHandler = new _SelectionHandler2.default(this.body, this.canvas); // Selection handler
-    this.interactionHandler = new _InteractionHandler2.default(this.body, this.canvas, this.selectionHandler); // Interaction handler handles all the hammer bindings (that are bound by canvas), key
-    this.view = new _View2.default(this.body, this.canvas); // camera handler, does animations and zooms
-    this.renderer = new _CanvasRenderer2.default(this.body, this.canvas); // renderer, starts renderloop, has events that modules can hook into
-    this.physics = new _PhysicsEngine2.default(this.body); // physics engine, does all the simulations
-    this.layoutEngine = new _LayoutEngine2.default(this.body); // layout engine for inital layout and hierarchical layout
-    this.clustering = new _Clustering2.default(this.body); // clustering api
-    this.manipulation = new _ManipulationSystem2.default(this.body, this.canvas, this.selectionHandler); // data manipulation system
-
-    this.nodesHandler = new _NodesHandler2.default(this.body, this.images, this.groups, this.layoutEngine); // Handle adding, deleting and updating of nodes as well as global options
-    this.edgesHandler = new _EdgesHandler2.default(this.body, this.images, this.groups); // Handle adding, deleting and updating of edges as well as global options
-
-    this.body.modules["kamadaKawai"] = new _KamadaKawai2.default(this.body, 150, 0.05); // Layouting algorithm.
->>>>>>> 88f14a0... add 'dist' folder for deployment
     this.body.modules["clustering"] = this.clustering;
 
     // create the DOM elements
@@ -39220,11 +32782,7 @@ return /******/ (function(modules) { // webpackBootstrap
     var _this2 = this;
 
     if (options !== undefined) {
-<<<<<<< HEAD
       var errorFound = _Validator2['default'].validate(options, _options.allOptions);
-=======
-      var errorFound = _Validator2.default.validate(options, _options.allOptions);
->>>>>>> 88f14a0... add 'dist' folder for deployment
       if (errorFound === true) {
         console.log('%cErrors have been found in the supplied options object.', _Validator.printStyle);
       }
@@ -39259,11 +32817,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
       if ('configure' in options) {
         if (!this.configurator) {
-<<<<<<< HEAD
           this.configurator = new _Configurator2['default'](this, this.body.container, _options.configureOptions, this.canvas.pixelRatio);
-=======
-          this.configurator = new _Configurator2.default(this, this.body.container, _options.configureOptions, this.canvas.pixelRatio);
->>>>>>> 88f14a0... add 'dist' folder for deployment
         }
 
         this.configurator.setOptions(options.configure);
@@ -39663,13 +33217,8 @@ return /******/ (function(modules) { // webpackBootstrap
   module.exports = Network;
 
 /***/ },
-<<<<<<< HEAD
 /* 156 */
 /***/ function(module, exports, __webpack_require__) {
-=======
-/* 64 */
-/***/ function(module, exports) {
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
   "use strict";
 
@@ -39677,7 +33226,6 @@ return /******/ (function(modules) { // webpackBootstrap
       value: true
   });
 
-<<<<<<< HEAD
   var _classCallCheck2 = __webpack_require__(115);
 
   var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
@@ -39687,11 +33235,6 @@ return /******/ (function(modules) { // webpackBootstrap
   var _createClass3 = _interopRequireDefault(_createClass2);
 
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-=======
-  var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
   /**
    * @class Images
@@ -39699,11 +33242,7 @@ return /******/ (function(modules) { // webpackBootstrap
    */
   var Images = function () {
       function Images(callback) {
-<<<<<<< HEAD
           (0, _classCallCheck3["default"])(this, Images);
-=======
-          _classCallCheck(this, Images);
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
           this.images = {};
           this.imageBroken = {};
@@ -39716,11 +33255,7 @@ return /******/ (function(modules) { // webpackBootstrap
        */
 
 
-<<<<<<< HEAD
       (0, _createClass3["default"])(Images, [{
-=======
-      _createClass(Images, [{
->>>>>>> 88f14a0... add 'dist' folder for deployment
           key: "_addImageToCache",
           value: function _addImageToCache(url, imageToCache) {
               // IE11 fix -- thanks dponch!
@@ -39810,7 +33345,6 @@ return /******/ (function(modules) { // webpackBootstrap
               return img;
           }
       }]);
-<<<<<<< HEAD
       return Images;
   }();
 
@@ -39818,16 +33352,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 157 */
-=======
-
-      return Images;
-  }();
-
-  exports.default = Images;
-
-/***/ },
-/* 65 */
->>>>>>> 88f14a0... add 'dist' folder for deployment
 /***/ function(module, exports, __webpack_require__) {
 
   "use strict";
@@ -39836,7 +33360,6 @@ return /******/ (function(modules) { // webpackBootstrap
     value: true
   });
 
-<<<<<<< HEAD
   var _classCallCheck2 = __webpack_require__(115);
 
   var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
@@ -39846,11 +33369,6 @@ return /******/ (function(modules) { // webpackBootstrap
   var _createClass3 = _interopRequireDefault(_createClass2);
 
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-=======
-  var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
   var util = __webpack_require__(1);
 
@@ -39861,11 +33379,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
   var Groups = function () {
     function Groups() {
-<<<<<<< HEAD
       (0, _classCallCheck3["default"])(this, Groups);
-=======
-      _classCallCheck(this, Groups);
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
       this.clear();
       this.defaultIndex = 0;
@@ -39904,11 +33418,7 @@ return /******/ (function(modules) { // webpackBootstrap
       util.extend(this.options, this.defaultOptions);
     }
 
-<<<<<<< HEAD
     (0, _createClass3["default"])(Groups, [{
-=======
-    _createClass(Groups, [{
->>>>>>> 88f14a0... add 'dist' folder for deployment
       key: "setOptions",
       value: function setOptions(options) {
         var optionFields = ['useDefaultGroups'];
@@ -39984,7 +33494,6 @@ return /******/ (function(modules) { // webpackBootstrap
         return style;
       }
     }]);
-<<<<<<< HEAD
     return Groups;
   }();
 
@@ -39992,16 +33501,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 158 */
-=======
-
-    return Groups;
-  }();
-
-  exports.default = Groups;
-
-/***/ },
-/* 66 */
->>>>>>> 88f14a0... add 'dist' folder for deployment
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -40010,7 +33509,6 @@ return /******/ (function(modules) { // webpackBootstrap
     value: true
   });
 
-<<<<<<< HEAD
   var _classCallCheck2 = __webpack_require__(115);
 
   var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
@@ -40032,35 +33530,12 @@ return /******/ (function(modules) { // webpackBootstrap
   var util = __webpack_require__(1);
   var DataSet = __webpack_require__(91);
   var DataView = __webpack_require__(93);
-=======
-  var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-  var _Node = __webpack_require__(67);
-
-  var _Node2 = _interopRequireDefault(_Node);
-
-  var _Label = __webpack_require__(68);
-
-  var _Label2 = _interopRequireDefault(_Label);
-
-  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-  var util = __webpack_require__(1);
-  var DataSet = __webpack_require__(9);
-  var DataView = __webpack_require__(11);
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
   var NodesHandler = function () {
     function NodesHandler(body, images, groups, layoutEngine) {
       var _this = this;
 
-<<<<<<< HEAD
       (0, _classCallCheck3['default'])(this, NodesHandler);
-=======
-      _classCallCheck(this, NodesHandler);
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
       this.body = body;
       this.images = images;
@@ -40110,7 +33585,6 @@ return /******/ (function(modules) { // webpackBootstrap
           background: 'none',
           strokeWidth: 0, // px
           strokeColor: '#ffffff',
-<<<<<<< HEAD
           align: 'center',
           vadjust: 0,
           multi: false,
@@ -40129,9 +33603,6 @@ return /******/ (function(modules) { // webpackBootstrap
             face: 'courier new',
             vadjust: 2
           }
-=======
-          align: 'center'
->>>>>>> 88f14a0... add 'dist' folder for deployment
         },
         group: undefined,
         hidden: false,
@@ -40145,15 +33616,12 @@ return /******/ (function(modules) { // webpackBootstrap
         label: undefined,
         labelHighlightBold: true,
         level: undefined,
-<<<<<<< HEAD
         margin: {
           top: 5,
           right: 5,
           bottom: 5,
           left: 5
         },
-=======
->>>>>>> 88f14a0... add 'dist' folder for deployment
         mass: 1,
         physics: true,
         scaling: {
@@ -40201,11 +33669,7 @@ return /******/ (function(modules) { // webpackBootstrap
       this.bindEventListeners();
     }
 
-<<<<<<< HEAD
     (0, _createClass3['default'])(NodesHandler, [{
-=======
-    _createClass(NodesHandler, [{
->>>>>>> 88f14a0... add 'dist' folder for deployment
       key: 'bindEventListeners',
       value: function bindEventListeners() {
         var _this2 = this;
@@ -40227,14 +33691,9 @@ return /******/ (function(modules) { // webpackBootstrap
     }, {
       key: 'setOptions',
       value: function setOptions(options) {
-<<<<<<< HEAD
         this.nodeOptions = options;
         if (options !== undefined) {
           _Node2['default'].parseOptions(this.options, options);
-=======
-        if (options !== undefined) {
-          _Node2.default.parseOptions(this.options, options);
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
           // update the shape in all nodes
           if (options.shape !== undefined) {
@@ -40247,11 +33706,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
           // update the font in all nodes
           if (options.font !== undefined) {
-<<<<<<< HEAD
             _Label2['default'].parseOptions(this.options.font, options);
-=======
-            _Label2.default.parseOptions(this.options.font, options);
->>>>>>> 88f14a0... add 'dist' folder for deployment
             for (var _nodeId in this.body.nodes) {
               if (this.body.nodes.hasOwnProperty(_nodeId)) {
                 this.body.nodes[_nodeId].updateLabelModule();
@@ -40419,15 +33874,9 @@ return /******/ (function(modules) { // webpackBootstrap
     }, {
       key: 'create',
       value: function create(properties) {
-<<<<<<< HEAD
         var constructorClass = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : _Node2['default'];
 
         return new constructorClass(properties, this.body, this.images, this.groups, this.options, this.defaultOptions, this.nodeOptions);
-=======
-        var constructorClass = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : _Node2.default;
-
-        return new constructorClass(properties, this.body, this.images, this.groups, this.options);
->>>>>>> 88f14a0... add 'dist' folder for deployment
       }
     }, {
       key: 'refresh',
@@ -40597,7 +34046,6 @@ return /******/ (function(modules) { // webpackBootstrap
         }
       }
     }]);
-<<<<<<< HEAD
     return NodesHandler;
   }();
 
@@ -40605,16 +34053,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 159 */
-=======
-
-    return NodesHandler;
-  }();
-
-  exports.default = NodesHandler;
-
-/***/ },
-/* 67 */
->>>>>>> 88f14a0... add 'dist' folder for deployment
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -40623,7 +34061,6 @@ return /******/ (function(modules) { // webpackBootstrap
     value: true
   });
 
-<<<<<<< HEAD
   var _typeof2 = __webpack_require__(62);
 
   var _typeof3 = _interopRequireDefault(_typeof2);
@@ -40701,77 +34138,6 @@ return /******/ (function(modules) { // webpackBootstrap
   var _Validator2 = _interopRequireDefault(_Validator);
 
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-=======
-  var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-  var _Label = __webpack_require__(68);
-
-  var _Label2 = _interopRequireDefault(_Label);
-
-  var _Box = __webpack_require__(69);
-
-  var _Box2 = _interopRequireDefault(_Box);
-
-  var _Circle = __webpack_require__(71);
-
-  var _Circle2 = _interopRequireDefault(_Circle);
-
-  var _CircularImage = __webpack_require__(73);
-
-  var _CircularImage2 = _interopRequireDefault(_CircularImage);
-
-  var _Database = __webpack_require__(74);
-
-  var _Database2 = _interopRequireDefault(_Database);
-
-  var _Diamond = __webpack_require__(75);
-
-  var _Diamond2 = _interopRequireDefault(_Diamond);
-
-  var _Dot = __webpack_require__(77);
-
-  var _Dot2 = _interopRequireDefault(_Dot);
-
-  var _Ellipse = __webpack_require__(78);
-
-  var _Ellipse2 = _interopRequireDefault(_Ellipse);
-
-  var _Icon = __webpack_require__(79);
-
-  var _Icon2 = _interopRequireDefault(_Icon);
-
-  var _Image = __webpack_require__(80);
-
-  var _Image2 = _interopRequireDefault(_Image);
-
-  var _Square = __webpack_require__(81);
-
-  var _Square2 = _interopRequireDefault(_Square);
-
-  var _Star = __webpack_require__(82);
-
-  var _Star2 = _interopRequireDefault(_Star);
-
-  var _Text = __webpack_require__(83);
-
-  var _Text2 = _interopRequireDefault(_Text);
-
-  var _Triangle = __webpack_require__(84);
-
-  var _Triangle2 = _interopRequireDefault(_Triangle);
-
-  var _TriangleDown = __webpack_require__(85);
-
-  var _TriangleDown2 = _interopRequireDefault(_TriangleDown);
-
-  var _Validator = __webpack_require__(31);
-
-  var _Validator2 = _interopRequireDefault(_Validator);
-
-  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
   var util = __webpack_require__(1);
 
@@ -40801,7 +34167,6 @@ return /******/ (function(modules) { // webpackBootstrap
    *
    */
   var Node = function () {
-<<<<<<< HEAD
     function Node(options, body, imagelist, grouplist, globalOptions, defaultOptions, nodeOptions) {
       (0, _classCallCheck3['default'])(this, Node);
 
@@ -40809,13 +34174,6 @@ return /******/ (function(modules) { // webpackBootstrap
       this.globalOptions = globalOptions;
       this.defaultOptions = defaultOptions;
       this.nodeOptions = nodeOptions;
-=======
-    function Node(options, body, imagelist, grouplist, globalOptions) {
-      _classCallCheck(this, Node);
-
-      this.options = util.bridgeObject(globalOptions);
-      this.globalOptions = globalOptions;
->>>>>>> 88f14a0... add 'dist' folder for deployment
       this.body = body;
 
       this.edges = []; // all edges connected to this node
@@ -40834,11 +34192,7 @@ return /******/ (function(modules) { // webpackBootstrap
       this.selected = false;
       this.hover = false;
 
-<<<<<<< HEAD
       this.labelModule = new _Label2['default'](this.body, this.options, false /* Not edge label */);
-=======
-      this.labelModule = new _Label2.default(this.body, this.options, false /* Not edge label */);
->>>>>>> 88f14a0... add 'dist' folder for deployment
       this.setOptions(options);
     }
 
@@ -40848,11 +34202,7 @@ return /******/ (function(modules) { // webpackBootstrap
      */
 
 
-<<<<<<< HEAD
     (0, _createClass3['default'])(Node, [{
-=======
-    _createClass(Node, [{
->>>>>>> 88f14a0... add 'dist' folder for deployment
       key: 'attachEdge',
       value: function attachEdge(edge) {
         if (this.edges.indexOf(edge) === -1) {
@@ -40930,11 +34280,8 @@ return /******/ (function(modules) { // webpackBootstrap
         // this transforms all shorthands into fully defined options
         Node.parseOptions(this.options, options, true, this.globalOptions);
 
-<<<<<<< HEAD
         this.choosify(options);
 
-=======
->>>>>>> 88f14a0... add 'dist' folder for deployment
         // load the images
         if (this.options.image !== undefined) {
           if (this.imagelist) {
@@ -40944,14 +34291,9 @@ return /******/ (function(modules) { // webpackBootstrap
           }
         }
 
-<<<<<<< HEAD
         this.updateLabelModule(options);
         this.updateShape(currentShape);
         this.labelModule.propagateFonts(this.nodeOptions, options, this.defaultOptions);
-=======
-        this.updateLabelModule();
-        this.updateShape(currentShape);
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
         if (options.hidden !== undefined || options.physics !== undefined) {
           return true;
@@ -40969,7 +34311,6 @@ return /******/ (function(modules) { // webpackBootstrap
        */
 
     }, {
-<<<<<<< HEAD
       key: 'choosify',
       value: function choosify(options) {
         this.chooser = true;
@@ -41030,10 +34371,6 @@ return /******/ (function(modules) { // webpackBootstrap
     }, {
       key: 'updateLabelModule',
       value: function updateLabelModule(options) {
-=======
-      key: 'updateLabelModule',
-      value: function updateLabelModule() {
->>>>>>> 88f14a0... add 'dist' folder for deployment
         if (this.options.label === undefined || this.options.label === null) {
           this.options.label = '';
         }
@@ -41041,11 +34378,8 @@ return /******/ (function(modules) { // webpackBootstrap
         if (this.labelModule.baseSize !== undefined) {
           this.baseFontSize = this.labelModule.baseSize;
         }
-<<<<<<< HEAD
         this.labelModule.constrain(this.nodeOptions, options, this.defaultOptions);
         this.labelModule.choosify(this.nodeOptions, options, this.defaultOptions);
-=======
->>>>>>> 88f14a0... add 'dist' folder for deployment
       }
     }, {
       key: 'updateShape',
@@ -41056,7 +34390,6 @@ return /******/ (function(modules) { // webpackBootstrap
           // choose draw method depending on the shape
           switch (this.options.shape) {
             case 'box':
-<<<<<<< HEAD
               this.shape = new _Box2['default'](this.options, this.body, this.labelModule);
               break;
             case 'circle':
@@ -41100,51 +34433,6 @@ return /******/ (function(modules) { // webpackBootstrap
               break;
             default:
               this.shape = new _Ellipse2['default'](this.options, this.body, this.labelModule);
-=======
-              this.shape = new _Box2.default(this.options, this.body, this.labelModule);
-              break;
-            case 'circle':
-              this.shape = new _Circle2.default(this.options, this.body, this.labelModule);
-              break;
-            case 'circularImage':
-              this.shape = new _CircularImage2.default(this.options, this.body, this.labelModule, this.imageObj);
-              break;
-            case 'database':
-              this.shape = new _Database2.default(this.options, this.body, this.labelModule);
-              break;
-            case 'diamond':
-              this.shape = new _Diamond2.default(this.options, this.body, this.labelModule);
-              break;
-            case 'dot':
-              this.shape = new _Dot2.default(this.options, this.body, this.labelModule);
-              break;
-            case 'ellipse':
-              this.shape = new _Ellipse2.default(this.options, this.body, this.labelModule);
-              break;
-            case 'icon':
-              this.shape = new _Icon2.default(this.options, this.body, this.labelModule);
-              break;
-            case 'image':
-              this.shape = new _Image2.default(this.options, this.body, this.labelModule, this.imageObj);
-              break;
-            case 'square':
-              this.shape = new _Square2.default(this.options, this.body, this.labelModule);
-              break;
-            case 'star':
-              this.shape = new _Star2.default(this.options, this.body, this.labelModule);
-              break;
-            case 'text':
-              this.shape = new _Text2.default(this.options, this.body, this.labelModule);
-              break;
-            case 'triangle':
-              this.shape = new _Triangle2.default(this.options, this.body, this.labelModule);
-              break;
-            case 'triangleDown':
-              this.shape = new _TriangleDown2.default(this.options, this.body, this.labelModule);
-              break;
-            default:
-              this.shape = new _Ellipse2.default(this.options, this.body, this.labelModule);
->>>>>>> 88f14a0... add 'dist' folder for deployment
               break;
           }
         }
@@ -41278,12 +34566,8 @@ return /******/ (function(modules) { // webpackBootstrap
     }, {
       key: 'draw',
       value: function draw(ctx) {
-<<<<<<< HEAD
         var values = this.getFormattingValues();
         this.shape.draw(ctx, this.x, this.y, this.selected, this.hover, values);
-=======
-        this.shape.draw(ctx, this.x, this.y, this.selected, this.hover);
->>>>>>> 88f14a0... add 'dist' folder for deployment
       }
 
       /**
@@ -41305,12 +34589,8 @@ return /******/ (function(modules) { // webpackBootstrap
     }, {
       key: 'resize',
       value: function resize(ctx) {
-<<<<<<< HEAD
         var values = this.getFormattingValues();
         this.shape.resize(ctx, this.selected, this.hover, values);
-=======
-        this.shape.resize(ctx, this.selected);
->>>>>>> 88f14a0... add 'dist' folder for deployment
       }
 
       /**
@@ -41373,11 +34653,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
         // handle the font options
         if (newOptions.font !== undefined && newOptions.font !== null) {
-<<<<<<< HEAD
           _Label2['default'].parseOptions(parentOptions.font, newOptions);
-=======
-          _Label2.default.parseOptions(parentOptions.font, newOptions);
->>>>>>> 88f14a0... add 'dist' folder for deployment
         } else if (allowDeletion === true && newOptions.font === null) {
           parentOptions.font = util.bridgeObject(globalOptions.font); // set the object back to the global options
         }
@@ -41388,7 +34664,6 @@ return /******/ (function(modules) { // webpackBootstrap
         }
       }
     }]);
-<<<<<<< HEAD
     return Node;
   }();
 
@@ -41396,16 +34671,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 160 */
-=======
-
-    return Node;
-  }();
-
-  exports.default = Node;
-
-/***/ },
-/* 68 */
->>>>>>> 88f14a0... add 'dist' folder for deployment
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -41414,7 +34679,6 @@ return /******/ (function(modules) { // webpackBootstrap
     value: true
   });
 
-<<<<<<< HEAD
   var _slicedToArray2 = __webpack_require__(161);
 
   var _slicedToArray3 = _interopRequireDefault(_slicedToArray2);
@@ -41436,27 +34700,13 @@ return /******/ (function(modules) { // webpackBootstrap
   var _createClass3 = _interopRequireDefault(_createClass2);
 
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-=======
-  var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"]) _i["return"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError("Invalid attempt to destructure non-iterable instance"); } }; }();
-
-  var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
-
-  var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
   var util = __webpack_require__(1);
 
   var Label = function () {
     function Label(body, options) {
       var edgelabel = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
-<<<<<<< HEAD
       (0, _classCallCheck3['default'])(this, Label);
-=======
-
-      _classCallCheck(this, Label);
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
       this.body = body;
 
@@ -41468,20 +34718,12 @@ return /******/ (function(modules) { // webpackBootstrap
       this.isEdgeLabel = edgelabel;
     }
 
-<<<<<<< HEAD
     (0, _createClass3['default'])(Label, [{
-=======
-    _createClass(Label, [{
->>>>>>> 88f14a0... add 'dist' folder for deployment
       key: 'setOptions',
       value: function setOptions(options) {
         var allowDeletion = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
 
-<<<<<<< HEAD
         this.elementOptions = options;
-=======
-        this.nodeOptions = options;
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
         // We want to keep the font options seperated from the node options.
         // The node options have to mirror the globals when they are not overruled.
@@ -41495,11 +34737,7 @@ return /******/ (function(modules) { // webpackBootstrap
           Label.parseOptions(this.fontOptions, options, allowDeletion);
           if (typeof options.font === 'string') {
             this.baseSize = this.fontOptions.size;
-<<<<<<< HEAD
           } else if ((0, _typeof3['default'])(options.font) === 'object') {
-=======
-          } else if (_typeof(options.font) === 'object') {
->>>>>>> 88f14a0... add 'dist' folder for deployment
             if (options.font.size !== undefined) {
               this.baseSize = options.font.size;
             }
@@ -41507,7 +34745,6 @@ return /******/ (function(modules) { // webpackBootstrap
         }
       }
     }, {
-<<<<<<< HEAD
       key: 'constrain',
 
 
@@ -41722,10 +34959,6 @@ return /******/ (function(modules) { // webpackBootstrap
           }
         }
       }
-=======
-      key: 'draw',
-
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
       /**
        * Main function. This is called from anything that wants to draw a label.
@@ -41735,7 +34968,6 @@ return /******/ (function(modules) { // webpackBootstrap
        * @param selected
        * @param baseline
        */
-<<<<<<< HEAD
 
     }, {
       key: 'draw',
@@ -41751,29 +34983,11 @@ return /******/ (function(modules) { // webpackBootstrap
 
         // update the size cache if required
         this.calculateLabelSize(ctx, selected, hover, x, y, baseline);
-=======
-      value: function draw(ctx, x, y, selected) {
-        var baseline = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : 'middle';
-
-        // if no label, return
-        if (this.nodeOptions.label === undefined) return;
-
-        // check if we have to render the label
-        var viewFontSize = this.fontOptions.size * this.body.view.scale;
-        if (this.nodeOptions.label && viewFontSize < this.nodeOptions.scaling.label.drawThreshold - 1) return;
-
-        // update the size cache if required
-        this.calculateLabelSize(ctx, selected, x, y, baseline);
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
         // create the fontfill background
         this._drawBackground(ctx);
         // draw text
-<<<<<<< HEAD
         this._drawText(ctx, selected, hover, x, y, baseline);
-=======
-        this._drawText(ctx, selected, x, y, baseline);
->>>>>>> 88f14a0... add 'dist' folder for deployment
       }
 
       /**
@@ -41821,29 +35035,18 @@ return /******/ (function(modules) { // webpackBootstrap
 
     }, {
       key: '_drawText',
-<<<<<<< HEAD
       value: function _drawText(ctx, selected, hover, x, y) {
         var baseline = arguments.length > 5 && arguments[5] !== undefined ? arguments[5] : 'middle';
-=======
-      value: function _drawText(ctx, selected, x, y) {
-        var baseline = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : 'middle';
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
         var fontSize = this.fontOptions.size;
         var viewFontSize = fontSize * this.body.view.scale;
         // this ensures that there will not be HUGE letters on screen by setting an upper limit on the visible text size (regardless of zoomLevel)
-<<<<<<< HEAD
         if (viewFontSize >= this.elementOptions.scaling.label.maxVisible) {
           fontSize = Number(this.elementOptions.scaling.label.maxVisible) / this.body.view.scale;
-=======
-        if (viewFontSize >= this.nodeOptions.scaling.label.maxVisible) {
-          fontSize = Number(this.nodeOptions.scaling.label.maxVisible) / this.body.view.scale;
->>>>>>> 88f14a0... add 'dist' folder for deployment
         }
 
         var yLine = this.size.yLine;
 
-<<<<<<< HEAD
         var _setAlignment2 = this._setAlignment(ctx, x, yLine, baseline);
 
         var _setAlignment3 = (0, _slicedToArray3['default'])(_setAlignment2, 2);
@@ -41861,40 +35064,10 @@ return /******/ (function(modules) { // webpackBootstrap
           if (this.fontOptions.valign === 'bottom') {
             yLine += (this.size.height - this.size.labelHeight) / 2;
           }
-=======
-        var _getColor2 = this._getColor(viewFontSize),
-            _getColor3 = _slicedToArray(_getColor2, 2),
-            fontColor = _getColor3[0],
-            strokeColor = _getColor3[1];
-
-        // configure context for drawing the text
-        var _setAlignment2 = this._setAlignment(ctx, x, yLine, baseline);
-
-        var _setAlignment3 = _slicedToArray(_setAlignment2, 2);
-
-        x = _setAlignment3[0];
-        yLine = _setAlignment3[1];
-        ctx.font = (selected && this.nodeOptions.labelHighlightBold ? 'bold ' : '') + fontSize + "px " + this.fontOptions.face;
-        ctx.fillStyle = fontColor;
-        // When the textAlign property is 'left', make label left-justified
-        if (!this.isEdgeLabel && this.fontOptions.align === 'left') {
-          ctx.textAlign = this.fontOptions.align;
-          x = x - 0.5 * this.size.width; // Shift label 1/2-distance to the left
-        } else {
-          ctx.textAlign = 'center';
-        }
-
-        // set the strokeWidth
-        if (this.fontOptions.strokeWidth > 0) {
-          ctx.lineWidth = this.fontOptions.strokeWidth;
-          ctx.strokeStyle = strokeColor;
-          ctx.lineJoin = 'round';
->>>>>>> 88f14a0... add 'dist' folder for deployment
         }
 
         // draw the text
         for (var i = 0; i < this.lineCount; i++) {
-<<<<<<< HEAD
           if (this.lines[i] && this.lines[i].blocks) {
             var width = 0;
             if (this.isEdgeLabel || this.fontOptions.align === 'center') {
@@ -41926,13 +35099,6 @@ return /******/ (function(modules) { // webpackBootstrap
             }
             yLine += this.lines[i].height;
           }
-=======
-          if (this.fontOptions.strokeWidth > 0) {
-            ctx.strokeText(this.lines[i], x, yLine);
-          }
-          ctx.fillText(this.lines[i], x, yLine);
-          yLine += fontSize;
->>>>>>> 88f14a0... add 'dist' folder for deployment
         }
       }
     }, {
@@ -41957,10 +35123,6 @@ return /******/ (function(modules) { // webpackBootstrap
         } else {
           ctx.textBaseline = baseline;
         }
-<<<<<<< HEAD
-=======
-
->>>>>>> 88f14a0... add 'dist' folder for deployment
         return [x, yLine];
       }
 
@@ -41975,19 +35137,11 @@ return /******/ (function(modules) { // webpackBootstrap
 
     }, {
       key: '_getColor',
-<<<<<<< HEAD
       value: function _getColor(color, viewFontSize, initialStrokeColor) {
         var fontColor = color || '#000000';
         var strokeColor = initialStrokeColor || '#ffffff';
         if (viewFontSize <= this.elementOptions.scaling.label.drawThreshold) {
           var opacity = Math.max(0, Math.min(1, 1 - (this.elementOptions.scaling.label.drawThreshold - viewFontSize)));
-=======
-      value: function _getColor(viewFontSize) {
-        var fontColor = this.fontOptions.color || '#000000';
-        var strokeColor = this.fontOptions.strokeColor || '#ffffff';
-        if (viewFontSize <= this.nodeOptions.scaling.label.drawThreshold) {
-          var opacity = Math.max(0, Math.min(1, 1 - (this.nodeOptions.scaling.label.drawThreshold - viewFontSize)));
->>>>>>> 88f14a0... add 'dist' folder for deployment
           fontColor = util.overrideOpacity(fontColor, opacity);
           strokeColor = util.overrideOpacity(strokeColor, opacity);
         }
@@ -42005,7 +35159,6 @@ return /******/ (function(modules) { // webpackBootstrap
       key: 'getTextSize',
       value: function getTextSize(ctx) {
         var selected = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
-<<<<<<< HEAD
         var hover = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
 
         this._processLabel(ctx, selected, hover);
@@ -42014,15 +35167,6 @@ return /******/ (function(modules) { // webpackBootstrap
           height: this.size.height,
           lineCount: this.lineCount
         };
-=======
-
-        var size = {
-          width: this._processLabel(ctx, selected),
-          height: this.fontOptions.size * this.lineCount,
-          lineCount: this.lineCount
-        };
-        return size;
->>>>>>> 88f14a0... add 'dist' folder for deployment
       }
 
       /**
@@ -42036,7 +35180,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
     }, {
       key: 'calculateLabelSize',
-<<<<<<< HEAD
       value: function calculateLabelSize(ctx, selected, hover) {
         var x = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 0;
         var y = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : 0;
@@ -42045,17 +35188,6 @@ return /******/ (function(modules) { // webpackBootstrap
         if (this.labelDirty === true) {
           this._processLabel(ctx, selected, hover);
         }
-=======
-      value: function calculateLabelSize(ctx, selected) {
-        var x = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 0;
-        var y = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 0;
-        var baseline = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : 'middle';
-
-        if (this.labelDirty === true) {
-          this.size.width = this._processLabel(ctx, selected);
-        }
-        this.size.height = this.fontOptions.size * this.lineCount;
->>>>>>> 88f14a0... add 'dist' folder for deployment
         this.size.left = x - this.size.width * 0.5;
         this.size.top = y - this.size.height * 0.5;
         this.size.yLine = y + (1 - this.lineCount) * 0.5 * this.fontOptions.size;
@@ -42064,7 +35196,6 @@ return /******/ (function(modules) { // webpackBootstrap
           this.size.top += 4; // distance from node, required because we use hanging. Hanging has less difference between browsers
           this.size.yLine += 4; // distance from node
         }
-<<<<<<< HEAD
         this.labelDirty = false;
       }
 
@@ -42374,23 +35505,11 @@ return /******/ (function(modules) { // webpackBootstrap
        * This explodes the label string into lines and sets the width, height and number of lines.
        * @param ctx
        * @param selected
-=======
-
-        this.labelDirty = false;
-      }
-
-      /**
-       * This calculates the width as well as explodes the label string and calculates the amount of lines.
-       * @param ctx
-       * @param selected
-       * @returns {number}
->>>>>>> 88f14a0... add 'dist' folder for deployment
        * @private
        */
 
     }, {
       key: '_processLabel',
-<<<<<<< HEAD
       value: function _processLabel(ctx, selected, hover) {
         var width = 0;
         var height = 0;
@@ -42433,14 +35552,14 @@ return /******/ (function(modules) { // webpackBootstrap
                     var words = blocks[j].text.split(" ");
                     var atStart = true;
                     var text = "";
-                    var measure = void 0;
+                    var measure = { width: 0 };
                     var lastMeasure = void 0;
                     var w = 0;
                     while (w < words.length) {
                       var pre = atStart ? "" : " ";
                       lastMeasure = measure;
                       measure = ctx.measureText(text + pre + words[w]);
-                      if (lineWidth + measure.width > this.fontOptions.maxWdt) {
+                      if (lineWidth + measure.width > this.fontOptions.maxWdt && lastMeasure.width != 0) {
                         lineHeight = _values.height > lineHeight ? _values.height : lineHeight;
                         lines.add(k, text, _values.font, _values.color, lastMeasure.width, _values.height, _values.vadjust, blocks[j].mod, _values.strokeWidth, _values.strokeColor);
                         lines.accumulate(k, lastMeasure.width, lineHeight);
@@ -42486,14 +35605,14 @@ return /******/ (function(modules) { // webpackBootstrap
               if (this.fontOptions.maxWdt > 0) {
                 var _words = _nlLines[_i].split(" ");
                 var _text = "";
-                var _measure2 = void 0;
+                var _measure2 = { width: 0 };
                 var _lastMeasure = void 0;
                 var _w = 0;
                 while (_w < _words.length) {
                   var _pre = _text === "" ? "" : " ";
                   _lastMeasure = _measure2;
                   _measure2 = ctx.measureText(_text + _pre + _words[_w]);
-                  if (_measure2.width > this.fontOptions.maxWdt) {
+                  if (_measure2.width > this.fontOptions.maxWdt && _lastMeasure.width != 0) {
                     lines.addAndAccumulate(k, _text, _values3.font, _values3.color, _lastMeasure.width, _values3.size, _values3.vadjust, "normal", _values3.strokeWidth, _values3.strokeColor);
                     width = lines[k].width > width ? lines[k].width : width;
                     height += lines[k].height;
@@ -42534,26 +35653,6 @@ return /******/ (function(modules) { // webpackBootstrap
         this.size.height = height;
         this.selectedState = selected;
         this.hoverState = hover;
-=======
-      value: function _processLabel(ctx, selected) {
-        var width = 0;
-        var lines = [''];
-        var lineCount = 0;
-        if (this.nodeOptions.label !== undefined) {
-          lines = String(this.nodeOptions.label).split('\n');
-          lineCount = lines.length;
-          ctx.font = (selected && this.nodeOptions.labelHighlightBold ? 'bold ' : '') + this.fontOptions.size + "px " + this.fontOptions.face;
-          width = ctx.measureText(lines[0]).width;
-          for (var i = 1; i < lineCount; i++) {
-            var lineWidth = ctx.measureText(lines[i]).width;
-            width = lineWidth > width ? lineWidth : width;
-          }
-        }
-        this.lines = lines;
-        this.lineCount = lineCount;
-
-        return width;
->>>>>>> 88f14a0... add 'dist' folder for deployment
       }
     }], [{
       key: 'parseOptions',
@@ -42565,7 +35664,6 @@ return /******/ (function(modules) { // webpackBootstrap
           parentOptions.size = newOptionsArray[0].replace("px", '');
           parentOptions.face = newOptionsArray[1];
           parentOptions.color = newOptionsArray[2];
-<<<<<<< HEAD
           parentOptions.vadjust = 0;
         } else if ((0, _typeof3['default'])(newOptions.font) === 'object') {
           util.fillIfDefined(parentOptions, newOptions.font, allowDeletion);
@@ -42665,22 +35763,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 165 */
-=======
-        } else if (_typeof(newOptions.font) === 'object') {
-          util.fillIfDefined(parentOptions, newOptions.font, allowDeletion);
-        }
-        parentOptions.size = Number(parentOptions.size);
-      }
-    }]);
-
-    return Label;
-  }();
-
-  exports.default = Label;
-
-/***/ },
-/* 69 */
->>>>>>> 88f14a0... add 'dist' folder for deployment
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -42689,7 +35771,6 @@ return /******/ (function(modules) { // webpackBootstrap
     value: true
   });
 
-<<<<<<< HEAD
   var _getPrototypeOf = __webpack_require__(166);
 
   var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
@@ -42739,45 +35820,10 @@ return /******/ (function(modules) { // webpackBootstrap
           this.width = this.textSize.width + this.margin.right + this.margin.left;
           this.height = this.textSize.height + this.margin.top + this.margin.bottom;
           this.radius = this.width / 2;
-=======
-  var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-  var _NodeBase2 = __webpack_require__(70);
-
-  var _NodeBase3 = _interopRequireDefault(_NodeBase2);
-
-  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-  function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-  function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-  var Box = function (_NodeBase) {
-    _inherits(Box, _NodeBase);
-
-    function Box(options, body, labelModule) {
-      _classCallCheck(this, Box);
-
-      return _possibleConstructorReturn(this, (Box.__proto__ || Object.getPrototypeOf(Box)).call(this, options, body, labelModule));
-    }
-
-    _createClass(Box, [{
-      key: 'resize',
-      value: function resize(ctx, selected) {
-        if (this.width === undefined) {
-          var margin = 5;
-          var textSize = this.labelModule.getTextSize(ctx, selected);
-          this.width = textSize.width + 2 * margin;
-          this.height = textSize.height + 2 * margin;
-          this.radius = 0.5 * this.width;
->>>>>>> 88f14a0... add 'dist' folder for deployment
         }
       }
     }, {
       key: 'draw',
-<<<<<<< HEAD
       value: function draw(ctx, x, y, selected, hover, values) {
         this.resize(ctx, selected, hover);
         this.left = x - this.width / 2;
@@ -42798,37 +35844,10 @@ return /******/ (function(modules) { // webpackBootstrap
         ctx.fill();
         // disable shadows for other elements.
         this.disableShadow(ctx, values);
-=======
-      value: function draw(ctx, x, y, selected, hover) {
-        this.resize(ctx, selected);
-        this.left = x - this.width / 2;
-        this.top = y - this.height / 2;
-
-        var borderWidth = this.options.borderWidth;
-        var selectionLineWidth = this.options.borderWidthSelected || 2 * this.options.borderWidth;
-
-        ctx.strokeStyle = selected ? this.options.color.highlight.border : hover ? this.options.color.hover.border : this.options.color.border;
-        ctx.lineWidth = selected ? selectionLineWidth : borderWidth;
-        ctx.lineWidth /= this.body.view.scale;
-        ctx.lineWidth = Math.min(this.width, ctx.lineWidth);
-
-        ctx.fillStyle = selected ? this.options.color.highlight.background : hover ? this.options.color.hover.background : this.options.color.background;
-
-        var borderRadius = this.options.shapeProperties.borderRadius; // only effective for box
-        ctx.roundRect(this.left, this.top, this.width, this.height, borderRadius);
-
-        // draw shadow if enabled
-        this.enableShadow(ctx);
-        // draw the background
-        ctx.fill();
-        // disable shadows for other elements.
-        this.disableShadow(ctx);
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
         //draw dashed border if enabled, save and restore is required for firefox not to crash on unix.
         ctx.save();
         // if borders are zero width, they will be drawn with width 1 by default. This prevents that
-<<<<<<< HEAD
         if (values.borderWidth > 0) {
           this.enableBorderDashes(ctx, values);
           //draw the border
@@ -42847,26 +35866,6 @@ return /******/ (function(modules) { // webpackBootstrap
         this.resize(ctx, selected, hover);
         this.left = x - this.width / 2;
         this.top = y - this.height / 2;
-=======
-        if (borderWidth > 0) {
-          this.enableBorderDashes(ctx);
-          //draw the border
-          ctx.stroke();
-          //disable dashed border for other elements
-          this.disableBorderDashes(ctx);
-        }
-        ctx.restore();
-
-        this.updateBoundingBox(x, y, ctx, selected);
-        this.labelModule.draw(ctx, x, y, selected);
-      }
-    }, {
-      key: 'updateBoundingBox',
-      value: function updateBoundingBox(x, y, ctx, selected) {
-        this.resize(ctx, selected);
-        this.left = x - this.width * 0.5;
-        this.top = y - this.height * 0.5;
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
         var borderRadius = this.options.shapeProperties.borderRadius; // only effective for box
         this.boundingBox.left = this.left - borderRadius;
@@ -42883,7 +35882,6 @@ return /******/ (function(modules) { // webpackBootstrap
         return Math.min(Math.abs(this.width / 2 / Math.cos(angle)), Math.abs(this.height / 2 / Math.sin(angle))) + borderWidth;
       }
     }]);
-<<<<<<< HEAD
     return Box;
   }(_NodeBase3['default']);
 
@@ -43033,25 +36031,10 @@ return /******/ (function(modules) { // webpackBootstrap
 
   'use strict';
 
-=======
-
-    return Box;
-  }(_NodeBase3.default);
-
-  exports.default = Box;
-
-/***/ },
-/* 70 */
-/***/ function(module, exports) {
-
-  "use strict";
-
->>>>>>> 88f14a0... add 'dist' folder for deployment
   Object.defineProperty(exports, "__esModule", {
     value: true
   });
 
-<<<<<<< HEAD
   var _typeof2 = __webpack_require__(62);
 
   var _typeof3 = _interopRequireDefault(_typeof2);
@@ -43069,15 +36052,6 @@ return /******/ (function(modules) { // webpackBootstrap
   var NodeBase = function () {
     function NodeBase(options, body, labelModule) {
       (0, _classCallCheck3['default'])(this, NodeBase);
-=======
-  var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-  var NodeBase = function () {
-    function NodeBase(options, body, labelModule) {
-      _classCallCheck(this, NodeBase);
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
       this.body = body;
       this.labelModule = labelModule;
@@ -43087,25 +36061,16 @@ return /******/ (function(modules) { // webpackBootstrap
       this.height = undefined;
       this.width = undefined;
       this.radius = undefined;
-<<<<<<< HEAD
       this.margin = undefined;
       this.boundingBox = { top: 0, left: 0, right: 0, bottom: 0 };
     }
 
     (0, _createClass3['default'])(NodeBase, [{
       key: 'setOptions',
-=======
-      this.boundingBox = { top: 0, left: 0, right: 0, bottom: 0 };
-    }
-
-    _createClass(NodeBase, [{
-      key: "setOptions",
->>>>>>> 88f14a0... add 'dist' folder for deployment
       value: function setOptions(options) {
         this.options = options;
       }
     }, {
-<<<<<<< HEAD
       key: '_setMargins',
       value: function _setMargins(labelModule) {
         this.margin = {};
@@ -43126,16 +36091,12 @@ return /******/ (function(modules) { // webpackBootstrap
       }
     }, {
       key: '_distanceToBorder',
-=======
-      key: "_distanceToBorder",
->>>>>>> 88f14a0... add 'dist' folder for deployment
       value: function _distanceToBorder(ctx, angle) {
         var borderWidth = this.options.borderWidth;
         this.resize(ctx);
         return Math.min(Math.abs(this.width / 2 / Math.cos(angle)), Math.abs(this.height / 2 / Math.sin(angle))) + borderWidth;
       }
     }, {
-<<<<<<< HEAD
       key: 'enableShadow',
       value: function enableShadow(ctx, values) {
         if (values.shadow) {
@@ -43149,21 +36110,6 @@ return /******/ (function(modules) { // webpackBootstrap
       key: 'disableShadow',
       value: function disableShadow(ctx, values) {
         if (values.shadow) {
-=======
-      key: "enableShadow",
-      value: function enableShadow(ctx) {
-        if (this.options.shadow.enabled === true) {
-          ctx.shadowColor = this.options.shadow.color;
-          ctx.shadowBlur = this.options.shadow.size;
-          ctx.shadowOffsetX = this.options.shadow.x;
-          ctx.shadowOffsetY = this.options.shadow.y;
-        }
-      }
-    }, {
-      key: "disableShadow",
-      value: function disableShadow(ctx) {
-        if (this.options.shadow.enabled === true) {
->>>>>>> 88f14a0... add 'dist' folder for deployment
           ctx.shadowColor = 'rgba(0,0,0,0)';
           ctx.shadowBlur = 0;
           ctx.shadowOffsetX = 0;
@@ -43171,19 +36117,11 @@ return /******/ (function(modules) { // webpackBootstrap
         }
       }
     }, {
-<<<<<<< HEAD
       key: 'enableBorderDashes',
       value: function enableBorderDashes(ctx, values) {
         if (values.borderDashes !== false) {
           if (ctx.setLineDash !== undefined) {
             var dashes = values.borderDashes;
-=======
-      key: "enableBorderDashes",
-      value: function enableBorderDashes(ctx) {
-        if (this.options.shapeProperties.borderDashes !== false) {
-          if (ctx.setLineDash !== undefined) {
-            var dashes = this.options.shapeProperties.borderDashes;
->>>>>>> 88f14a0... add 'dist' folder for deployment
             if (dashes === true) {
               dashes = [5, 15];
             }
@@ -43191,37 +36129,24 @@ return /******/ (function(modules) { // webpackBootstrap
           } else {
             console.warn("setLineDash is not supported in this browser. The dashed borders cannot be used.");
             this.options.shapeProperties.borderDashes = false;
-<<<<<<< HEAD
             values.borderDashes = false;
-=======
->>>>>>> 88f14a0... add 'dist' folder for deployment
           }
         }
       }
     }, {
-<<<<<<< HEAD
       key: 'disableBorderDashes',
       value: function disableBorderDashes(ctx, values) {
         if (values.borderDashes !== false) {
-=======
-      key: "disableBorderDashes",
-      value: function disableBorderDashes(ctx) {
-        if (this.options.shapeProperties.borderDashes !== false) {
->>>>>>> 88f14a0... add 'dist' folder for deployment
           if (ctx.setLineDash !== undefined) {
             ctx.setLineDash([0]);
           } else {
             console.warn("setLineDash is not supported in this browser. The dashed borders cannot be used.");
             this.options.shapeProperties.borderDashes = false;
-<<<<<<< HEAD
             values.borderDashes = false;
-=======
->>>>>>> 88f14a0... add 'dist' folder for deployment
           }
         }
       }
     }]);
-<<<<<<< HEAD
     return NodeBase;
   }();
 
@@ -43229,16 +36154,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 176 */
-=======
-
-    return NodeBase;
-  }();
-
-  exports.default = NodeBase;
-
-/***/ },
-/* 71 */
->>>>>>> 88f14a0... add 'dist' folder for deployment
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -43247,7 +36162,6 @@ return /******/ (function(modules) { // webpackBootstrap
     value: true
   });
 
-<<<<<<< HEAD
   var _getPrototypeOf = __webpack_require__(166);
 
   var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
@@ -43296,52 +36210,15 @@ return /******/ (function(modules) { // webpackBootstrap
         if (this.width === undefined || this.labelModule.differentState(selected, hover)) {
           this.textSize = this.labelModule.getTextSize(ctx, selected, hover);
           var diameter = Math.max(this.textSize.width + this.margin.right + this.margin.left, this.textSize.height + this.margin.top + this.margin.bottom);
-=======
-  var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-  var _CircleImageBase2 = __webpack_require__(72);
-
-  var _CircleImageBase3 = _interopRequireDefault(_CircleImageBase2);
-
-  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-  function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-  function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-  var Circle = function (_CircleImageBase) {
-    _inherits(Circle, _CircleImageBase);
-
-    function Circle(options, body, labelModule) {
-      _classCallCheck(this, Circle);
-
-      return _possibleConstructorReturn(this, (Circle.__proto__ || Object.getPrototypeOf(Circle)).call(this, options, body, labelModule));
-    }
-
-    _createClass(Circle, [{
-      key: 'resize',
-      value: function resize(ctx, selected) {
-        if (this.width === undefined) {
-          var margin = 5;
-          var textSize = this.labelModule.getTextSize(ctx, selected);
-          var diameter = Math.max(textSize.width, textSize.height) + 2 * margin;
->>>>>>> 88f14a0... add 'dist' folder for deployment
           this.options.size = diameter / 2;
 
           this.width = diameter;
           this.height = diameter;
-<<<<<<< HEAD
           this.radius = this.width / 2;
-=======
-          this.radius = 0.5 * this.width;
->>>>>>> 88f14a0... add 'dist' folder for deployment
         }
       }
     }, {
       key: 'draw',
-<<<<<<< HEAD
       value: function draw(ctx, x, y, selected, hover, values) {
         this.resize(ctx, selected, hover);
         this.left = x - this.width / 2;
@@ -43355,23 +36232,7 @@ return /******/ (function(modules) { // webpackBootstrap
         this.boundingBox.bottom = y + values.size;
 
         this.updateBoundingBox(x, y);
-        this.labelModule.draw(ctx, this.left + this.textSize.width / 2 + this.margin.left, this.top + this.textSize.height / 2 + this.margin.top, selected, hover);
-=======
-      value: function draw(ctx, x, y, selected, hover) {
-        this.resize(ctx, selected);
-        this.left = x - this.width / 2;
-        this.top = y - this.height / 2;
-
-        this._drawRawCircle(ctx, x, y, selected, hover, this.options.size);
-
-        this.boundingBox.top = y - this.options.size;
-        this.boundingBox.left = x - this.options.size;
-        this.boundingBox.right = x + this.options.size;
-        this.boundingBox.bottom = y + this.options.size;
-
-        this.updateBoundingBox(x, y);
-        this.labelModule.draw(ctx, x, y, selected);
->>>>>>> 88f14a0... add 'dist' folder for deployment
+        this.labelModule.draw(ctx, this.left + this.textSize.width / 2 + this.margin.left, y, selected, hover);
       }
     }, {
       key: 'updateBoundingBox',
@@ -43388,7 +36249,6 @@ return /******/ (function(modules) { // webpackBootstrap
         return this.width * 0.5;
       }
     }]);
-<<<<<<< HEAD
     return Circle;
   }(_CircleImageBase3['default']);
 
@@ -43396,16 +36256,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 177 */
-=======
-
-    return Circle;
-  }(_CircleImageBase3.default);
-
-  exports.default = Circle;
-
-/***/ },
-/* 72 */
->>>>>>> 88f14a0... add 'dist' folder for deployment
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -43414,7 +36264,6 @@ return /******/ (function(modules) { // webpackBootstrap
     value: true
   });
 
-<<<<<<< HEAD
   var _getPrototypeOf = __webpack_require__(166);
 
   var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
@@ -43448,40 +36297,13 @@ return /******/ (function(modules) { // webpackBootstrap
       (0, _classCallCheck3['default'])(this, CircleImageBase);
 
       var _this = (0, _possibleConstructorReturn3['default'])(this, (CircleImageBase.__proto__ || (0, _getPrototypeOf2['default'])(CircleImageBase)).call(this, options, body, labelModule));
-=======
-  var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-  var _NodeBase2 = __webpack_require__(70);
-
-  var _NodeBase3 = _interopRequireDefault(_NodeBase2);
-
-  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-  function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-  function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-  var CircleImageBase = function (_NodeBase) {
-    _inherits(CircleImageBase, _NodeBase);
-
-    function CircleImageBase(options, body, labelModule) {
-      _classCallCheck(this, CircleImageBase);
-
-      var _this = _possibleConstructorReturn(this, (CircleImageBase.__proto__ || Object.getPrototypeOf(CircleImageBase)).call(this, options, body, labelModule));
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
       _this.labelOffset = 0;
       _this.imageLoaded = false;
       return _this;
     }
 
-<<<<<<< HEAD
     (0, _createClass3['default'])(CircleImageBase, [{
-=======
-    _createClass(CircleImageBase, [{
->>>>>>> 88f14a0... add 'dist' folder for deployment
       key: 'setOptions',
       value: function setOptions(options, imageObj) {
         this.options = options;
@@ -43544,7 +36366,6 @@ return /******/ (function(modules) { // webpackBootstrap
       }
     }, {
       key: '_drawRawCircle',
-<<<<<<< HEAD
       value: function _drawRawCircle(ctx, x, y, selected, hover, values) {
         var borderWidth = values.borderWidth / this.body.view.scale;
         ctx.lineWidth = Math.min(this.width, borderWidth);
@@ -43559,62 +36380,28 @@ return /******/ (function(modules) { // webpackBootstrap
         ctx.fill();
         // disable shadows for other elements.
         this.disableShadow(ctx, values);
-=======
-      value: function _drawRawCircle(ctx, x, y, selected, hover, size) {
-        var neutralborderWidth = this.options.borderWidth;
-        var selectionLineWidth = this.options.borderWidthSelected || 2 * this.options.borderWidth;
-        var borderWidth = (selected ? selectionLineWidth : neutralborderWidth) / this.body.view.scale;
-        ctx.lineWidth = Math.min(this.width, borderWidth);
-
-        ctx.strokeStyle = selected ? this.options.color.highlight.border : hover ? this.options.color.hover.border : this.options.color.border;
-        ctx.fillStyle = selected ? this.options.color.highlight.background : hover ? this.options.color.hover.background : this.options.color.background;
-        ctx.circle(x, y, size);
-
-        // draw shadow if enabled
-        this.enableShadow(ctx);
-        // draw the background
-        ctx.fill();
-        // disable shadows for other elements.
-        this.disableShadow(ctx);
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
         //draw dashed border if enabled, save and restore is required for firefox not to crash on unix.
         ctx.save();
         // if borders are zero width, they will be drawn with width 1 by default. This prevents that
         if (borderWidth > 0) {
-<<<<<<< HEAD
           this.enableBorderDashes(ctx, values);
           //draw the border
           ctx.stroke();
           //disable dashed border for other elements
           this.disableBorderDashes(ctx, values);
-=======
-          this.enableBorderDashes(ctx);
-          //draw the border
-          ctx.stroke();
-          //disable dashed border for other elements
-          this.disableBorderDashes(ctx);
->>>>>>> 88f14a0... add 'dist' folder for deployment
         }
         ctx.restore();
       }
     }, {
       key: '_drawImageAtPosition',
-<<<<<<< HEAD
       value: function _drawImageAtPosition(ctx, values) {
-=======
-      value: function _drawImageAtPosition(ctx) {
->>>>>>> 88f14a0... add 'dist' folder for deployment
         if (this.imageObj.width != 0) {
           // draw the image
           ctx.globalAlpha = 1.0;
 
           // draw shadow if enabled
-<<<<<<< HEAD
           this.enableShadow(ctx, values);
-=======
-          this.enableShadow(ctx);
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
           var factor = this.imageObj.width / this.width / this.body.view.scale;
           if (factor > 2 && this.options.shapeProperties.interpolation === true) {
@@ -43647,30 +36434,18 @@ return /******/ (function(modules) { // webpackBootstrap
           }
 
           // disable shadows for other elements.
-<<<<<<< HEAD
           this.disableShadow(ctx, values);
-=======
-          this.disableShadow(ctx);
->>>>>>> 88f14a0... add 'dist' folder for deployment
         }
       }
     }, {
       key: '_drawImageLabel',
-<<<<<<< HEAD
       value: function _drawImageLabel(ctx, x, y, selected, hover) {
-=======
-      value: function _drawImageLabel(ctx, x, y, selected) {
->>>>>>> 88f14a0... add 'dist' folder for deployment
         var yLabel;
         var offset = 0;
 
         if (this.height !== undefined) {
           offset = this.height * 0.5;
-<<<<<<< HEAD
           var labelDimensions = this.labelModule.getTextSize(ctx, selected, hover);
-=======
-          var labelDimensions = this.labelModule.getTextSize(ctx);
->>>>>>> 88f14a0... add 'dist' folder for deployment
           if (labelDimensions.lineCount >= 1) {
             offset += labelDimensions.height / 2;
           }
@@ -43681,7 +36456,6 @@ return /******/ (function(modules) { // webpackBootstrap
         if (this.options.label) {
           this.labelOffset = offset;
         }
-<<<<<<< HEAD
         this.labelModule.draw(ctx, x, yLabel, selected, hover, 'hanging');
       }
     }]);
@@ -43692,19 +36466,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 178 */
-=======
-        this.labelModule.draw(ctx, x, yLabel, selected, 'hanging');
-      }
-    }]);
-
-    return CircleImageBase;
-  }(_NodeBase3.default);
-
-  exports.default = CircleImageBase;
-
-/***/ },
-/* 73 */
->>>>>>> 88f14a0... add 'dist' folder for deployment
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -43713,7 +36474,6 @@ return /******/ (function(modules) { // webpackBootstrap
     value: true
   });
 
-<<<<<<< HEAD
   var _getPrototypeOf = __webpack_require__(166);
 
   var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
@@ -43747,36 +36507,12 @@ return /******/ (function(modules) { // webpackBootstrap
       (0, _classCallCheck3['default'])(this, CircularImage);
 
       var _this = (0, _possibleConstructorReturn3['default'])(this, (CircularImage.__proto__ || (0, _getPrototypeOf2['default'])(CircularImage)).call(this, options, body, labelModule));
-=======
-  var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-  var _CircleImageBase2 = __webpack_require__(72);
-
-  var _CircleImageBase3 = _interopRequireDefault(_CircleImageBase2);
-
-  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-  function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-  function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-  var CircularImage = function (_CircleImageBase) {
-    _inherits(CircularImage, _CircleImageBase);
-
-    function CircularImage(options, body, labelModule, imageObj) {
-      _classCallCheck(this, CircularImage);
-
-      var _this = _possibleConstructorReturn(this, (CircularImage.__proto__ || Object.getPrototypeOf(CircularImage)).call(this, options, body, labelModule));
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
       _this.imageObj = imageObj;
       _this._swapToImageResizeWhenImageLoaded = true;
       return _this;
     }
 
-<<<<<<< HEAD
     (0, _createClass3['default'])(CircularImage, [{
       key: 'resize',
       value: function resize(ctx) {
@@ -43789,19 +36525,6 @@ return /******/ (function(modules) { // webpackBootstrap
           this.height = diameter;
           this._swapToImageResizeWhenImageLoaded = true;
           this.radius = 0.5 * this.width;
-=======
-    _createClass(CircularImage, [{
-      key: 'resize',
-      value: function resize() {
-        if (this.imageObj.src === undefined || this.imageObj.width === undefined || this.imageObj.height === undefined) {
-          if (!this.width) {
-            var diameter = this.options.size * 2;
-            this.width = diameter;
-            this.height = diameter;
-            this._swapToImageResizeWhenImageLoaded = true;
-            this.radius = 0.5 * this.width;
-          }
->>>>>>> 88f14a0... add 'dist' folder for deployment
         } else {
           if (this._swapToImageResizeWhenImageLoaded) {
             this.width = undefined;
@@ -43813,11 +36536,7 @@ return /******/ (function(modules) { // webpackBootstrap
       }
     }, {
       key: 'draw',
-<<<<<<< HEAD
       value: function draw(ctx, x, y, selected, hover, values) {
-=======
-      value: function draw(ctx, x, y, selected, hover) {
->>>>>>> 88f14a0... add 'dist' folder for deployment
         this.resize();
 
         this.left = x - this.width / 2;
@@ -43826,30 +36545,18 @@ return /******/ (function(modules) { // webpackBootstrap
         var size = Math.min(0.5 * this.height, 0.5 * this.width);
 
         // draw the background circle. IMPORTANT: the stroke in this method is used by the clip method below.
-<<<<<<< HEAD
         this._drawRawCircle(ctx, x, y, selected, hover, values);
-=======
-        this._drawRawCircle(ctx, x, y, selected, hover, size);
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
         // now we draw in the circle, we save so we can revert the clip operation after drawing.
         ctx.save();
         // clip is used to use the stroke in drawRawCircle as an area that we can draw in.
         ctx.clip();
         // draw the image
-<<<<<<< HEAD
         this._drawImageAtPosition(ctx, values);
         // restore so we can again draw on the full canvas
         ctx.restore();
 
         this._drawImageLabel(ctx, x, y, selected, hover);
-=======
-        this._drawImageAtPosition(ctx);
-        // restore so we can again draw on the full canvas
-        ctx.restore();
-
-        this._drawImageLabel(ctx, x, y, selected);
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
         this.updateBoundingBox(x, y);
       }
@@ -43871,7 +36578,6 @@ return /******/ (function(modules) { // webpackBootstrap
         return this.width * 0.5;
       }
     }]);
-<<<<<<< HEAD
     return CircularImage;
   }(_CircleImageBase3['default']);
 
@@ -43879,16 +36585,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 179 */
-=======
-
-    return CircularImage;
-  }(_CircleImageBase3.default);
-
-  exports.default = CircularImage;
-
-/***/ },
-/* 74 */
->>>>>>> 88f14a0... add 'dist' folder for deployment
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -43897,7 +36593,6 @@ return /******/ (function(modules) { // webpackBootstrap
     value: true
   });
 
-<<<<<<< HEAD
   var _getPrototypeOf = __webpack_require__(166);
 
   var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
@@ -43945,46 +36640,10 @@ return /******/ (function(modules) { // webpackBootstrap
           this.width = size;
           this.height = size;
           this.radius = this.width / 2;
-=======
-  var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-  var _NodeBase2 = __webpack_require__(70);
-
-  var _NodeBase3 = _interopRequireDefault(_NodeBase2);
-
-  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-  function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-  function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-  var Database = function (_NodeBase) {
-    _inherits(Database, _NodeBase);
-
-    function Database(options, body, labelModule) {
-      _classCallCheck(this, Database);
-
-      return _possibleConstructorReturn(this, (Database.__proto__ || Object.getPrototypeOf(Database)).call(this, options, body, labelModule));
-    }
-
-    _createClass(Database, [{
-      key: 'resize',
-      value: function resize(ctx, selected) {
-        if (this.width === undefined) {
-          var margin = 5;
-          var textSize = this.labelModule.getTextSize(ctx, selected);
-          var size = textSize.width + 2 * margin;
-          this.width = size;
-          this.height = size;
-          this.radius = 0.5 * this.width;
->>>>>>> 88f14a0... add 'dist' folder for deployment
         }
       }
     }, {
       key: 'draw',
-<<<<<<< HEAD
       value: function draw(ctx, x, y, selected, hover, values) {
         this.resize(ctx, selected, hover);
         this.left = x - this.width / 2;
@@ -44004,35 +36663,11 @@ return /******/ (function(modules) { // webpackBootstrap
         ctx.fill();
         // disable shadows for other elements.
         this.disableShadow(ctx, values);
-=======
-      value: function draw(ctx, x, y, selected, hover) {
-        this.resize(ctx, selected);
-        this.left = x - this.width / 2;
-        this.top = y - this.height / 2;
-
-        var neutralborderWidth = this.options.borderWidth;
-        var selectionLineWidth = this.options.borderWidthSelected || 2 * this.options.borderWidth;
-        var borderWidth = (selected ? selectionLineWidth : neutralborderWidth) / this.body.view.scale;
-        ctx.lineWidth = Math.min(this.width, borderWidth);
-
-        ctx.strokeStyle = selected ? this.options.color.highlight.border : hover ? this.options.color.hover.border : this.options.color.border;
-
-        ctx.fillStyle = selected ? this.options.color.highlight.background : hover ? this.options.color.hover.background : this.options.color.background;
-        ctx.database(x - this.width / 2, y - this.height * 0.5, this.width, this.height);
-
-        // draw shadow if enabled
-        this.enableShadow(ctx);
-        // draw the background
-        ctx.fill();
-        // disable shadows for other elements.
-        this.disableShadow(ctx);
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
         //draw dashed border if enabled, save and restore is required for firefox not to crash on unix.
         ctx.save();
         // if borders are zero width, they will be drawn with width 1 by default. This prevents that
         if (borderWidth > 0) {
-<<<<<<< HEAD
           this.enableBorderDashes(ctx, values);
           //draw the border
           ctx.stroke();
@@ -44048,23 +36683,6 @@ return /******/ (function(modules) { // webpackBootstrap
       key: 'updateBoundingBox',
       value: function updateBoundingBox(x, y, ctx, selected, hover) {
         this.resize(ctx, selected, hover);
-=======
-          this.enableBorderDashes(ctx);
-          //draw the border
-          ctx.stroke();
-          //disable dashed border for other elements
-          this.disableBorderDashes(ctx);
-        }
-        ctx.restore();
-
-        this.updateBoundingBox(x, y, ctx, selected);
-        this.labelModule.draw(ctx, x, y, selected);
-      }
-    }, {
-      key: 'updateBoundingBox',
-      value: function updateBoundingBox(x, y, ctx, selected) {
-        this.resize(ctx, selected);
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
         this.left = x - this.width * 0.5;
         this.top = y - this.height * 0.5;
@@ -44080,7 +36698,6 @@ return /******/ (function(modules) { // webpackBootstrap
         return this._distanceToBorder(ctx, angle);
       }
     }]);
-<<<<<<< HEAD
     return Database;
   }(_NodeBase3['default']);
 
@@ -44088,16 +36705,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 180 */
-=======
-
-    return Database;
-  }(_NodeBase3.default);
-
-  exports.default = Database;
-
-/***/ },
-/* 75 */
->>>>>>> 88f14a0... add 'dist' folder for deployment
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -44106,7 +36713,6 @@ return /******/ (function(modules) { // webpackBootstrap
     value: true
   });
 
-<<<<<<< HEAD
   var _getPrototypeOf = __webpack_require__(166);
 
   var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
@@ -44143,9 +36749,10 @@ return /******/ (function(modules) { // webpackBootstrap
 
     (0, _createClass3['default'])(Diamond, [{
       key: 'resize',
-      value: function resize(ctx, values) {
-        var selected = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : this.selected;
-        var hover = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : this.hover;
+      value: function resize(ctx) {
+        var selected = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : this.selected;
+        var hover = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : this.hover;
+        var values = arguments[3];
 
         this._resizeShape(selected, hover, values);
       }
@@ -44153,40 +36760,6 @@ return /******/ (function(modules) { // webpackBootstrap
       key: 'draw',
       value: function draw(ctx, x, y, selected, hover, values) {
         this._drawShape(ctx, 'diamond', 4, x, y, selected, hover, values);
-=======
-  var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-  var _ShapeBase2 = __webpack_require__(76);
-
-  var _ShapeBase3 = _interopRequireDefault(_ShapeBase2);
-
-  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-  function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-  function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-  var Diamond = function (_ShapeBase) {
-    _inherits(Diamond, _ShapeBase);
-
-    function Diamond(options, body, labelModule) {
-      _classCallCheck(this, Diamond);
-
-      return _possibleConstructorReturn(this, (Diamond.__proto__ || Object.getPrototypeOf(Diamond)).call(this, options, body, labelModule));
-    }
-
-    _createClass(Diamond, [{
-      key: 'resize',
-      value: function resize(ctx) {
-        this._resizeShape();
-      }
-    }, {
-      key: 'draw',
-      value: function draw(ctx, x, y, selected, hover) {
-        this._drawShape(ctx, 'diamond', 4, x, y, selected, hover);
->>>>>>> 88f14a0... add 'dist' folder for deployment
       }
     }, {
       key: 'distanceToBorder',
@@ -44194,7 +36767,6 @@ return /******/ (function(modules) { // webpackBootstrap
         return this._distanceToBorder(ctx, angle);
       }
     }]);
-<<<<<<< HEAD
     return Diamond;
   }(_ShapeBase3['default']);
 
@@ -44202,16 +36774,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 181 */
-=======
-
-    return Diamond;
-  }(_ShapeBase3.default);
-
-  exports.default = Diamond;
-
-/***/ },
-/* 76 */
->>>>>>> 88f14a0... add 'dist' folder for deployment
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -44220,7 +36782,6 @@ return /******/ (function(modules) { // webpackBootstrap
     value: true
   });
 
-<<<<<<< HEAD
   var _getPrototypeOf = __webpack_require__(166);
 
   var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
@@ -44264,36 +36825,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
         if (this.width === undefined || this.labelModule.differentState(selected, hover)) {
           var size = 2 * values.size;
-=======
-  var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-  var _NodeBase2 = __webpack_require__(70);
-
-  var _NodeBase3 = _interopRequireDefault(_NodeBase2);
-
-  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-  function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-  function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-  var ShapeBase = function (_NodeBase) {
-    _inherits(ShapeBase, _NodeBase);
-
-    function ShapeBase(options, body, labelModule) {
-      _classCallCheck(this, ShapeBase);
-
-      return _possibleConstructorReturn(this, (ShapeBase.__proto__ || Object.getPrototypeOf(ShapeBase)).call(this, options, body, labelModule));
-    }
-
-    _createClass(ShapeBase, [{
-      key: '_resizeShape',
-      value: function _resizeShape() {
-        if (this.width === undefined) {
-          var size = 2 * this.options.size;
->>>>>>> 88f14a0... add 'dist' folder for deployment
           this.width = size;
           this.height = size;
           this.radius = 0.5 * this.width;
@@ -44301,18 +36832,12 @@ return /******/ (function(modules) { // webpackBootstrap
       }
     }, {
       key: '_drawShape',
-<<<<<<< HEAD
       value: function _drawShape(ctx, shape, sizeMultiplier, x, y, selected, hover, values) {
         this._resizeShape(selected, hover, values);
-=======
-      value: function _drawShape(ctx, shape, sizeMultiplier, x, y, selected, hover) {
-        this._resizeShape();
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
         this.left = x - this.width / 2;
         this.top = y - this.height / 2;
 
-<<<<<<< HEAD
         var borderWidth = values.borderWidth / this.body.view.scale;
         ctx.lineWidth = Math.min(this.width, borderWidth);
 
@@ -44326,51 +36851,22 @@ return /******/ (function(modules) { // webpackBootstrap
         ctx.fill();
         // disable shadows for other elements.
         this.disableShadow(ctx, values);
-=======
-        var neutralborderWidth = this.options.borderWidth;
-        var selectionLineWidth = this.options.borderWidthSelected || 2 * this.options.borderWidth;
-        var borderWidth = (selected ? selectionLineWidth : neutralborderWidth) / this.body.view.scale;
-        ctx.lineWidth = Math.min(this.width, borderWidth);
-
-        ctx.strokeStyle = selected ? this.options.color.highlight.border : hover ? this.options.color.hover.border : this.options.color.border;
-        ctx.fillStyle = selected ? this.options.color.highlight.background : hover ? this.options.color.hover.background : this.options.color.background;
-        ctx[shape](x, y, this.options.size);
-
-        // draw shadow if enabled
-        this.enableShadow(ctx);
-        // draw the background
-        ctx.fill();
-        // disable shadows for other elements.
-        this.disableShadow(ctx);
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
         //draw dashed border if enabled, save and restore is required for firefox not to crash on unix.
         ctx.save();
         // if borders are zero width, they will be drawn with width 1 by default. This prevents that
         if (borderWidth > 0) {
-<<<<<<< HEAD
           this.enableBorderDashes(ctx, values);
           //draw the border
           ctx.stroke();
           //disable dashed border for other elements
           this.disableBorderDashes(ctx, values);
-=======
-          this.enableBorderDashes(ctx);
-          //draw the border
-          ctx.stroke();
-          //disable dashed border for other elements
-          this.disableBorderDashes(ctx);
->>>>>>> 88f14a0... add 'dist' folder for deployment
         }
         ctx.restore();
 
         if (this.options.label !== undefined) {
           var yLabel = y + 0.5 * this.height + 3; // the + 3 is to offset it a bit below the node.
-<<<<<<< HEAD
           this.labelModule.draw(ctx, x, yLabel, selected, hover, 'hanging');
-=======
-          this.labelModule.draw(ctx, x, yLabel, selected, 'hanging');
->>>>>>> 88f14a0... add 'dist' folder for deployment
         }
 
         this.updateBoundingBox(x, y);
@@ -44390,7 +36886,6 @@ return /******/ (function(modules) { // webpackBootstrap
         }
       }
     }]);
-<<<<<<< HEAD
     return ShapeBase;
   }(_NodeBase3['default']);
 
@@ -44398,16 +36893,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 182 */
-=======
-
-    return ShapeBase;
-  }(_NodeBase3.default);
-
-  exports.default = ShapeBase;
-
-/***/ },
-/* 77 */
->>>>>>> 88f14a0... add 'dist' folder for deployment
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -44416,7 +36901,6 @@ return /******/ (function(modules) { // webpackBootstrap
     value: true
   });
 
-<<<<<<< HEAD
   var _getPrototypeOf = __webpack_require__(166);
 
   var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
@@ -44453,9 +36937,10 @@ return /******/ (function(modules) { // webpackBootstrap
 
     (0, _createClass3['default'])(Dot, [{
       key: 'resize',
-      value: function resize(ctx, values) {
-        var selected = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : this.selected;
-        var hover = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : this.hover;
+      value: function resize(ctx) {
+        var selected = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : this.selected;
+        var hover = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : this.hover;
+        var values = arguments[3];
 
         this._resizeShape(selected, hover, values);
       }
@@ -44463,40 +36948,6 @@ return /******/ (function(modules) { // webpackBootstrap
       key: 'draw',
       value: function draw(ctx, x, y, selected, hover, values) {
         this._drawShape(ctx, 'circle', 2, x, y, selected, hover, values);
-=======
-  var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-  var _ShapeBase2 = __webpack_require__(76);
-
-  var _ShapeBase3 = _interopRequireDefault(_ShapeBase2);
-
-  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-  function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-  function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-  var Dot = function (_ShapeBase) {
-    _inherits(Dot, _ShapeBase);
-
-    function Dot(options, body, labelModule) {
-      _classCallCheck(this, Dot);
-
-      return _possibleConstructorReturn(this, (Dot.__proto__ || Object.getPrototypeOf(Dot)).call(this, options, body, labelModule));
-    }
-
-    _createClass(Dot, [{
-      key: 'resize',
-      value: function resize(ctx) {
-        this._resizeShape();
-      }
-    }, {
-      key: 'draw',
-      value: function draw(ctx, x, y, selected, hover) {
-        this._drawShape(ctx, 'circle', 2, x, y, selected, hover);
->>>>>>> 88f14a0... add 'dist' folder for deployment
       }
     }, {
       key: 'distanceToBorder',
@@ -44505,7 +36956,6 @@ return /******/ (function(modules) { // webpackBootstrap
         return this.options.size;
       }
     }]);
-<<<<<<< HEAD
     return Dot;
   }(_ShapeBase3['default']);
 
@@ -44513,16 +36963,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 183 */
-=======
-
-    return Dot;
-  }(_ShapeBase3.default);
-
-  exports.default = Dot;
-
-/***/ },
-/* 78 */
->>>>>>> 88f14a0... add 'dist' folder for deployment
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -44531,7 +36971,6 @@ return /******/ (function(modules) { // webpackBootstrap
     value: true
   });
 
-<<<<<<< HEAD
   var _getPrototypeOf = __webpack_require__(166);
 
   var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
@@ -44574,36 +37013,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
         if (this.width === undefined || this.labelModule.differentState(selected, hover)) {
           var textSize = this.labelModule.getTextSize(ctx, selected, hover);
-=======
-  var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-  var _NodeBase2 = __webpack_require__(70);
-
-  var _NodeBase3 = _interopRequireDefault(_NodeBase2);
-
-  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-  function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-  function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-  var Ellipse = function (_NodeBase) {
-    _inherits(Ellipse, _NodeBase);
-
-    function Ellipse(options, body, labelModule) {
-      _classCallCheck(this, Ellipse);
-
-      return _possibleConstructorReturn(this, (Ellipse.__proto__ || Object.getPrototypeOf(Ellipse)).call(this, options, body, labelModule));
-    }
-
-    _createClass(Ellipse, [{
-      key: 'resize',
-      value: function resize(ctx, selected) {
-        if (this.width === undefined) {
-          var textSize = this.labelModule.getTextSize(ctx, selected);
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
           this.height = textSize.height * 2;
           this.width = textSize.width + this.height;
@@ -44612,7 +37021,6 @@ return /******/ (function(modules) { // webpackBootstrap
       }
     }, {
       key: 'draw',
-<<<<<<< HEAD
       value: function draw(ctx, x, y, selected, hover, values) {
         this.resize(ctx, selected, hover);
         this.left = x - this.width * 0.5;
@@ -44632,53 +37040,21 @@ return /******/ (function(modules) { // webpackBootstrap
         ctx.fill();
         // disable shadows for other elements.
         this.disableShadow(ctx, values);
-=======
-      value: function draw(ctx, x, y, selected, hover) {
-        this.resize(ctx, selected);
-        this.left = x - this.width * 0.5;
-        this.top = y - this.height * 0.5;
-
-        var neutralborderWidth = this.options.borderWidth;
-        var selectionLineWidth = this.options.borderWidthSelected || 2 * this.options.borderWidth;
-        var borderWidth = (selected ? selectionLineWidth : neutralborderWidth) / this.body.view.scale;
-        ctx.lineWidth = Math.min(this.width, borderWidth);
-
-        ctx.strokeStyle = selected ? this.options.color.highlight.border : hover ? this.options.color.hover.border : this.options.color.border;
-
-        ctx.fillStyle = selected ? this.options.color.highlight.background : hover ? this.options.color.hover.background : this.options.color.background;
-        ctx.ellipse(this.left, this.top, this.width, this.height);
-
-        // draw shadow if enabled
-        this.enableShadow(ctx);
-        // draw the background
-        ctx.fill();
-        // disable shadows for other elements.
-        this.disableShadow(ctx);
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
         //draw dashed border if enabled, save and restore is required for firefox not to crash on unix.
         ctx.save();
 
         // if borders are zero width, they will be drawn with width 1 by default. This prevents that
         if (borderWidth > 0) {
-<<<<<<< HEAD
           this.enableBorderDashes(ctx, values);
           //draw the border
           ctx.stroke();
           //disable dashed border for other elements
           this.disableBorderDashes(ctx, values);
-=======
-          this.enableBorderDashes(ctx);
-          //draw the border
-          ctx.stroke();
-          //disable dashed border for other elements
-          this.disableBorderDashes(ctx);
->>>>>>> 88f14a0... add 'dist' folder for deployment
         }
 
         ctx.restore();
 
-<<<<<<< HEAD
         this.updateBoundingBox(x, y, ctx, selected, hover);
         this.labelModule.draw(ctx, x, y, selected, hover);
       }
@@ -44686,15 +37062,6 @@ return /******/ (function(modules) { // webpackBootstrap
       key: 'updateBoundingBox',
       value: function updateBoundingBox(x, y, ctx, selected, hover) {
         this.resize(ctx, selected, hover); // just in case
-=======
-        this.updateBoundingBox(x, y, ctx, selected);
-        this.labelModule.draw(ctx, x, y, selected);
-      }
-    }, {
-      key: 'updateBoundingBox',
-      value: function updateBoundingBox(x, y, ctx, selected) {
-        this.resize(ctx, selected); // just in case
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
         this.left = x - this.width * 0.5;
         this.top = y - this.height * 0.5;
@@ -44715,7 +37082,6 @@ return /******/ (function(modules) { // webpackBootstrap
         return a * b / Math.sqrt(w * w + h * h);
       }
     }]);
-<<<<<<< HEAD
     return Ellipse;
   }(_NodeBase3['default']);
 
@@ -44723,16 +37089,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 184 */
-=======
-
-    return Ellipse;
-  }(_NodeBase3.default);
-
-  exports.default = Ellipse;
-
-/***/ },
-/* 79 */
->>>>>>> 88f14a0... add 'dist' folder for deployment
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -44741,7 +37097,6 @@ return /******/ (function(modules) { // webpackBootstrap
     value: true
   });
 
-<<<<<<< HEAD
   var _getPrototypeOf = __webpack_require__(166);
 
   var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
@@ -44790,48 +37145,11 @@ return /******/ (function(modules) { // webpackBootstrap
           };
           this.width = this.iconSize.width + this.margin.right + this.margin.left;
           this.height = this.iconSize.height + this.margin.top + this.margin.bottom;
-=======
-  var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-  var _NodeBase2 = __webpack_require__(70);
-
-  var _NodeBase3 = _interopRequireDefault(_NodeBase2);
-
-  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-  function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-  function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-  var Icon = function (_NodeBase) {
-    _inherits(Icon, _NodeBase);
-
-    function Icon(options, body, labelModule) {
-      _classCallCheck(this, Icon);
-
-      return _possibleConstructorReturn(this, (Icon.__proto__ || Object.getPrototypeOf(Icon)).call(this, options, body, labelModule));
-    }
-
-    _createClass(Icon, [{
-      key: 'resize',
-      value: function resize(ctx) {
-        if (this.width === undefined) {
-          var margin = 5;
-          var iconSize = {
-            width: Number(this.options.icon.size),
-            height: Number(this.options.icon.size)
-          };
-          this.width = iconSize.width + 2 * margin;
-          this.height = iconSize.height + 2 * margin;
->>>>>>> 88f14a0... add 'dist' folder for deployment
           this.radius = 0.5 * this.width;
         }
       }
     }, {
       key: 'draw',
-<<<<<<< HEAD
       value: function draw(ctx, x, y, selected, hover, values) {
         this.resize(ctx, selected, hover);
         this.options.icon.size = this.options.icon.size || 50;
@@ -44843,19 +37161,6 @@ return /******/ (function(modules) { // webpackBootstrap
         if (this.options.label !== undefined) {
           var iconTextSpacing = 5;
           this.labelModule.draw(ctx, this.left + this.iconSize.width / 2 + this.margin.left, y + this.height / 2 + iconTextSpacing, selected);
-=======
-      value: function draw(ctx, x, y, selected, hover) {
-        this.resize(ctx);
-        this.options.icon.size = this.options.icon.size || 50;
-
-        this.left = x - this.width * 0.5;
-        this.top = y - this.height * 0.5;
-        this._icon(ctx, x, y, selected);
-
-        if (this.options.label !== undefined) {
-          var iconTextSpacing = 5;
-          this.labelModule.draw(ctx, x, y + this.height * 0.5 + iconTextSpacing, selected);
->>>>>>> 88f14a0... add 'dist' folder for deployment
         }
 
         this.updateBoundingBox(x, y);
@@ -44877,11 +37182,7 @@ return /******/ (function(modules) { // webpackBootstrap
       }
     }, {
       key: '_icon',
-<<<<<<< HEAD
       value: function _icon(ctx, x, y, selected, hover, values) {
-=======
-      value: function _icon(ctx, x, y, selected) {
->>>>>>> 88f14a0... add 'dist' folder for deployment
         var iconSize = Number(this.options.icon.size);
 
         if (this.options.icon.code !== undefined) {
@@ -44893,19 +37194,11 @@ return /******/ (function(modules) { // webpackBootstrap
           ctx.textBaseline = "middle";
 
           // draw shadow if enabled
-<<<<<<< HEAD
           this.enableShadow(ctx, values);
           ctx.fillText(this.options.icon.code, x, y);
 
           // disable shadows for other elements.
           this.disableShadow(ctx, values);
-=======
-          this.enableShadow(ctx);
-          ctx.fillText(this.options.icon.code, x, y);
-
-          // disable shadows for other elements.
-          this.disableShadow(ctx);
->>>>>>> 88f14a0... add 'dist' folder for deployment
         } else {
           console.error('When using the icon shape, you need to define the code in the icon options object. This can be done per node or globally.');
         }
@@ -44916,7 +37209,6 @@ return /******/ (function(modules) { // webpackBootstrap
         return this._distanceToBorder(ctx, angle);
       }
     }]);
-<<<<<<< HEAD
     return Icon;
   }(_NodeBase3['default']);
 
@@ -44924,16 +37216,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 185 */
-=======
-
-    return Icon;
-  }(_NodeBase3.default);
-
-  exports.default = Icon;
-
-/***/ },
-/* 80 */
->>>>>>> 88f14a0... add 'dist' folder for deployment
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -44942,7 +37224,6 @@ return /******/ (function(modules) { // webpackBootstrap
     value: true
   });
 
-<<<<<<< HEAD
   var _getPrototypeOf = __webpack_require__(166);
 
   var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
@@ -44976,50 +37257,19 @@ return /******/ (function(modules) { // webpackBootstrap
       (0, _classCallCheck3['default'])(this, Image);
 
       var _this = (0, _possibleConstructorReturn3['default'])(this, (Image.__proto__ || (0, _getPrototypeOf2['default'])(Image)).call(this, options, body, labelModule));
-=======
-  var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-  var _CircleImageBase2 = __webpack_require__(72);
-
-  var _CircleImageBase3 = _interopRequireDefault(_CircleImageBase2);
-
-  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-  function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-  function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-  var Image = function (_CircleImageBase) {
-    _inherits(Image, _CircleImageBase);
-
-    function Image(options, body, labelModule, imageObj) {
-      _classCallCheck(this, Image);
-
-      var _this = _possibleConstructorReturn(this, (Image.__proto__ || Object.getPrototypeOf(Image)).call(this, options, body, labelModule));
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
       _this.imageObj = imageObj;
       return _this;
     }
 
-<<<<<<< HEAD
     (0, _createClass3['default'])(Image, [{
-=======
-    _createClass(Image, [{
->>>>>>> 88f14a0... add 'dist' folder for deployment
       key: 'resize',
       value: function resize() {
         this._resizeImage();
       }
     }, {
       key: 'draw',
-<<<<<<< HEAD
       value: function draw(ctx, x, y, selected, hover, values) {
-=======
-      value: function draw(ctx, x, y, selected, hover) {
->>>>>>> 88f14a0... add 'dist' folder for deployment
         this.resize();
         this.left = x - this.width / 2;
         this.top = y - this.height / 2;
@@ -45046,26 +37296,20 @@ return /******/ (function(modules) { // webpackBootstrap
           ctx.save();
           // if borders are zero width, they will be drawn with width 1 by default. This prevents that
           if (borderWidth > 0) {
-            this.enableBorderDashes(ctx);
+            this.enableBorderDashes(ctx, values);
             //draw the border
             ctx.stroke();
             //disable dashed border for other elements
-            this.disableBorderDashes(ctx);
+            this.disableBorderDashes(ctx, values);
           }
           ctx.restore();
 
           ctx.closePath();
         }
 
-<<<<<<< HEAD
         this._drawImageAtPosition(ctx, values);
 
         this._drawImageLabel(ctx, x, y, selected, hover);
-=======
-        this._drawImageAtPosition(ctx);
-
-        this._drawImageLabel(ctx, x, y, selected || hover);
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
         this.updateBoundingBox(x, y);
       }
@@ -45093,7 +37337,6 @@ return /******/ (function(modules) { // webpackBootstrap
         return this._distanceToBorder(ctx, angle);
       }
     }]);
-<<<<<<< HEAD
     return Image;
   }(_CircleImageBase3['default']);
 
@@ -45101,16 +37344,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 186 */
-=======
-
-    return Image;
-  }(_CircleImageBase3.default);
-
-  exports.default = Image;
-
-/***/ },
-/* 81 */
->>>>>>> 88f14a0... add 'dist' folder for deployment
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -45119,7 +37352,6 @@ return /******/ (function(modules) { // webpackBootstrap
     value: true
   });
 
-<<<<<<< HEAD
   var _getPrototypeOf = __webpack_require__(166);
 
   var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
@@ -45155,45 +37387,14 @@ return /******/ (function(modules) { // webpackBootstrap
     }
 
     (0, _createClass3['default'])(Square, [{
-=======
-  var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-  var _ShapeBase2 = __webpack_require__(76);
-
-  var _ShapeBase3 = _interopRequireDefault(_ShapeBase2);
-
-  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-  function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-  function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-  var Square = function (_ShapeBase) {
-    _inherits(Square, _ShapeBase);
-
-    function Square(options, body, labelModule) {
-      _classCallCheck(this, Square);
-
-      return _possibleConstructorReturn(this, (Square.__proto__ || Object.getPrototypeOf(Square)).call(this, options, body, labelModule));
-    }
-
-    _createClass(Square, [{
->>>>>>> 88f14a0... add 'dist' folder for deployment
       key: 'resize',
       value: function resize() {
         this._resizeShape();
       }
     }, {
       key: 'draw',
-<<<<<<< HEAD
       value: function draw(ctx, x, y, selected, hover, values) {
         this._drawShape(ctx, 'square', 2, x, y, selected, hover, values);
-=======
-      value: function draw(ctx, x, y, selected, hover) {
-        this._drawShape(ctx, 'square', 2, x, y, selected, hover);
->>>>>>> 88f14a0... add 'dist' folder for deployment
       }
     }, {
       key: 'distanceToBorder',
@@ -45201,7 +37402,6 @@ return /******/ (function(modules) { // webpackBootstrap
         return this._distanceToBorder(ctx, angle);
       }
     }]);
-<<<<<<< HEAD
     return Square;
   }(_ShapeBase3['default']);
 
@@ -45209,16 +37409,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 187 */
-=======
-
-    return Square;
-  }(_ShapeBase3.default);
-
-  exports.default = Square;
-
-/***/ },
-/* 82 */
->>>>>>> 88f14a0... add 'dist' folder for deployment
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -45227,7 +37417,6 @@ return /******/ (function(modules) { // webpackBootstrap
     value: true
   });
 
-<<<<<<< HEAD
   var _getPrototypeOf = __webpack_require__(166);
 
   var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
@@ -45264,47 +37453,13 @@ return /******/ (function(modules) { // webpackBootstrap
 
     (0, _createClass3['default'])(Star, [{
       key: 'resize',
-      value: function resize(ctx, values, selected, hover) {
+      value: function resize(ctx, selected, hover, values) {
         this._resizeShape(selected, hover, values);
       }
     }, {
       key: 'draw',
       value: function draw(ctx, x, y, selected, hover, values) {
         this._drawShape(ctx, 'star', 4, x, y, selected, hover, values);
-=======
-  var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-  var _ShapeBase2 = __webpack_require__(76);
-
-  var _ShapeBase3 = _interopRequireDefault(_ShapeBase2);
-
-  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-  function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-  function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-  var Star = function (_ShapeBase) {
-    _inherits(Star, _ShapeBase);
-
-    function Star(options, body, labelModule) {
-      _classCallCheck(this, Star);
-
-      return _possibleConstructorReturn(this, (Star.__proto__ || Object.getPrototypeOf(Star)).call(this, options, body, labelModule));
-    }
-
-    _createClass(Star, [{
-      key: 'resize',
-      value: function resize(ctx) {
-        this._resizeShape();
-      }
-    }, {
-      key: 'draw',
-      value: function draw(ctx, x, y, selected, hover) {
-        this._drawShape(ctx, 'star', 4, x, y, selected, hover);
->>>>>>> 88f14a0... add 'dist' folder for deployment
       }
     }, {
       key: 'distanceToBorder',
@@ -45312,7 +37467,6 @@ return /******/ (function(modules) { // webpackBootstrap
         return this._distanceToBorder(ctx, angle);
       }
     }]);
-<<<<<<< HEAD
     return Star;
   }(_ShapeBase3['default']);
 
@@ -45320,16 +37474,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 188 */
-=======
-
-    return Star;
-  }(_ShapeBase3.default);
-
-  exports.default = Star;
-
-/***/ },
-/* 83 */
->>>>>>> 88f14a0... add 'dist' folder for deployment
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -45338,7 +37482,6 @@ return /******/ (function(modules) { // webpackBootstrap
     value: true
   });
 
-<<<<<<< HEAD
   var _getPrototypeOf = __webpack_require__(166);
 
   var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
@@ -45384,56 +37527,17 @@ return /******/ (function(modules) { // webpackBootstrap
           this.textSize = this.labelModule.getTextSize(ctx, selected, hover);
           this.width = this.textSize.width + this.margin.right + this.margin.left;
           this.height = this.textSize.height + this.margin.top + this.margin.bottom;
-=======
-  var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-  var _NodeBase2 = __webpack_require__(70);
-
-  var _NodeBase3 = _interopRequireDefault(_NodeBase2);
-
-  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-  function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-  function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-  var Text = function (_NodeBase) {
-    _inherits(Text, _NodeBase);
-
-    function Text(options, body, labelModule) {
-      _classCallCheck(this, Text);
-
-      return _possibleConstructorReturn(this, (Text.__proto__ || Object.getPrototypeOf(Text)).call(this, options, body, labelModule));
-    }
-
-    _createClass(Text, [{
-      key: 'resize',
-      value: function resize(ctx, selected) {
-        if (this.width === undefined) {
-          var margin = 5;
-          var textSize = this.labelModule.getTextSize(ctx, selected);
-          this.width = textSize.width + 2 * margin;
-          this.height = textSize.height + 2 * margin;
->>>>>>> 88f14a0... add 'dist' folder for deployment
           this.radius = 0.5 * this.width;
         }
       }
     }, {
       key: 'draw',
-<<<<<<< HEAD
       value: function draw(ctx, x, y, selected, hover, values) {
         this.resize(ctx, selected, hover);
-=======
-      value: function draw(ctx, x, y, selected, hover) {
-        this.resize(ctx, selected || hover);
->>>>>>> 88f14a0... add 'dist' folder for deployment
         this.left = x - this.width / 2;
         this.top = y - this.height / 2;
 
         // draw shadow if enabled
-<<<<<<< HEAD
         this.enableShadow(ctx, values);
         this.labelModule.draw(ctx, this.left + this.textSize.width / 2 + this.margin.left, this.top + this.textSize.height / 2 + this.margin.top, selected, hover);
 
@@ -45446,20 +37550,6 @@ return /******/ (function(modules) { // webpackBootstrap
       key: 'updateBoundingBox',
       value: function updateBoundingBox(x, y, ctx, selected, hover) {
         this.resize(ctx, selected, hover);
-=======
-        this.enableShadow(ctx);
-        this.labelModule.draw(ctx, x, y, selected || hover);
-
-        // disable shadows for other elements.
-        this.disableShadow(ctx);
-
-        this.updateBoundingBox(x, y, ctx, selected);
-      }
-    }, {
-      key: 'updateBoundingBox',
-      value: function updateBoundingBox(x, y, ctx, selected) {
-        this.resize(ctx, selected);
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
         this.left = x - this.width / 2;
         this.top = y - this.height / 2;
@@ -45475,7 +37565,6 @@ return /******/ (function(modules) { // webpackBootstrap
         return this._distanceToBorder(ctx, angle);
       }
     }]);
-<<<<<<< HEAD
     return Text;
   }(_NodeBase3['default']);
 
@@ -45483,16 +37572,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 189 */
-=======
-
-    return Text;
-  }(_NodeBase3.default);
-
-  exports.default = Text;
-
-/***/ },
-/* 84 */
->>>>>>> 88f14a0... add 'dist' folder for deployment
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -45501,7 +37580,6 @@ return /******/ (function(modules) { // webpackBootstrap
     value: true
   });
 
-<<<<<<< HEAD
   var _getPrototypeOf = __webpack_require__(166);
 
   var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
@@ -45537,45 +37615,14 @@ return /******/ (function(modules) { // webpackBootstrap
     }
 
     (0, _createClass3['default'])(Triangle, [{
-=======
-  var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-  var _ShapeBase2 = __webpack_require__(76);
-
-  var _ShapeBase3 = _interopRequireDefault(_ShapeBase2);
-
-  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-  function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-  function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-  var Triangle = function (_ShapeBase) {
-    _inherits(Triangle, _ShapeBase);
-
-    function Triangle(options, body, labelModule) {
-      _classCallCheck(this, Triangle);
-
-      return _possibleConstructorReturn(this, (Triangle.__proto__ || Object.getPrototypeOf(Triangle)).call(this, options, body, labelModule));
-    }
-
-    _createClass(Triangle, [{
->>>>>>> 88f14a0... add 'dist' folder for deployment
       key: 'resize',
       value: function resize(ctx) {
         this._resizeShape();
       }
     }, {
       key: 'draw',
-<<<<<<< HEAD
       value: function draw(ctx, x, y, selected, hover, values) {
         this._drawShape(ctx, 'triangle', 3, x, y, selected, hover, values);
-=======
-      value: function draw(ctx, x, y, selected, hover) {
-        this._drawShape(ctx, 'triangle', 3, x, y, selected, hover);
->>>>>>> 88f14a0... add 'dist' folder for deployment
       }
     }, {
       key: 'distanceToBorder',
@@ -45583,7 +37630,6 @@ return /******/ (function(modules) { // webpackBootstrap
         return this._distanceToBorder(ctx, angle);
       }
     }]);
-<<<<<<< HEAD
     return Triangle;
   }(_ShapeBase3['default']);
 
@@ -45591,16 +37637,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 190 */
-=======
-
-    return Triangle;
-  }(_ShapeBase3.default);
-
-  exports.default = Triangle;
-
-/***/ },
-/* 85 */
->>>>>>> 88f14a0... add 'dist' folder for deployment
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -45609,7 +37645,6 @@ return /******/ (function(modules) { // webpackBootstrap
     value: true
   });
 
-<<<<<<< HEAD
   var _getPrototypeOf = __webpack_require__(166);
 
   var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
@@ -45645,45 +37680,14 @@ return /******/ (function(modules) { // webpackBootstrap
     }
 
     (0, _createClass3['default'])(TriangleDown, [{
-=======
-  var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-  var _ShapeBase2 = __webpack_require__(76);
-
-  var _ShapeBase3 = _interopRequireDefault(_ShapeBase2);
-
-  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-  function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-  function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-  var TriangleDown = function (_ShapeBase) {
-    _inherits(TriangleDown, _ShapeBase);
-
-    function TriangleDown(options, body, labelModule) {
-      _classCallCheck(this, TriangleDown);
-
-      return _possibleConstructorReturn(this, (TriangleDown.__proto__ || Object.getPrototypeOf(TriangleDown)).call(this, options, body, labelModule));
-    }
-
-    _createClass(TriangleDown, [{
->>>>>>> 88f14a0... add 'dist' folder for deployment
       key: 'resize',
       value: function resize(ctx) {
         this._resizeShape();
       }
     }, {
       key: 'draw',
-<<<<<<< HEAD
       value: function draw(ctx, x, y, selected, hover, values) {
         this._drawShape(ctx, 'triangleDown', 3, x, y, selected, hover, values);
-=======
-      value: function draw(ctx, x, y, selected, hover) {
-        this._drawShape(ctx, 'triangleDown', 3, x, y, selected, hover);
->>>>>>> 88f14a0... add 'dist' folder for deployment
       }
     }, {
       key: 'distanceToBorder',
@@ -45691,7 +37695,6 @@ return /******/ (function(modules) { // webpackBootstrap
         return this._distanceToBorder(ctx, angle);
       }
     }]);
-<<<<<<< HEAD
     return TriangleDown;
   }(_ShapeBase3['default']);
 
@@ -45699,16 +37702,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 191 */
-=======
-
-    return TriangleDown;
-  }(_ShapeBase3.default);
-
-  exports.default = TriangleDown;
-
-/***/ },
-/* 86 */
->>>>>>> 88f14a0... add 'dist' folder for deployment
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -45717,7 +37710,6 @@ return /******/ (function(modules) { // webpackBootstrap
     value: true
   });
 
-<<<<<<< HEAD
   var _classCallCheck2 = __webpack_require__(115);
 
   var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
@@ -45739,35 +37731,12 @@ return /******/ (function(modules) { // webpackBootstrap
   var util = __webpack_require__(1);
   var DataSet = __webpack_require__(91);
   var DataView = __webpack_require__(93);
-=======
-  var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-  var _Edge = __webpack_require__(87);
-
-  var _Edge2 = _interopRequireDefault(_Edge);
-
-  var _Label = __webpack_require__(68);
-
-  var _Label2 = _interopRequireDefault(_Label);
-
-  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-  var util = __webpack_require__(1);
-  var DataSet = __webpack_require__(9);
-  var DataView = __webpack_require__(11);
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
   var EdgesHandler = function () {
     function EdgesHandler(body, images, groups) {
       var _this = this;
 
-<<<<<<< HEAD
       (0, _classCallCheck3['default'])(this, EdgesHandler);
-=======
-      _classCallCheck(this, EdgesHandler);
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
       this.body = body;
       this.images = images;
@@ -45811,7 +37780,6 @@ return /******/ (function(modules) { // webpackBootstrap
           background: 'none',
           strokeWidth: 2, // px
           strokeColor: '#ffffff',
-<<<<<<< HEAD
           align: 'horizontal',
           multi: false,
           vadjust: 0,
@@ -45830,9 +37798,6 @@ return /******/ (function(modules) { // webpackBootstrap
             face: 'courier new',
             vadjust: 2
           }
-=======
-          align: 'horizontal'
->>>>>>> 88f14a0... add 'dist' folder for deployment
         },
         hidden: false,
         hoverWidth: 1.5,
@@ -45884,11 +37849,7 @@ return /******/ (function(modules) { // webpackBootstrap
       this.bindEventListeners();
     }
 
-<<<<<<< HEAD
     (0, _createClass3['default'])(EdgesHandler, [{
-=======
-    _createClass(EdgesHandler, [{
->>>>>>> 88f14a0... add 'dist' folder for deployment
       key: 'bindEventListeners',
       value: function bindEventListeners() {
         var _this2 = this;
@@ -45929,10 +37890,6 @@ return /******/ (function(modules) { // webpackBootstrap
         // this is called when options of EXISTING nodes or edges have changed.
         this.body.emitter.on("_dataUpdated", function () {
           _this2.reconnectEdges();
-<<<<<<< HEAD
-=======
-          _this2.markAllEdgesAsDirty();
->>>>>>> 88f14a0... add 'dist' folder for deployment
         });
 
         // refresh the edges. Used when reverting from hierarchical layout
@@ -45952,21 +37909,10 @@ return /******/ (function(modules) { // webpackBootstrap
     }, {
       key: 'setOptions',
       value: function setOptions(options) {
-<<<<<<< HEAD
         this.edgeOptions = options;
         if (options !== undefined) {
           // use the parser from the Edge class to fill in all shorthand notations
           _Edge2['default'].parseOptions(this.options, options);
-=======
-        if (options !== undefined) {
-          // use the parser from the Edge class to fill in all shorthand notations
-          _Edge2.default.parseOptions(this.options, options);
-
-          // handle multiple input cases for color
-          if (options.color !== undefined) {
-            this.markAllEdgesAsDirty();
-          }
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
           // update smooth settings in all edges
           var dataChanged = false;
@@ -45981,11 +37927,7 @@ return /******/ (function(modules) { // webpackBootstrap
           // update fonts in all edges
           if (options.font !== undefined) {
             // use the parser from the Label class to fill in all shorthand notations
-<<<<<<< HEAD
             _Label2['default'].parseOptions(this.options.font, options);
-=======
-            _Label2.default.parseOptions(this.options.font, options);
->>>>>>> 88f14a0... add 'dist' folder for deployment
             for (var _edgeId in this.body.edges) {
               if (this.body.edges.hasOwnProperty(_edgeId)) {
                 this.body.edges[_edgeId].updateLabelModule();
@@ -46161,18 +38103,7 @@ return /******/ (function(modules) { // webpackBootstrap
     }, {
       key: 'create',
       value: function create(properties) {
-<<<<<<< HEAD
         return new _Edge2['default'](properties, this.body, this.options, this.defaultOptions, this.edgeOptions);
-=======
-        return new _Edge2.default(properties, this.body, this.options);
-      }
-    }, {
-      key: 'markAllEdgesAsDirty',
-      value: function markAllEdgesAsDirty() {
-        for (var edgeId in this.body.edges) {
-          this.body.edges[edgeId].edgeType.colorDirty = true;
-        }
->>>>>>> 88f14a0... add 'dist' folder for deployment
       }
 
       /**
@@ -46218,7 +38149,6 @@ return /******/ (function(modules) { // webpackBootstrap
         return nodeList;
       }
     }]);
-<<<<<<< HEAD
     return EdgesHandler;
   }();
 
@@ -46226,16 +38156,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 192 */
-=======
-
-    return EdgesHandler;
-  }();
-
-  exports.default = EdgesHandler;
-
-/***/ },
-/* 87 */
->>>>>>> 88f14a0... add 'dist' folder for deployment
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -46244,7 +38164,6 @@ return /******/ (function(modules) { // webpackBootstrap
     value: true
   });
 
-<<<<<<< HEAD
   var _stringify = __webpack_require__(82);
 
   var _stringify2 = _interopRequireDefault(_stringify);
@@ -46286,35 +38205,6 @@ return /******/ (function(modules) { // webpackBootstrap
   var _StraightEdge2 = _interopRequireDefault(_StraightEdge);
 
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-=======
-  var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
-
-  var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-  var _Label = __webpack_require__(68);
-
-  var _Label2 = _interopRequireDefault(_Label);
-
-  var _CubicBezierEdge = __webpack_require__(88);
-
-  var _CubicBezierEdge2 = _interopRequireDefault(_CubicBezierEdge);
-
-  var _BezierEdgeDynamic = __webpack_require__(92);
-
-  var _BezierEdgeDynamic2 = _interopRequireDefault(_BezierEdgeDynamic);
-
-  var _BezierEdgeStatic = __webpack_require__(93);
-
-  var _BezierEdgeStatic2 = _interopRequireDefault(_BezierEdgeStatic);
-
-  var _StraightEdge = __webpack_require__(94);
-
-  var _StraightEdge2 = _interopRequireDefault(_StraightEdge);
-
-  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
   var util = __webpack_require__(1);
 
@@ -46334,24 +38224,16 @@ return /******/ (function(modules) { // webpackBootstrap
    *                                example for the color
    */
   var Edge = function () {
-<<<<<<< HEAD
     function Edge(options, body, globalOptions, defaultOptions, edgeOptions) {
       (0, _classCallCheck3['default'])(this, Edge);
-=======
-    function Edge(options, body, globalOptions) {
-      _classCallCheck(this, Edge);
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
       if (body === undefined) {
         throw "No body provided";
       }
       this.options = util.bridgeObject(globalOptions);
       this.globalOptions = globalOptions;
-<<<<<<< HEAD
       this.defaultOptions = defaultOptions;
       this.edgeOptions = edgeOptions;
-=======
->>>>>>> 88f14a0... add 'dist' folder for deployment
       this.body = body;
 
       // initialize variables
@@ -46361,10 +38243,6 @@ return /******/ (function(modules) { // webpackBootstrap
       this.selected = false;
       this.hover = false;
       this.labelDirty = true;
-<<<<<<< HEAD
-=======
-      this.colorDirty = true;
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
       this.baseWidth = this.options.width;
       this.baseFontSize = this.options.font.size;
@@ -46376,12 +38254,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
       this.connected = false;
 
-<<<<<<< HEAD
       this.labelModule = new _Label2['default'](this.body, this.options, true /* It's an edge label */);
-=======
-      this.labelModule = new _Label2.default(this.body, this.options, true /* It's an edge label */);
-
->>>>>>> 88f14a0... add 'dist' folder for deployment
       this.setOptions(options);
     }
 
@@ -46392,20 +38265,12 @@ return /******/ (function(modules) { // webpackBootstrap
      */
 
 
-<<<<<<< HEAD
     (0, _createClass3['default'])(Edge, [{
-=======
-    _createClass(Edge, [{
->>>>>>> 88f14a0... add 'dist' folder for deployment
       key: 'setOptions',
       value: function setOptions(options) {
         if (!options) {
           return;
         }
-<<<<<<< HEAD
-=======
-        this.colorDirty = true;
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
         Edge.parseOptions(this.options, options, true, this.globalOptions);
 
@@ -46425,16 +38290,11 @@ return /******/ (function(modules) { // webpackBootstrap
           options.value = parseFloat(options.value);
         }
 
-<<<<<<< HEAD
         this.choosify(options);
 
         // update label Module
         this.updateLabelModule(options);
         this.labelModule.propagateFonts(this.edgeOptions, options, this.defaultOptions);
-=======
-        // update label Module
-        this.updateLabelModule();
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
         var dataChanged = this.updateEdgeType();
 
@@ -46451,7 +38311,6 @@ return /******/ (function(modules) { // webpackBootstrap
         return dataChanged;
       }
     }, {
-<<<<<<< HEAD
       key: 'choosify',
       value: function choosify(options) {
         this.chooser = true;
@@ -46539,31 +38398,20 @@ return /******/ (function(modules) { // webpackBootstrap
         }
         return values;
       }
-=======
-      key: 'updateLabelModule',
-
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
       /**
        * update the options in the label module
        */
-<<<<<<< HEAD
 
     }, {
       key: 'updateLabelModule',
       value: function updateLabelModule(options) {
-=======
-      value: function updateLabelModule() {
->>>>>>> 88f14a0... add 'dist' folder for deployment
         this.labelModule.setOptions(this.options, true);
         if (this.labelModule.baseSize !== undefined) {
           this.baseFontSize = this.labelModule.baseSize;
         }
-<<<<<<< HEAD
         this.labelModule.constrain(this.edgeOptions, options, this.defaultOptions);
         this.labelModule.choosify(this.edgeOptions, options, this.defaultOptions);
-=======
->>>>>>> 88f14a0... add 'dist' folder for deployment
       }
 
       /**
@@ -46574,7 +38422,6 @@ return /******/ (function(modules) { // webpackBootstrap
     }, {
       key: 'updateEdgeType',
       value: function updateEdgeType() {
-<<<<<<< HEAD
         var smooth = this.options.smooth;
         var dataChanged = false;
         var changeInType = true;
@@ -46582,30 +38429,10 @@ return /******/ (function(modules) { // webpackBootstrap
           if (this.edgeType instanceof _BezierEdgeDynamic2['default'] && smooth.enabled === true && smooth.type === 'dynamic' || this.edgeType instanceof _CubicBezierEdge2['default'] && smooth.enabled === true && smooth.type === 'cubicBezier' || this.edgeType instanceof _BezierEdgeStatic2['default'] && smooth.enabled === true && smooth.type !== 'dynamic' && smooth.type !== 'cubicBezier' || this.edgeType instanceof _StraightEdge2['default'] && smooth.type.enabled === false) {
             changeInType = false;
           }
-=======
-        var dataChanged = false;
-        var changeInType = true;
-        var smooth = this.options.smooth;
-        if (this.edgeType !== undefined) {
-          if (this.edgeType instanceof _BezierEdgeDynamic2.default && smooth.enabled === true && smooth.type === 'dynamic') {
-            changeInType = false;
-          }
-          if (this.edgeType instanceof _CubicBezierEdge2.default && smooth.enabled === true && smooth.type === 'cubicBezier') {
-            changeInType = false;
-          }
-          if (this.edgeType instanceof _BezierEdgeStatic2.default && smooth.enabled === true && smooth.type !== 'dynamic' && smooth.type !== 'cubicBezier') {
-            changeInType = false;
-          }
-          if (this.edgeType instanceof _StraightEdge2.default && smooth.enabled === false) {
-            changeInType = false;
-          }
-
->>>>>>> 88f14a0... add 'dist' folder for deployment
           if (changeInType === true) {
             dataChanged = this.cleanup();
           }
         }
-<<<<<<< HEAD
         if (changeInType === true) {
           if (smooth.enabled === true) {
             if (smooth.type === 'dynamic') {
@@ -46618,30 +38445,11 @@ return /******/ (function(modules) { // webpackBootstrap
             }
           } else {
             this.edgeType = new _StraightEdge2['default'](this.options, this.body, this.labelModule);
-=======
-
-        if (changeInType === true) {
-          if (this.options.smooth.enabled === true) {
-            if (this.options.smooth.type === 'dynamic') {
-              dataChanged = true;
-              this.edgeType = new _BezierEdgeDynamic2.default(this.options, this.body, this.labelModule);
-            } else if (this.options.smooth.type === 'cubicBezier') {
-              this.edgeType = new _CubicBezierEdge2.default(this.options, this.body, this.labelModule);
-            } else {
-              this.edgeType = new _BezierEdgeStatic2.default(this.options, this.body, this.labelModule);
-            }
-          } else {
-            this.edgeType = new _StraightEdge2.default(this.options, this.body, this.labelModule);
->>>>>>> 88f14a0... add 'dist' folder for deployment
           }
         } else {
           // if nothing changes, we just set the options.
           this.edgeType.setOptions(this.options);
         }
-<<<<<<< HEAD
-=======
-
->>>>>>> 88f14a0... add 'dist' folder for deployment
         return dataChanged;
       }
 
@@ -46761,10 +38569,6 @@ return /******/ (function(modules) { // webpackBootstrap
         } else {
           this.edgeType.hoverWidth = this.options.hoverWidth + this.options.width;
         }
-<<<<<<< HEAD
-=======
-
->>>>>>> 88f14a0... add 'dist' folder for deployment
         if (typeof this.options.selectionWidth === 'function') {
           this.edgeType.selectionWidth = this.options.selectionWidth(this.options.width);
         } else {
@@ -46782,14 +38586,11 @@ return /******/ (function(modules) { // webpackBootstrap
     }, {
       key: 'draw',
       value: function draw(ctx) {
-<<<<<<< HEAD
         var values = this.getFormattingValues();
         if (values.hidden) {
           return;
         }
 
-=======
->>>>>>> 88f14a0... add 'dist' folder for deployment
         // get the via node from the edge type
         var viaNode = this.edgeType.getViaNode();
         var arrowData = {};
@@ -46799,7 +38600,6 @@ return /******/ (function(modules) { // webpackBootstrap
         this.edgeType.toPoint = this.edgeType.to;
 
         // from and to arrows give a different end point for edges. we set them here
-<<<<<<< HEAD
         if (values.fromArrow) {
           arrowData.from = this.edgeType.getArrowData(ctx, 'from', viaNode, this.selected, this.hover, values);
           if (values.arrowStrikethrough === false) this.edgeType.fromPoint = arrowData.from.core;
@@ -46817,30 +38617,10 @@ return /******/ (function(modules) { // webpackBootstrap
         // draw everything
         this.edgeType.drawLine(ctx, values, this.selected, this.hover, viaNode);
         this.drawArrows(ctx, arrowData, values);
-=======
-        if (this.options.arrows.from.enabled === true) {
-          arrowData.from = this.edgeType.getArrowData(ctx, 'from', viaNode, this.selected, this.hover);
-          if (this.options.arrowStrikethrough === false) this.edgeType.fromPoint = arrowData.from.core;
-        }
-        if (this.options.arrows.to.enabled === true) {
-          arrowData.to = this.edgeType.getArrowData(ctx, 'to', viaNode, this.selected, this.hover);
-          if (this.options.arrowStrikethrough === false) this.edgeType.toPoint = arrowData.to.core;
-        }
-
-        // the middle arrow depends on the line, which can depend on the to and from arrows so we do this one lastly.
-        if (this.options.arrows.middle.enabled === true) {
-          arrowData.middle = this.edgeType.getArrowData(ctx, 'middle', viaNode, this.selected, this.hover);
-        }
-
-        // draw everything
-        this.edgeType.drawLine(ctx, this.selected, this.hover, viaNode);
-        this.drawArrows(ctx, arrowData);
->>>>>>> 88f14a0... add 'dist' folder for deployment
         this.drawLabel(ctx, viaNode);
       }
     }, {
       key: 'drawArrows',
-<<<<<<< HEAD
       value: function drawArrows(ctx, arrowData, values) {
         if (values.fromArrow) {
           this.edgeType.drawArrowHead(ctx, values, this.selected, this.hover, arrowData.from);
@@ -46850,17 +38630,6 @@ return /******/ (function(modules) { // webpackBootstrap
         }
         if (values.toArrow) {
           this.edgeType.drawArrowHead(ctx, values, this.selected, this.hover, arrowData.to);
-=======
-      value: function drawArrows(ctx, arrowData) {
-        if (this.options.arrows.from.enabled === true) {
-          this.edgeType.drawArrowHead(ctx, this.selected, this.hover, arrowData.from);
-        }
-        if (this.options.arrows.middle.enabled === true) {
-          this.edgeType.drawArrowHead(ctx, this.selected, this.hover, arrowData.middle);
-        }
-        if (this.options.arrows.to.enabled === true) {
-          this.edgeType.drawArrowHead(ctx, this.selected, this.hover, arrowData.to);
->>>>>>> 88f14a0... add 'dist' folder for deployment
         }
       }
     }, {
@@ -46878,21 +38647,13 @@ return /******/ (function(modules) { // webpackBootstrap
 
             // if the label has to be rotated:
             if (this.options.font.align !== "horizontal") {
-<<<<<<< HEAD
               this.labelModule.calculateLabelSize(ctx, selected, this.hover, point.x, point.y);
-=======
-              this.labelModule.calculateLabelSize(ctx, selected, point.x, point.y);
->>>>>>> 88f14a0... add 'dist' folder for deployment
               ctx.translate(point.x, this.labelModule.size.yLine);
               this._rotateForLabelAlignment(ctx);
             }
 
             // draw the label
-<<<<<<< HEAD
             this.labelModule.draw(ctx, point.x, point.y, selected, this.hover);
-=======
-            this.labelModule.draw(ctx, point.x, point.y, selected);
->>>>>>> 88f14a0... add 'dist' folder for deployment
             ctx.restore();
           } else {
             // Ignore the orientations.
@@ -46907,11 +38668,7 @@ return /******/ (function(modules) { // webpackBootstrap
               y = node1.y - node1.shape.height * 0.5;
             }
             point = this._pointOnCircle(x, y, radius, 0.125);
-<<<<<<< HEAD
             this.labelModule.draw(ctx, point.x, point.y, selected, this.hover);
-=======
-            this.labelModule.draw(ctx, point.x, point.y, selected);
->>>>>>> 88f14a0... add 'dist' folder for deployment
           }
         }
       }
@@ -47020,11 +38777,7 @@ return /******/ (function(modules) { // webpackBootstrap
         if (newOptions.dashes !== undefined && newOptions.dashes !== null) {
           parentOptions.dashes = newOptions.dashes;
         } else if (allowDeletion === true && newOptions.dashes === null) {
-<<<<<<< HEAD
           parentOptions.dashes = (0, _create2['default'])(globalOptions.dashes); // this sets the pointer of the option back to the global option.
-=======
-          parentOptions.dashes = Object.create(globalOptions.dashes); // this sets the pointer of the option back to the global option.
->>>>>>> 88f14a0... add 'dist' folder for deployment
         }
 
         // set the scaling newOptions
@@ -47037,11 +38790,7 @@ return /******/ (function(modules) { // webpackBootstrap
           }
           util.mergeOptions(parentOptions.scaling, newOptions.scaling, 'label', allowDeletion, globalOptions.scaling);
         } else if (allowDeletion === true && newOptions.scaling === null) {
-<<<<<<< HEAD
           parentOptions.scaling = (0, _create2['default'])(globalOptions.scaling); // this sets the pointer of the option back to the global option.
-=======
-          parentOptions.scaling = Object.create(globalOptions.scaling); // this sets the pointer of the option back to the global option.
->>>>>>> 88f14a0... add 'dist' folder for deployment
         }
 
         // handle multiple input cases for arrows
@@ -47051,26 +38800,15 @@ return /******/ (function(modules) { // webpackBootstrap
             parentOptions.arrows.to.enabled = arrows.indexOf("to") != -1;
             parentOptions.arrows.middle.enabled = arrows.indexOf("middle") != -1;
             parentOptions.arrows.from.enabled = arrows.indexOf("from") != -1;
-<<<<<<< HEAD
           } else if ((0, _typeof3['default'])(newOptions.arrows) === 'object') {
-=======
-          } else if (_typeof(newOptions.arrows) === 'object') {
->>>>>>> 88f14a0... add 'dist' folder for deployment
             util.mergeOptions(parentOptions.arrows, newOptions.arrows, 'to', allowDeletion, globalOptions.arrows);
             util.mergeOptions(parentOptions.arrows, newOptions.arrows, 'middle', allowDeletion, globalOptions.arrows);
             util.mergeOptions(parentOptions.arrows, newOptions.arrows, 'from', allowDeletion, globalOptions.arrows);
           } else {
-<<<<<<< HEAD
             throw new Error("The arrow newOptions can only be an object or a string. Refer to the documentation. You used:" + (0, _stringify2['default'])(newOptions.arrows));
           }
         } else if (allowDeletion === true && newOptions.arrows === null) {
           parentOptions.arrows = (0, _create2['default'])(globalOptions.arrows); // this sets the pointer of the option back to the global option.
-=======
-            throw new Error("The arrow newOptions can only be an object or a string. Refer to the documentation. You used:" + JSON.stringify(newOptions.arrows));
-          }
-        } else if (allowDeletion === true && newOptions.arrows === null) {
-          parentOptions.arrows = Object.create(globalOptions.arrows); // this sets the pointer of the option back to the global option.
->>>>>>> 88f14a0... add 'dist' folder for deployment
         }
 
         // handle multiple input cases for color
@@ -47110,17 +38848,12 @@ return /******/ (function(modules) { // webpackBootstrap
 
         // handle the font settings
         if (newOptions.font !== undefined && newOptions.font !== null) {
-<<<<<<< HEAD
           _Label2['default'].parseOptions(parentOptions.font, newOptions);
-=======
-          _Label2.default.parseOptions(parentOptions.font, newOptions);
->>>>>>> 88f14a0... add 'dist' folder for deployment
         } else if (allowDeletion === true && newOptions.font === null) {
           parentOptions.font = util.bridgeObject(globalOptions.font); // set the object back to the global options
         }
       }
     }]);
-<<<<<<< HEAD
     return Edge;
   }();
 
@@ -47128,16 +38861,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 193 */
-=======
-
-    return Edge;
-  }();
-
-  exports.default = Edge;
-
-/***/ },
-/* 88 */
->>>>>>> 88f14a0... add 'dist' folder for deployment
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -47146,7 +38869,6 @@ return /******/ (function(modules) { // webpackBootstrap
     value: true
   });
 
-<<<<<<< HEAD
   var _slicedToArray2 = __webpack_require__(161);
 
   var _slicedToArray3 = _interopRequireDefault(_slicedToArray2);
@@ -47183,31 +38905,6 @@ return /******/ (function(modules) { // webpackBootstrap
     function CubicBezierEdge(options, body, labelModule) {
       (0, _classCallCheck3['default'])(this, CubicBezierEdge);
       return (0, _possibleConstructorReturn3['default'])(this, (CubicBezierEdge.__proto__ || (0, _getPrototypeOf2['default'])(CubicBezierEdge)).call(this, options, body, labelModule));
-=======
-  var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"]) _i["return"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError("Invalid attempt to destructure non-iterable instance"); } }; }();
-
-  var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-  var _CubicBezierEdgeBase2 = __webpack_require__(89);
-
-  var _CubicBezierEdgeBase3 = _interopRequireDefault(_CubicBezierEdgeBase2);
-
-  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-  function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-  function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-  var CubicBezierEdge = function (_CubicBezierEdgeBase) {
-    _inherits(CubicBezierEdge, _CubicBezierEdgeBase);
-
-    function CubicBezierEdge(options, body, labelModule) {
-      _classCallCheck(this, CubicBezierEdge);
-
-      return _possibleConstructorReturn(this, (CubicBezierEdge.__proto__ || Object.getPrototypeOf(CubicBezierEdge)).call(this, options, body, labelModule));
->>>>>>> 88f14a0... add 'dist' folder for deployment
     }
 
     /**
@@ -47217,15 +38914,9 @@ return /******/ (function(modules) { // webpackBootstrap
      */
 
 
-<<<<<<< HEAD
     (0, _createClass3['default'])(CubicBezierEdge, [{
       key: '_line',
       value: function _line(ctx, values, viaNodes) {
-=======
-    _createClass(CubicBezierEdge, [{
-      key: '_line',
-      value: function _line(ctx, viaNodes) {
->>>>>>> 88f14a0... add 'dist' folder for deployment
         // get the coordinates of the support points.
         var via1 = viaNodes[0];
         var via2 = viaNodes[1];
@@ -47241,15 +38932,9 @@ return /******/ (function(modules) { // webpackBootstrap
           ctx.bezierCurveTo(via1.x, via1.y, via2.x, via2.y, this.toPoint.x, this.toPoint.y);
         }
         // draw shadow if enabled
-<<<<<<< HEAD
         this.enableShadow(ctx, values);
         ctx.stroke();
         this.disableShadow(ctx, values);
-=======
-        this.enableShadow(ctx);
-        ctx.stroke();
-        this.disableShadow(ctx);
->>>>>>> 88f14a0... add 'dist' folder for deployment
       }
     }, {
       key: '_getViaCoordinates',
@@ -47292,11 +38977,7 @@ return /******/ (function(modules) { // webpackBootstrap
       key: '_getDistanceToEdge',
       value: function _getDistanceToEdge(x1, y1, x2, y2, x3, y3) {
         var _ref = arguments.length > 6 && arguments[6] !== undefined ? arguments[6] : this._getViaCoordinates(),
-<<<<<<< HEAD
             _ref2 = (0, _slicedToArray3['default'])(_ref, 2),
-=======
-            _ref2 = _slicedToArray(_ref, 2),
->>>>>>> 88f14a0... add 'dist' folder for deployment
             via1 = _ref2[0],
             via2 = _ref2[1];
 
@@ -47316,11 +38997,7 @@ return /******/ (function(modules) { // webpackBootstrap
       key: 'getPoint',
       value: function getPoint(percentage) {
         var _ref3 = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : this._getViaCoordinates(),
-<<<<<<< HEAD
             _ref4 = (0, _slicedToArray3['default'])(_ref3, 2),
-=======
-            _ref4 = _slicedToArray(_ref3, 2),
->>>>>>> 88f14a0... add 'dist' folder for deployment
             via1 = _ref4[0],
             via2 = _ref4[1];
 
@@ -47336,7 +39013,6 @@ return /******/ (function(modules) { // webpackBootstrap
         return { x: x, y: y };
       }
     }]);
-<<<<<<< HEAD
     return CubicBezierEdge;
   }(_CubicBezierEdgeBase3['default']);
 
@@ -47344,16 +39020,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 194 */
-=======
-
-    return CubicBezierEdge;
-  }(_CubicBezierEdgeBase3.default);
-
-  exports.default = CubicBezierEdge;
-
-/***/ },
-/* 89 */
->>>>>>> 88f14a0... add 'dist' folder for deployment
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -47362,7 +39028,6 @@ return /******/ (function(modules) { // webpackBootstrap
     value: true
   });
 
-<<<<<<< HEAD
   var _getPrototypeOf = __webpack_require__(166);
 
   var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
@@ -47395,29 +39060,6 @@ return /******/ (function(modules) { // webpackBootstrap
     function CubicBezierEdgeBase(options, body, labelModule) {
       (0, _classCallCheck3['default'])(this, CubicBezierEdgeBase);
       return (0, _possibleConstructorReturn3['default'])(this, (CubicBezierEdgeBase.__proto__ || (0, _getPrototypeOf2['default'])(CubicBezierEdgeBase)).call(this, options, body, labelModule));
-=======
-  var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-  var _BezierEdgeBase2 = __webpack_require__(90);
-
-  var _BezierEdgeBase3 = _interopRequireDefault(_BezierEdgeBase2);
-
-  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-  function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-  function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-  var CubicBezierEdgeBase = function (_BezierEdgeBase) {
-    _inherits(CubicBezierEdgeBase, _BezierEdgeBase);
-
-    function CubicBezierEdgeBase(options, body, labelModule) {
-      _classCallCheck(this, CubicBezierEdgeBase);
-
-      return _possibleConstructorReturn(this, (CubicBezierEdgeBase.__proto__ || Object.getPrototypeOf(CubicBezierEdgeBase)).call(this, options, body, labelModule));
->>>>>>> 88f14a0... add 'dist' folder for deployment
     }
 
     /**
@@ -47435,11 +39077,7 @@ return /******/ (function(modules) { // webpackBootstrap
      */
 
 
-<<<<<<< HEAD
     (0, _createClass3['default'])(CubicBezierEdgeBase, [{
-=======
-    _createClass(CubicBezierEdgeBase, [{
->>>>>>> 88f14a0... add 'dist' folder for deployment
       key: '_getDistanceToBezierEdge',
       value: function _getDistanceToBezierEdge(x1, y1, x2, y2, x3, y3, via1, via2) {
         // x3,y3 is the point
@@ -47471,7 +39109,6 @@ return /******/ (function(modules) { // webpackBootstrap
         return minDistance;
       }
     }]);
-<<<<<<< HEAD
     return CubicBezierEdgeBase;
   }(_BezierEdgeBase3['default']);
 
@@ -47479,16 +39116,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 195 */
-=======
-
-    return CubicBezierEdgeBase;
-  }(_BezierEdgeBase3.default);
-
-  exports.default = CubicBezierEdgeBase;
-
-/***/ },
-/* 90 */
->>>>>>> 88f14a0... add 'dist' folder for deployment
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -47497,7 +39124,6 @@ return /******/ (function(modules) { // webpackBootstrap
     value: true
   });
 
-<<<<<<< HEAD
   var _getPrototypeOf = __webpack_require__(166);
 
   var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
@@ -47530,29 +39156,6 @@ return /******/ (function(modules) { // webpackBootstrap
     function BezierEdgeBase(options, body, labelModule) {
       (0, _classCallCheck3['default'])(this, BezierEdgeBase);
       return (0, _possibleConstructorReturn3['default'])(this, (BezierEdgeBase.__proto__ || (0, _getPrototypeOf2['default'])(BezierEdgeBase)).call(this, options, body, labelModule));
-=======
-  var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-  var _EdgeBase2 = __webpack_require__(91);
-
-  var _EdgeBase3 = _interopRequireDefault(_EdgeBase2);
-
-  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-  function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-  function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-  var BezierEdgeBase = function (_EdgeBase) {
-    _inherits(BezierEdgeBase, _EdgeBase);
-
-    function BezierEdgeBase(options, body, labelModule) {
-      _classCallCheck(this, BezierEdgeBase);
-
-      return _possibleConstructorReturn(this, (BezierEdgeBase.__proto__ || Object.getPrototypeOf(BezierEdgeBase)).call(this, options, body, labelModule));
->>>>>>> 88f14a0... add 'dist' folder for deployment
     }
 
     /**
@@ -47570,11 +39173,7 @@ return /******/ (function(modules) { // webpackBootstrap
      */
 
 
-<<<<<<< HEAD
     (0, _createClass3['default'])(BezierEdgeBase, [{
-=======
-    _createClass(BezierEdgeBase, [{
->>>>>>> 88f14a0... add 'dist' folder for deployment
       key: '_findBorderPositionBezier',
       value: function _findBorderPositionBezier(nearNode, ctx) {
         var viaNode = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : this._getViaCoordinates();
@@ -47664,7 +39263,6 @@ return /******/ (function(modules) { // webpackBootstrap
         return minDistance;
       }
     }]);
-<<<<<<< HEAD
     return BezierEdgeBase;
   }(_EdgeBase3['default']);
 
@@ -47672,16 +39270,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 196 */
-=======
-
-    return BezierEdgeBase;
-  }(_EdgeBase3.default);
-
-  exports.default = BezierEdgeBase;
-
-/***/ },
-/* 91 */
->>>>>>> 88f14a0... add 'dist' folder for deployment
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -47690,7 +39278,6 @@ return /******/ (function(modules) { // webpackBootstrap
     value: true
   });
 
-<<<<<<< HEAD
   var _slicedToArray2 = __webpack_require__(161);
 
   var _slicedToArray3 = _interopRequireDefault(_slicedToArray2);
@@ -47704,23 +39291,12 @@ return /******/ (function(modules) { // webpackBootstrap
   var _createClass3 = _interopRequireDefault(_createClass2);
 
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-=======
-  var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"]) _i["return"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError("Invalid attempt to destructure non-iterable instance"); } }; }();
-
-  var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
   var util = __webpack_require__(1);
 
   var EdgeBase = function () {
     function EdgeBase(options, body, labelModule) {
-<<<<<<< HEAD
       (0, _classCallCheck3['default'])(this, EdgeBase);
-=======
-      _classCallCheck(this, EdgeBase);
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
       this.body = body;
       this.labelModule = labelModule;
@@ -47734,11 +39310,7 @@ return /******/ (function(modules) { // webpackBootstrap
       this.toPoint = this.to;
     }
 
-<<<<<<< HEAD
     (0, _createClass3['default'])(EdgeBase, [{
-=======
-    _createClass(EdgeBase, [{
->>>>>>> 88f14a0... add 'dist' folder for deployment
       key: 'connect',
       value: function connect() {
         this.from = this.body.nodes[this.options.from];
@@ -47768,7 +39340,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
     }, {
       key: 'drawLine',
-<<<<<<< HEAD
       value: function drawLine(ctx, values, selected, hover, viaNode) {
         // set style
         ctx.strokeStyle = this.getColor(ctx, values, selected, hover);
@@ -47778,64 +39349,31 @@ return /******/ (function(modules) { // webpackBootstrap
           this._drawDashedLine(ctx, values, viaNode);
         } else {
           this._drawLine(ctx, values, viaNode);
-=======
-      value: function drawLine(ctx, selected, hover, viaNode) {
-        // set style
-        ctx.strokeStyle = this.getColor(ctx, selected, hover);
-        ctx.lineWidth = this.getLineWidth(selected, hover);
-
-        if (this.options.dashes !== false) {
-          this._drawDashedLine(ctx, viaNode);
-        } else {
-          this._drawLine(ctx, viaNode);
->>>>>>> 88f14a0... add 'dist' folder for deployment
         }
       }
     }, {
       key: '_drawLine',
-<<<<<<< HEAD
       value: function _drawLine(ctx, values, viaNode, fromPoint, toPoint) {
         if (this.from != this.to) {
           // draw line
           this._line(ctx, values, viaNode, fromPoint, toPoint);
         } else {
-          var _getCircleData2 = this._getCircleData(ctx, values),
-              _getCircleData3 = (0, _slicedToArray3['default'])(_getCircleData2, 3),
-=======
-      value: function _drawLine(ctx, viaNode, fromPoint, toPoint) {
-        if (this.from != this.to) {
-          // draw line
-          this._line(ctx, viaNode, fromPoint, toPoint);
-        } else {
           var _getCircleData2 = this._getCircleData(ctx),
-              _getCircleData3 = _slicedToArray(_getCircleData2, 3),
->>>>>>> 88f14a0... add 'dist' folder for deployment
+              _getCircleData3 = (0, _slicedToArray3['default'])(_getCircleData2, 3),
               x = _getCircleData3[0],
               y = _getCircleData3[1],
               radius = _getCircleData3[2];
 
-<<<<<<< HEAD
           this._circle(ctx, values, x, y, radius);
-=======
-          this._circle(ctx, x, y, radius);
->>>>>>> 88f14a0... add 'dist' folder for deployment
         }
       }
     }, {
       key: '_drawDashedLine',
-<<<<<<< HEAD
       value: function _drawDashedLine(ctx, values, viaNode, fromPoint, toPoint) {
         ctx.lineCap = 'round';
         var pattern = [5, 5];
         if (Array.isArray(values.dashes) === true) {
           pattern = values.dashes;
-=======
-      value: function _drawDashedLine(ctx, viaNode, fromPoint, toPoint) {
-        ctx.lineCap = 'round';
-        var pattern = [5, 5];
-        if (Array.isArray(this.options.dashes) === true) {
-          pattern = this.options.dashes;
->>>>>>> 88f14a0... add 'dist' folder for deployment
         }
 
         // only firefox and chrome support this method, else we use the legacy one.
@@ -47849,26 +39387,15 @@ return /******/ (function(modules) { // webpackBootstrap
           // draw the line
           if (this.from != this.to) {
             // draw line
-<<<<<<< HEAD
             this._line(ctx, values, viaNode);
           } else {
-            var _getCircleData4 = this._getCircleData(ctx, values),
-                _getCircleData5 = (0, _slicedToArray3['default'])(_getCircleData4, 3),
-=======
-            this._line(ctx, viaNode);
-          } else {
             var _getCircleData4 = this._getCircleData(ctx),
-                _getCircleData5 = _slicedToArray(_getCircleData4, 3),
->>>>>>> 88f14a0... add 'dist' folder for deployment
+                _getCircleData5 = (0, _slicedToArray3['default'])(_getCircleData4, 3),
                 x = _getCircleData5[0],
                 y = _getCircleData5[1],
                 radius = _getCircleData5[2];
 
-<<<<<<< HEAD
             this._circle(ctx, values, x, y, radius);
-=======
-            this._circle(ctx, x, y, radius);
->>>>>>> 88f14a0... add 'dist' folder for deployment
           }
 
           // restore the dash settings.
@@ -47881,37 +39408,21 @@ return /******/ (function(modules) { // webpackBootstrap
             // draw line
             ctx.dashedLine(this.from.x, this.from.y, this.to.x, this.to.y, pattern);
           } else {
-<<<<<<< HEAD
-            var _getCircleData6 = this._getCircleData(ctx, values),
-                _getCircleData7 = (0, _slicedToArray3['default'])(_getCircleData6, 3),
-=======
             var _getCircleData6 = this._getCircleData(ctx),
-                _getCircleData7 = _slicedToArray(_getCircleData6, 3),
->>>>>>> 88f14a0... add 'dist' folder for deployment
+                _getCircleData7 = (0, _slicedToArray3['default'])(_getCircleData6, 3),
                 _x = _getCircleData7[0],
                 _y = _getCircleData7[1],
                 _radius = _getCircleData7[2];
 
-<<<<<<< HEAD
             this._circle(ctx, values, _x, _y, _radius);
           }
           // draw shadow if enabled
           this.enableShadow(ctx, values);
-=======
-            this._circle(ctx, _x, _y, _radius);
-          }
-          // draw shadow if enabled
-          this.enableShadow(ctx);
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
           ctx.stroke();
 
           // disable shadows for other elements.
-<<<<<<< HEAD
           this.disableShadow(ctx, values);
-=======
-          this.disableShadow(ctx);
->>>>>>> 88f14a0... add 'dist' folder for deployment
         }
       }
     }, {
@@ -47933,11 +39444,7 @@ return /******/ (function(modules) { // webpackBootstrap
           to = this._findBorderPosition(this.to, ctx);
         } else {
           var _getCircleData8 = this._getCircleData(ctx),
-<<<<<<< HEAD
               _getCircleData9 = (0, _slicedToArray3['default'])(_getCircleData8, 3),
-=======
-              _getCircleData9 = _slicedToArray(_getCircleData8, 3),
->>>>>>> 88f14a0... add 'dist' folder for deployment
               x = _getCircleData9[0],
               y = _getCircleData9[1],
               radius = _getCircleData9[2];
@@ -48074,18 +39581,10 @@ return /******/ (function(modules) { // webpackBootstrap
       }
     }, {
       key: 'getColor',
-<<<<<<< HEAD
       value: function getColor(ctx, values, selected, hover) {
         if (values.inheritsColor !== false) {
           // when this is a loop edge, just use the 'from' method
           if (values.inheritsColor === 'both' && this.from.id !== this.to.id) {
-=======
-      value: function getColor(ctx, selected, hover) {
-        var colorOptions = this.options.color;
-        if (colorOptions.inherit !== false) {
-          // when this is a loop edge, just use the 'from' method
-          if (colorOptions.inherit === 'both' && this.from.id !== this.to.id) {
->>>>>>> 88f14a0... add 'dist' folder for deployment
             var grd = ctx.createLinearGradient(this.from.x, this.from.y, this.to.x, this.to.y);
             var fromColor = void 0,
                 toColor = void 0;
@@ -48093,13 +39592,8 @@ return /******/ (function(modules) { // webpackBootstrap
             toColor = this.to.options.color.highlight.border;
 
             if (this.from.selected === false && this.to.selected === false) {
-<<<<<<< HEAD
               fromColor = util.overrideOpacity(this.from.options.color.border, values.opacity);
               toColor = util.overrideOpacity(this.to.options.color.border, values.opacity);
-=======
-              fromColor = util.overrideOpacity(this.from.options.color.border, this.options.color.opacity);
-              toColor = util.overrideOpacity(this.to.options.color.border, this.options.color.opacity);
->>>>>>> 88f14a0... add 'dist' folder for deployment
             } else if (this.from.selected === true && this.to.selected === false) {
               toColor = this.to.options.color.border;
             } else if (this.from.selected === false && this.to.selected === true) {
@@ -48112,7 +39606,6 @@ return /******/ (function(modules) { // webpackBootstrap
             return grd;
           }
 
-<<<<<<< HEAD
           if (values.inheritsColor === "to") {
             return util.overrideOpacity(this.to.options.color.border, values.opacity);
           } else {
@@ -48121,35 +39614,6 @@ return /******/ (function(modules) { // webpackBootstrap
           }
         } else {
           return util.overrideOpacity(values.color, values.opacity);
-=======
-          if (this.colorDirty === true) {
-            if (colorOptions.inherit === "to") {
-              this.color.highlight = this.to.options.color.highlight.border;
-              this.color.hover = this.to.options.color.hover.border;
-              this.color.color = util.overrideOpacity(this.to.options.color.border, colorOptions.opacity);
-            } else {
-              // (this.options.color.inherit.source === "from") {
-              this.color.highlight = this.from.options.color.highlight.border;
-              this.color.hover = this.from.options.color.hover.border;
-              this.color.color = util.overrideOpacity(this.from.options.color.border, colorOptions.opacity);
-            }
-          }
-        } else if (this.colorDirty === true) {
-          this.color.highlight = colorOptions.highlight;
-          this.color.hover = colorOptions.hover;
-          this.color.color = util.overrideOpacity(colorOptions.color, colorOptions.opacity);
-        }
-
-        // if color inherit is on and gradients are used, the function has already returned by now.
-        this.colorDirty = false;
-
-        if (selected === true) {
-          return this.color.highlight;
-        } else if (hover === true) {
-          return this.color.hover;
-        } else {
-          return this.color.color;
->>>>>>> 88f14a0... add 'dist' folder for deployment
         }
       }
 
@@ -48164,15 +39628,9 @@ return /******/ (function(modules) { // webpackBootstrap
 
     }, {
       key: '_circle',
-<<<<<<< HEAD
       value: function _circle(ctx, values, x, y, radius) {
         // draw shadow if enabled
         this.enableShadow(ctx, values);
-=======
-      value: function _circle(ctx, x, y, radius) {
-        // draw shadow if enabled
-        this.enableShadow(ctx);
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
         // draw a circle
         ctx.beginPath();
@@ -48180,11 +39638,7 @@ return /******/ (function(modules) { // webpackBootstrap
         ctx.stroke();
 
         // disable shadows for other elements.
-<<<<<<< HEAD
         this.disableShadow(ctx, values);
-=======
-        this.disableShadow(ctx);
->>>>>>> 88f14a0... add 'dist' folder for deployment
       }
 
       /**
@@ -48202,23 +39656,14 @@ return /******/ (function(modules) { // webpackBootstrap
 
     }, {
       key: 'getDistanceToEdge',
-<<<<<<< HEAD
       value: function getDistanceToEdge(x1, y1, x2, y2, x3, y3, via, values) {
-=======
-      value: function getDistanceToEdge(x1, y1, x2, y2, x3, y3, via) {
->>>>>>> 88f14a0... add 'dist' folder for deployment
         // x3,y3 is the point
         var returnValue = 0;
         if (this.from != this.to) {
           returnValue = this._getDistanceToEdge(x1, y1, x2, y2, x3, y3, via);
         } else {
-<<<<<<< HEAD
-          var _getCircleData10 = this._getCircleData(undefined, values),
+          var _getCircleData10 = this._getCircleData(undefined),
               _getCircleData11 = (0, _slicedToArray3['default'])(_getCircleData10, 3),
-=======
-          var _getCircleData10 = this._getCircleData(),
-              _getCircleData11 = _slicedToArray(_getCircleData10, 3),
->>>>>>> 88f14a0... add 'dist' folder for deployment
               x = _getCircleData11[0],
               y = _getCircleData11[1],
               radius = _getCircleData11[2];
@@ -48271,11 +39716,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
     }, {
       key: 'getArrowData',
-<<<<<<< HEAD
       value: function getArrowData(ctx, position, viaNode, selected, hover, values) {
-=======
-      value: function getArrowData(ctx, position, viaNode, selected, hover) {
->>>>>>> 88f14a0... add 'dist' folder for deployment
         // set lets
         var angle = void 0;
         var arrowPoint = void 0;
@@ -48284,28 +39725,18 @@ return /******/ (function(modules) { // webpackBootstrap
         var guideOffset = void 0;
         var scaleFactor = void 0;
         var type = void 0;
-<<<<<<< HEAD
         var lineWidth = values.width;
-=======
-        var lineWidth = this.getLineWidth(selected, hover);
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
         if (position === 'from') {
           node1 = this.from;
           node2 = this.to;
           guideOffset = 0.1;
-<<<<<<< HEAD
           scaleFactor = values.fromArrowScale;
           type = values.fromArrowType;
-=======
-          scaleFactor = this.options.arrows.from.scaleFactor;
-          type = this.options.arrows.from.type;
->>>>>>> 88f14a0... add 'dist' folder for deployment
         } else if (position === 'to') {
           node1 = this.to;
           node2 = this.from;
           guideOffset = -0.1;
-<<<<<<< HEAD
           scaleFactor = values.toArrowScale;
           type = values.toArrowType;
         } else {
@@ -48313,15 +39744,6 @@ return /******/ (function(modules) { // webpackBootstrap
           node2 = this.from;
           scaleFactor = values.middleArrowScale;
           type = values.middleArrowType;
-=======
-          scaleFactor = this.options.arrows.to.scaleFactor;
-          type = this.options.arrows.to.type;
-        } else {
-          node1 = this.to;
-          node2 = this.from;
-          scaleFactor = this.options.arrows.middle.scaleFactor;
-          type = this.options.arrows.middle.type;
->>>>>>> 88f14a0... add 'dist' folder for deployment
         }
 
         // if not connected to itself
@@ -48343,11 +39765,7 @@ return /******/ (function(modules) { // webpackBootstrap
         } else {
           // draw circle
           var _getCircleData12 = this._getCircleData(ctx),
-<<<<<<< HEAD
               _getCircleData13 = (0, _slicedToArray3['default'])(_getCircleData12, 3),
-=======
-              _getCircleData13 = _slicedToArray(_getCircleData12, 3),
->>>>>>> 88f14a0... add 'dist' folder for deployment
               x = _getCircleData13[0],
               y = _getCircleData13[1],
               radius = _getCircleData13[2];
@@ -48383,19 +39801,11 @@ return /******/ (function(modules) { // webpackBootstrap
 
     }, {
       key: 'drawArrowHead',
-<<<<<<< HEAD
       value: function drawArrowHead(ctx, values, selected, hover, arrowData) {
         // set style
         ctx.strokeStyle = this.getColor(ctx, values, selected, hover);
         ctx.fillStyle = ctx.strokeStyle;
         ctx.lineWidth = values.width;
-=======
-      value: function drawArrowHead(ctx, selected, hover, arrowData) {
-        // set style
-        ctx.strokeStyle = this.getColor(ctx, selected, hover);
-        ctx.fillStyle = ctx.strokeStyle;
-        ctx.lineWidth = this.getLineWidth(selected, hover);
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
         if (arrowData.type && arrowData.type.toLowerCase() === 'circle') {
           // draw circle at the end of the line
@@ -48406,7 +39816,6 @@ return /******/ (function(modules) { // webpackBootstrap
         }
 
         // draw shadow if enabled
-<<<<<<< HEAD
         this.enableShadow(ctx, values);
         ctx.fill();
         // disable shadows for other elements.
@@ -48420,32 +39829,12 @@ return /******/ (function(modules) { // webpackBootstrap
           ctx.shadowBlur = values.shadowSize;
           ctx.shadowOffsetX = values.shadowX;
           ctx.shadowOffsetY = values.shadowY;
-=======
-        this.enableShadow(ctx);
-        ctx.fill();
-        // disable shadows for other elements.
-        this.disableShadow(ctx);
-      }
-    }, {
-      key: 'enableShadow',
-      value: function enableShadow(ctx) {
-        if (this.options.shadow.enabled === true) {
-          ctx.shadowColor = this.options.shadow.color;
-          ctx.shadowBlur = this.options.shadow.size;
-          ctx.shadowOffsetX = this.options.shadow.x;
-          ctx.shadowOffsetY = this.options.shadow.y;
->>>>>>> 88f14a0... add 'dist' folder for deployment
         }
       }
     }, {
       key: 'disableShadow',
-<<<<<<< HEAD
       value: function disableShadow(ctx, values) {
         if (values.shadow === true) {
-=======
-      value: function disableShadow(ctx) {
-        if (this.options.shadow.enabled === true) {
->>>>>>> 88f14a0... add 'dist' folder for deployment
           ctx.shadowColor = 'rgba(0,0,0,0)';
           ctx.shadowBlur = 0;
           ctx.shadowOffsetX = 0;
@@ -48453,7 +39842,6 @@ return /******/ (function(modules) { // webpackBootstrap
         }
       }
     }]);
-<<<<<<< HEAD
     return EdgeBase;
   }();
 
@@ -48461,16 +39849,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 197 */
-=======
-
-    return EdgeBase;
-  }();
-
-  exports.default = EdgeBase;
-
-/***/ },
-/* 92 */
->>>>>>> 88f14a0... add 'dist' folder for deployment
 /***/ function(module, exports, __webpack_require__) {
 
   "use strict";
@@ -48479,7 +39857,6 @@ return /******/ (function(modules) { // webpackBootstrap
     value: true
   });
 
-<<<<<<< HEAD
   var _slicedToArray2 = __webpack_require__(161);
 
   var _slicedToArray3 = _interopRequireDefault(_slicedToArray2);
@@ -48518,32 +39895,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
       // --> this calls the setOptions below
       var _this = (0, _possibleConstructorReturn3["default"])(this, (BezierEdgeDynamic.__proto__ || (0, _getPrototypeOf2["default"])(BezierEdgeDynamic)).call(this, options, body, labelModule));
-=======
-  var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"]) _i["return"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError("Invalid attempt to destructure non-iterable instance"); } }; }();
-
-  var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-  var _BezierEdgeBase2 = __webpack_require__(90);
-
-  var _BezierEdgeBase3 = _interopRequireDefault(_BezierEdgeBase2);
-
-  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-  function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-  function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-  var BezierEdgeDynamic = function (_BezierEdgeBase) {
-    _inherits(BezierEdgeDynamic, _BezierEdgeBase);
-
-    function BezierEdgeDynamic(options, body, labelModule) {
-      _classCallCheck(this, BezierEdgeDynamic);
-
-      // --> this calls the setOptions below
-      var _this = _possibleConstructorReturn(this, (BezierEdgeDynamic.__proto__ || Object.getPrototypeOf(BezierEdgeDynamic)).call(this, options, body, labelModule));
->>>>>>> 88f14a0... add 'dist' folder for deployment
       //this.via = undefined; // Here for completeness but not allowed to defined before super() is invoked.
 
 
@@ -48554,11 +39905,7 @@ return /******/ (function(modules) { // webpackBootstrap
       return _this;
     }
 
-<<<<<<< HEAD
     (0, _createClass3["default"])(BezierEdgeDynamic, [{
-=======
-    _createClass(BezierEdgeDynamic, [{
->>>>>>> 88f14a0... add 'dist' folder for deployment
       key: "setOptions",
       value: function setOptions(options) {
         // check if the physics has changed.
@@ -48662,11 +40009,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
     }, {
       key: "_line",
-<<<<<<< HEAD
       value: function _line(ctx, values, viaNode) {
-=======
-      value: function _line(ctx, viaNode) {
->>>>>>> 88f14a0... add 'dist' folder for deployment
         // draw a straight line
         ctx.beginPath();
         ctx.moveTo(this.fromPoint.x, this.fromPoint.y);
@@ -48677,15 +40020,9 @@ return /******/ (function(modules) { // webpackBootstrap
           ctx.quadraticCurveTo(viaNode.x, viaNode.y, this.toPoint.x, this.toPoint.y);
         }
         // draw shadow if enabled
-<<<<<<< HEAD
         this.enableShadow(ctx, values);
         ctx.stroke();
         this.disableShadow(ctx, values);
-=======
-        this.enableShadow(ctx);
-        ctx.stroke();
-        this.disableShadow(ctx);
->>>>>>> 88f14a0... add 'dist' folder for deployment
       }
     }, {
       key: "getViaNode",
@@ -48711,11 +40048,7 @@ return /******/ (function(modules) { // webpackBootstrap
             y = void 0;
         if (this.from === this.to) {
           var _getCircleData = this._getCircleData(this.from),
-<<<<<<< HEAD
               _getCircleData2 = (0, _slicedToArray3["default"])(_getCircleData, 3),
-=======
-              _getCircleData2 = _slicedToArray(_getCircleData, 3),
->>>>>>> 88f14a0... add 'dist' folder for deployment
               cx = _getCircleData2[0],
               cy = _getCircleData2[1],
               cr = _getCircleData2[2];
@@ -48742,7 +40075,6 @@ return /******/ (function(modules) { // webpackBootstrap
         return this._getDistanceToBezierEdge(x1, y1, x2, y2, x3, y3, this.via);
       }
     }]);
-<<<<<<< HEAD
     return BezierEdgeDynamic;
   }(_BezierEdgeBase3["default"]);
 
@@ -48750,16 +40082,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 198 */
-=======
-
-    return BezierEdgeDynamic;
-  }(_BezierEdgeBase3.default);
-
-  exports.default = BezierEdgeDynamic;
-
-/***/ },
-/* 93 */
->>>>>>> 88f14a0... add 'dist' folder for deployment
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -48768,7 +40090,6 @@ return /******/ (function(modules) { // webpackBootstrap
     value: true
   });
 
-<<<<<<< HEAD
   var _getPrototypeOf = __webpack_require__(166);
 
   var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
@@ -48801,29 +40122,6 @@ return /******/ (function(modules) { // webpackBootstrap
     function BezierEdgeStatic(options, body, labelModule) {
       (0, _classCallCheck3['default'])(this, BezierEdgeStatic);
       return (0, _possibleConstructorReturn3['default'])(this, (BezierEdgeStatic.__proto__ || (0, _getPrototypeOf2['default'])(BezierEdgeStatic)).call(this, options, body, labelModule));
-=======
-  var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-  var _BezierEdgeBase2 = __webpack_require__(90);
-
-  var _BezierEdgeBase3 = _interopRequireDefault(_BezierEdgeBase2);
-
-  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-  function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-  function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-  var BezierEdgeStatic = function (_BezierEdgeBase) {
-    _inherits(BezierEdgeStatic, _BezierEdgeBase);
-
-    function BezierEdgeStatic(options, body, labelModule) {
-      _classCallCheck(this, BezierEdgeStatic);
-
-      return _possibleConstructorReturn(this, (BezierEdgeStatic.__proto__ || Object.getPrototypeOf(BezierEdgeStatic)).call(this, options, body, labelModule));
->>>>>>> 88f14a0... add 'dist' folder for deployment
     }
 
     /**
@@ -48833,15 +40131,9 @@ return /******/ (function(modules) { // webpackBootstrap
      */
 
 
-<<<<<<< HEAD
     (0, _createClass3['default'])(BezierEdgeStatic, [{
       key: '_line',
       value: function _line(ctx, values, viaNode) {
-=======
-    _createClass(BezierEdgeStatic, [{
-      key: '_line',
-      value: function _line(ctx, viaNode) {
->>>>>>> 88f14a0... add 'dist' folder for deployment
         // draw a straight line
         ctx.beginPath();
         ctx.moveTo(this.fromPoint.x, this.fromPoint.y);
@@ -48853,15 +40145,9 @@ return /******/ (function(modules) { // webpackBootstrap
           ctx.quadraticCurveTo(viaNode.x, viaNode.y, this.toPoint.x, this.toPoint.y);
         }
         // draw shadow if enabled
-<<<<<<< HEAD
         this.enableShadow(ctx, values);
         ctx.stroke();
         this.disableShadow(ctx, values);
-=======
-        this.enableShadow(ctx);
-        ctx.stroke();
-        this.disableShadow(ctx);
->>>>>>> 88f14a0... add 'dist' folder for deployment
       }
     }, {
       key: 'getViaNode',
@@ -49067,7 +40353,6 @@ return /******/ (function(modules) { // webpackBootstrap
         return { x: x, y: y };
       }
     }]);
-<<<<<<< HEAD
     return BezierEdgeStatic;
   }(_BezierEdgeBase3['default']);
 
@@ -49075,16 +40360,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 199 */
-=======
-
-    return BezierEdgeStatic;
-  }(_BezierEdgeBase3.default);
-
-  exports.default = BezierEdgeStatic;
-
-/***/ },
-/* 94 */
->>>>>>> 88f14a0... add 'dist' folder for deployment
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -49093,7 +40368,6 @@ return /******/ (function(modules) { // webpackBootstrap
     value: true
   });
 
-<<<<<<< HEAD
   var _getPrototypeOf = __webpack_require__(166);
 
   var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
@@ -49126,29 +40400,6 @@ return /******/ (function(modules) { // webpackBootstrap
     function StraightEdge(options, body, labelModule) {
       (0, _classCallCheck3['default'])(this, StraightEdge);
       return (0, _possibleConstructorReturn3['default'])(this, (StraightEdge.__proto__ || (0, _getPrototypeOf2['default'])(StraightEdge)).call(this, options, body, labelModule));
-=======
-  var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-  var _EdgeBase2 = __webpack_require__(91);
-
-  var _EdgeBase3 = _interopRequireDefault(_EdgeBase2);
-
-  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-  function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-  function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-  var StraightEdge = function (_EdgeBase) {
-    _inherits(StraightEdge, _EdgeBase);
-
-    function StraightEdge(options, body, labelModule) {
-      _classCallCheck(this, StraightEdge);
-
-      return _possibleConstructorReturn(this, (StraightEdge.__proto__ || Object.getPrototypeOf(StraightEdge)).call(this, options, body, labelModule));
->>>>>>> 88f14a0... add 'dist' folder for deployment
     }
 
     /**
@@ -49158,29 +40409,17 @@ return /******/ (function(modules) { // webpackBootstrap
      */
 
 
-<<<<<<< HEAD
     (0, _createClass3['default'])(StraightEdge, [{
       key: '_line',
       value: function _line(ctx, values) {
-=======
-    _createClass(StraightEdge, [{
-      key: '_line',
-      value: function _line(ctx) {
->>>>>>> 88f14a0... add 'dist' folder for deployment
         // draw a straight line
         ctx.beginPath();
         ctx.moveTo(this.fromPoint.x, this.fromPoint.y);
         ctx.lineTo(this.toPoint.x, this.toPoint.y);
         // draw shadow if enabled
-<<<<<<< HEAD
         this.enableShadow(ctx, values);
         ctx.stroke();
         this.disableShadow(ctx, values);
-=======
-        this.enableShadow(ctx);
-        ctx.stroke();
-        this.disableShadow(ctx);
->>>>>>> 88f14a0... add 'dist' folder for deployment
       }
     }, {
       key: 'getViaNode',
@@ -49234,7 +40473,6 @@ return /******/ (function(modules) { // webpackBootstrap
         return this._getDistanceToLine(x1, y1, x2, y2, x3, y3);
       }
     }]);
-<<<<<<< HEAD
     return StraightEdge;
   }(_EdgeBase3['default']);
 
@@ -49242,16 +40480,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 200 */
-=======
-
-    return StraightEdge;
-  }(_EdgeBase3.default);
-
-  exports.default = StraightEdge;
-
-/***/ },
-/* 95 */
->>>>>>> 88f14a0... add 'dist' folder for deployment
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -49260,7 +40488,6 @@ return /******/ (function(modules) { // webpackBootstrap
     value: true
   });
 
-<<<<<<< HEAD
   var _keys = __webpack_require__(58);
 
   var _keys2 = _interopRequireDefault(_keys);
@@ -49306,55 +40533,12 @@ return /******/ (function(modules) { // webpackBootstrap
   var _FA2BasedCentralGravitySolver2 = _interopRequireDefault(_FA2BasedCentralGravitySolver);
 
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-=======
-  var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-  var _BarnesHutSolver = __webpack_require__(96);
-
-  var _BarnesHutSolver2 = _interopRequireDefault(_BarnesHutSolver);
-
-  var _RepulsionSolver = __webpack_require__(97);
-
-  var _RepulsionSolver2 = _interopRequireDefault(_RepulsionSolver);
-
-  var _HierarchicalRepulsionSolver = __webpack_require__(98);
-
-  var _HierarchicalRepulsionSolver2 = _interopRequireDefault(_HierarchicalRepulsionSolver);
-
-  var _SpringSolver = __webpack_require__(99);
-
-  var _SpringSolver2 = _interopRequireDefault(_SpringSolver);
-
-  var _HierarchicalSpringSolver = __webpack_require__(100);
-
-  var _HierarchicalSpringSolver2 = _interopRequireDefault(_HierarchicalSpringSolver);
-
-  var _CentralGravitySolver = __webpack_require__(101);
-
-  var _CentralGravitySolver2 = _interopRequireDefault(_CentralGravitySolver);
-
-  var _FA2BasedRepulsionSolver = __webpack_require__(102);
-
-  var _FA2BasedRepulsionSolver2 = _interopRequireDefault(_FA2BasedRepulsionSolver);
-
-  var _FA2BasedCentralGravitySolver = __webpack_require__(103);
-
-  var _FA2BasedCentralGravitySolver2 = _interopRequireDefault(_FA2BasedCentralGravitySolver);
-
-  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
   var util = __webpack_require__(1);
 
   var PhysicsEngine = function () {
     function PhysicsEngine(body) {
-<<<<<<< HEAD
       (0, _classCallCheck3['default'])(this, PhysicsEngine);
-=======
-      _classCallCheck(this, PhysicsEngine);
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
       this.body = body;
       this.physicsBody = { physicsNodeIndices: [], physicsEdgeIndices: [], forces: {}, velocities: {} };
@@ -49435,11 +40619,7 @@ return /******/ (function(modules) { // webpackBootstrap
       this.bindEventListeners();
     }
 
-<<<<<<< HEAD
     (0, _createClass3['default'])(PhysicsEngine, [{
-=======
-    _createClass(PhysicsEngine, [{
->>>>>>> 88f14a0... add 'dist' folder for deployment
       key: 'bindEventListeners',
       value: function bindEventListeners() {
         var _this = this;
@@ -49528,7 +40708,6 @@ return /******/ (function(modules) { // webpackBootstrap
         var options;
         if (this.options.solver === 'forceAtlas2Based') {
           options = this.options.forceAtlas2Based;
-<<<<<<< HEAD
           this.nodesSolver = new _FA2BasedRepulsionSolver2['default'](this.body, this.physicsBody, options);
           this.edgesSolver = new _SpringSolver2['default'](this.body, this.physicsBody, options);
           this.gravitySolver = new _FA2BasedCentralGravitySolver2['default'](this.body, this.physicsBody, options);
@@ -49548,27 +40727,6 @@ return /******/ (function(modules) { // webpackBootstrap
           this.nodesSolver = new _BarnesHutSolver2['default'](this.body, this.physicsBody, options);
           this.edgesSolver = new _SpringSolver2['default'](this.body, this.physicsBody, options);
           this.gravitySolver = new _CentralGravitySolver2['default'](this.body, this.physicsBody, options);
-=======
-          this.nodesSolver = new _FA2BasedRepulsionSolver2.default(this.body, this.physicsBody, options);
-          this.edgesSolver = new _SpringSolver2.default(this.body, this.physicsBody, options);
-          this.gravitySolver = new _FA2BasedCentralGravitySolver2.default(this.body, this.physicsBody, options);
-        } else if (this.options.solver === 'repulsion') {
-          options = this.options.repulsion;
-          this.nodesSolver = new _RepulsionSolver2.default(this.body, this.physicsBody, options);
-          this.edgesSolver = new _SpringSolver2.default(this.body, this.physicsBody, options);
-          this.gravitySolver = new _CentralGravitySolver2.default(this.body, this.physicsBody, options);
-        } else if (this.options.solver === 'hierarchicalRepulsion') {
-          options = this.options.hierarchicalRepulsion;
-          this.nodesSolver = new _HierarchicalRepulsionSolver2.default(this.body, this.physicsBody, options);
-          this.edgesSolver = new _HierarchicalSpringSolver2.default(this.body, this.physicsBody, options);
-          this.gravitySolver = new _CentralGravitySolver2.default(this.body, this.physicsBody, options);
-        } else {
-          // barnesHut
-          options = this.options.barnesHut;
-          this.nodesSolver = new _BarnesHutSolver2.default(this.body, this.physicsBody, options);
-          this.edgesSolver = new _SpringSolver2.default(this.body, this.physicsBody, options);
-          this.gravitySolver = new _CentralGravitySolver2.default(this.body, this.physicsBody, options);
->>>>>>> 88f14a0... add 'dist' folder for deployment
         }
 
         this.modelOptions = options;
@@ -49828,11 +40986,7 @@ return /******/ (function(modules) { // webpackBootstrap
     }, {
       key: 'revert',
       value: function revert() {
-<<<<<<< HEAD
         var nodeIds = (0, _keys2['default'])(this.previousStates);
-=======
-        var nodeIds = Object.keys(this.previousStates);
->>>>>>> 88f14a0... add 'dist' folder for deployment
         var nodes = this.body.nodes;
         var velocities = this.physicsBody.velocities;
         this.referenceState = {};
@@ -50147,7 +41301,6 @@ return /******/ (function(modules) { // webpackBootstrap
         }
       }
     }]);
-<<<<<<< HEAD
     return PhysicsEngine;
   }();
 
@@ -50156,17 +41309,6 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ },
 /* 201 */
 /***/ function(module, exports, __webpack_require__) {
-=======
-
-    return PhysicsEngine;
-  }();
-
-  exports.default = PhysicsEngine;
-
-/***/ },
-/* 96 */
-/***/ function(module, exports) {
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
   "use strict";
 
@@ -50174,7 +41316,6 @@ return /******/ (function(modules) { // webpackBootstrap
     value: true
   });
 
-<<<<<<< HEAD
   var _classCallCheck2 = __webpack_require__(115);
 
   var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
@@ -50188,15 +41329,6 @@ return /******/ (function(modules) { // webpackBootstrap
   var BarnesHutSolver = function () {
     function BarnesHutSolver(body, physicsBody, options) {
       (0, _classCallCheck3["default"])(this, BarnesHutSolver);
-=======
-  var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-  var BarnesHutSolver = function () {
-    function BarnesHutSolver(body, physicsBody, options) {
-      _classCallCheck(this, BarnesHutSolver);
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
       this.body = body;
       this.physicsBody = physicsBody;
@@ -50208,11 +41340,7 @@ return /******/ (function(modules) { // webpackBootstrap
       //this.body.emitter.on("afterDrawing", (ctx) => {this._debug(ctx,'#ff0000')})
     }
 
-<<<<<<< HEAD
     (0, _createClass3["default"])(BarnesHutSolver, [{
-=======
-    _createClass(BarnesHutSolver, [{
->>>>>>> 88f14a0... add 'dist' folder for deployment
       key: "setOptions",
       value: function setOptions(options) {
         this.options = options;
@@ -50692,7 +41820,6 @@ return /******/ (function(modules) { // webpackBootstrap
          */
       }
     }]);
-<<<<<<< HEAD
     return BarnesHutSolver;
   }();
 
@@ -50701,17 +41828,6 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ },
 /* 202 */
 /***/ function(module, exports, __webpack_require__) {
-=======
-
-    return BarnesHutSolver;
-  }();
-
-  exports.default = BarnesHutSolver;
-
-/***/ },
-/* 97 */
-/***/ function(module, exports) {
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
   "use strict";
 
@@ -50719,7 +41835,6 @@ return /******/ (function(modules) { // webpackBootstrap
     value: true
   });
 
-<<<<<<< HEAD
   var _classCallCheck2 = __webpack_require__(115);
 
   var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
@@ -50733,26 +41848,13 @@ return /******/ (function(modules) { // webpackBootstrap
   var RepulsionSolver = function () {
     function RepulsionSolver(body, physicsBody, options) {
       (0, _classCallCheck3["default"])(this, RepulsionSolver);
-=======
-  var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-  var RepulsionSolver = function () {
-    function RepulsionSolver(body, physicsBody, options) {
-      _classCallCheck(this, RepulsionSolver);
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
       this.body = body;
       this.physicsBody = physicsBody;
       this.setOptions(options);
     }
 
-<<<<<<< HEAD
     (0, _createClass3["default"])(RepulsionSolver, [{
-=======
-    _createClass(RepulsionSolver, [{
->>>>>>> 88f14a0... add 'dist' folder for deployment
       key: "setOptions",
       value: function setOptions(options) {
         this.options = options;
@@ -50817,7 +41919,6 @@ return /******/ (function(modules) { // webpackBootstrap
         }
       }
     }]);
-<<<<<<< HEAD
     return RepulsionSolver;
   }();
 
@@ -50826,17 +41927,6 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ },
 /* 203 */
 /***/ function(module, exports, __webpack_require__) {
-=======
-
-    return RepulsionSolver;
-  }();
-
-  exports.default = RepulsionSolver;
-
-/***/ },
-/* 98 */
-/***/ function(module, exports) {
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
   "use strict";
 
@@ -50844,7 +41934,6 @@ return /******/ (function(modules) { // webpackBootstrap
     value: true
   });
 
-<<<<<<< HEAD
   var _classCallCheck2 = __webpack_require__(115);
 
   var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
@@ -50858,26 +41947,13 @@ return /******/ (function(modules) { // webpackBootstrap
   var HierarchicalRepulsionSolver = function () {
     function HierarchicalRepulsionSolver(body, physicsBody, options) {
       (0, _classCallCheck3["default"])(this, HierarchicalRepulsionSolver);
-=======
-  var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-  var HierarchicalRepulsionSolver = function () {
-    function HierarchicalRepulsionSolver(body, physicsBody, options) {
-      _classCallCheck(this, HierarchicalRepulsionSolver);
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
       this.body = body;
       this.physicsBody = physicsBody;
       this.setOptions(options);
     }
 
-<<<<<<< HEAD
     (0, _createClass3["default"])(HierarchicalRepulsionSolver, [{
-=======
-    _createClass(HierarchicalRepulsionSolver, [{
->>>>>>> 88f14a0... add 'dist' folder for deployment
       key: "setOptions",
       value: function setOptions(options) {
         this.options = options;
@@ -50939,7 +42015,6 @@ return /******/ (function(modules) { // webpackBootstrap
         }
       }
     }]);
-<<<<<<< HEAD
     return HierarchicalRepulsionSolver;
   }();
 
@@ -50948,17 +42023,6 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ },
 /* 204 */
 /***/ function(module, exports, __webpack_require__) {
-=======
-
-    return HierarchicalRepulsionSolver;
-  }();
-
-  exports.default = HierarchicalRepulsionSolver;
-
-/***/ },
-/* 99 */
-/***/ function(module, exports) {
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
   "use strict";
 
@@ -50966,7 +42030,6 @@ return /******/ (function(modules) { // webpackBootstrap
     value: true
   });
 
-<<<<<<< HEAD
   var _classCallCheck2 = __webpack_require__(115);
 
   var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
@@ -50980,26 +42043,13 @@ return /******/ (function(modules) { // webpackBootstrap
   var SpringSolver = function () {
     function SpringSolver(body, physicsBody, options) {
       (0, _classCallCheck3["default"])(this, SpringSolver);
-=======
-  var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-  var SpringSolver = function () {
-    function SpringSolver(body, physicsBody, options) {
-      _classCallCheck(this, SpringSolver);
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
       this.body = body;
       this.physicsBody = physicsBody;
       this.setOptions(options);
     }
 
-<<<<<<< HEAD
     (0, _createClass3["default"])(SpringSolver, [{
-=======
-    _createClass(SpringSolver, [{
->>>>>>> 88f14a0... add 'dist' folder for deployment
       key: "setOptions",
       value: function setOptions(options) {
         this.options = options;
@@ -51081,7 +42131,6 @@ return /******/ (function(modules) { // webpackBootstrap
         }
       }
     }]);
-<<<<<<< HEAD
     return SpringSolver;
   }();
 
@@ -51090,17 +42139,6 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ },
 /* 205 */
 /***/ function(module, exports, __webpack_require__) {
-=======
-
-    return SpringSolver;
-  }();
-
-  exports.default = SpringSolver;
-
-/***/ },
-/* 100 */
-/***/ function(module, exports) {
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
   "use strict";
 
@@ -51108,7 +42146,6 @@ return /******/ (function(modules) { // webpackBootstrap
     value: true
   });
 
-<<<<<<< HEAD
   var _classCallCheck2 = __webpack_require__(115);
 
   var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
@@ -51122,26 +42159,13 @@ return /******/ (function(modules) { // webpackBootstrap
   var HierarchicalSpringSolver = function () {
     function HierarchicalSpringSolver(body, physicsBody, options) {
       (0, _classCallCheck3["default"])(this, HierarchicalSpringSolver);
-=======
-  var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-  var HierarchicalSpringSolver = function () {
-    function HierarchicalSpringSolver(body, physicsBody, options) {
-      _classCallCheck(this, HierarchicalSpringSolver);
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
       this.body = body;
       this.physicsBody = physicsBody;
       this.setOptions(options);
     }
 
-<<<<<<< HEAD
     (0, _createClass3["default"])(HierarchicalSpringSolver, [{
-=======
-    _createClass(HierarchicalSpringSolver, [{
->>>>>>> 88f14a0... add 'dist' folder for deployment
       key: "setOptions",
       value: function setOptions(options) {
         this.options = options;
@@ -51241,7 +42265,6 @@ return /******/ (function(modules) { // webpackBootstrap
         }
       }
     }]);
-<<<<<<< HEAD
     return HierarchicalSpringSolver;
   }();
 
@@ -51250,17 +42273,6 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ },
 /* 206 */
 /***/ function(module, exports, __webpack_require__) {
-=======
-
-    return HierarchicalSpringSolver;
-  }();
-
-  exports.default = HierarchicalSpringSolver;
-
-/***/ },
-/* 101 */
-/***/ function(module, exports) {
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
   "use strict";
 
@@ -51268,7 +42280,6 @@ return /******/ (function(modules) { // webpackBootstrap
     value: true
   });
 
-<<<<<<< HEAD
   var _classCallCheck2 = __webpack_require__(115);
 
   var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
@@ -51282,26 +42293,13 @@ return /******/ (function(modules) { // webpackBootstrap
   var CentralGravitySolver = function () {
     function CentralGravitySolver(body, physicsBody, options) {
       (0, _classCallCheck3["default"])(this, CentralGravitySolver);
-=======
-  var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-  var CentralGravitySolver = function () {
-    function CentralGravitySolver(body, physicsBody, options) {
-      _classCallCheck(this, CentralGravitySolver);
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
       this.body = body;
       this.physicsBody = physicsBody;
       this.setOptions(options);
     }
 
-<<<<<<< HEAD
     (0, _createClass3["default"])(CentralGravitySolver, [{
-=======
-    _createClass(CentralGravitySolver, [{
->>>>>>> 88f14a0... add 'dist' folder for deployment
       key: "setOptions",
       value: function setOptions(options) {
         this.options = options;
@@ -51341,7 +42339,6 @@ return /******/ (function(modules) { // webpackBootstrap
         forces[node.id].y = dy * gravityForce;
       }
     }]);
-<<<<<<< HEAD
     return CentralGravitySolver;
   }();
 
@@ -51349,16 +42346,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 207 */
-=======
-
-    return CentralGravitySolver;
-  }();
-
-  exports.default = CentralGravitySolver;
-
-/***/ },
-/* 102 */
->>>>>>> 88f14a0... add 'dist' folder for deployment
 /***/ function(module, exports, __webpack_require__) {
 
   "use strict";
@@ -51367,7 +42354,6 @@ return /******/ (function(modules) { // webpackBootstrap
     value: true
   });
 
-<<<<<<< HEAD
   var _getPrototypeOf = __webpack_require__(166);
 
   var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
@@ -51400,29 +42386,6 @@ return /******/ (function(modules) { // webpackBootstrap
     function ForceAtlas2BasedRepulsionSolver(body, physicsBody, options) {
       (0, _classCallCheck3["default"])(this, ForceAtlas2BasedRepulsionSolver);
       return (0, _possibleConstructorReturn3["default"])(this, (ForceAtlas2BasedRepulsionSolver.__proto__ || (0, _getPrototypeOf2["default"])(ForceAtlas2BasedRepulsionSolver)).call(this, body, physicsBody, options));
-=======
-  var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-  var _BarnesHutSolver2 = __webpack_require__(96);
-
-  var _BarnesHutSolver3 = _interopRequireDefault(_BarnesHutSolver2);
-
-  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-  function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-  function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-  var ForceAtlas2BasedRepulsionSolver = function (_BarnesHutSolver) {
-    _inherits(ForceAtlas2BasedRepulsionSolver, _BarnesHutSolver);
-
-    function ForceAtlas2BasedRepulsionSolver(body, physicsBody, options) {
-      _classCallCheck(this, ForceAtlas2BasedRepulsionSolver);
-
-      return _possibleConstructorReturn(this, (ForceAtlas2BasedRepulsionSolver.__proto__ || Object.getPrototypeOf(ForceAtlas2BasedRepulsionSolver)).call(this, body, physicsBody, options));
->>>>>>> 88f14a0... add 'dist' folder for deployment
     }
 
     /**
@@ -51437,11 +42400,7 @@ return /******/ (function(modules) { // webpackBootstrap
      */
 
 
-<<<<<<< HEAD
     (0, _createClass3["default"])(ForceAtlas2BasedRepulsionSolver, [{
-=======
-    _createClass(ForceAtlas2BasedRepulsionSolver, [{
->>>>>>> 88f14a0... add 'dist' folder for deployment
       key: "_calculateForces",
       value: function _calculateForces(distance, dx, dy, node, parentBranch) {
         if (distance === 0) {
@@ -51464,7 +42423,6 @@ return /******/ (function(modules) { // webpackBootstrap
         this.physicsBody.forces[node.id].y += fy;
       }
     }]);
-<<<<<<< HEAD
     return ForceAtlas2BasedRepulsionSolver;
   }(_BarnesHutSolver3["default"]);
 
@@ -51472,16 +42430,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 208 */
-=======
-
-    return ForceAtlas2BasedRepulsionSolver;
-  }(_BarnesHutSolver3.default);
-
-  exports.default = ForceAtlas2BasedRepulsionSolver;
-
-/***/ },
-/* 103 */
->>>>>>> 88f14a0... add 'dist' folder for deployment
 /***/ function(module, exports, __webpack_require__) {
 
   "use strict";
@@ -51490,7 +42438,6 @@ return /******/ (function(modules) { // webpackBootstrap
     value: true
   });
 
-<<<<<<< HEAD
   var _getPrototypeOf = __webpack_require__(166);
 
   var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
@@ -51523,29 +42470,6 @@ return /******/ (function(modules) { // webpackBootstrap
     function ForceAtlas2BasedCentralGravitySolver(body, physicsBody, options) {
       (0, _classCallCheck3["default"])(this, ForceAtlas2BasedCentralGravitySolver);
       return (0, _possibleConstructorReturn3["default"])(this, (ForceAtlas2BasedCentralGravitySolver.__proto__ || (0, _getPrototypeOf2["default"])(ForceAtlas2BasedCentralGravitySolver)).call(this, body, physicsBody, options));
-=======
-  var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-  var _CentralGravitySolver2 = __webpack_require__(101);
-
-  var _CentralGravitySolver3 = _interopRequireDefault(_CentralGravitySolver2);
-
-  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-  function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-  function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-  var ForceAtlas2BasedCentralGravitySolver = function (_CentralGravitySolver) {
-    _inherits(ForceAtlas2BasedCentralGravitySolver, _CentralGravitySolver);
-
-    function ForceAtlas2BasedCentralGravitySolver(body, physicsBody, options) {
-      _classCallCheck(this, ForceAtlas2BasedCentralGravitySolver);
-
-      return _possibleConstructorReturn(this, (ForceAtlas2BasedCentralGravitySolver.__proto__ || Object.getPrototypeOf(ForceAtlas2BasedCentralGravitySolver)).call(this, body, physicsBody, options));
->>>>>>> 88f14a0... add 'dist' folder for deployment
     }
 
     /**
@@ -51554,11 +42478,7 @@ return /******/ (function(modules) { // webpackBootstrap
      */
 
 
-<<<<<<< HEAD
     (0, _createClass3["default"])(ForceAtlas2BasedCentralGravitySolver, [{
-=======
-    _createClass(ForceAtlas2BasedCentralGravitySolver, [{
->>>>>>> 88f14a0... add 'dist' folder for deployment
       key: "_calculateForces",
       value: function _calculateForces(distance, dx, dy, forces, node) {
         if (distance > 0) {
@@ -51569,7 +42489,6 @@ return /******/ (function(modules) { // webpackBootstrap
         }
       }
     }]);
-<<<<<<< HEAD
     return ForceAtlas2BasedCentralGravitySolver;
   }(_CentralGravitySolver3["default"]);
 
@@ -51577,16 +42496,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 209 */
-=======
-
-    return ForceAtlas2BasedCentralGravitySolver;
-  }(_CentralGravitySolver3.default);
-
-  exports.default = ForceAtlas2BasedCentralGravitySolver;
-
-/***/ },
-/* 104 */
->>>>>>> 88f14a0... add 'dist' folder for deployment
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -51595,7 +42504,6 @@ return /******/ (function(modules) { // webpackBootstrap
     value: true
   });
 
-<<<<<<< HEAD
   var _keys = __webpack_require__(58);
 
   var _keys2 = _interopRequireDefault(_keys);
@@ -51621,23 +42529,6 @@ return /******/ (function(modules) { // webpackBootstrap
   var _Cluster2 = _interopRequireDefault(_Cluster);
 
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-=======
-  var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
-
-  var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-  var _NetworkUtil = __webpack_require__(105);
-
-  var _NetworkUtil2 = _interopRequireDefault(_NetworkUtil);
-
-  var _Cluster = __webpack_require__(106);
-
-  var _Cluster2 = _interopRequireDefault(_Cluster);
-
-  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
   var util = __webpack_require__(1);
 
@@ -51645,11 +42536,7 @@ return /******/ (function(modules) { // webpackBootstrap
     function ClusterEngine(body) {
       var _this = this;
 
-<<<<<<< HEAD
       (0, _classCallCheck3['default'])(this, ClusterEngine);
-=======
-      _classCallCheck(this, ClusterEngine);
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
       this.body = body;
       this.clusteredNodes = {};
@@ -51671,20 +42558,12 @@ return /******/ (function(modules) { // webpackBootstrap
     */
 
 
-<<<<<<< HEAD
     (0, _createClass3['default'])(ClusterEngine, [{
-=======
-    _createClass(ClusterEngine, [{
->>>>>>> 88f14a0... add 'dist' folder for deployment
       key: 'clusterByHubsize',
       value: function clusterByHubsize(hubsize, options) {
         if (hubsize === undefined) {
           hubsize = this._getHubSize();
-<<<<<<< HEAD
         } else if ((typeof hubsize === 'undefined' ? 'undefined' : (0, _typeof3['default'])(hubsize)) === "object") {
-=======
-        } else if ((typeof hubsize === 'undefined' ? 'undefined' : _typeof(hubsize)) === "object") {
->>>>>>> 88f14a0... add 'dist' folder for deployment
           options = this._checkOptions(hubsize);
           hubsize = this._getHubSize();
         }
@@ -51730,11 +42609,7 @@ return /******/ (function(modules) { // webpackBootstrap
         for (var i = 0; i < this.body.nodeIndices.length; i++) {
           var nodeId = this.body.nodeIndices[i];
           var node = this.body.nodes[nodeId];
-<<<<<<< HEAD
           var clonedOptions = _NetworkUtil2['default'].cloneOptions(node);
-=======
-          var clonedOptions = _NetworkUtil2.default.cloneOptions(node);
->>>>>>> 88f14a0... add 'dist' folder for deployment
           if (options.joinCondition(clonedOptions) === true) {
             childNodesObj[nodeId] = this.body.nodes[nodeId];
 
@@ -51805,11 +42680,7 @@ return /******/ (function(modules) { // webpackBootstrap
                   childNodesObj[childNodeId] = this.body.nodes[childNodeId];
                   usedNodes[nodeId] = true;
                 } else {
-<<<<<<< HEAD
                   var clonedOptions = _NetworkUtil2['default'].cloneOptions(this.body.nodes[nodeId]);
-=======
-                  var clonedOptions = _NetworkUtil2.default.cloneOptions(this.body.nodes[nodeId]);
->>>>>>> 88f14a0... add 'dist' folder for deployment
                   if (options.joinCondition(clonedOptions) === true) {
                     childEdgesObj[edge.id] = edge;
                     childNodesObj[nodeId] = this.body.nodes[nodeId];
@@ -51823,11 +42694,7 @@ return /******/ (function(modules) { // webpackBootstrap
               }
 
               // add to the cluster queue
-<<<<<<< HEAD
               if ((0, _keys2['default'])(childNodesObj).length > 0 && (0, _keys2['default'])(childEdgesObj).length > 0 && gatheringSuccessful === true) {
-=======
-              if (Object.keys(childNodesObj).length > 0 && Object.keys(childEdgesObj).length > 0 && gatheringSuccessful === true) {
->>>>>>> 88f14a0... add 'dist' folder for deployment
                 clusters.push({ nodes: childNodesObj, edges: childEdgesObj });
               }
             }
@@ -51908,11 +42775,7 @@ return /******/ (function(modules) { // webpackBootstrap
         var childNodesObj = {};
         var childEdgesObj = {};
         var parentNodeId = node.id;
-<<<<<<< HEAD
         var parentClonedOptions = _NetworkUtil2['default'].cloneOptions(node);
-=======
-        var parentClonedOptions = _NetworkUtil2.default.cloneOptions(node);
->>>>>>> 88f14a0... add 'dist' folder for deployment
         childNodesObj[parentNodeId] = node;
 
         // collect the nodes that will be in the cluster
@@ -51929,11 +42792,7 @@ return /******/ (function(modules) { // webpackBootstrap
                   childNodesObj[childNodeId] = this.body.nodes[childNodeId];
                 } else {
                   // clone the options and insert some additional parameters that could be interesting.
-<<<<<<< HEAD
                   var childClonedOptions = _NetworkUtil2['default'].cloneOptions(this.body.nodes[childNodeId]);
-=======
-                  var childClonedOptions = _NetworkUtil2.default.cloneOptions(this.body.nodes[childNodeId]);
->>>>>>> 88f14a0... add 'dist' folder for deployment
                   if (options.joinCondition(parentClonedOptions, childClonedOptions) === true) {
                     childEdgesObj[edge.id] = edge;
                     childNodesObj[childNodeId] = this.body.nodes[childNodeId];
@@ -51946,11 +42805,7 @@ return /******/ (function(modules) { // webpackBootstrap
             }
           }
         }
-<<<<<<< HEAD
         var childNodeIDs = (0, _keys2['default'])(childNodesObj).map(function (childNode) {
-=======
-        var childNodeIDs = Object.keys(childNodesObj).map(function (childNode) {
->>>>>>> 88f14a0... add 'dist' folder for deployment
           return childNodesObj[childNode].id;
         });
 
@@ -51989,11 +42844,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
         // loop over all child nodes and their edges to find edges going out of the cluster
         // these edges will be replaced by clusterEdges.
-<<<<<<< HEAD
         var childKeys = (0, _keys2['default'])(childNodesObj);
-=======
-        var childKeys = Object.keys(childNodesObj);
->>>>>>> 88f14a0... add 'dist' folder for deployment
         var createEdges = [];
         for (var i = 0; i < childKeys.length; i++) {
           childNodeId = childKeys[i];
@@ -52034,11 +42885,7 @@ return /******/ (function(modules) { // webpackBootstrap
         for (var _j2 = 0; _j2 < createEdges.length; _j2++) {
           var _edge = createEdges[_j2].edge;
           // copy the options of the edge we will replace
-<<<<<<< HEAD
           var clonedOptions = _NetworkUtil2['default'].cloneOptions(_edge, 'edge');
-=======
-          var clonedOptions = _NetworkUtil2.default.cloneOptions(_edge, 'edge');
->>>>>>> 88f14a0... add 'dist' folder for deployment
           // make sure the properties of clusterEdges are superimposed on it
           util.deepExtend(clonedOptions, clusterEdgeProperties);
 
@@ -52103,20 +42950,12 @@ return /******/ (function(modules) { // webpackBootstrap
         var refreshData = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : true;
 
         // kill condition: no nodes don't bother
-<<<<<<< HEAD
         if ((0, _keys2['default'])(childNodesObj).length == 0) {
-=======
-        if (Object.keys(childNodesObj).length == 0) {
->>>>>>> 88f14a0... add 'dist' folder for deployment
           return;
         }
 
         // allow clusters of 1 if options allow
-<<<<<<< HEAD
         if ((0, _keys2['default'])(childNodesObj).length == 1 && options.clusterNodeProperties.allowSingleNodeCluster != true) {
-=======
-        if (Object.keys(childNodesObj).length == 1 && options.clusterNodeProperties.allowSingleNodeCluster != true) {
->>>>>>> 88f14a0... add 'dist' folder for deployment
           return;
         }
 
@@ -52137,11 +42976,7 @@ return /******/ (function(modules) { // webpackBootstrap
           var childNodesOptions = [];
           for (var _nodeId in childNodesObj) {
             if (childNodesObj.hasOwnProperty(_nodeId)) {
-<<<<<<< HEAD
               var clonedOptions = _NetworkUtil2['default'].cloneOptions(childNodesObj[_nodeId]);
-=======
-              var clonedOptions = _NetworkUtil2.default.cloneOptions(childNodesObj[_nodeId]);
->>>>>>> 88f14a0... add 'dist' folder for deployment
               childNodesOptions.push(clonedOptions);
             }
           }
@@ -52152,11 +42987,7 @@ return /******/ (function(modules) { // webpackBootstrap
             if (childEdgesObj.hasOwnProperty(edgeId)) {
               // these cluster edges will be removed on creation of the cluster.
               if (edgeId.substr(0, 12) !== "clusterEdge:") {
-<<<<<<< HEAD
                 var _clonedOptions = _NetworkUtil2['default'].cloneOptions(childEdgesObj[edgeId], 'edge');
-=======
-                var _clonedOptions = _NetworkUtil2.default.cloneOptions(childEdgesObj[edgeId], 'edge');
->>>>>>> 88f14a0... add 'dist' folder for deployment
                 childEdgesOptions.push(_clonedOptions);
               }
             }
@@ -52195,11 +43026,7 @@ return /******/ (function(modules) { // webpackBootstrap
         clusterNodeProperties.id = clusterId;
 
         // create the clusterNode
-<<<<<<< HEAD
         var clusterNode = this.body.functions.createNode(clusterNodeProperties, _Cluster2['default']);
-=======
-        var clusterNode = this.body.functions.createNode(clusterNodeProperties, _Cluster2.default);
->>>>>>> 88f14a0... add 'dist' folder for deployment
         clusterNode.isCluster = true;
         clusterNode.containedNodes = childNodesObj;
         clusterNode.containedEdges = childEdgesObj;
@@ -52285,11 +43112,7 @@ return /******/ (function(modules) { // webpackBootstrap
     }, {
       key: '_getClusterPosition',
       value: function _getClusterPosition(childNodesObj) {
-<<<<<<< HEAD
         var childKeys = (0, _keys2['default'])(childNodesObj);
-=======
-        var childKeys = Object.keys(childNodesObj);
->>>>>>> 88f14a0... add 'dist' folder for deployment
         var minX = childNodesObj[childKeys[0]].x;
         var maxX = childNodesObj[childKeys[0]].x;
         var minY = childNodesObj[childKeys[0]].y;
@@ -52419,11 +43242,7 @@ return /******/ (function(modules) { // webpackBootstrap
               }
 
               // clone the options and apply the cluster options to them
-<<<<<<< HEAD
               var clonedOptions = _NetworkUtil2['default'].cloneOptions(transferEdge, 'edge');
-=======
-              var clonedOptions = _NetworkUtil2.default.cloneOptions(transferEdge, 'edge');
->>>>>>> 88f14a0... add 'dist' folder for deployment
               util.deepExtend(clonedOptions, otherCluster.clusterEdgeProperties);
 
               // apply the edge specific options to it.
@@ -52657,7 +43476,6 @@ return /******/ (function(modules) { // webpackBootstrap
         return hubThreshold;
       }
     }]);
-<<<<<<< HEAD
     return ClusterEngine;
   }();
 
@@ -52665,16 +43483,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 210 */
-=======
-
-    return ClusterEngine;
-  }();
-
-  exports.default = ClusterEngine;
-
-/***/ },
-/* 105 */
->>>>>>> 88f14a0... add 'dist' folder for deployment
 /***/ function(module, exports, __webpack_require__) {
 
   "use strict";
@@ -52683,7 +43491,6 @@ return /******/ (function(modules) { // webpackBootstrap
     value: true
   });
 
-<<<<<<< HEAD
   var _classCallCheck2 = __webpack_require__(115);
 
   var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
@@ -52693,21 +43500,12 @@ return /******/ (function(modules) { // webpackBootstrap
   var _createClass3 = _interopRequireDefault(_createClass2);
 
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-=======
-  var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
   var util = __webpack_require__(1);
 
   var NetworkUtil = function () {
     function NetworkUtil() {
-<<<<<<< HEAD
       (0, _classCallCheck3["default"])(this, NetworkUtil);
-=======
-      _classCallCheck(this, NetworkUtil);
->>>>>>> 88f14a0... add 'dist' folder for deployment
     }
 
     /**
@@ -52715,11 +43513,7 @@ return /******/ (function(modules) { // webpackBootstrap
      */
 
 
-<<<<<<< HEAD
     (0, _createClass3["default"])(NetworkUtil, null, [{
-=======
-    _createClass(NetworkUtil, null, [{
->>>>>>> 88f14a0... add 'dist' folder for deployment
       key: "getRange",
       value: function getRange(allNodes) {
         var specificNodes = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : [];
@@ -52825,7 +43619,6 @@ return /******/ (function(modules) { // webpackBootstrap
         return clonedOptions;
       }
     }]);
-<<<<<<< HEAD
     return NetworkUtil;
   }();
 
@@ -52833,16 +43626,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 211 */
-=======
-
-    return NetworkUtil;
-  }();
-
-  exports.default = NetworkUtil;
-
-/***/ },
-/* 106 */
->>>>>>> 88f14a0... add 'dist' folder for deployment
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -52851,7 +43634,6 @@ return /******/ (function(modules) { // webpackBootstrap
     value: true
   });
 
-<<<<<<< HEAD
   var _getPrototypeOf = __webpack_require__(166);
 
   var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
@@ -52873,39 +43655,17 @@ return /******/ (function(modules) { // webpackBootstrap
   var _Node3 = _interopRequireDefault(_Node2);
 
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-=======
-  var _Node2 = __webpack_require__(67);
-
-  var _Node3 = _interopRequireDefault(_Node2);
-
-  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-  function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-  function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
   /**
    *
    */
   var Cluster = function (_Node) {
-<<<<<<< HEAD
     (0, _inherits3['default'])(Cluster, _Node);
 
     function Cluster(options, body, imagelist, grouplist, globalOptions) {
       (0, _classCallCheck3['default'])(this, Cluster);
 
       var _this = (0, _possibleConstructorReturn3['default'])(this, (Cluster.__proto__ || (0, _getPrototypeOf2['default'])(Cluster)).call(this, options, body, imagelist, grouplist, globalOptions));
-=======
-    _inherits(Cluster, _Node);
-
-    function Cluster(options, body, imagelist, grouplist, globalOptions) {
-      _classCallCheck(this, Cluster);
-
-      var _this = _possibleConstructorReturn(this, (Cluster.__proto__ || Object.getPrototypeOf(Cluster)).call(this, options, body, imagelist, grouplist, globalOptions));
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
       _this.isCluster = true;
       _this.containedNodes = {};
@@ -52914,21 +43674,12 @@ return /******/ (function(modules) { // webpackBootstrap
     }
 
     return Cluster;
-<<<<<<< HEAD
   }(_Node3['default']);
 
   exports['default'] = Cluster;
 
 /***/ },
 /* 212 */
-=======
-  }(_Node3.default);
-
-  exports.default = Cluster;
-
-/***/ },
-/* 107 */
->>>>>>> 88f14a0... add 'dist' folder for deployment
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -52937,7 +43688,6 @@ return /******/ (function(modules) { // webpackBootstrap
     value: true
   });
 
-<<<<<<< HEAD
   var _classCallCheck2 = __webpack_require__(115);
 
   var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
@@ -52947,11 +43697,6 @@ return /******/ (function(modules) { // webpackBootstrap
   var _createClass3 = _interopRequireDefault(_createClass2);
 
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-=======
-  var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
   if (typeof window !== 'undefined') {
     window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
@@ -52961,11 +43706,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
   var CanvasRenderer = function () {
     function CanvasRenderer(body, canvas) {
-<<<<<<< HEAD
       (0, _classCallCheck3['default'])(this, CanvasRenderer);
-=======
-      _classCallCheck(this, CanvasRenderer);
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
       this.body = body;
       this.canvas = canvas;
@@ -52990,11 +43731,7 @@ return /******/ (function(modules) { // webpackBootstrap
       this.bindEventListeners();
     }
 
-<<<<<<< HEAD
     (0, _createClass3['default'])(CanvasRenderer, [{
-=======
-    _createClass(CanvasRenderer, [{
->>>>>>> 88f14a0... add 'dist' folder for deployment
       key: 'bindEventListeners',
       value: function bindEventListeners() {
         var _this = this;
@@ -53003,17 +43740,10 @@ return /******/ (function(modules) { // webpackBootstrap
           _this.dragging = true;
         });
         this.body.emitter.on("dragEnd", function () {
-<<<<<<< HEAD
           _this.dragging = false;
         });
         this.body.emitter.on("_resizeNodes", function () {
           _this._resizeNodes();
-=======
-          return _this.dragging = false;
-        });
-        this.body.emitter.on("_resizeNodes", function () {
-          return _this._resizeNodes();
->>>>>>> 88f14a0... add 'dist' folder for deployment
         });
         this.body.emitter.on("_redraw", function () {
           if (_this.renderingActive === false) {
@@ -53321,7 +44051,6 @@ return /******/ (function(modules) { // webpackBootstrap
         }
       }
     }]);
-<<<<<<< HEAD
     return CanvasRenderer;
   }();
 
@@ -53329,16 +44058,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 213 */
-=======
-
-    return CanvasRenderer;
-  }();
-
-  exports.default = CanvasRenderer;
-
-/***/ },
-/* 108 */
->>>>>>> 88f14a0... add 'dist' folder for deployment
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -53347,7 +44066,6 @@ return /******/ (function(modules) { // webpackBootstrap
     value: true
   });
 
-<<<<<<< HEAD
   var _classCallCheck2 = __webpack_require__(115);
 
   var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
@@ -53360,14 +44078,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
   var Hammer = __webpack_require__(108);
   var hammerUtil = __webpack_require__(121);
-=======
-  var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-  var Hammer = __webpack_require__(22);
-  var hammerUtil = __webpack_require__(30);
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
   var util = __webpack_require__(1);
 
@@ -53381,11 +44091,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
   var Canvas = function () {
     function Canvas(body) {
-<<<<<<< HEAD
       (0, _classCallCheck3['default'])(this, Canvas);
-=======
-      _classCallCheck(this, Canvas);
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
       this.body = body;
       this.pixelRatio = 1;
@@ -53406,11 +44112,7 @@ return /******/ (function(modules) { // webpackBootstrap
       this.bindEventListeners();
     }
 
-<<<<<<< HEAD
     (0, _createClass3['default'])(Canvas, [{
-=======
-    _createClass(Canvas, [{
->>>>>>> 88f14a0... add 'dist' folder for deployment
       key: 'bindEventListeners',
       value: function bindEventListeners() {
         var _this = this;
@@ -53824,7 +44526,6 @@ return /******/ (function(modules) { // webpackBootstrap
         return { x: this._XconvertDOMtoCanvas(pos.x), y: this._YconvertDOMtoCanvas(pos.y) };
       }
     }]);
-<<<<<<< HEAD
     return Canvas;
   }();
 
@@ -53832,16 +44533,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 214 */
-=======
-
-    return Canvas;
-  }();
-
-  exports.default = Canvas;
-
-/***/ },
-/* 109 */
->>>>>>> 88f14a0... add 'dist' folder for deployment
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -53850,7 +44541,6 @@ return /******/ (function(modules) { // webpackBootstrap
     value: true
   });
 
-<<<<<<< HEAD
   var _classCallCheck2 = __webpack_require__(115);
 
   var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
@@ -53864,17 +44554,6 @@ return /******/ (function(modules) { // webpackBootstrap
   var _NetworkUtil2 = _interopRequireDefault(_NetworkUtil);
 
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-=======
-  var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-  var _NetworkUtil = __webpack_require__(105);
-
-  var _NetworkUtil2 = _interopRequireDefault(_NetworkUtil);
-
-  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
   var util = __webpack_require__(1);
 
@@ -53882,11 +44561,7 @@ return /******/ (function(modules) { // webpackBootstrap
     function View(body, canvas) {
       var _this = this;
 
-<<<<<<< HEAD
       (0, _classCallCheck3['default'])(this, View);
-=======
-      _classCallCheck(this, View);
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
       this.body = body;
       this.canvas = canvas;
@@ -53911,11 +44586,7 @@ return /******/ (function(modules) { // webpackBootstrap
       this.body.emitter.on("unlockNode", this.releaseNode.bind(this));
     }
 
-<<<<<<< HEAD
     (0, _createClass3['default'])(View, [{
-=======
-    _createClass(View, [{
->>>>>>> 88f14a0... add 'dist' folder for deployment
       key: 'setOptions',
       value: function setOptions() {
         var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
@@ -53957,11 +44628,7 @@ return /******/ (function(modules) { // webpackBootstrap
             return;
           }
 
-<<<<<<< HEAD
           range = _NetworkUtil2['default'].getRange(this.body.nodes, options.nodes);
-=======
-          range = _NetworkUtil2.default.getRange(this.body.nodes, options.nodes);
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
           var numberOfNodes = this.body.nodeIndices.length;
           zoomLevel = 12.662 / (numberOfNodes + 7.4147) + 0.0964822; // this is obtained from fitting a dataset from 5 points with scale levels that looked good.
@@ -53971,11 +44638,7 @@ return /******/ (function(modules) { // webpackBootstrap
           zoomLevel *= factor;
         } else {
           this.body.emitter.emit("_resizeNodes");
-<<<<<<< HEAD
           range = _NetworkUtil2['default'].getRange(this.body.nodes, options.nodes);
-=======
-          range = _NetworkUtil2.default.getRange(this.body.nodes, options.nodes);
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
           var xDistance = Math.abs(range.maxX - range.minX) * 1.1;
           var yDistance = Math.abs(range.maxY - range.minY) * 1.1;
@@ -53992,11 +44655,7 @@ return /******/ (function(modules) { // webpackBootstrap
           zoomLevel = 1.0;
         }
 
-<<<<<<< HEAD
         var center = _NetworkUtil2['default'].findCenter(range);
-=======
-        var center = _NetworkUtil2.default.findCenter(range);
->>>>>>> 88f14a0... add 'dist' folder for deployment
         var animationOptions = { position: center, scale: zoomLevel, animation: options.animation };
         this.moveTo(animationOptions);
       }
@@ -54220,7 +44879,6 @@ return /******/ (function(modules) { // webpackBootstrap
         return this.canvas.DOMtoCanvas({ x: 0.5 * this.canvas.frame.canvas.clientWidth, y: 0.5 * this.canvas.frame.canvas.clientHeight });
       }
     }]);
-<<<<<<< HEAD
     return View;
   }();
 
@@ -54228,16 +44886,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 215 */
-=======
-
-    return View;
-  }();
-
-  exports.default = View;
-
-/***/ },
-/* 110 */
->>>>>>> 88f14a0... add 'dist' folder for deployment
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -54246,7 +44894,6 @@ return /******/ (function(modules) { // webpackBootstrap
     value: true
   });
 
-<<<<<<< HEAD
   var _classCallCheck2 = __webpack_require__(115);
 
   var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
@@ -54264,40 +44911,17 @@ return /******/ (function(modules) { // webpackBootstrap
   var _Popup2 = _interopRequireDefault(_Popup);
 
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-=======
-  var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-  var _NavigationHandler = __webpack_require__(111);
-
-  var _NavigationHandler2 = _interopRequireDefault(_NavigationHandler);
-
-  var _Popup = __webpack_require__(112);
-
-  var _Popup2 = _interopRequireDefault(_Popup);
-
-  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
   var util = __webpack_require__(1);
 
   var InteractionHandler = function () {
     function InteractionHandler(body, canvas, selectionHandler) {
-<<<<<<< HEAD
       (0, _classCallCheck3['default'])(this, InteractionHandler);
-=======
-      _classCallCheck(this, InteractionHandler);
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
       this.body = body;
       this.canvas = canvas;
       this.selectionHandler = selectionHandler;
-<<<<<<< HEAD
       this.navigationHandler = new _NavigationHandler2['default'](body, canvas);
-=======
-      this.navigationHandler = new _NavigationHandler2.default(body, canvas);
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
       // bind the events from hammer to functions in this object
       this.body.eventListeners.onTap = this.onTap.bind(this);
@@ -54341,11 +44965,7 @@ return /******/ (function(modules) { // webpackBootstrap
       this.bindEventListeners();
     }
 
-<<<<<<< HEAD
     (0, _createClass3['default'])(InteractionHandler, [{
-=======
-    _createClass(InteractionHandler, [{
->>>>>>> 88f14a0... add 'dist' folder for deployment
       key: 'bindEventListeners',
       value: function bindEventListeners() {
         var _this = this;
@@ -54799,15 +45419,9 @@ return /******/ (function(modules) { // webpackBootstrap
           this.body.emitter.emit('_requestRedraw');
 
           if (scaleOld < scale) {
-<<<<<<< HEAD
             this.body.emitter.emit('zoom', { direction: '+', scale: this.body.view.scale, pointer: pointer });
           } else {
             this.body.emitter.emit('zoom', { direction: '-', scale: this.body.view.scale, pointer: pointer });
-=======
-            this.body.emitter.emit('zoom', { direction: '+', scale: this.body.view.scale });
-          } else {
-            this.body.emitter.emit('zoom', { direction: '-', scale: this.body.view.scale });
->>>>>>> 88f14a0... add 'dist' folder for deployment
           }
         }
       }
@@ -54994,11 +45608,7 @@ return /******/ (function(modules) { // webpackBootstrap
           // show popup message window
           if (this.popupObj.id !== previousPopupObjId) {
             if (this.popup === undefined) {
-<<<<<<< HEAD
               this.popup = new _Popup2['default'](this.canvas.frame);
-=======
-              this.popup = new _Popup2.default(this.canvas.frame);
->>>>>>> 88f14a0... add 'dist' folder for deployment
             }
 
             this.popup.popupTargetType = popupType;
@@ -55041,11 +45651,7 @@ return /******/ (function(modules) { // webpackBootstrap
             // we initially only check stillOnObj because this is much faster.
             if (stillOnObj === true) {
               var overNode = this.selectionHandler.getNodeAt(pointer);
-<<<<<<< HEAD
               stillOnObj = overNode === undefined ? false : overNode.id === this.popup.popupTargetId;
-=======
-              stillOnObj = overNode.id === this.popup.popupTargetId;
->>>>>>> 88f14a0... add 'dist' folder for deployment
             }
           }
         } else {
@@ -55063,7 +45669,6 @@ return /******/ (function(modules) { // webpackBootstrap
         }
       }
     }]);
-<<<<<<< HEAD
     return InteractionHandler;
   }();
 
@@ -55071,16 +45676,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 216 */
-=======
-
-    return InteractionHandler;
-  }();
-
-  exports.default = InteractionHandler;
-
-/***/ },
-/* 111 */
->>>>>>> 88f14a0... add 'dist' folder for deployment
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -55089,7 +45684,6 @@ return /******/ (function(modules) { // webpackBootstrap
     value: true
   });
 
-<<<<<<< HEAD
   var _classCallCheck2 = __webpack_require__(115);
 
   var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
@@ -55104,26 +45698,12 @@ return /******/ (function(modules) { // webpackBootstrap
   var Hammer = __webpack_require__(108);
   var hammerUtil = __webpack_require__(121);
   var keycharm = __webpack_require__(111);
-=======
-  var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-  var util = __webpack_require__(1);
-  var Hammer = __webpack_require__(22);
-  var hammerUtil = __webpack_require__(30);
-  var keycharm = __webpack_require__(25);
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
   var NavigationHandler = function () {
     function NavigationHandler(body, canvas) {
       var _this = this;
 
-<<<<<<< HEAD
       (0, _classCallCheck3['default'])(this, NavigationHandler);
-=======
-      _classCallCheck(this, NavigationHandler);
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
       this.body = body;
       this.canvas = canvas;
@@ -55149,11 +45729,7 @@ return /******/ (function(modules) { // webpackBootstrap
       this.options = {};
     }
 
-<<<<<<< HEAD
     (0, _createClass3['default'])(NavigationHandler, [{
-=======
-    _createClass(NavigationHandler, [{
->>>>>>> 88f14a0... add 'dist' folder for deployment
       key: 'setOptions',
       value: function setOptions(options) {
         if (options !== undefined) {
@@ -55326,11 +45902,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
         this.body.view.scale = scale;
         this.body.view.translation = { x: tx, y: ty };
-<<<<<<< HEAD
-        this.body.emitter.emit('zoom', { direction: '+', scale: this.body.view.scale, pointer: pointer });
-=======
-        this.body.emitter.emit('zoom', { direction: '+', scale: this.body.view.scale });
->>>>>>> 88f14a0... add 'dist' folder for deployment
+        this.body.emitter.emit('zoom', { direction: '+', scale: this.body.view.scale, pointer: null });
       }
     }, {
       key: '_zoomOut',
@@ -55344,11 +45916,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
         this.body.view.scale = scale;
         this.body.view.translation = { x: tx, y: ty };
-<<<<<<< HEAD
-        this.body.emitter.emit('zoom', { direction: '-', scale: this.body.view.scale, pointer: pointer });
-=======
-        this.body.emitter.emit('zoom', { direction: '-', scale: this.body.view.scale });
->>>>>>> 88f14a0... add 'dist' folder for deployment
+        this.body.emitter.emit('zoom', { direction: '-', scale: this.body.view.scale, pointer: null });
       }
 
       /**
@@ -55451,7 +46019,6 @@ return /******/ (function(modules) { // webpackBootstrap
         }
       }
     }]);
-<<<<<<< HEAD
     return NavigationHandler;
   }();
 
@@ -55460,17 +46027,6 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ },
 /* 217 */
 /***/ function(module, exports, __webpack_require__) {
-=======
-
-    return NavigationHandler;
-  }();
-
-  exports.default = NavigationHandler;
-
-/***/ },
-/* 112 */
-/***/ function(module, exports) {
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
   'use strict';
 
@@ -55478,7 +46034,6 @@ return /******/ (function(modules) { // webpackBootstrap
     value: true
   });
 
-<<<<<<< HEAD
   var _classCallCheck2 = __webpack_require__(115);
 
   var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
@@ -55496,150 +46051,6 @@ return /******/ (function(modules) { // webpackBootstrap
   var _Edge2 = _interopRequireDefault(_Edge);
 
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-=======
-  var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-  /**
-   * Popup is a class to create a popup window with some text
-   * @param {Element}  container     The container object.
-   * @param {Number} [x]
-   * @param {Number} [y]
-   * @param {String} [text]
-   * @param {Object} [style]     An object containing borderColor,
-   *                             backgroundColor, etc.
-   */
-  var Popup = function () {
-    function Popup(container) {
-      _classCallCheck(this, Popup);
-
-      this.container = container;
-
-      this.x = 0;
-      this.y = 0;
-      this.padding = 5;
-      this.hidden = false;
-
-      // create the frame
-      this.frame = document.createElement('div');
-      this.frame.className = 'vis-network-tooltip';
-      this.container.appendChild(this.frame);
-    }
-
-    /**
-     * @param {number} x   Horizontal position of the popup window
-     * @param {number} y   Vertical position of the popup window
-     */
-
-
-    _createClass(Popup, [{
-      key: 'setPosition',
-      value: function setPosition(x, y) {
-        this.x = parseInt(x);
-        this.y = parseInt(y);
-      }
-
-      /**
-       * Set the content for the popup window. This can be HTML code or text.
-       * @param {string | Element} content
-       */
-
-    }, {
-      key: 'setText',
-      value: function setText(content) {
-        if (content instanceof Element) {
-          this.frame.innerHTML = '';
-          this.frame.appendChild(content);
-        } else {
-          this.frame.innerHTML = content; // string containing text or HTML
-        }
-      }
-
-      /**
-       * Show the popup window
-       * @param {boolean} [doShow]    Show or hide the window
-       */
-
-    }, {
-      key: 'show',
-      value: function show(doShow) {
-        if (doShow === undefined) {
-          doShow = true;
-        }
-
-        if (doShow === true) {
-          var height = this.frame.clientHeight;
-          var width = this.frame.clientWidth;
-          var maxHeight = this.frame.parentNode.clientHeight;
-          var maxWidth = this.frame.parentNode.clientWidth;
-
-          var top = this.y - height;
-          if (top + height + this.padding > maxHeight) {
-            top = maxHeight - height - this.padding;
-          }
-          if (top < this.padding) {
-            top = this.padding;
-          }
-
-          var left = this.x;
-          if (left + width + this.padding > maxWidth) {
-            left = maxWidth - width - this.padding;
-          }
-          if (left < this.padding) {
-            left = this.padding;
-          }
-
-          this.frame.style.left = left + "px";
-          this.frame.style.top = top + "px";
-          this.frame.style.visibility = "visible";
-          this.hidden = false;
-        } else {
-          this.hide();
-        }
-      }
-
-      /**
-       * Hide the popup window
-       */
-
-    }, {
-      key: 'hide',
-      value: function hide() {
-        this.hidden = true;
-        this.frame.style.visibility = "hidden";
-      }
-    }]);
-
-    return Popup;
-  }();
-
-  exports.default = Popup;
-
-/***/ },
-/* 113 */
-/***/ function(module, exports, __webpack_require__) {
-
-  'use strict';
-
-  Object.defineProperty(exports, "__esModule", {
-    value: true
-  });
-
-  var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-  var _Node = __webpack_require__(67);
-
-  var _Node2 = _interopRequireDefault(_Node);
-
-  var _Edge = __webpack_require__(87);
-
-  var _Edge2 = _interopRequireDefault(_Edge);
-
-  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
   var util = __webpack_require__(1);
 
@@ -55647,11 +46058,7 @@ return /******/ (function(modules) { // webpackBootstrap
     function SelectionHandler(body, canvas) {
       var _this = this;
 
-<<<<<<< HEAD
       (0, _classCallCheck3['default'])(this, SelectionHandler);
-=======
-      _classCallCheck(this, SelectionHandler);
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
       this.body = body;
       this.canvas = canvas;
@@ -55672,11 +46079,7 @@ return /******/ (function(modules) { // webpackBootstrap
       });
     }
 
-<<<<<<< HEAD
     (0, _createClass3['default'])(SelectionHandler, [{
-=======
-    _createClass(SelectionHandler, [{
->>>>>>> 88f14a0... add 'dist' folder for deployment
       key: 'setOptions',
       value: function setOptions(options) {
         if (options !== undefined) {
@@ -55757,11 +46160,7 @@ return /******/ (function(modules) { // webpackBootstrap
         var highlightEdges = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : this.options.selectConnectedEdges;
 
         if (obj !== undefined) {
-<<<<<<< HEAD
           if (obj instanceof _Node2['default']) {
-=======
-          if (obj instanceof _Node2.default) {
->>>>>>> 88f14a0... add 'dist' folder for deployment
             if (highlightEdges === true) {
               this._selectConnectedEdges(obj);
             }
@@ -55938,11 +46337,7 @@ return /******/ (function(modules) { // webpackBootstrap
     }, {
       key: '_addToSelection',
       value: function _addToSelection(obj) {
-<<<<<<< HEAD
         if (obj instanceof _Node2['default']) {
-=======
-        if (obj instanceof _Node2.default) {
->>>>>>> 88f14a0... add 'dist' folder for deployment
           this.selectionObj.nodes[obj.id] = obj;
         } else {
           this.selectionObj.edges[obj.id] = obj;
@@ -55959,11 +46354,7 @@ return /******/ (function(modules) { // webpackBootstrap
     }, {
       key: '_addToHover',
       value: function _addToHover(obj) {
-<<<<<<< HEAD
         if (obj instanceof _Node2['default']) {
-=======
-        if (obj instanceof _Node2.default) {
->>>>>>> 88f14a0... add 'dist' folder for deployment
           this.hoverObj.nodes[obj.id] = obj;
         } else {
           this.hoverObj.edges[obj.id] = obj;
@@ -55980,11 +46371,7 @@ return /******/ (function(modules) { // webpackBootstrap
     }, {
       key: '_removeFromSelection',
       value: function _removeFromSelection(obj) {
-<<<<<<< HEAD
         if (obj instanceof _Node2['default']) {
-=======
-        if (obj instanceof _Node2.default) {
->>>>>>> 88f14a0... add 'dist' folder for deployment
           delete this.selectionObj.nodes[obj.id];
           this._unselectConnectedEdges(obj);
         } else {
@@ -56218,11 +46605,7 @@ return /******/ (function(modules) { // webpackBootstrap
       value: function blurObject(object) {
         if (object.hover === true) {
           object.hover = false;
-<<<<<<< HEAD
           if (object instanceof _Node2['default']) {
-=======
-          if (object instanceof _Node2.default) {
->>>>>>> 88f14a0... add 'dist' folder for deployment
             this.body.emitter.emit("blurNode", { node: object.id });
           } else {
             this.body.emitter.emit("blurEdge", { edge: object.id });
@@ -56245,11 +46628,7 @@ return /******/ (function(modules) { // webpackBootstrap
         // remove all node hover highlights
         for (var nodeId in this.hoverObj.nodes) {
           if (this.hoverObj.nodes.hasOwnProperty(nodeId)) {
-<<<<<<< HEAD
             if (object === undefined || object instanceof _Node2['default'] && object.id != nodeId || object instanceof _Edge2['default']) {
-=======
-            if (object === undefined || object instanceof _Node2.default && object.id != nodeId || object instanceof _Edge2.default) {
->>>>>>> 88f14a0... add 'dist' folder for deployment
               this.blurObject(this.hoverObj.nodes[nodeId]);
               delete this.hoverObj.nodes[nodeId];
               hoverChanged = true;
@@ -56267,13 +46646,8 @@ return /******/ (function(modules) { // webpackBootstrap
               delete this.hoverObj.edges[edgeId];
             }
             // if the blur remains the same and the object is undefined (mouse off) or another
-<<<<<<< HEAD
             // edge has been hovered, or another node has been hovered we blur the edge.
             else if (object === undefined || object instanceof _Edge2['default'] && object.id != edgeId || object instanceof _Node2['default'] && !object.hover) {
-=======
-            // edge has been hovered, we blur the edge
-            else if (object === undefined || object instanceof _Edge2.default) {
->>>>>>> 88f14a0... add 'dist' folder for deployment
                 this.blurObject(this.hoverObj.edges[edgeId]);
                 delete this.hoverObj.edges[edgeId];
                 hoverChanged = true;
@@ -56286,21 +46660,13 @@ return /******/ (function(modules) { // webpackBootstrap
             object.hover = true;
             this._addToHover(object);
             hoverChanged = true;
-<<<<<<< HEAD
             if (object instanceof _Node2['default']) {
-=======
-            if (object instanceof _Node2.default) {
->>>>>>> 88f14a0... add 'dist' folder for deployment
               this.body.emitter.emit("hoverNode", { node: object.id });
             } else {
               this.body.emitter.emit("hoverEdge", { edge: object.id });
             }
           }
-<<<<<<< HEAD
           if (object instanceof _Node2['default'] && this.options.hoverConnectedEdges === true) {
-=======
-          if (object instanceof _Node2.default && this.options.hoverConnectedEdges === true) {
->>>>>>> 88f14a0... add 'dist' folder for deployment
             this._hoverConnectedEdges(object);
           }
         }
@@ -56467,7 +46833,6 @@ return /******/ (function(modules) { // webpackBootstrap
         }
       }
     }]);
-<<<<<<< HEAD
     return SelectionHandler;
   }();
 
@@ -56475,16 +46840,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 218 */
-=======
-
-    return SelectionHandler;
-  }();
-
-  exports.default = SelectionHandler;
-
-/***/ },
-/* 114 */
->>>>>>> 88f14a0... add 'dist' folder for deployment
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -56493,7 +46848,6 @@ return /******/ (function(modules) { // webpackBootstrap
     value: true
   });
 
-<<<<<<< HEAD
   var _keys = __webpack_require__(58);
 
   var _keys2 = _interopRequireDefault(_keys);
@@ -56519,31 +46873,12 @@ return /******/ (function(modules) { // webpackBootstrap
   var _NetworkUtil2 = _interopRequireDefault(_NetworkUtil);
 
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-=======
-  var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"]) _i["return"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError("Invalid attempt to destructure non-iterable instance"); } }; }();
-
-  var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
-
-  var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-  var _NetworkUtil = __webpack_require__(105);
-
-  var _NetworkUtil2 = _interopRequireDefault(_NetworkUtil);
-
-  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
   var util = __webpack_require__(1);
 
   var LayoutEngine = function () {
     function LayoutEngine(body) {
-<<<<<<< HEAD
       (0, _classCallCheck3['default'])(this, LayoutEngine);
-=======
-      _classCallCheck(this, LayoutEngine);
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
       this.body = body;
 
@@ -56572,11 +46907,7 @@ return /******/ (function(modules) { // webpackBootstrap
       this.bindEventListeners();
     }
 
-<<<<<<< HEAD
     (0, _createClass3['default'])(LayoutEngine, [{
-=======
-    _createClass(LayoutEngine, [{
->>>>>>> 88f14a0... add 'dist' folder for deployment
       key: 'bindEventListeners',
       value: function bindEventListeners() {
         var _this = this;
@@ -56644,11 +46975,7 @@ return /******/ (function(modules) { // webpackBootstrap
             };
             this.optionsBackup.physics.enabled = this.optionsBackup.physics.enabled === undefined ? true : this.optionsBackup.physics.enabled;
             this.optionsBackup.physics.solver = this.optionsBackup.physics.solver || 'barnesHut';
-<<<<<<< HEAD
           } else if ((0, _typeof3['default'])(allOptions.physics) === 'object') {
-=======
-          } else if (_typeof(allOptions.physics) === 'object') {
->>>>>>> 88f14a0... add 'dist' folder for deployment
             this.optionsBackup.physics.enabled = allOptions.physics.enabled === undefined ? true : allOptions.physics.enabled;
             this.optionsBackup.physics.solver = allOptions.physics.solver || 'barnesHut';
             allOptions.physics.solver = 'hierarchicalRepulsion';
@@ -56810,13 +47137,8 @@ return /******/ (function(modules) { // webpackBootstrap
     }, {
       key: '_shiftToCenter',
       value: function _shiftToCenter() {
-<<<<<<< HEAD
         var range = _NetworkUtil2['default'].getRangeCore(this.body.nodes, this.body.nodeIndices);
         var center = _NetworkUtil2['default'].findCenter(range);
-=======
-        var range = _NetworkUtil2.default.getRangeCore(this.body.nodes, this.body.nodeIndices);
-        var center = _NetworkUtil2.default.findCenter(range);
->>>>>>> 88f14a0... add 'dist' folder for deployment
         for (var i = 0; i < this.body.nodeIndices.length; i++) {
           this.body.nodes[this.body.nodeIndices[i]].x -= center.x;
           this.body.nodes[this.body.nodeIndices[i]].y -= center.y;
@@ -56946,9 +47268,11 @@ return /******/ (function(modules) { // webpackBootstrap
         // the main method to shift the trees
         var shiftTrees = function shiftTrees() {
           var treeSizes = getTreeSizes();
+          var shiftBy = 0;
           for (var i = 0; i < treeSizes.length - 1; i++) {
             var diff = treeSizes[i].max - treeSizes[i + 1].min;
-            shiftTree(i + 1, diff + _this2.options.hierarchical.treeSpacing);
+            shiftBy += diff + _this2.options.hierarchical.treeSpacing;
+            shiftTree(i + 1, shiftBy);
           }
         };
 
@@ -57021,11 +47345,7 @@ return /******/ (function(modules) { // webpackBootstrap
               // get the space around the node.
 
               var _getSpaceAroundNode2 = _this2._getSpaceAroundNode(node, branchMap),
-<<<<<<< HEAD
                   _getSpaceAroundNode3 = (0, _slicedToArray3['default'])(_getSpaceAroundNode2, 2),
-=======
-                  _getSpaceAroundNode3 = _slicedToArray(_getSpaceAroundNode2, 2),
->>>>>>> 88f14a0... add 'dist' folder for deployment
                   minSpaceNode = _getSpaceAroundNode3[0],
                   maxSpaceNode = _getSpaceAroundNode3[1];
 
@@ -57119,22 +47439,14 @@ return /******/ (function(modules) { // webpackBootstrap
             var maxLevel = getCollisionLevel(node1, node2);
 
             var _getBranchBoundary = getBranchBoundary(branchNodes1, maxLevel),
-<<<<<<< HEAD
                 _getBranchBoundary2 = (0, _slicedToArray3['default'])(_getBranchBoundary, 4),
-=======
-                _getBranchBoundary2 = _slicedToArray(_getBranchBoundary, 4),
->>>>>>> 88f14a0... add 'dist' folder for deployment
                 min1 = _getBranchBoundary2[0],
                 max1 = _getBranchBoundary2[1],
                 minSpace1 = _getBranchBoundary2[2],
                 maxSpace1 = _getBranchBoundary2[3];
 
             var _getBranchBoundary3 = getBranchBoundary(branchNodes2, maxLevel),
-<<<<<<< HEAD
                 _getBranchBoundary4 = (0, _slicedToArray3['default'])(_getBranchBoundary3, 4),
-=======
-                _getBranchBoundary4 = _slicedToArray(_getBranchBoundary3, 4),
->>>>>>> 88f14a0... add 'dist' folder for deployment
                 min2 = _getBranchBoundary4[0],
                 max2 = _getBranchBoundary4[1],
                 minSpace2 = _getBranchBoundary4[2],
@@ -57242,11 +47554,7 @@ return /******/ (function(modules) { // webpackBootstrap
             }
 
             var _getBranchBoundary5 = getBranchBoundary(branches[node.id]),
-<<<<<<< HEAD
                 _getBranchBoundary6 = (0, _slicedToArray3['default'])(_getBranchBoundary5, 4),
-=======
-                _getBranchBoundary6 = _slicedToArray(_getBranchBoundary5, 4),
->>>>>>> 88f14a0... add 'dist' folder for deployment
                 minBranch = _getBranchBoundary6[0],
                 maxBranch = _getBranchBoundary6[1],
                 minSpaceBranch = _getBranchBoundary6[2],
@@ -57276,11 +47584,7 @@ return /******/ (function(modules) { // webpackBootstrap
             // position node if there is space
 
             var _getSpaceAroundNode4 = _this2._getSpaceAroundNode(node),
-<<<<<<< HEAD
                 _getSpaceAroundNode5 = (0, _slicedToArray3['default'])(_getSpaceAroundNode4, 2),
-=======
-                _getSpaceAroundNode5 = _slicedToArray(_getSpaceAroundNode4, 2),
->>>>>>> 88f14a0... add 'dist' folder for deployment
                 minSpace = _getSpaceAroundNode5[0],
                 maxSpace = _getSpaceAroundNode5[1];
 
@@ -57310,11 +47614,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
         // method to remove whitespace between branches. Because we do bottom up, we can center the parents.
         var minimizeEdgeLengthBottomUp = function minimizeEdgeLengthBottomUp(iterations) {
-<<<<<<< HEAD
           var levels = (0, _keys2['default'])(_this2.distributionOrdering);
-=======
-          var levels = Object.keys(_this2.distributionOrdering);
->>>>>>> 88f14a0... add 'dist' folder for deployment
           levels = levels.reverse();
           for (var i = 0; i < iterations; i++) {
             stillShifting = false;
@@ -57334,11 +47634,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
         // method to remove whitespace between branches. Because we do bottom up, we can center the parents.
         var shiftBranchesCloserBottomUp = function shiftBranchesCloserBottomUp(iterations) {
-<<<<<<< HEAD
           var levels = (0, _keys2['default'])(_this2.distributionOrdering);
-=======
-          var levels = Object.keys(_this2.distributionOrdering);
->>>>>>> 88f14a0... add 'dist' folder for deployment
           levels = levels.reverse();
           for (var i = 0; i < iterations; i++) {
             stillShifting = false;
@@ -57359,11 +47655,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
         // center all parents
         var centerAllParentsBottomUp = function centerAllParentsBottomUp() {
-<<<<<<< HEAD
           var levels = (0, _keys2['default'])(_this2.distributionOrdering);
-=======
-          var levels = Object.keys(_this2.distributionOrdering);
->>>>>>> 88f14a0... add 'dist' folder for deployment
           levels = levels.reverse();
           for (var i = 0; i < levels.length; i++) {
             var level = levels[i];
@@ -57466,11 +47758,7 @@ return /******/ (function(modules) { // webpackBootstrap
               var position = this._getPositionForHierarchy(parentNode);
 
               var _getSpaceAroundNode6 = this._getSpaceAroundNode(parentNode),
-<<<<<<< HEAD
                   _getSpaceAroundNode7 = (0, _slicedToArray3['default'])(_getSpaceAroundNode6, 2),
-=======
-                  _getSpaceAroundNode7 = _slicedToArray(_getSpaceAroundNode6, 2),
->>>>>>> 88f14a0... add 'dist' folder for deployment
                   minSpace = _getSpaceAroundNode7[0],
                   maxSpace = _getSpaceAroundNode7[1];
 
@@ -57499,11 +47787,7 @@ return /******/ (function(modules) { // webpackBootstrap
         for (var level in distribution) {
           if (distribution.hasOwnProperty(level)) {
             // sort nodes in level by position:
-<<<<<<< HEAD
             var nodeArray = (0, _keys2['default'])(distribution[level]);
-=======
-            var nodeArray = Object.keys(distribution[level]);
->>>>>>> 88f14a0... add 'dist' folder for deployment
             nodeArray = this._indexArrayToNodes(nodeArray);
             this._sortNodeArray(nodeArray);
             var handledNodeCount = 0;
@@ -57752,11 +48036,7 @@ return /******/ (function(modules) { // webpackBootstrap
             _this4.hierarchicalLevels[nodeA.id] = minLevel;
           }
 
-<<<<<<< HEAD
           var diff = customCallback(_NetworkUtil2['default'].cloneOptions(nodeA, 'node'), _NetworkUtil2['default'].cloneOptions(nodeB, 'node'), _NetworkUtil2['default'].cloneOptions(edge, 'edge'));
-=======
-          var diff = customCallback(_NetworkUtil2.default.cloneOptions(nodeA, 'node'), _NetworkUtil2.default.cloneOptions(nodeB, 'node'), _NetworkUtil2.default.cloneOptions(edge, 'edge'));
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
           _this4.hierarchicalLevels[nodeB.id] = _this4.hierarchicalLevels[nodeA.id] + diff;
         };
@@ -58052,7 +48332,6 @@ return /******/ (function(modules) { // webpackBootstrap
         }
       }
     }]);
-<<<<<<< HEAD
     return LayoutEngine;
   }();
 
@@ -58060,16 +48339,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 219 */
-=======
-
-    return LayoutEngine;
-  }();
-
-  exports.default = LayoutEngine;
-
-/***/ },
-/* 115 */
->>>>>>> 88f14a0... add 'dist' folder for deployment
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -58078,7 +48347,6 @@ return /******/ (function(modules) { // webpackBootstrap
     value: true
   });
 
-<<<<<<< HEAD
   var _keys = __webpack_require__(58);
 
   var _keys2 = _interopRequireDefault(_keys);
@@ -58104,15 +48372,6 @@ return /******/ (function(modules) { // webpackBootstrap
   var util = __webpack_require__(1);
   var Hammer = __webpack_require__(108);
   var hammerUtil = __webpack_require__(121);
-=======
-  var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-  var util = __webpack_require__(1);
-  var Hammer = __webpack_require__(22);
-  var hammerUtil = __webpack_require__(30);
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
   /**
    * clears the toolbar div element of children
@@ -58124,11 +48383,7 @@ return /******/ (function(modules) { // webpackBootstrap
     function ManipulationSystem(body, canvas, selectionHandler) {
       var _this = this;
 
-<<<<<<< HEAD
       (0, _classCallCheck3['default'])(this, ManipulationSystem);
-=======
-      _classCallCheck(this, ManipulationSystem);
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
       this.body = body;
       this.canvas = canvas;
@@ -58182,11 +48437,7 @@ return /******/ (function(modules) { // webpackBootstrap
      */
 
 
-<<<<<<< HEAD
     (0, _createClass3['default'])(ManipulationSystem, [{
-=======
-    _createClass(ManipulationSystem, [{
->>>>>>> 88f14a0... add 'dist' folder for deployment
       key: '_restore',
       value: function _restore() {
         if (this.inMode !== false) {
@@ -58490,7 +48741,6 @@ return /******/ (function(modules) { // webpackBootstrap
         this._clean();
 
         this.inMode = 'editEdge';
-<<<<<<< HEAD
         if ((0, _typeof3['default'])(this.options.editEdge) === 'object' && typeof this.options.editEdge.editWithoutDrag === "function") {
           this.edgeBeingEditedId = this.selectionHandler.getSelectedEdges()[0];
           if (this.edgeBeingEditedId !== undefined) {
@@ -58499,8 +48749,6 @@ return /******/ (function(modules) { // webpackBootstrap
             return;
           }
         }
-=======
->>>>>>> 88f14a0... add 'dist' folder for deployment
         if (this.guiEnabled === true) {
           var locale = this.options.locales[this.options.locale];
           this.manipulationDOM = {};
@@ -58941,11 +49189,7 @@ return /******/ (function(modules) { // webpackBootstrap
           this.temporaryUIFunctions[UIfunctionName] = this.body.eventListeners[UIfunctionName];
           this.body.eventListeners[UIfunctionName] = newFunction;
         } else {
-<<<<<<< HEAD
           throw new Error('This UI function does not exist. Typo? You tried: ' + UIfunctionName + ' possible are: ' + (0, _stringify2['default'])((0, _keys2['default'])(this.body.eventListeners)));
-=======
-          throw new Error('This UI function does not exist. Typo? You tried: ' + UIfunctionName + ' possible are: ' + JSON.stringify(Object.keys(this.body.eventListeners)));
->>>>>>> 88f14a0... add 'dist' folder for deployment
         }
       }
 
@@ -59345,7 +49589,6 @@ return /******/ (function(modules) { // webpackBootstrap
       value: function _performEditEdge(sourceNodeId, targetNodeId) {
         var _this7 = this;
 
-<<<<<<< HEAD
         var defaultData = { id: this.edgeBeingEditedId, from: sourceNodeId, to: targetNodeId, label: this.body.data.edges._data[this.edgeBeingEditedId].label };
         var eeFunct = this.options.editEdge;
         if ((typeof eeFunct === 'undefined' ? 'undefined' : (0, _typeof3['default'])(eeFunct)) === 'object') {
@@ -59354,20 +49597,11 @@ return /******/ (function(modules) { // webpackBootstrap
         if (typeof eeFunct === 'function') {
           if (eeFunct.length === 2) {
             eeFunct(defaultData, function (finalizedData) {
-=======
-        var defaultData = { id: this.edgeBeingEditedId, from: sourceNodeId, to: targetNodeId };
-        if (typeof this.options.editEdge === 'function') {
-          if (this.options.editEdge.length === 2) {
-            this.options.editEdge(defaultData, function (finalizedData) {
->>>>>>> 88f14a0... add 'dist' folder for deployment
               if (finalizedData === null || finalizedData === undefined || _this7.inMode !== 'editEdge') {
                 // if for whatever reason the mode has changes (due to dataset change) disregard the callback) {
                 _this7.body.edges[defaultData.id].updateEdgeType();
                 _this7.body.emitter.emit('_redraw');
-<<<<<<< HEAD
                 _this7.showManipulatorToolbar();
-=======
->>>>>>> 88f14a0... add 'dist' folder for deployment
               } else {
                 _this7.body.data.edges.getDataSet().update(finalizedData);
                 _this7.selectionHandler.unselectAll();
@@ -59384,7 +49618,6 @@ return /******/ (function(modules) { // webpackBootstrap
         }
       }
     }]);
-<<<<<<< HEAD
     return ManipulationSystem;
   }();
 
@@ -59392,16 +49625,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 220 */
-=======
-
-    return ManipulationSystem;
-  }();
-
-  exports.default = ManipulationSystem;
-
-/***/ },
-/* 116 */
->>>>>>> 88f14a0... add 'dist' folder for deployment
 /***/ function(module, exports) {
 
   'use strict';
@@ -59417,11 +49640,7 @@ return /******/ (function(modules) { // webpackBootstrap
    * __type__ is a required field for all objects and contains the allowed types of all objects
    */
   var string = 'string';
-<<<<<<< HEAD
   var bool = 'boolean';
-=======
-  var boolean = 'boolean';
->>>>>>> 88f14a0... add 'dist' folder for deployment
   var number = 'number';
   var array = 'array';
   var object = 'object'; // should only be in a __type__ property
@@ -59430,7 +49649,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
   var allOptions = {
     configure: {
-<<<<<<< HEAD
       enabled: { boolean: bool },
       filter: { boolean: bool, string: string, array: array, 'function': 'function' },
       container: { dom: dom },
@@ -59450,39 +49668,15 @@ return /******/ (function(modules) { // webpackBootstrap
         edge: { boolean: bool, 'function': 'function' },
         __type__: { object: object, boolean: bool }
       },
-=======
-      enabled: { boolean: boolean },
-      filter: { boolean: boolean, string: string, array: array, 'function': 'function' },
-      container: { dom: dom },
-      showButton: { boolean: boolean },
-      __type__: { object: object, boolean: boolean, string: string, array: array, 'function': 'function' }
-    },
-    edges: {
-      arrows: {
-        to: { enabled: { boolean: boolean }, scaleFactor: { number: number }, type: { string: ['arrow', 'circle'] }, __type__: { object: object, boolean: boolean } },
-        middle: { enabled: { boolean: boolean }, scaleFactor: { number: number }, type: { string: ['arrow', 'circle'] }, __type__: { object: object, boolean: boolean } },
-        from: { enabled: { boolean: boolean }, scaleFactor: { number: number }, type: { string: ['arrow', 'circle'] }, __type__: { object: object, boolean: boolean } },
-        __type__: { string: ['from', 'to', 'middle'], object: object }
-      },
-      arrowStrikethrough: { boolean: boolean },
->>>>>>> 88f14a0... add 'dist' folder for deployment
       color: {
         color: { string: string },
         highlight: { string: string },
         hover: { string: string },
-<<<<<<< HEAD
         inherit: { string: ['from', 'to', 'both'], boolean: bool },
         opacity: { number: number },
         __type__: { object: object, string: string }
       },
       dashes: { boolean: bool, array: array },
-=======
-        inherit: { string: ['from', 'to', 'both'], boolean: boolean },
-        opacity: { number: number },
-        __type__: { object: object, string: string }
-      },
-      dashes: { boolean: boolean, array: array },
->>>>>>> 88f14a0... add 'dist' folder for deployment
       font: {
         color: { string: string },
         size: { number: number }, // px
@@ -59491,7 +49685,6 @@ return /******/ (function(modules) { // webpackBootstrap
         strokeWidth: { number: number }, // px
         strokeColor: { string: string },
         align: { string: ['horizontal', 'top', 'middle', 'bottom'] },
-<<<<<<< HEAD
         vadjust: { number: number },
         multi: { boolean: bool, string: string },
         bold: {
@@ -59534,34 +49727,16 @@ return /******/ (function(modules) { // webpackBootstrap
       labelHighlightBold: { boolean: bool },
       length: { number: number, 'undefined': 'undefined' },
       physics: { boolean: bool },
-=======
-        __type__: { object: object, string: string }
-      },
-      hidden: { boolean: boolean },
-      hoverWidth: { 'function': 'function', number: number },
-      label: { string: string, 'undefined': 'undefined' },
-      labelHighlightBold: { boolean: boolean },
-      length: { number: number, 'undefined': 'undefined' },
-      physics: { boolean: boolean },
->>>>>>> 88f14a0... add 'dist' folder for deployment
       scaling: {
         min: { number: number },
         max: { number: number },
         label: {
-<<<<<<< HEAD
           enabled: { boolean: bool },
-=======
-          enabled: { boolean: boolean },
->>>>>>> 88f14a0... add 'dist' folder for deployment
           min: { number: number },
           max: { number: number },
           maxVisible: { number: number },
           drawThreshold: { number: number },
-<<<<<<< HEAD
           __type__: { object: object, boolean: bool }
-=======
-          __type__: { object: object, boolean: boolean }
->>>>>>> 88f14a0... add 'dist' folder for deployment
         },
         customScalingFunction: { 'function': 'function' },
         __type__: { object: object }
@@ -59569,16 +49744,11 @@ return /******/ (function(modules) { // webpackBootstrap
       selectionWidth: { 'function': 'function', number: number },
       selfReferenceSize: { number: number },
       shadow: {
-<<<<<<< HEAD
         enabled: { boolean: bool },
-=======
-        enabled: { boolean: boolean },
->>>>>>> 88f14a0... add 'dist' folder for deployment
         color: { string: string },
         size: { number: number },
         x: { number: number },
         y: { number: number },
-<<<<<<< HEAD
         __type__: { object: object, boolean: bool }
       },
       smooth: {
@@ -59594,33 +49764,15 @@ return /******/ (function(modules) { // webpackBootstrap
         maximum: { number: number },
         __type__: { object: object, boolean: bool, number: number }
       },
-=======
-        __type__: { object: object, boolean: boolean }
-      },
-      smooth: {
-        enabled: { boolean: boolean },
-        type: { string: ['dynamic', 'continuous', 'discrete', 'diagonalCross', 'straightCross', 'horizontal', 'vertical', 'curvedCW', 'curvedCCW', 'cubicBezier'] },
-        roundness: { number: number },
-        forceDirection: { string: ['horizontal', 'vertical', 'none'], boolean: boolean },
-        __type__: { object: object, boolean: boolean }
-      },
-      title: { string: string, 'undefined': 'undefined' },
-      width: { number: number },
->>>>>>> 88f14a0... add 'dist' folder for deployment
       value: { number: number, 'undefined': 'undefined' },
       __type__: { object: object }
     },
     groups: {
-<<<<<<< HEAD
       useDefaultGroups: { boolean: bool },
-=======
-      useDefaultGroups: { boolean: boolean },
->>>>>>> 88f14a0... add 'dist' folder for deployment
       __any__: 'get from nodes, will be overwritten below',
       __type__: { object: object }
     },
     interaction: {
-<<<<<<< HEAD
       dragNodes: { boolean: bool },
       dragView: { boolean: bool },
       hideEdgesOnDrag: { boolean: bool },
@@ -59639,31 +49791,10 @@ return /******/ (function(modules) { // webpackBootstrap
       hoverConnectedEdges: { boolean: bool },
       tooltipDelay: { number: number },
       zoomView: { boolean: bool },
-=======
-      dragNodes: { boolean: boolean },
-      dragView: { boolean: boolean },
-      hideEdgesOnDrag: { boolean: boolean },
-      hideNodesOnDrag: { boolean: boolean },
-      hover: { boolean: boolean },
-      keyboard: {
-        enabled: { boolean: boolean },
-        speed: { x: { number: number }, y: { number: number }, zoom: { number: number }, __type__: { object: object } },
-        bindToWindow: { boolean: boolean },
-        __type__: { object: object, boolean: boolean }
-      },
-      multiselect: { boolean: boolean },
-      navigationButtons: { boolean: boolean },
-      selectable: { boolean: boolean },
-      selectConnectedEdges: { boolean: boolean },
-      hoverConnectedEdges: { boolean: boolean },
-      tooltipDelay: { number: number },
-      zoomView: { boolean: boolean },
->>>>>>> 88f14a0... add 'dist' folder for deployment
       __type__: { object: object }
     },
     layout: {
       randomSeed: { 'undefined': 'undefined', number: number },
-<<<<<<< HEAD
       improvedLayout: { boolean: bool },
       hierarchical: {
         enabled: { boolean: bool },
@@ -59676,25 +49807,10 @@ return /******/ (function(modules) { // webpackBootstrap
         direction: { string: ['UD', 'DU', 'LR', 'RL'] }, // UD, DU, LR, RL
         sortMethod: { string: ['hubsize', 'directed'] }, // hubsize, directed
         __type__: { object: object, boolean: bool }
-=======
-      improvedLayout: { boolean: boolean },
-      hierarchical: {
-        enabled: { boolean: boolean },
-        levelSeparation: { number: number },
-        nodeSpacing: { number: number },
-        treeSpacing: { number: number },
-        blockShifting: { boolean: boolean },
-        edgeMinimization: { boolean: boolean },
-        parentCentralization: { boolean: boolean },
-        direction: { string: ['UD', 'DU', 'LR', 'RL'] }, // UD, DU, LR, RL
-        sortMethod: { string: ['hubsize', 'directed'] }, // hubsize, directed
-        __type__: { object: object, boolean: boolean }
->>>>>>> 88f14a0... add 'dist' folder for deployment
       },
       __type__: { object: object }
     },
     manipulation: {
-<<<<<<< HEAD
       enabled: { boolean: bool },
       initiallyActive: { boolean: bool },
       addNode: { boolean: bool, 'function': 'function' },
@@ -59708,31 +49824,16 @@ return /******/ (function(modules) { // webpackBootstrap
       deleteEdge: { boolean: bool, 'function': 'function' },
       controlNodeStyle: 'get from nodes, will be overwritten below',
       __type__: { object: object, boolean: bool }
-=======
-      enabled: { boolean: boolean },
-      initiallyActive: { boolean: boolean },
-      addNode: { boolean: boolean, 'function': 'function' },
-      addEdge: { boolean: boolean, 'function': 'function' },
-      editNode: { 'function': 'function' },
-      editEdge: { boolean: boolean, 'function': 'function' },
-      deleteNode: { boolean: boolean, 'function': 'function' },
-      deleteEdge: { boolean: boolean, 'function': 'function' },
-      controlNodeStyle: 'get from nodes, will be overwritten below',
-      __type__: { object: object, boolean: boolean }
->>>>>>> 88f14a0... add 'dist' folder for deployment
     },
     nodes: {
       borderWidth: { number: number },
       borderWidthSelected: { number: number, 'undefined': 'undefined' },
       brokenImage: { string: string, 'undefined': 'undefined' },
-<<<<<<< HEAD
       chosen: {
         label: { boolean: bool, 'function': 'function' },
         node: { boolean: bool, 'function': 'function' },
         __type__: { object: object, boolean: bool }
       },
-=======
->>>>>>> 88f14a0... add 'dist' folder for deployment
       color: {
         border: { string: string },
         background: { string: string },
@@ -59749,15 +49850,9 @@ return /******/ (function(modules) { // webpackBootstrap
         __type__: { object: object, string: string }
       },
       fixed: {
-<<<<<<< HEAD
         x: { boolean: bool },
         y: { boolean: bool },
         __type__: { object: object, boolean: bool }
-=======
-        x: { boolean: boolean },
-        y: { boolean: boolean },
-        __type__: { object: object, boolean: boolean }
->>>>>>> 88f14a0... add 'dist' folder for deployment
       },
       font: {
         align: { string: string },
@@ -59767,7 +49862,6 @@ return /******/ (function(modules) { // webpackBootstrap
         background: { string: string },
         strokeWidth: { number: number }, // px
         strokeColor: { string: string },
-<<<<<<< HEAD
         vadjust: { number: number },
         multi: { boolean: bool, string: string },
         bold: {
@@ -59811,12 +49905,6 @@ return /******/ (function(modules) { // webpackBootstrap
         __type__: { object: object, boolean: bool, number: number }
       },
       hidden: { boolean: bool },
-=======
-        __type__: { object: object, string: string }
-      },
-      group: { string: string, number: number, 'undefined': 'undefined' },
-      hidden: { boolean: boolean },
->>>>>>> 88f14a0... add 'dist' folder for deployment
       icon: {
         face: { string: string },
         code: { string: string }, //'\uf007',
@@ -59827,7 +49915,6 @@ return /******/ (function(modules) { // webpackBootstrap
       id: { string: string, number: number },
       image: { string: string, 'undefined': 'undefined' }, // --> URL
       label: { string: string, 'undefined': 'undefined' },
-<<<<<<< HEAD
       labelHighlightBold: { boolean: bool },
       level: { number: number, 'undefined': 'undefined' },
       margin: {
@@ -59839,45 +49926,26 @@ return /******/ (function(modules) { // webpackBootstrap
       },
       mass: { number: number },
       physics: { boolean: bool },
-=======
-      labelHighlightBold: { boolean: boolean },
-      level: { number: number, 'undefined': 'undefined' },
-      mass: { number: number },
-      physics: { boolean: boolean },
->>>>>>> 88f14a0... add 'dist' folder for deployment
       scaling: {
         min: { number: number },
         max: { number: number },
         label: {
-<<<<<<< HEAD
           enabled: { boolean: bool },
-=======
-          enabled: { boolean: boolean },
->>>>>>> 88f14a0... add 'dist' folder for deployment
           min: { number: number },
           max: { number: number },
           maxVisible: { number: number },
           drawThreshold: { number: number },
-<<<<<<< HEAD
           __type__: { object: object, boolean: bool }
-=======
-          __type__: { object: object, boolean: boolean }
->>>>>>> 88f14a0... add 'dist' folder for deployment
         },
         customScalingFunction: { 'function': 'function' },
         __type__: { object: object }
       },
       shadow: {
-<<<<<<< HEAD
         enabled: { boolean: bool },
-=======
-        enabled: { boolean: boolean },
->>>>>>> 88f14a0... add 'dist' folder for deployment
         color: { string: string },
         size: { number: number },
         x: { number: number },
         y: { number: number },
-<<<<<<< HEAD
         __type__: { object: object, boolean: bool }
       },
       shape: { string: ['ellipse', 'circle', 'database', 'box', 'text', 'image', 'circularImage', 'diamond', 'dot', 'star', 'triangle', 'triangleDown', 'square', 'icon'] },
@@ -59887,40 +49955,22 @@ return /******/ (function(modules) { // webpackBootstrap
         interpolation: { boolean: bool },
         useImageSize: { boolean: bool },
         useBorderWithImage: { boolean: bool },
-=======
-        __type__: { object: object, boolean: boolean }
-      },
-      shape: { string: ['ellipse', 'circle', 'database', 'box', 'text', 'image', 'circularImage', 'diamond', 'dot', 'star', 'triangle', 'triangleDown', 'square', 'icon'] },
-      shapeProperties: {
-        borderDashes: { boolean: boolean, array: array },
-        borderRadius: { number: number },
-        interpolation: { boolean: boolean },
-        useImageSize: { boolean: boolean },
-        useBorderWithImage: { boolean: boolean },
->>>>>>> 88f14a0... add 'dist' folder for deployment
         __type__: { object: object }
       },
       size: { number: number },
       title: { string: string, 'undefined': 'undefined' },
       value: { number: number, 'undefined': 'undefined' },
-<<<<<<< HEAD
       widthConstraint: {
         minimum: { number: number },
         maximum: { number: number },
         __type__: { object: object, boolean: bool, number: number }
       },
-=======
->>>>>>> 88f14a0... add 'dist' folder for deployment
       x: { number: number },
       y: { number: number },
       __type__: { object: object }
     },
     physics: {
-<<<<<<< HEAD
       enabled: { boolean: bool },
-=======
-      enabled: { boolean: boolean },
->>>>>>> 88f14a0... add 'dist' folder for deployment
       barnesHut: {
         gravitationalConstant: { number: number },
         centralGravity: { number: number },
@@ -59959,7 +50009,6 @@ return /******/ (function(modules) { // webpackBootstrap
       minVelocity: { number: number }, // px/s
       solver: { string: ['barnesHut', 'repulsion', 'hierarchicalRepulsion', 'forceAtlas2Based'] },
       stabilization: {
-<<<<<<< HEAD
         enabled: { boolean: bool },
         iterations: { number: number }, // maximum number of iteration to stabilize
         updateInterval: { number: number },
@@ -59975,23 +50024,6 @@ return /******/ (function(modules) { // webpackBootstrap
     //globals :
     autoResize: { boolean: bool },
     clickToUse: { boolean: bool },
-=======
-        enabled: { boolean: boolean },
-        iterations: { number: number }, // maximum number of iteration to stabilize
-        updateInterval: { number: number },
-        onlyDynamicEdges: { boolean: boolean },
-        fit: { boolean: boolean },
-        __type__: { object: object, boolean: boolean }
-      },
-      timestep: { number: number },
-      adaptiveTimestep: { boolean: boolean },
-      __type__: { object: object, boolean: boolean }
-    },
-
-    //globals :
-    autoResize: { boolean: boolean },
-    clickToUse: { boolean: boolean },
->>>>>>> 88f14a0... add 'dist' folder for deployment
     locale: { string: string },
     locales: {
       __any__: { any: any },
@@ -60210,11 +50242,7 @@ return /******/ (function(modules) { // webpackBootstrap
   exports.configureOptions = configureOptions;
 
 /***/ },
-<<<<<<< HEAD
 /* 221 */
-=======
-/* 117 */
->>>>>>> 88f14a0... add 'dist' folder for deployment
 /***/ function(module, exports, __webpack_require__) {
 
   "use strict";
@@ -60223,7 +50251,6 @@ return /******/ (function(modules) { // webpackBootstrap
     value: true
   });
 
-<<<<<<< HEAD
   var _slicedToArray2 = __webpack_require__(161);
 
   var _slicedToArray3 = _interopRequireDefault(_slicedToArray2);
@@ -60241,20 +50268,6 @@ return /******/ (function(modules) { // webpackBootstrap
   var _FloydWarshall2 = _interopRequireDefault(_FloydWarshall);
 
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-=======
-  var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"]) _i["return"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError("Invalid attempt to destructure non-iterable instance"); } }; }();
-
-  var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }(); // distance finding algorithm
-
-
-  var _FloydWarshall = __webpack_require__(118);
-
-  var _FloydWarshall2 = _interopRequireDefault(_FloydWarshall);
-
-  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
   /**
    * KamadaKawai positions the nodes initially based on
@@ -60266,20 +50279,12 @@ return /******/ (function(modules) { // webpackBootstrap
    */
   var KamadaKawai = function () {
     function KamadaKawai(body, edgeLength, edgeStrength) {
-<<<<<<< HEAD
       (0, _classCallCheck3["default"])(this, KamadaKawai);
-=======
-      _classCallCheck(this, KamadaKawai);
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
       this.body = body;
       this.springLength = edgeLength;
       this.springConstant = edgeStrength;
-<<<<<<< HEAD
       this.distanceSolver = new _FloydWarshall2["default"]();
-=======
-      this.distanceSolver = new _FloydWarshall2.default();
->>>>>>> 88f14a0... add 'dist' folder for deployment
     }
 
     /**
@@ -60288,11 +50293,7 @@ return /******/ (function(modules) { // webpackBootstrap
      */
 
 
-<<<<<<< HEAD
     (0, _createClass3["default"])(KamadaKawai, [{
-=======
-    _createClass(KamadaKawai, [{
->>>>>>> 88f14a0... add 'dist' folder for deployment
       key: "setOptions",
       value: function setOptions(options) {
         if (options) {
@@ -60344,11 +50345,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
           var _getHighestEnergyNode2 = this._getHighestEnergyNode(ignoreClusters);
 
-<<<<<<< HEAD
           var _getHighestEnergyNode3 = (0, _slicedToArray3["default"])(_getHighestEnergyNode2, 4);
-=======
-          var _getHighestEnergyNode3 = _slicedToArray(_getHighestEnergyNode2, 4);
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
           highE_nodeId = _getHighestEnergyNode3[0];
           maxEnergy = _getHighestEnergyNode3[1];
@@ -60363,11 +50360,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
             var _getEnergy2 = this._getEnergy(highE_nodeId);
 
-<<<<<<< HEAD
             var _getEnergy3 = (0, _slicedToArray3["default"])(_getEnergy2, 3);
-=======
-            var _getEnergy3 = _slicedToArray(_getEnergy2, 3);
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
             delta_m = _getEnergy3[0];
             dE_dx = _getEnergy3[1];
@@ -60397,11 +50390,7 @@ return /******/ (function(modules) { // webpackBootstrap
           // by not evaluating nodes with predefined positions we should only move nodes that have no positions.
           if (nodes[m].predefinedPosition === false || nodes[m].isCluster === true && ignoreClusters === true || nodes[m].options.fixed.x === true || nodes[m].options.fixed.y === true) {
             var _getEnergy4 = this._getEnergy(m),
-<<<<<<< HEAD
                 _getEnergy5 = (0, _slicedToArray3["default"])(_getEnergy4, 3),
-=======
-                _getEnergy5 = _slicedToArray(_getEnergy4, 3),
->>>>>>> 88f14a0... add 'dist' folder for deployment
                 delta_m = _getEnergy5[0],
                 dE_dx = _getEnergy5[1],
                 dE_dy = _getEnergy5[2];
@@ -60539,7 +50528,6 @@ return /******/ (function(modules) { // webpackBootstrap
         }
       }
     }]);
-<<<<<<< HEAD
     return KamadaKawai;
   }(); // distance finding algorithm
 
@@ -60549,17 +50537,6 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ },
 /* 222 */
 /***/ function(module, exports, __webpack_require__) {
-=======
-
-    return KamadaKawai;
-  }();
-
-  exports.default = KamadaKawai;
-
-/***/ },
-/* 118 */
-/***/ function(module, exports) {
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
   "use strict";
 
@@ -60567,7 +50544,6 @@ return /******/ (function(modules) { // webpackBootstrap
     value: true
   });
 
-<<<<<<< HEAD
   var _classCallCheck2 = __webpack_require__(115);
 
   var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
@@ -60577,11 +50553,6 @@ return /******/ (function(modules) { // webpackBootstrap
   var _createClass3 = _interopRequireDefault(_createClass2);
 
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-=======
-  var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
->>>>>>> 88f14a0... add 'dist' folder for deployment
 
   /**
    * Created by Alex on 10-Aug-15.
@@ -60589,17 +50560,10 @@ return /******/ (function(modules) { // webpackBootstrap
 
   var FloydWarshall = function () {
     function FloydWarshall() {
-<<<<<<< HEAD
       (0, _classCallCheck3["default"])(this, FloydWarshall);
     }
 
     (0, _createClass3["default"])(FloydWarshall, [{
-=======
-      _classCallCheck(this, FloydWarshall);
-    }
-
-    _createClass(FloydWarshall, [{
->>>>>>> 88f14a0... add 'dist' folder for deployment
       key: "getDistances",
       value: function getDistances(body, nodesArray, edgesArray) {
         var D_matrix = {};
@@ -60640,7 +50604,6 @@ return /******/ (function(modules) { // webpackBootstrap
         return D_matrix;
       }
     }]);
-<<<<<<< HEAD
     return FloydWarshall;
   }();
 
@@ -60648,16 +50611,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 223 */
-=======
-
-    return FloydWarshall;
-  }();
-
-  exports.default = FloydWarshall;
-
-/***/ },
-/* 119 */
->>>>>>> 88f14a0... add 'dist' folder for deployment
 /***/ function(module, exports) {
 
   'use strict';
@@ -60955,7 +50908,6 @@ return /******/ (function(modules) { // webpackBootstrap
   }
 
 /***/ },
-<<<<<<< HEAD
 /* 224 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -60967,13 +50919,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-=======
-/* 120 */
-/***/ function(module, exports) {
-
-  'use strict';
-
->>>>>>> 88f14a0... add 'dist' folder for deployment
   /**
    * Parse a text source containing data in DOT language into a JSON object.
    * The object contains two lists: one with nodes and one with edges.
@@ -61003,11 +50948,7 @@ return /******/ (function(modules) { // webpackBootstrap
     'tooltip': 'title',
     'labeltooltip': 'title'
   };
-<<<<<<< HEAD
   var EDGE_ATTR_MAPPING = (0, _create2['default'])(NODE_ATTR_MAPPING);
-=======
-  var EDGE_ATTR_MAPPING = Object.create(NODE_ATTR_MAPPING);
->>>>>>> 88f14a0... add 'dist' folder for deployment
   EDGE_ATTR_MAPPING.color = 'color.color';
 
   // token types enumeration
@@ -61871,11 +51812,7 @@ return /******/ (function(modules) { // webpackBootstrap
   exports.DOTToGraph = DOTToGraph;
 
 /***/ },
-<<<<<<< HEAD
 /* 225 */
-=======
-/* 121 */
->>>>>>> 88f14a0... add 'dist' folder for deployment
 /***/ function(module, exports) {
 
   'use strict';
@@ -61953,11 +51890,7 @@ return /******/ (function(modules) { // webpackBootstrap
   exports.parseGephi = parseGephi;
 
 /***/ },
-<<<<<<< HEAD
 /* 226 */
-=======
-/* 122 */
->>>>>>> 88f14a0... add 'dist' folder for deployment
 /***/ function(module, exports) {
 
   'use strict';
